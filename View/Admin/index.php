@@ -32,6 +32,9 @@
 
 
                 <span class="btn btn-success" onclick="login()">Đăng Nhập</span>
+                <a href="index.php?c=indexadmin&a=register">
+                    <span class="btn btn-primary" >Đăng ký</span>
+                </a>
             </form>
         </div>
     </div>
