@@ -1,3 +1,32 @@
+<?php
+if (isset($_POST["nút submit"])) {
+    // lấy thông tin người dùng
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    //làm sạch thông tin, xóa bỏ các tag html, ký tự đặc biệt
+    //mà người dùng cố tình thêm vào để tấn công theo phương thức sql injection
+    $username = strip_tags($username);
+    $username = addslashes($username);
+    $password = strip_tags($password);
+    $password = addslashes($password);
+    if ($username == "" || $password =="") {
+        echo "username hoặc password bạn không được để trống!";
+    }else{
+        $sql = "select * from users where username = '$username' and password = '$password' ";
+        $query = mysqli_query($conn,$sql);
+        $num_rows = mysqli_num_rows($query);
+        if ($num_rows==0) {
+            echo "tên đăng nhập hoặc mật khẩu không đúng !";
+        }else{
+            //tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
+            $_SESSION['username'] = $username;
+            // Thực thi hành động sau khi lưu thông tin vào session
+            // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
+            header('Location: index.php');
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,22 +45,30 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <form>
+            <form action="?c=indexadmin&a=login" method="post">
                 <legend>Đăng Nhập Vào Page Trần ĐỨc Bo Admin</legend>
                 <span><i id="err" style="color: red"></i></span>
-
+                <span style="color: red;font-weight: bold">
+                    <?php
+                    if (isset($_GET['r']))
+                    {
+                        if ($_GET['r'] == 0)
+                        {
+                            echo "Tên đăng nhập hoặc mật khẩu không đúng";
+                        }
+                    }
+                    ?>
+                </span>
+                <br>
                 <div class="form-group">
                     <label for="">Tên tài khoản</label>
-                    <input type="text" class="form-control" id="username">
+                    <input type="text" class="form-control" name="user" id="username">
                 </div>
                 <div class="form-group">
                     <label for="">Mật khẩu</label>
-                    <input type="text" class="form-control" id="password">
+                    <input type="text" class="form-control" name="pass" id="password">
                 </div>
-
-
-
-                <span class="btn btn-success" onclick="login()">Đăng Nhập</span>
+                <input type="submit" class="btn btn-success" value="Đăng Nhập">
                 <a href="index.php?c=indexadmin&a=register">
                     <span class="btn btn-primary" >Đăng ký</span>
                 </a>
@@ -39,25 +76,5 @@
         </div>
     </div>
 </div>
-<script>
-    function login(){
-        var username = $('#username').val();
-        var password = $('#password').val();
-        $.ajax({
-            url : "indexadmin/login",
-            type : "post",
-            dataType:"text",
-            data : {
-                username, password
-            },
-            success : function (result){
-                if(result == "LoginSuccess"){
-                    location.replace('http://localhost/WBH_MVC/indexadmin/dashboard');
-                }
-                $('#err').html(result);
-            }
-        });
-    }
-</script>
 </body>
 </html>

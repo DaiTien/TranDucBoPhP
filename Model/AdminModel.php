@@ -38,7 +38,12 @@ class AdminModel
             $result = $this ->mysqli->query("Insert into tdb_adminuser(UserName,Password,Role) value ('$admin->userName','$admin->passWord','$admin->role')");
             return $result;
         }
-
-
+    }
+    function loginRecord($user,$pass)
+    {
+        $query = "select * from tdb_adminuser where username ='$user' and password ='$pass'";
+        $result = $this ->mysqli->query($query);
+        $num_rows = mysqli_num_rows($result);
+        return $num_rows;
     }
 }

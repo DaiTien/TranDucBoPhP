@@ -37,4 +37,18 @@ class IndexAdminController
         }
 
     }
+    function login()
+    {
+        session_start();
+        $user = $_POST['user'];
+        $pass = $_POST['pass'];
+        $result = $this ->adminModel->loginRecord($user,$pass);
+        if ($result == 0){
+            header('location:index.php?c=indexadmin&a=index&r=0&action=login');
+        }
+        else{
+            $_SESSION['userAdmin'] = $user;
+            echo $_SESSION['userAdmin'];
+        }
+    }
 }
