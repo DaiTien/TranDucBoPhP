@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(/asset/web/images/cocsu.jpg);
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(112, 105, 105, 0.2);
+    display: block;
+}
+
+.check-input {
+    display: flex;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 1px\9;
+    line-height: normal;
+}
+
+.box {
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(221, 221, 220, 0.8);
+    text-align: center;
+}
+
+.box h1 {
+    color: white;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-family: 'Crimson Text', serif;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 8px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background: #2ecc71;
+}
+
+.psw {
+    position: relative;
+    top: -20px;
+    left: 75px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .title {
+    padding-top: 15px;
+}
+
+.footer .icon-link {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: rgb(51, 139, 223);
+}
