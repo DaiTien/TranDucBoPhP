@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Trần Đức Bo | Registration</title>
+    <title>Trần Đức Bo | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -17,65 +17,53 @@
     <link rel="stylesheet" href="asset/admin/AdminLTE/dist/css/AdminLTE.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="asset/admin/AdminLTE/plugins/iCheck/square/blue.css">
-
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition register-page">
-<div class="register-box">
-    <div class="register-logo">
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
         <a href="../../index2.html"><b>Admin</b>Trần Đức Bo</a>
     </div>
-
-    <div class="register-box-body">
-        <p class="login-box-msg">Register a new membership</p>
-        <p class="pb-2" style="color: red">
-            <?php
-            if (isset($_GET['r']))
-            {
-                if ($_GET['r'] == 1)
-                {
-                    echo $_GET['action'] . ' Account Thành Công';
-                }else if($_GET['r'] == 2){
-                    echo 'Confirm Password Không Đúng, vui lòng đăng ký lại';
-                } else
-                {
-                    echo 'UserName bạn đăng ký đã tồn tại, vui lòng đăng ký lại';
-                }
-            }
-            ?>
-        </p>
-
-        <form action="?c=indexadmin&a=signUp" method="post">
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+        <span style="color: #ff0000;font-weight: bold">
+             <?php
+                  if (isset($_GET['r']))
+                  {
+                      if ($_GET['r'] == 0)
+                      {
+                          echo "Tên đăng nhập hoặc mật khẩu không đúng";
+                      }
+                  }
+             ?>
+         </span>
+        <form action="?c=indexadmin&a=login" method="post">
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" name="username" placeholder="User Name">
+                <input type="text" name="user" class="form-control" placeholder="UserName">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="password" class="form-control" placeholder="Password">
+                <input type="password" name="pass" class="form-control" placeholder="Password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password">
-                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
             <div class="row">
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <input type="submit" class="btn btn-primary" value="Register">
-                </div>
-                <div class="col-xs-4">
-                    <input type="reset" class="btn btn-default" value="Reset">
+                    <input type="submit" class="btn btn-primary btn-block btn-flat" value="Đăng Nhập">
                 </div>
                 <!-- /.col -->
             </div>
         </form>
-        <a href="?c=indexadmin&a=index" class="text-center">I already have a membership</a>
+        <!-- <a href="#">I forgot my password</a><br> -->
+        <a href="index.php?c=indexadmin&a=register" class="text-center">Register a new membership</a>
+
     </div>
-    <!-- /.form-box -->
+    <!-- /.login-box-body -->
 </div>
-<!-- /.register-box -->
+<!-- /.login-box -->
 
 <!-- jQuery 3 -->
 <script src="asset/admin/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>

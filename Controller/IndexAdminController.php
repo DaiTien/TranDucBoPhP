@@ -1,15 +1,18 @@
 <?php
 require_once SYSTEM_PATH. "/Model/AdminModel.php";
+require_once SYSTEM_PATH. "/Model/FeedBackAdminModel.php";
 class IndexAdminController
 {
     private $adminModel;
+    private $feedbackModel;
     public function __construct()
     {
         $this ->adminModel = new AdminModel();
+        $this ->feedbackModel = new FeedBackAdminModel();
     }
 
     function index(){
-        require_once SYSTEM_PATH. "/View/Admin/index.php";
+        require_once SYSTEM_PATH. "/View/Admin/login.php";
     }
     function register()
     {
@@ -47,8 +50,23 @@ class IndexAdminController
             header('location:index.php?c=indexadmin&a=index&r=0&action=login');
         }
         else{
+            header('location:index.php?c=indexadmin&a=trangchu');
             $_SESSION['userAdmin'] = $user;
-            echo $_SESSION['userAdmin'];
         }
+    }
+    function logout()
+    {
+        session_start();
+        unset($_SESSION['userAdmin']);
+        session_destroy();
+        require_once SYSTEM_PATH . "/View/Admin/login.php";
+    }
+    function trangchu()
+    {
+        session_start();
+        $user = $_SESSION['userAdmin'];
+        $totalMember = $this -> adminModel ->CountMember();
+        $totalFeedBack = $this ->feedbackModel ->CountFeedBack();
+        require_once SYSTEM_PATH."/View/Admin/dashboard.php";
     }
 }

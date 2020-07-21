@@ -1,80 +1,80 @@
-<?php
-if (isset($_POST["nút submit"])) {
-    // lấy thông tin người dùng
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    //làm sạch thông tin, xóa bỏ các tag html, ký tự đặc biệt
-    //mà người dùng cố tình thêm vào để tấn công theo phương thức sql injection
-    $username = strip_tags($username);
-    $username = addslashes($username);
-    $password = strip_tags($password);
-    $password = addslashes($password);
-    if ($username == "" || $password =="") {
-        echo "username hoặc password bạn không được để trống!";
-    }else{
-        $sql = "select * from users where username = '$username' and password = '$password' ";
-        $query = mysqli_query($conn,$sql);
-        $num_rows = mysqli_num_rows($query);
-        if ($num_rows==0) {
-            echo "tên đăng nhập hoặc mật khẩu không đúng !";
-        }else{
-            //tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
-            $_SESSION['username'] = $username;
-            // Thực thi hành động sau khi lưu thông tin vào session
-            // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-            header('Location: index.php');
-        }
-    }
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Trang quản trị admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="asset/admin/admin_js/jquery-latest.js"></script>
     <script type="text/javascript" src="asset/admin/admin_js/bootstrap.min.js"></script>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/jvectormap/jquery-jvectormap.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="asset/admin/AdminLTE/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+     folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="asset/admin/AdminLTE/dist/css/skins/_all-skins.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <style>
+        .custom-banner{
+            max-height: 400px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .custom-banner a{
+            position: relative;
+            top: 200px;
+            z-index: 1;
+        }
+    </style>
 </head>
-<body>
-<div class="container-fluid" style="background-color: #2c56b5; text-align: center; margin-bottom: 20px">
-    <img src="asset/web/images/logo.png">
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <form action="?c=indexadmin&a=login" method="post">
-                <legend>Đăng Nhập Vào Page Trần ĐỨc Bo Admin</legend>
-                <span><i id="err" style="color: red"></i></span>
-                <span style="color: red;font-weight: bold">
-                    <?php
-                    if (isset($_GET['r']))
-                    {
-                        if ($_GET['r'] == 0)
-                        {
-                            echo "Tên đăng nhập hoặc mật khẩu không đúng";
-                        }
-                    }
-                    ?>
-                </span>
-                <br>
-                <div class="form-group">
-                    <label for="">Tên tài khoản</label>
-                    <input type="text" class="form-control" name="user" id="username">
-                </div>
-                <div class="form-group">
-                    <label for="">Mật khẩu</label>
-                    <input type="text" class="form-control" name="pass" id="password">
-                </div>
-                <input type="submit" class="btn btn-success" value="Đăng Nhập">
-                <a href="index.php?c=indexadmin&a=register">
-                    <span class="btn btn-primary" >Đăng ký</span>
-                </a>
-            </form>
-        </div>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <!--Header -->
+    <?php
+    include 'header.php';
+    ?>
+    <!-- Left side column. contains the logo and sidebar -->
+    <?php
+    include 'menu.php';
+    ?>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+
+        <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <?php echo $content ?>
+        <!-- ~END CONTENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->
     </div>
+    <!-- /.content-wrapper -->
+    <?php
+    include 'footer.php';
+    ?>
 </div>
+<!-- ./wrapper -->
 </body>
 </html>

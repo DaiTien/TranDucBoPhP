@@ -1,5 +1,6 @@
 <?php
 class Admin{
+    public $id;
     public $userName;
     public $passWord;
     public $fullName;
@@ -7,8 +8,9 @@ class Admin{
     public $phone;
     public $email;
     public $role;
-    public function __construct($userName,$passWord,$fullName,$genDer,$phone,$email,$role)
+    public function __construct($id,$userName,$passWord,$fullName,$genDer,$phone,$email,$role)
     {
+        $this -> id =$id;
         $this -> userName =$userName;
         $this ->passWord =$passWord;
         $this ->fullName =$fullName;
@@ -46,4 +48,18 @@ class AdminModel
         $num_rows = mysqli_num_rows($result);
         return $num_rows;
     }
+    //Dashboard
+    function CountMember()
+    {
+        $query ="select * from tdb_adminuser";
+        $result = $this ->mysqli->query($query);
+        $data = [];
+        foreach ( $result->fetch_all() as $value)
+        {
+            array_push($data , new Admin($value[0],$value[1],$value[2],$value[3],$value[4],$value[5],$value[6],$value[8]));
+        }
+        $soluong = count($data);
+        return $soluong;
+    }
+
 }
