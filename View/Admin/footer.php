@@ -1,7 +1,6 @@
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.0
+        <b>IT17A1.11</b>
     </div>
-    <strong>Copyright &copy; 2014-2016 by AdminLTE <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <strong>Thành Viên FC-Trần Đức Bo :</strong> Trường , Tuấn, Tiến, Lượng
 </footer>

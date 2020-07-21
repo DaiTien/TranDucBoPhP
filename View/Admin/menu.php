@@ -77,11 +77,11 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/charts/chartjs.html"><i class="fa fa-file-image-o"></i> Thư Viện Ảnh</a></li>
+                    <li><a href="#"><i class="fa fa-file-image-o"></i> Thư Viện Ảnh</a></li>
                 </ul>
             </li>
-            <li id="qltintuc"><a href="https://adminlte.io/docs"><i class="fa fa-newspaper-o"></i> <span>Quản Lý Tin Tức</span></a></li>
-            <li id="qlthanhvien"><a href="https://adminlte.io/docs"><i class="fa fa-users"></i> <span>Quản Lý Thành Viên</span></a></li>
+            <li id="qltintuc"><a href="#"><i class="fa fa-newspaper-o"></i> <span>Quản Lý Tin Tức</span></a></li>
+            <li id="qlthanhvien"><a href="#"><i class="fa fa-users"></i> <span>Quản Lý Thành Viên</span></a></li>
         </ul>
     </section>
     <!-- /.sidebar -->
