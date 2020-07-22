@@ -83,7 +83,7 @@ $(document).on('ready', function() {
         marker.setMap(map);
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { map.setOptions({ 'draggable': false }); }
     }
-    // if (document.getElementById('map') != null) { google.maps.event.addDomListener(window, 'load', initialize); }
+    if (document.getElementById('map') != null) { google.maps.event.addDomListener(window, 'load', initialize); }
     if ($('.footer-map-outer').length > 0) { $('#footer-map').height('445px'); }
     if ($('.footer-map-outer1').length > 0) { $('#footer-map').height('300px'); }
     if ($('.footer-map-outer2').length > 0) { $('#footer-map').height('334px'); }
