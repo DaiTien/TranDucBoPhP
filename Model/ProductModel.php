@@ -3,18 +3,18 @@ class Product
 {
     public $id;
     public $name;
-    public $title;
     public $image;
     public $summary;
+    public $soLuong;
     public $price;
 
-    public function __construct($id,$name,$title,$image,$summary,$price)
+    public function __construct($id,$name,$image,$summary,$soLuong,$price)
     {
         $this->id=$id;
         $this->name=$name;
-        $this->title=$title;
         $this->image=$image;
         $this->summary=$summary;
+        $this->soLuong=$soLuong;
         $this->price=$price;
 
     }
@@ -36,5 +36,39 @@ class ProductModel
         }
         return $data;
     }
+    function insert(Product $product)
+    {
+        $query = "Insert Into tdb_product(name,image,summary,soluong,price) VALUE ('$product->name', '$product->image', '$product->summary',$product->soLuong, '$product->price')";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
+    function GetByID($id)
+    {
+        $query = "SELECT
+                        * 
+                    FROM
+                        tdb_product
+                    WHERE
+                        Id = '$id' LIMIT 1";
+        $result = $this->mysqli->query($query);
+        $data = $result->fetch_all();
+        if (count($data)) {
+            return new Product($data[0][0], $data[0][1], $data[0][2], $data[0][3],$data[0][4], $data[0][5]);
+        }
+        return null;
+    }
 
+    function Update(product $product)
+    {
+        $query = "UPDATE tdb_product SET Name = '$product->name', Image = '$product->image', Summary = '$product->summary',SoLuong =$product->soLuong,Price = '$product->price'
+WHERE Id = '$product->id'";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
+    function delete( $id)
+    {
+        $query = "DELETE from tdb_product WHERE Id = '$id'";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
 }

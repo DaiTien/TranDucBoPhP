@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -69,74 +69,61 @@
 
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="box">
-                        <div class="box-header">
-                            <h3 class="box-title"><b>Sản Phẩm</b></h3>
-                        </div>
-                        <p style="color: red">
-                            <?php
-                            if (isset($_GET['r']))
-                            {
-                                if ($_GET['r'] ==1)
-                                {
-                                    echo $_GET['action'] .' Thành Công';
-                                }else{
-                                    echo $_GET['action'] .' Không Thành Công';
-                                }
-                            }
-                            ?>
-                        </p>
-                        <a class="btn btn-primary glyphicon glyphicon-plus btn-sm" href="?c=Product&a=insert">Thêm</a>
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <tr id="tbheader">
-                                    <th><input type="checkbox" id="check-all-gd"></th>
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Tên Sản Phẩm</th>
-                                    <th>Hình Ảnh</th>
-                                    <th>Giới Thiệu</th>
-                                    <th>Số Lượng</th>
-                                    <th>Giá</th>
-                                    <th>Hành động</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                $stt =1;
-                                foreach ($data as $value){
-                                    ?>
-                                    <tr>
-                                        <td><input type="checkbox" class="cbsp" value="<?=$value->id?>"></td>
-                                        <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
-                                        <td><?=$value->name?></td>
-                                        <td><?=$value->image?></td>
-                                        <td><?=$value->summary?></td>
-                                        <td><?=$value->soLuong?></td>
-                                        <td><?=$value->price?></td>
-                                        <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=Product&a=Delete&id=<?=$value->id?>"></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=Product&a=Update&id=<?=$value->id?>"></a>
-                                        </td>
-
-                                    </tr>
-                                    <?php
-                                }
-                                ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.box-body -->
+            <form method="post" action="index.php?c=Product&a=LuuSua">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Chỉnh Sửa Đơn Hàng</h3>
                     </div>
-                    <!-- /.box -->
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form role="form">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">MÃ ĐƠN HÀNG</label>
+                                <input type="text"value="<?=$tdb_product->id?>"  class="form-control" name="id" readonly  placeholder="Mã Đơn Hàng">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">TÊN SẢN PHẨM</label>
+                                <input type="text"value="<?=$tdb_product->name?>"  class="form-control" name="name" placeholder="Tên Sản Phẩm">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">GIỚI THIỆU</label>
+                                <input type="text" value="<?=$tdb_product->summary?>" class="form-control" name="summary" placeholder="Giới Thiệu">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Số lượng </label>
+                                <input type="text"value="<?=$tdb_product->soLuong?>"  class="form-control" name="soLuong" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Gía </label>
+                                <input type="text"value="<?=$tdb_product->price?>"  class="form-control" name="price" placeholder="Gía">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputFile">Hình Ảnh Sản Phẩm</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file"value="<?=$tdb_product->image?>"  class="custom-file-input" name="image">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="">Upload</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                            <button type="reset" class="btn btn-info">Refresh</button>
+                            <a href="?c=Product&a=index" class="btn btn-danger">Cancel</a>
+                        </div>
+
+                    </form>
                 </div>
-                <!-- /.col -->
-            </div>
+                </table>
+            </form>
             <!-- /.row -->
         </section>
         <!-- ~END CONTENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->
@@ -205,5 +192,4 @@
 </script>
 </body>
 </html>
-
 
