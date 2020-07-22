@@ -36,7 +36,7 @@
             {
                 if ($_GET['r'] == 1)
                 {
-                    echo $_GET['action'] . ' Account Thành Công';
+                    echo $_GET['action'] . ' Account Thành Công <a href="?c=indexadmin&a=index">Login</a>' ;
                 }else if($_GET['r'] == 2){
                     echo 'Confirm Password Không Đúng, vui lòng đăng ký lại';
                 } else

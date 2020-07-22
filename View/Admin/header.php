@@ -70,8 +70,8 @@
                             <img src="asset/admin/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                             <p>
-                                <?php echo 'Admin ' .$user ?> - Web Developer
-                                <small>Member since Nov. 2012</small>
+                                <?php echo 'Admin ' .$user ?> - student Dong A University
+                                <small>Member IT17A1.11 Class</small>
                             </p>
                         </li>
                         <!-- Menu Footer-->
