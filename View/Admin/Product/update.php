@@ -69,61 +69,79 @@
 
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
-            <form method="post" action="index.php?c=Product&a=LuuSua">
-                <!-- general form elements -->
-                <div class="card card-primary">
-                    <div class="card-header">
-                        <h3 class="card-title">Chỉnh Sửa Đơn Hàng</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <!-- form start -->
-                    <form role="form">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">MÃ ĐƠN HÀNG</label>
-                                <input type="text"value="<?=$tdb_product->id?>"  class="form-control" name="id" readonly  placeholder="Mã Đơn Hàng">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">TÊN SẢN PHẨM</label>
-                                <input type="text"value="<?=$tdb_product->name?>"  class="form-control" name="name" placeholder="Tên Sản Phẩm">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">GIỚI THIỆU</label>
-                                <input type="text" value="<?=$tdb_product->summary?>" class="form-control" name="summary" placeholder="Giới Thiệu">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Số lượng </label>
-                                <input type="text"value="<?=$tdb_product->soLuong?>"  class="form-control" name="soLuong" placeholder="">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Gía </label>
-                                <input type="text"value="<?=$tdb_product->price?>"  class="form-control" name="price" placeholder="Gía">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputFile">Hình Ảnh Sản Phẩm</label>
-                                <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file"value="<?=$tdb_product->image?>"  class="custom-file-input" name="image">
-                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="card-title">Chỉnh Sửa Đơn Hàng</h3>
+                        </div>
+                        <form method="post" action="index.php?c=Product&a=LuuSua">
+                                <!-- form start -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">MÃ ĐƠN HÀNG</label>
+                                            <input type="text"value="<?=$tdb_product->id?>"  class="form-control" name="id" readonly  placeholder="Mã Đơn Hàng">
+                                        </div>
                                     </div>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="">Upload</span>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">TÊN SẢN PHẨM</label>
+                                            <input type="text"value="<?=$tdb_product->name?>"  class="form-control" name="name" placeholder="Tên Sản Phẩm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Số lượng </label>
+                                            <input type="text"value="<?=$tdb_product->soLuong?>"  class="form-control" name="soLuong" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Gía </label>
+                                            <input type="text"value="<?=$tdb_product->price?>"  class="form-control" name="price" placeholder="Gía">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">GIỚI THIỆU</label>
+                                    <input type="text" value="<?=$tdb_product->summary?>" class="form-control" name="summary" placeholder="Giới Thiệu">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Hình Ảnh Sản Phẩm</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file"value="<?=$tdb_product->image?>"  class="custom-file-input" name="image">
+                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="">Upload</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- /.card-body -->
-
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Update</button>
-                            <button type="reset" class="btn btn-info">Refresh</button>
-                            <a href="?c=Product&a=index" class="btn btn-danger">Cancel</a>
-                        </div>
-
-                    </form>
+                                    <div class="box-footer">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                        <button type="reset" class="btn btn-info">Refresh</button>
+                                        <a href="?c=Product&a=index" class="btn btn-danger">Cancel</a>
+                                    </div>
+                        </form>
+                    </div>
                 </div>
-                </table>
-            </form>
+                <div class="col-md-6">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <img style="display: block;width: 100%;margin: 2px 10px 63px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- /.row -->
         </section>
         <!-- ~END CONTENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->

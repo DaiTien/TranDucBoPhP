@@ -85,7 +85,6 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Full Name</label>
                                             <input type="text" class="form-control" name="fullName" value="<?=$data->fullName?>">
