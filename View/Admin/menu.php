@@ -81,7 +81,7 @@
                 </ul>
             </li>
             <li id="qltintuc"><a href="#"><i class="fa fa-newspaper-o"></i> <span>Quản Lý Tin Tức</span></a></li>
-            <li id="qlthanhvien"><a href="#"><i class="fa fa-users"></i> <span>Quản Lý Thành Viên</span></a></li>
+            <li id="qlthanhvien"><a href="?c=UserAdmin&a=index"><i class="fa fa-users"></i> <span>Quản Lý Thành Viên</span></a></li>
         </ul>
     </section>
     <!-- /.sidebar -->
