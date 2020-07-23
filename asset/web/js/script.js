@@ -153,3 +153,24 @@ equalheight = function(container) {
         for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) { rowDivs[currentDiv].height(currentTallest); }
     });
 }
+
+
+//Luong
+$('.slider__list').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nav: true,
+});
+
+
+//End Luong
+//Click Scroll link
+$(document).ready(function() {
+    $("a.menu__link").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 700);
+    });
+});
+//Click Scroll link

@@ -1,71 +1,23 @@
-<aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-        <!-- Sidebar user panel -->
-        <div class="user-panel">
-            <div class="pull-left image">
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+        <span class="brand-text text-center font-weight-light">Admin <b>Trần Đức Bo</b></span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
                 <img src="asset/admin/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
-            <div class="pull-left info">
+            <div class="info">
                 <!--<p><?php echo $_SESSION['admin']['ten'] ?></p> -->
-                <p><?php echo 'Xin chào ' .$user ?></p>
-                <a><i class="fa fa-circle text-success"></i> Online</a>
+                <p style="color: white;font-weight: bold"><?php echo 'Xin chào ' .$user ?></p>
             </div>
         </div>
-        <!-- search form -->
-        <!--
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search...">
-                <span class="input-group-btn">
-              <span type="submit" name="search" id="search-btn" class="btn btn-flat">
-                <i class="fa fa-search"></i>
-              </span>
-            </span>
-            </div>
-        </form>
-        -->
-        <!-- /.search form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">MAIN NAVIGATION</li>
-            <li id="dashboard"><a href="?c=indexAdmin&a=trangchu"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-            <li id="qlwebsite" class="treeview">
-                <a href="#">
-                    <i class="fa fa-server"></i> <span>Quản Lý Website</span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active">
-                        <a href="#"><i class="fa fa-circle-o"></i> Slide</a>
-                    </li>
-                    <!--<li>
-                        <a href="#"><i class="fa fa-circle-o"></i> Hệ thống chi nhánh</a>
-                    </li>-->
-                    <li>
-                        <a href="#"><i class="fa fa-circle-o"></i> Giới thiệu</a>
-                    </li>
-                    <li>
-                        <a href="?c=FeedBackAdmin&a=index"><i class="fa fa-circle-o"></i> Phản hồi khách hàng</a>
-                    </li>
-                    <li>
-                        <a href="?c=SocialNetworkAdmin&a=index"><i class="fa fa-circle-o"></i> Mạng Xã Hội</a>
-                    </li>
-                </ul>
-            </li>
-            <li id="qlsanpham" class="treeview">
-                <a href="#">
-                    <i class="fa fa-files-o"></i>
-                    <span>Quản Lý Sản Phẩm</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="?c=Product&a=index"><i class="fa fa-circle-o"></i> Sản phẩm</a></li>
 
+<<<<<<< HEAD
                 </ul>
             </li>
             <li id="qltvanh" class="treeview">
@@ -84,5 +36,100 @@
             <li id="qlthanhvien"><a href="?c=UserAdmin&a=index"><i class="fa fa-users"></i> <span>Quản Lý Thành Viên</span></a></li>
         </ul>
     </section>
+=======
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                <li class="nav-item has-treeview">
+                    <a id="dashboard" href="?c=indexAdmin&a=trangchu" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a id="qlwebsite" href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Quản Lý Website
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i> Slide</a>
+                        </li>
+                        <!--<li>
+                            <a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i> Hệ thống chi nhánh</a>
+                        </li>-->
+                        <li>
+                            <a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i> Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="?c=FeedBackAdmin&a=index"><i class="far fa-circle nav-icon"></i> Phản hồi khách hàng</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="?c=SocialNetworkAdmin&a=index"><i class="far fa-circle nav-icon"></i> Mạng Xã Hội</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a id="qlsanpham" href="#" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <p>
+                            Quản Lý Sản Phẩm
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="?c=Product&a=index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Sản phẩm</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a id="qltvanh" href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tree"></i>
+                        <p>
+                            QL Thư Viện Ảnh
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Ảnh</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a id="qltintuc" href="#" class="nav-link">
+                        <i class="nav-icon far fa-calendar-alt"></i>
+                        <p>
+                            Quản Lý Tin Tức
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="qlthanhvien" href="?c=UserAdmin&a=index" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Quản Lý Thành Viên
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+>>>>>>> 577f2692c46a2ee7e594f89b66f968f5daf8ef15
     <!-- /.sidebar -->
 </aside>

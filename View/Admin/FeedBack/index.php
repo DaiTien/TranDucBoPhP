@@ -68,15 +68,15 @@
         <!-- Content Header (Page header) -->
 
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <section class="content">
+        <section class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="box">
-                        <div class="box-header">
-                            <h3 class="box-title"><b>PHẢN HỒI KHÁCH HÀNG</b></h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title"><b>PHẢN HỒI KHÁCH HÀNG</b></h3>
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body">
+                        <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr id="tbheader">
@@ -105,6 +105,8 @@
                                         <td><?=$value->date?></td>
                                         <td class="text-center">
                                             <a class="btn btn-primary glyphicon glyphicon-trash btn-sm" href="?c=FeedBackAdmin&a=Delete&id=<?=$value->id?>"></a>
+                                            <a class="btn btn-success glyphicon glyphicon-eye-open btn-sm" href="?c=FeedBackAdmin&a=Update&id=<?=$value->id?>"></a>
+
                                         </td>
                                     </tr>
                                 <?php

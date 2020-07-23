@@ -104,8 +104,8 @@
                                         <td><?=$value->instagram?></td>
                                         <td><?=$value->google?></td>
                                         <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=FeedBackAdmin&a=Delete&id=<?=$value->id?>"></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=FeedBackAdmin&a=Update&id=<?=$value->id?>"></a>
+                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=SocialNetworkAdmin&a=Delete&id=<?=$value->id?>"></a>
+                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=SocialNetworkAdmin&a=Update&id=<?=$value->id?>"></a>
                                         </td>
 
                                     </tr>

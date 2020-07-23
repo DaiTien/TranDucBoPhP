@@ -51,5 +51,25 @@ class FeedBackAdminModel
         }
         return $data;
     }
-
+    function delete( $id)
+    {
+        $query = "DELETE from tdb_customerfeedback WHERE Id = '$id'";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
+    function GetByID($id)
+    {
+        $query = "SELECT
+                        * 
+                    FROM
+                        tdb_customerfeedback
+                    WHERE
+                        Id = '$id' LIMIT 1";
+        $result = $this->mysqli->query($query);
+        $data = $result->fetch_all();
+        if (count($data)) {
+            return new FeedBackAdmin($data[0][0], $data[0][1], $data[0][2], $data[0][3],$data[0][4],$data[0][5]);
+        }
+        return null;
+    }
 }
