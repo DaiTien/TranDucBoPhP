@@ -68,15 +68,15 @@
         <!-- Content Header (Page header) -->
 
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <section class="content">
+        <section class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="box">
-                        <div class="box-header">
-                            <h3 class="box-title"><b>PHẢN HỒI KHÁCH HÀNG</b></h3>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title"><b>PHẢN HỒI KHÁCH HÀNG</b></h3>
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body">
+                        <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr id="tbheader">
