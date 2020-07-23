@@ -45,7 +45,7 @@
                             <a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i> Hệ thống chi nhánh</a>
                         </li>-->
                         <li>
-                            <a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i> Giới thiệu</a>
+                            <a class="nav-link" href="?c=Introduce&a=index"><i class="far fa-circle nav-icon"></i> Giới thiệu</a>
                         </li>
                         <li>
                             <a class="nav-link" href="?c=FeedBackAdmin&a=index"><i class="far fa-circle nav-icon"></i> Phản hồi khách hàng</a>
