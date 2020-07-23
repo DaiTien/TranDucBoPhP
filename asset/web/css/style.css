@@ -15,7 +15,7 @@
 }
 
 .search-part {
-    margin-left: 27px;
+    margin-left: 17px;
 }
 
 .social-round li a {
@@ -30,4 +30,8 @@
 
 .menu-main ul>li.mega-menu:hover>a:before {
     display: none;
+}
+
+.home-icon.login-register.bg-skeen {
+    background-color: #f4f2ed;
 }

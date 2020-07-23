@@ -2,27 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="/TranDucBoPhP/asset/Web/images/favicon.png">
-    <title>WebSite Trà Sữa Trần Đức Bo</title>
-    <link href="/TranDucBoPhp/asset/web/css/bootstrap.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/datepicker.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/font-awesome.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/jquery.formstyler.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/extralayers.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/settings.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/owl.carousel.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/owl.theme.default.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/slick.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/slick-theme.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/magnific-popup.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/animate.min.css" rel="stylesheet">
-    <link href="/TranDucBoPhp/asset/web/css/theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="/TranDucBoPhp/asset/web/css/style.css">
-    <link href="/TranDucBoPhp/asset/web/css/responsive.css" rel="stylesheet">
+    <?php
+    include 'linkheader.php';
+    ?>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -58,8 +40,8 @@
                     <div class="container">
                         <div class="breadcrumb-inner">
                             <h2>Trang Chủ</h2>
-                            <a href="#">Home</a>
-                            <span>Blog</span>
+                            <a href="#">Trang Chủ</a>
+                            <span>Tin Tức</span>
                         </div>
                     </div>
                 </section>
@@ -146,22 +128,9 @@
     </div>
     <!-- Back To Top Arrow -->
     <a href="#" class="top-arrow"></a>
-    <script src="/TranDucBoPhp/asset/web/js/jquery.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/bootstrap.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/bootstrap-datepicker.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/jquery.formstyler.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/jquery.themepunch.plugins.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/owl.carousel.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/slick.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/isotop.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/packery-mode.pkgd.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/jquery.magnific-popup.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/wow.min.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/jquery.stellar.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/app.js"></script>
-    <script src="/TranDucBoPhp/asset/web/js/script.js"></script>
+    <?php
+    include 'linkfooter.php';
+    ?>
 
 </body>
 
