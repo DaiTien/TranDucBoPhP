@@ -144,8 +144,9 @@
 
             <div class="row">
                 <div class="custom-banner col-sm-12">
-                    <a href="order" class="btn btn-success btn-lg">BẮT ĐẦU</a>
-                    <img src="asset/admin/admin_images/banner.jpg" style="width: 100%; filter: brightness(.6);">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/X7rjPgr8xhY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!--<a href="order" class="btn btn-success btn-lg">BẮT ĐẦU</a>
+                    <img src="asset/admin/admin_images/banner.jpg" style="width: 100%; filter: brightness(.6);">-->
                 </div>
             </div>
         </section>
