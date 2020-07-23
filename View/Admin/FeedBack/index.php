@@ -105,6 +105,8 @@
                                         <td><?=$value->date?></td>
                                         <td class="text-center">
                                             <a class="btn btn-primary glyphicon glyphicon-trash btn-sm" href="?c=FeedBackAdmin&a=Delete&id=<?=$value->id?>"></a>
+                                            <a class="btn btn-success glyphicon glyphicon-eye-open btn-sm" href="?c=FeedBackAdmin&a=Update&id=<?=$value->id?>"></a>
+
                                         </td>
                                     </tr>
                                 <?php
