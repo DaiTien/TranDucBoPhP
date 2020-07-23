@@ -27,6 +27,11 @@ class IndexAdminController
         $password = $_POST['password'];
         $role = 'Admin';
         $confirm_password = $_POST['confirm_password'];
+        if($userName == null || $password == null  || $confirm_password ==null)
+        {
+            header('location:index.php?c=indexadmin&a=register&r=3&action=Create');
+        }
+        else
         if ($password == $confirm_password)
         {
             $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$password,null,null,null,null,$role));
@@ -49,6 +54,9 @@ class IndexAdminController
         $user = $_POST['user'];
         $pass = $_POST['pass'];
         $result = $this ->adminModel->loginRecord($user,$pass);
+        if($user == null || $pass == null){
+            header('location:index.php?c=indexadmin&a=index&r=1&action=login');
+        }else
         if ($result == 0){
             header('location:index.php?c=indexadmin&a=index&r=0&action=login');
         }
@@ -86,5 +94,11 @@ class IndexAdminController
         $user = $_SESSION['userAdmin'];
         $result = $this ->adminModel ->getPassword($user);
         $matkhauuser = $result->passWord;
+        if ($matkhau == $matkhauuser)
+        {
+            header('location:index.php?c=indexadmin&a=trangchu');
+        }else{
+            header('location:index.php?c=indexadmin&a=lockscreen&r=0');
+        }
     }
 }

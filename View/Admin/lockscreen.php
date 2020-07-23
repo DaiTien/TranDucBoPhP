@@ -44,18 +44,28 @@
             </div>
         </form>
         <!-- /.lockscreen credentials -->
-
     </div>
     <!-- /.lockscreen-item -->
     <div class="help-block text-center">
-        Enter your password to retrieve your session
+        <p style="color: red">
+            <?php
+            if (isset($_GET['r']))
+            {
+                if ($_GET['r']== 0)
+                {
+                    echo "Mật Khẩu Không Đúng!";
+                }
+            }
+            ?>
+        </p>
+        Đăng nhập với mật khẩu của bạn để tiếp tục
     </div>
     <div class="text-center">
-        <a href="login.html">Or sign in as a different user</a>
+        <a href="?c=indexadmin&a=index">Đăng nhập với tài khoản khác</a>
     </div>
     <div class="lockscreen-footer text-center">
-        Copyright &copy; 2014-2019 <b><a href="http://adminlte.io" class="text-black">AdminLTE.io</a></b><br>
-        All rights reserved
+        Group 4 <b>TĐB</b><br>
+        IT17A1.11
     </div>
 </div>
 <!-- /.center -->

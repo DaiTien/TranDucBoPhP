@@ -5,21 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trần Đức Bo | Registration</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="asset/admin/AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="asset/admin/AdminLTE/dist/css/AdminLTE.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="asset/admin/AdminLTE/plugins/iCheck/square/blue.css">
-
-    <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <?php
+    include "asset/Scripts/ScriptHeader.php";
+    ?>
 </head>
 
 <body class="hold-transition register-page">
@@ -39,7 +27,9 @@
                     echo $_GET['action'] . ' Account Thành Công <a href="?c=indexadmin&a=index">Login</a>' ;
                 }else if($_GET['r'] == 2){
                     echo 'Confirm Password Không Đúng, vui lòng đăng ký lại';
-                } else
+                } else if ($_GET['r'] == 3){
+                    echo 'Vui lòng điền đầy đủ thông tin, không để trống';
+                }else
                 {
                     echo 'UserName bạn đăng ký đã tồn tại, vui lòng đăng ký lại';
                 }
@@ -48,25 +38,37 @@
         </p>
 
         <form action="?c=indexadmin&a=signUp" method="post">
-            <div class="form-group has-feedback">
+            <div class="form-group input-group has-feedback">
                 <input type="text" class="form-control" name="username" placeholder="User Name">
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
             </div>
-            <div class="form-group has-feedback">
+            <div class="form-group input-group has-feedback">
                 <input type="password" name="password" class="form-control" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <i class="fas fa-key"></i>
+                    </div>
+                </div>
             </div>
-            <div class="form-group has-feedback">
+            <div class="form-group input-group has-feedback">
                 <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password">
-                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <i class="fas fa-unlock-alt"></i>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <input type="submit" class="btn btn-primary" value="Register">
+                    <input type="submit" class="btn ml-2 btn-primary" value="Register">
                 </div>
                 <div class="col-xs-4">
-                    <input type="reset" class="btn btn-default" value="Reset">
+                    <input type="reset" class="btn ml-2 btn-default" value="Reset">
                 </div>
                 <!-- /.col -->
             </div>
@@ -77,21 +79,10 @@
 </div>
 <!-- /.register-box -->
 
-<!-- jQuery 3 -->
-<script src="asset/admin/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="asset/admin/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="asset/admin/AdminLTE/plugins/iCheck/icheck.min.js"></script>
-<script>
-    $(function() {
-        $('input').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%' /* optional */
-        });
-    });
-</script>
+<!-- jQuery -->
+<script src="asset/admin/AdminLTE/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="asset/admin/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
