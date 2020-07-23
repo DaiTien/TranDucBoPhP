@@ -28,6 +28,6 @@
     display: none;
 }
 
-.menu-main ul>li.has-child:hover>a::before {
+.menu-main ul>li.mega-menu:hover>a:before {
     display: none;
 }
