@@ -16,27 +16,6 @@
                 <p style="color: white;font-weight: bold"><?php echo 'Xin chào ' .$user ?></p>
             </div>
         </div>
-
-<<<<<<< HEAD
-                </ul>
-            </li>
-            <li id="qltvanh" class="treeview">
-                <a href="#">
-                    <i class="fa fa-file-archive-o"></i>
-                    <span>Quản Lý TV Ảnh</span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-file-image-o"></i> Thư Viện Ảnh</a></li>
-                </ul>
-            </li>
-            <li id="qltintuc"><a href="?c=NewsAdmin&a=index"><i class="fa fa-newspaper-o"></i> <span>Quản Lý Tin Tức</span></a></li>
-            <li id="qlthanhvien"><a href="?c=UserAdmin&a=index"><i class="fa fa-users"></i> <span>Quản Lý Thành Viên</span></a></li>
-        </ul>
-    </section>
-=======
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -130,6 +109,5 @@
         </nav>
         <!-- /.sidebar-menu -->
     </div>
->>>>>>> 577f2692c46a2ee7e594f89b66f968f5daf8ef15
     <!-- /.sidebar -->
 </aside>
