@@ -3,3 +3,31 @@
 .icon__footer {
     width: 57px;
 }
+
+.header-info {
+    padding: 0;
+}
+
+.header-info-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-part {
+    margin-left: 27px;
+}
+
+.social-round li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-main ul>li.has-child:hover>a:after {
+    display: none;
+}
+
+.menu-main ul>li.has-child:hover>a::before {
+    display: none;
+}
