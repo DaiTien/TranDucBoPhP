@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -858,53 +859,7 @@
         ?>
         <!-- End Footer -->
         <!-- Start Book Table -->
-        <div class="modal fade booktable" id="booktable" tabindex="-1" role="dialog" aria-labelledby="booktable">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <div class="table-title">
-                            <h2>Reservation</h2>
-                            <h6 class="heade-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <select class="select-dropbox">
-                                    <option>Hour</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <select class="select-dropbox">
-                                    <option>Number of People</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="txt" placeholder="Pick a Date" class="date-pick">
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="txt" placeholder="Phone Number">
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="email" name="email" placeholder="Email Address">
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <button class="btn-main btn-big">BOOK A TABLE</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- End Book Table -->
     </div>
     <!-- Back To Top Arrow -->
