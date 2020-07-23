@@ -61,5 +61,17 @@ class AdminModel
         $soluong = count($data);
         return $soluong;
     }
+    function getPassword($user)
+    {
+        $query ="select * from tdb_adminuser where username = '$user'";
+        $result = $this->mysqli->query($query);
+        $data = $result ->fetch_all();
+        if (count($data))
+        {
+            $password = new Admin($data[0][0],$data[0][1],$data[0][2],$data[0][3],$data[0][4],$data[0][5],$data[0][6],$data[0][8]);
+            return $password;
+        }
+        return null;
+    }
 
 }

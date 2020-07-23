@@ -71,4 +71,15 @@ WHERE Id = '$product->id'";
         $result = $this->mysqli->query($query);
         return $result;
     }
+    function CountProduct()
+    {
+        $result = $this->mysqli->query("select * from tdb_product");
+        $data = [];
+        foreach ( $result->fetch_all() as $value)
+        {
+            array_push($data , new Product($value[0],$value[1],$value[2],$value[3],$value[4],$value[5]));
+        }
+        $soluong = count($data);
+        return $soluong;
+    }
 }

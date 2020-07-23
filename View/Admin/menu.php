@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-        <span class="brand-text text-center font-weight-light">Admin <b>Trần Đức Bo</b></span>
+    <a href="#" class="brand-link text-center">
+        <span class="brand-text font-weight-light">Admin <b>Trần Đức Bo</b></span>
     </a>
 
     <!-- Sidebar -->
@@ -13,7 +13,7 @@
             </div>
             <div class="info">
                 <!--<p><?php echo $_SESSION['admin']['ten'] ?></p> -->
-                <p style="color: white;font-weight: bold"><?php echo 'Xin chào ' .$user ?></p>
+                <p style="color: white"><?php echo 'Xin chào <b>' .$user.'</b>' ?></p>
             </div>
         </div>
         <!-- Sidebar Menu -->
@@ -31,7 +31,7 @@
                 </li>
                 <li class="nav-item has-treeview">
                     <a id="qlwebsite" href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
+                        <i class="nav-icon fas fa-pager"></i>
                         <p>
                             Quản Lý Website
                             <i class="fas fa-angle-left right"></i>
@@ -74,7 +74,7 @@
                 </li>
                 <li class="nav-item has-treeview">
                     <a id="qltvanh" href="#" class="nav-link">
-                        <i class="nav-icon fas fa-tree"></i>
+                        <i class="nav-icon far fa-image"></i>
                         <p>
                             QL Thư Viện Ảnh
                             <i class="fas fa-angle-left right"></i>
@@ -90,7 +90,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a id="qltintuc" href="#" class="nav-link">
+                    <a id="qltintuc" href="?c=NewsAdmin&a=index" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
                             Quản Lý Tin Tức
@@ -99,7 +99,7 @@
                 </li>
                 <li class="nav-item">
                     <a id="qlthanhvien" href="?c=UserAdmin&a=index" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
+                        <i class="nav-icon fa fa-users"></i>
                         <p>
                             Quản Lý Thành Viên
                         </p>

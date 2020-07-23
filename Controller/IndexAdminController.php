@@ -1,14 +1,17 @@
 <?php
 require_once SYSTEM_PATH. "/Model/AdminModel.php";
 require_once SYSTEM_PATH. "/Model/FeedBackAdminModel.php";
+require_once SYSTEM_PATH. "/Model/ProductModel.php";
 class IndexAdminController
 {
     private $adminModel;
     private $feedbackModel;
+    private $productModel;
     public function __construct()
     {
         $this ->adminModel = new AdminModel();
         $this ->feedbackModel = new FeedBackAdminModel();
+        $this->productModel=new ProductModel();
     }
 
     function index(){
@@ -67,6 +70,21 @@ class IndexAdminController
         $user = $_SESSION['userAdmin'];
         $totalMember = $this -> adminModel ->CountMember();
         $totalFeedBack = $this ->feedbackModel ->CountFeedBack();
+        $totalProduct = $this ->productModel ->CountProduct();
         require_once SYSTEM_PATH."/View/Admin/dashboard.php";
+    }
+    function lockscreen()
+    {
+        session_start();
+        $user = $_SESSION['userAdmin'];
+        require_once SYSTEM_PATH."/View/Admin/lockscreen.php";
+    }
+    function openscreen()
+    {
+        session_start();
+        $matkhau =$_POST['matkhau'];
+        $user = $_SESSION['userAdmin'];
+        $result = $this ->adminModel ->getPassword($user);
+        $matkhauuser = $result->passWord;
     }
 }

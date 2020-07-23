@@ -28,10 +28,10 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12" style="width: 100%">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title"><b>Sản Phẩm</b></h3>
+                            <h3 style="font-size: 30px" class="card-title"><i class="fas fa-align-justify"></i> <b>Sản Phẩm</b></h3>
                         </div>
                         <p style="color: red">
                             <?php
@@ -46,13 +46,12 @@
                             }
                             ?>
                         </p>
-                        <a class="col-1 ml-3 btn btn-primary glyphicon glyphicon-plus btn-sm" href="?c=Product&a=insert">Thêm</a>
+                        <a class="col-1 ml-3 btn btn-primary btn-sm" href="?c=Product&a=insert"><i class="fas fa-plus"></i> Thêm</a>
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr id="tbheader">
-                                    <th><input type="checkbox" id="check-all-gd"></th>
                                     <th>STT</th>
                                     <th>ID</th>
                                     <th>Tên Sản Phẩm</th>
@@ -69,7 +68,6 @@
                                 foreach ($data as $value){
                                     ?>
                                     <tr>
-                                        <td><input type="checkbox" class="cbsp" value="<?=$value->id?>"></td>
                                         <td><?=$stt++?></td>
                                         <td><?=$value->id?></td>
                                         <td><?=$value->name?></td>
@@ -78,8 +76,8 @@
                                         <td><?=$value->soLuong?></td>
                                         <td><?=$value->price?></td>
                                         <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=Product&a=Delete&id=<?=$value->id?>"></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=Product&a=Update&id=<?=$value->id?>"></a>
+                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=Product&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=Product&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
 
                                     </tr>

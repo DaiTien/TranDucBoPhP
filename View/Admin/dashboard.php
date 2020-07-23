@@ -78,7 +78,7 @@
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h3>53</h3>
+                                <h3><?php echo $totalProduct?></h3>
 
                                 <p>TỔNG SẢN PHẨM</p>
                             </div>

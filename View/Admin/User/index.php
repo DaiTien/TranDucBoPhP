@@ -30,7 +30,7 @@ include 'asset/Scripts/ScriptHeader.php';
                 <div class="col-xs-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title"><b>THÀNH VIÊN</b></h3>
+                            <h3 style="font-size: 30px" class="card-title text-dark"><i class="fas fa-address-card"></i> <b>THÀNH VIÊN</b> </h3>
                         </div>
                         <p style="color: red">
                             <?php
@@ -47,7 +47,7 @@ include 'asset/Scripts/ScriptHeader.php';
                             ?>
                         </p>
                         <!-- /.box-header -->
-                        <a href="?c=UserAdmin&a=Insert" class="col-1 ml-3 btn btn-primary glyphicon glyphicon-plus">Add</a>
+                        <a href="?c=UserAdmin&a=Insert" class="col-1 ml-3 btn btn-primary"><i class="fas fa-plus"></i> Thêm</a>
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
@@ -61,7 +61,7 @@ include 'asset/Scripts/ScriptHeader.php';
                                     <th>Điện thoại</th>
                                     <th>Email</th>
                                     <th>Chức năng</th>
-                                    <th>Hành động</th>
+                                    <th style="width: 56px">Hành động</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -80,8 +80,8 @@ include 'asset/Scripts/ScriptHeader.php';
                                         <td><?=$value->email?></td>
                                         <td><?=$value->role?></td>
                                         <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=UserAdmin&a=Delete&id=<?=$value->id?>"></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=UserAdmin&a=Update&id=<?=$value->id?>"></a>
+                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=UserAdmin&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=UserAdmin&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
 
                                     </tr>
