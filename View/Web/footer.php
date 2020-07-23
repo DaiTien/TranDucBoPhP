@@ -6,16 +6,16 @@
                 <div class="container">
                     <div class="footer-inner">
                         <div class="footer-info">
-                            <h3>La boom Restaurant</h3>
-                            <p>329 Queensberry Street, North Melbourne VIC 3051, Australia.</p>
-                            <p><a href="#">123 456 7890</a></p>
-                            <p><a href="#">support@laboom.com</a></p>
+                            <h3>BoBo MilkTea</h3>
+                            <p>33 Xô Viết Nghệ Tĩnh - Quận Hải Châu - Tp. Đà Nẵng</p>
+                            <p><a href="#">033 452 3321</a></p>
+                            <p><a href="#">bobomilktea@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="copy-right">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12 copyright-before">
-                                <span>Copyright © 2017 Polygon Theme. All rights reserved.</span>
+                                <span>Copyright &copy; 2020 by Bobo MilkTea .</span>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12 copyright-after">
                                 <div class="social-round">
