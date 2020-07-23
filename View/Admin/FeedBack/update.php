@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -70,57 +70,74 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="box">
+                <div class="col-md-6">
+                    <div class="box box-primary">
                         <div class="box-header">
-                            <h3 class="box-title"><b>Mạng Xã Hội</b></h3>
+                            <h3 class="card-title">Nội Dung Phản Ánh</h3>
                         </div>
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <tr id="tbheader">
-                                    <th><input type="checkbox" id="check-all-gd"></th>
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Facebook</th>
-                                    <th>Twitter</th>
-                                    <th>Instagram</th>
-                                    <th>Google</th>
-                                    <th>Hành động</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                $stt =1;
-                                foreach ($data as $value){
-                                    ?>
-                                    <tr>
-                                        <td><input type="checkbox" class="cbsp" value="<?=$value->id?>"></td>
-                                        <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
-                                        <td><?=$value->facebook?></td>
-                                        <td><?=$value->twitter?></td>
-                                        <td><?=$value->instagram?></td>
-                                        <td><?=$value->google?></td>
-                                        <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=SocialNetworkAdmin&a=Delete&id=<?=$value->id?>"></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=SocialNetworkAdmin&a=Update&id=<?=$value->id?>"></a>
-                                        </td>
+                        <form method="post" action="index.php?c=Product&a=LuuSua">
+                                <!-- form start -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">MÃ Khách Hàng</label>
+                                            <input type="text"value="<?=$tdb_product->id?>"  class="form-control" name="id" readonly  placeholder="Mã Đơn Hàng">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">TÊN Khách Hàng</label>
+                                            <input type="text"value="<?=$tdb_product->name?>"  class="form-control" name="name" readonly placeholder="Tên Sản Phẩm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Ngày Tháng </label>
+                                            <input type="text"value="<?=$tdb_product->date?>"  class="form-control" name="soLuong" readonly placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Bạn Muốn Phản Ánh Gì</label>
+                                    <input type="text" value="<?=$tdb_product->title?>" class="form-control" name="summary" readonly placeholder="Giới Thiệu">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Nội Dung Phản Ánh</label>
+                                    <input type="text" value="<?=$tdb_product->content?>" class="form-control" name="summary" readonly placeholder="Giới Thiệu">
+                                </div>
 
-                                    </tr>
-                                    <?php
-                                }
-                                ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.box-body -->
+
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Hình Ảnh Nếu Có</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file"value="<?=$tdb_product->image?>"  class="custom-file-input" name="image">
+                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="">Upload</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                    <div class="box-footer">
+                                        <a href="?c=FeedBackAdmin&a=index" class="btn btn-danger">Cancel</a>
+                                    </div>
+                        </form>
                     </div>
-                    <!-- /.box -->
                 </div>
-                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <img style="display: block;width: 100%;margin: 2px 10px 63px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- /.row -->
         </section>
         <!-- ~END CONTENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->
@@ -172,7 +189,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="asset/admin/AdminLTE/dist/js/demo.js"></script>
 <script>
-    $('#qlwebsite').addClass('active');
+    $('#qlsanpham').addClass('active');
 </script>
 <script>
     $(function () {
@@ -189,5 +206,4 @@
 </script>
 </body>
 </html>
-
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -70,57 +70,70 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="box">
+                <div class="col-md-6">
+                    <div class="box box-primary">
                         <div class="box-header">
-                            <h3 class="box-title"><b>Mạng Xã Hội</b></h3>
+                            <h3 class="card-title">Mạng Xã Hội</h3>
                         </div>
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <tr id="tbheader">
-                                    <th><input type="checkbox" id="check-all-gd"></th>
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Facebook</th>
-                                    <th>Twitter</th>
-                                    <th>Instagram</th>
-                                    <th>Google</th>
-                                    <th>Hành động</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                $stt =1;
-                                foreach ($data as $value){
-                                    ?>
-                                    <tr>
-                                        <td><input type="checkbox" class="cbsp" value="<?=$value->id?>"></td>
-                                        <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
-                                        <td><?=$value->facebook?></td>
-                                        <td><?=$value->twitter?></td>
-                                        <td><?=$value->instagram?></td>
-                                        <td><?=$value->google?></td>
-                                        <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=SocialNetworkAdmin&a=Delete&id=<?=$value->id?>"></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=SocialNetworkAdmin&a=Update&id=<?=$value->id?>"></a>
-                                        </td>
-
-                                    </tr>
-                                    <?php
-                                }
-                                ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.box-body -->
+                        <form method="post" action="index.php?c=SocialNetworkAdmin&a=LuuSua">
+                                <!-- form start -->
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">MÃ Khách Hàng</label>
+                                            <input type="text"value="<?=$socialNetworkAdmin->id?>"  class="form-control" name="id" readonly  placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">FaceBook</label>
+                                            <input type="text"value="<?=$socialNetworkAdmin->facebook?>"  class="form-control" name="facebook"  placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">twitter </label>
+                                            <input type="text"value="<?=$socialNetworkAdmin->twitter?>"  class="form-control" name="twitter"  placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Instagram </label>
+                                            <input type="text"value="<?=$socialNetworkAdmin->instagram?>"  class="form-control" name="instagram"  placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Google </label>
+                                            <input type="text"value="<?=$socialNetworkAdmin->google?>"  class="form-control" name="google"  placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                    <div class="box-footer">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                        <button type="reset" class="btn btn-info">Refresh</button>
+                                        <a href="?c=SocialNetworkAdmin&a=index" class="btn btn-danger">Cancel</a>
+                                    </div>
+                        </form>
                     </div>
-                    <!-- /.box -->
                 </div>
-                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <img style="display: block;width: 100%;margin: 2px 10px 63px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <!-- /.row -->
         </section>
         <!-- ~END CONTENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   -->
@@ -172,7 +185,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="asset/admin/AdminLTE/dist/js/demo.js"></script>
 <script>
-    $('#qlwebsite').addClass('active');
+    $('#qlsanpham').addClass('active');
 </script>
 <script>
     $(function () {
@@ -189,5 +202,4 @@
 </script>
 </body>
 </html>
-
 

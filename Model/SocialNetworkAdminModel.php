@@ -35,5 +35,33 @@ class SocialNetworkAdminModel
         }
         return $data;
     }
+    function GetByID($id)
+    {
+        $query = "SELECT
+                        * 
+                    FROM
+                        tdb_socialnetwork
+                    WHERE
+                        Id = '$id' LIMIT 1";
+        $result = $this->mysqli->query($query);
+        $data = $result->fetch_all();
+        if (count($data)) {
+            return new SocialNetworkAdmin($data[0][0], $data[0][1], $data[0][2], $data[0][3],$data[0][4]);
+        }
+        return null;
+    }
 
+    function Update(SocialNetworkAdmin $socialNetworkAdmin)
+    {
+        $query = "UPDATE tdb_socialnetwork SET Facebook = '$socialNetworkAdmin->facebook', Twitter = '$socialNetworkAdmin->twitter', Instagram = '$socialNetworkAdmin->instagram',Google ='$socialNetworkAdmin->google'
+WHERE Id = $socialNetworkAdmin->id";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
+    function delete( $id)
+    {
+        $query = "DELETE from tdb_socialnetwork WHERE Id = '$id'";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
 }
