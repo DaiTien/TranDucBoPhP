@@ -39,4 +39,9 @@ class SlideImageModel
         }
         return null;
     }
+    function UpdateRecord(Slide $image)
+    {
+        $result = $this->mysqli->query("update tdb_sdlie set image ='$image->imageSlide' where id = $image->id");
+        return $result;
+    }
 }

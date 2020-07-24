@@ -37,4 +37,10 @@ class SlideController
             }
         }
     }
+    function Update()
+    {
+        $id =$_GET['id'];
+        $data = $this->imageSlideModel->GetRecordById($id);
+        require_once  SYSTEM_PATH. "/View/Admin/Slide/update.php";
+    }
 }
