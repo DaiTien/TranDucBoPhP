@@ -34,7 +34,7 @@ class IndexAdminController
         else
         if ($password == $confirm_password)
         {
-            $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$password,null,null,null,null,$role));
+            $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$password,null,null,null,null,$role,null));
             if ($result == true)
             {
                 header('location:index.php?c=indexadmin&a=register&r=1&action=Create');
