@@ -58,7 +58,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i> Slide</a>
+                            <a class="nav-link" href="?c=Slide&a=index"><i class="far fa-circle nav-icon"></i> Slide</a>
                         </li>
                         <!--<li>
                             <a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i> Hệ thống chi nhánh</a>
