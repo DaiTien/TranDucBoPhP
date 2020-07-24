@@ -39,8 +39,15 @@ class AdminModel
         {
             return false;
         }else{
-            $result = $this ->mysqli->query("Insert into tdb_adminuser(UserName,Password,Role) value ('$admin->userName','$admin->passWord','$admin->role')");
-            return $result;
+            $checkEmail = $this->mysqli->query("select * from tdb_adminuser where email ='$admin->email'");
+            $count = $checkEmail ->fetch_all();
+            if (count($count))
+            {
+                return false;
+            }else{
+                $result = $this ->mysqli->query("Insert into tdb_adminuser(UserName,Password,Email,Role) value ('$admin->userName','$admin->passWord','$admin->email','$admin->role')");
+                return $result;
+            }
         }
     }
     function loginRecord($user,$pass)
@@ -85,6 +92,18 @@ class AdminModel
         $query ="update tdb_adminuser set avatar='$ad->avatar' where username = '$ad->userName'";
         $result = $this->mysqli->query($query);
         return $result;
+    }
+    function forgotPassword($email)
+    {
+        $query ="select * from tdb_adminuser where email = '$email'";
+        $result = $this->mysqli->query($query);
+        $num_rows = mysqli_num_rows($result);
+        return $num_rows;
+    }
+    function updatePasswordByEmail($email,$pass)
+    {
+        $query ="update tdb_adminuser set password ='$pass' where email ='$email'";
+        $this->mysqli->query($query);
     }
 
 }

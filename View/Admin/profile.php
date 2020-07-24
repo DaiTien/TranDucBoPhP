@@ -86,7 +86,6 @@
                                 }
                                 ?>
                             </p>
-
                             <!-- /.card-body -->
                         </div>
                     </div>
@@ -107,9 +106,11 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-6 row">
-                                                    <label class="col-4 col-form-label">Mật khẩu</label>
-                                                    <div class="col-8">
+                                                    <label class="col-3 col-form-label">Mật khẩu</label>
+                                                    <div class="col-7">
                                                         <input type="text" class="form-control" name="password" value="<?=$data->passWord?>" placeholder="Password">
+                                                    </div>
+                                                    <div class="col-4">
                                                     </div>
                                                 </div>
 

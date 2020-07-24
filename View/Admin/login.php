@@ -57,7 +57,15 @@
             </div>
         </form>
         <!-- <a href="#">I forgot my password</a><br> -->
-        <a href="index.php?c=indexadmin&a=register" class="text-center">Register a new membership</a>
+        <div class="row">
+            <div class="col-6">
+                <a href="index.php?c=indexadmin&a=register" class="text-center">Đăng ký thành viên mới</a>
+            </div>
+            <div class="col-6">
+                <a href="index.php?c=indexadmin&a=forgotPassword" class="text-center">Quên mật khẩu ?</a>
+            </div>
+        </div>
+        </br>
 
     </div>
     <!-- /.login-box-body -->

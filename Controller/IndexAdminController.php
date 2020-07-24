@@ -1,4 +1,13 @@
 <?php
+include  "PHPMailer-master/src/PHPMailer.php";
+include  "PHPMailer-master/src/Exception.php";
+include  "PHPMailer-master/src/OAuth.php";
+include  "PHPMailer-master/src/POP3.php";
+include  "PHPMailer-master/src/SMTP.php";
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 require_once SYSTEM_PATH. "/Model/AdminModel.php";
 require_once SYSTEM_PATH. "/Model/FeedBackAdminModel.php";
 require_once SYSTEM_PATH. "/Model/ProductModel.php";
@@ -27,14 +36,15 @@ class IndexAdminController
         $password = $_POST['password'];
         $role = 'Admin';
         $confirm_password = $_POST['confirm_password'];
-        if($userName == null || $password == null  || $confirm_password ==null)
+        $email = $_POST['email'];
+        if($userName == null || $password == null  || $confirm_password ==null || $email==null)
         {
             header('location:index.php?c=indexadmin&a=register&r=3&action=Create');
         }
         else
         if ($password == $confirm_password)
         {
-            $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$password,null,null,null,null,$role,null));
+            $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$password,null,null,null,$email,$role,null));
             if ($result == true)
             {
                 header('location:index.php?c=indexadmin&a=register&r=1&action=Create');
@@ -155,6 +165,53 @@ class IndexAdminController
             }else{
                 header('location:index.php?c=indexadmin&a=profile&u=0&action=UpdateAvatar');
             }
+        }
+    }
+    function forgotPassword()
+    {
+        require_once SYSTEM_PATH ."/View/Admin/forgotPassword.php";
+    }
+    function requestPassword()
+    {
+        $email = $_POST['email'];
+        //Random mật khẩu
+        $randoom = rand(100,999);
+        $password = 'abc'.$randoom;
+        $result = $this->adminModel->forgotPassword($email);
+        if ($result ==1)
+        {
+            $mail = new PHPMailer(true);
+            try {
+                //Server settings
+                $mail->SMTPDebug = 2;
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'tranducbo17a1.11@gmail.com';
+                $mail->Password = 'Abc123#!';
+                $mail->SMTPSecure = 'tls';
+                $mail->Port = 587;
+
+                $mail->CharSet = 'UTF-8';
+                $mail->setFrom('tranducbo17a1.11@gmail.com', 'Admin TRần Đức Bo');
+                $mail->addAddress($email);
+
+                $mail->isHTML(true);
+                $mail->Subject = 'Trần Đức Bo Xác nhận lấy lại mật khẩu';
+                $mail->Body    = 'Bạn đã yêu cầu mật khẩu mới, Mật khẩu mới của bạn là : '.$password;
+                $mail->AltBody = '';
+
+                $mail->send();
+                $this ->adminModel ->updatePasswordByEmail($email,$password);
+                header('location:index.php?c=indexadmin&a=forgotPassword&r=1');
+
+            }catch (Exception $e)
+            {
+                echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+            }
+        }else
+        {
+            header('location:index.php?c=indexadmin&a=forgotPassword&r=0');
         }
     }
 }
