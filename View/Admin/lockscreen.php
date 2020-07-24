@@ -29,7 +29,7 @@
     <div class="lockscreen-item">
         <!-- lockscreen image -->
         <div class="lockscreen-image">
-            <img src="<?php echo $avatarUser?>" alt="User Image">
+            <img style="display: block" src="<?php echo $avatarUser?>">
         </div>
         <!-- /.lockscreen-image -->
 
