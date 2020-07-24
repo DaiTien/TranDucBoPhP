@@ -68,13 +68,15 @@
                                 foreach ($data as $value){
                                     ?>
                                     <tr>
-                                        <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
-                                        <td><?=$value->name?></td>
-                                        <td><?=$value->image?></td>
-                                        <td><?=$value->summary?></td>
-                                        <td><?=$value->soLuong?></td>
-                                        <td><?=$value->price?></td>
+                                        <td class="text-center"><?=$stt++?></td>
+                                        <td class="text-center"><?=$value->id?></td>
+                                        <td class="text-center"><?=$value->name?></td>
+                                        <td class="text-center">
+                                            <img class="imagee" style="width: 150px" height="100px" src="<?=$value->image?>">
+                                        </td>
+                                        <td class="text-center"><?=$value->summary?></td>
+                                        <td class="text-center"><?=$value->soLuong?></td>
+                                        <td class="text-center"><?=$value->price?></td>
                                         <td class="text-center">
                                             <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=Product&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
                                             <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=Product&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>

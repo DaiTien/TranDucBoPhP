@@ -32,9 +32,24 @@
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Chỉnh Sửa Đơn Hàng</h3>
                         </div>
-                        <form method="post" action="index.php?c=Product&a=LuuSua">
+                        <form method="post" action="index.php?c=Product&a=LuuSua" enctype="multipart/form-data">
                                 <!-- form start -->
                             <div class="card-body">
+                                <div class="form-group">
+                                    <label style="color: #2b669a">
+                                        <?php
+                                        if (isset($_GET['r']))
+                                        {
+                                            if ($_GET['r'] == 2)
+                                            {
+                                                echo 'Hình Ảnh này đã được thêm vào trước đó!';
+                                            }else{
+                                                echo 'Vui lòng chọn file';
+                                            }
+                                        }
+                                        ?>
+                                    </label>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -70,16 +85,9 @@
 
 
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Hình Ảnh Sản Phẩm</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file"value="<?=$tdb_product->image?>"  class="custom-file-input" name="image">
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="">Upload</span>
-                                        </div>
-                                    </div>
+                                    <label for="exampleInputFile">File input</label>
+                                    <input type="file" name="file" id="inputFile">
+                                    <img class="imageShow" id="showImage" style="width: 150px" height="100px" src="<?=$tdb_product->image?>"/>
                                 </div>
                             </div>
                                     <div class="card-footer">

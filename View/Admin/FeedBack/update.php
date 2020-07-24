@@ -57,11 +57,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Bạn Muốn Phản Ánh Gì</label>
-                                    <input type="text" value="<?=$tdb_product->title?>" class="form-control" name="summary" readonly placeholder="Giới Thiệu">
+                                    <textarea type="text" value="<?=$tdb_product->title?>" class="form-control" name="summary" readonly placeholder="Chủ đề"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Nội Dung Phản Ánh</label>
-                                    <input type="text" value="<?=$tdb_product->content?>" class="form-control" name="summary" readonly placeholder="Giới Thiệu">
+                                    <textarea type="text" value="<?=$tdb_product->content?>" class="form-control" name="summary" readonly placeholder="Nội dung"></textarea>
+
                                 </div>
                             </div>
                                     <div class="card-footer">
