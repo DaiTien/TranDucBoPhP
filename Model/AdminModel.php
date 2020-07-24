@@ -74,5 +74,17 @@ class AdminModel
         }
         return null;
     }
+    function UpdateRecord(Admin $ad)
+    {
+        $query ="update tdb_adminuser set password ='$ad->passWord',fullname ='$ad->fullName',email='$ad->email',phone = '$ad->phone',avatar='$ad->avatar' where username = '$ad->userName'";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
+    function UpdateAvatar(Admin $ad)
+    {
+        $query ="update tdb_adminuser set avatar='$ad->avatar' where username = '$ad->userName'";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
 
 }

@@ -116,4 +116,45 @@ class IndexAdminController
         $data = $this ->adminModel->getPassword($user);
         require_once SYSTEM_PATH."/View/Admin/profile.php";
     }
+    function UpdateProfile()
+    {
+        session_start();
+        $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
+        $pass = $_POST['password'];
+        $fullName = $_POST['fullName'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $result = $this->adminModel->UpdateRecord(new Admin(null,$user,$pass,$fullName,null,$phone,$email,null,null));
+        if ($result == true)
+        {
+            header('location:index.php?c=indexadmin&a=profile&r=1&action=Update');
+        }else{
+            header('location:index.php?c=indexadmin&a=profile&r=0&action=Update');
+        }
+    }
+    function updateAvatar()
+    {
+        session_start();
+        $user = $_SESSION['userAdmin'];
+
+        if ($_FILES["file"]["error"] > 0)
+        {
+            header('location:index.php?c=indexadmin&a=profile&u=2');
+        }
+        else
+        {
+            move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/Avatars/".$_FILES["file"]["name"]);
+            $image = "UpLoadFile/Avatars/".$_FILES["file"]["name"];
+            $result = $this->adminModel->UpdateAvatar(new Admin(null,$user,null,null,null,null,null,null,$image));
+            if ($result == true)
+            {
+                header('location:index.php?c=indexadmin&a=profile&u=1&action=UpdateAvatar');
+                $_SESSION['avatarUser'] = $image;
+                $avatarUser = $_SESSION['avatarUser'];
+            }else{
+                header('location:index.php?c=indexadmin&a=profile&u=0&action=UpdateAvatar');
+            }
+        }
+    }
 }

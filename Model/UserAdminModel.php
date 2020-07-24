@@ -29,9 +29,9 @@ class UserAdminModel
     {
         $this->mysqli = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
     }
-    function GetAllRecords()
+    function GetAllRecords($user)
     {
-        $result = $this->mysqli->query("select * from tdb_adminuser");
+        $result = $this->mysqli->query("select * from tdb_adminuser where username != '$user'");
         $data =[];
         foreach ($result->fetch_all() as $value)
         {
