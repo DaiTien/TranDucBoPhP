@@ -12,6 +12,7 @@ class SocialNetworkAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $data = $this->socialModel->GetAllRecords();
         require_once SYSTEM_PATH. "/View/Admin/SocialNetwork/index.php";
     }
@@ -19,6 +20,7 @@ class SocialNetworkAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $id = $_GET['id'];
         $socialNetworkAdmin = $this->socialModel->GetByID($id);
         require_once SYSTEM_PATH. '/View/Admin/SocialNetwork/update.php';

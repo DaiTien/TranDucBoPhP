@@ -54,6 +54,8 @@ class IndexAdminController
         $user = $_POST['user'];
         $pass = $_POST['pass'];
         $result = $this ->adminModel->loginRecord($user,$pass);
+        $avatar = $this ->adminModel->getPassword($user);
+        $avatarUser = $avatar ->avatar;
         if($user == null || $pass == null){
             header('location:index.php?c=indexadmin&a=index&r=1&action=login');
         }else
@@ -63,12 +65,14 @@ class IndexAdminController
         else{
             header('location:index.php?c=indexadmin&a=trangchu');
             $_SESSION['userAdmin'] = $user;
+            $_SESSION['avatarUser'] = $avatarUser;
         }
     }
     function logout()
     {
         session_start();
         unset($_SESSION['userAdmin']);
+        unset($_SESSION['avatarUser']);
         session_destroy();
         require_once SYSTEM_PATH . "/View/Admin/login.php";
     }
@@ -76,6 +80,7 @@ class IndexAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $totalMember = $this -> adminModel ->CountMember();
         $totalFeedBack = $this ->feedbackModel ->CountFeedBack();
         $totalProduct = $this ->productModel ->CountProduct();
@@ -85,6 +90,7 @@ class IndexAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         require_once SYSTEM_PATH."/View/Admin/lockscreen.php";
     }
     function openscreen()
@@ -92,6 +98,7 @@ class IndexAdminController
         session_start();
         $matkhau =$_POST['matkhau'];
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $result = $this ->adminModel ->getPassword($user);
         $matkhauuser = $result->passWord;
         if ($matkhau == $matkhauuser)
@@ -100,5 +107,12 @@ class IndexAdminController
         }else{
             header('location:index.php?c=indexadmin&a=lockscreen&r=0');
         }
+    }
+    function profile()
+    {
+        session_start();
+        $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
+        require_once SYSTEM_PATH."/View/Admin/profile.php";
     }
 }

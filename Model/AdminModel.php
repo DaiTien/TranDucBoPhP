@@ -8,7 +8,8 @@ class Admin{
     public $phone;
     public $email;
     public $role;
-    public function __construct($id,$userName,$passWord,$fullName,$genDer,$phone,$email,$role)
+    public $avatar;
+    public function __construct($id,$userName,$passWord,$fullName,$genDer,$phone,$email,$role,$avatar)
     {
         $this -> id =$id;
         $this -> userName =$userName;
@@ -18,6 +19,7 @@ class Admin{
         $this ->phone =$phone;
         $this ->email =$email;
         $this ->role =$role;
+        $this ->avatar =$avatar;
     }
 
 }
@@ -56,7 +58,7 @@ class AdminModel
         $data = [];
         foreach ( $result->fetch_all() as $value)
         {
-            array_push($data , new Admin($value[0],$value[1],$value[2],$value[3],$value[4],$value[5],$value[6],$value[8]));
+            array_push($data , new Admin($value[0],$value[1],$value[2],$value[3],$value[4],$value[5],$value[6],$value[8],$value[9]));
         }
         $soluong = count($data);
         return $soluong;
@@ -68,8 +70,7 @@ class AdminModel
         $data = $result ->fetch_all();
         if (count($data))
         {
-            $password = new Admin($data[0][0],$data[0][1],$data[0][2],$data[0][3],$data[0][4],$data[0][5],$data[0][6],$data[0][8]);
-            return $password;
+            return new Admin($data[0][0],$data[0][1],$data[0][2],$data[0][3],$data[0][4],$data[0][5],$data[0][6],$data[0][8],$data[0][9]);;
         }
         return null;
     }

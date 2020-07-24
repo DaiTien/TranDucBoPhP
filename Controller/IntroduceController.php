@@ -10,6 +10,7 @@ class IntroduceController{
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $data = $this->introduceModel->GetAlldata();
         require_once SYSTEM_PATH. "/View/Admin/introduce/index.php";
     }
@@ -17,6 +18,7 @@ class IntroduceController{
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         require_once SYSTEM_PATH. "/View/Admin/introduce/insert.php";
     }
     function InsertSave()
@@ -41,6 +43,7 @@ class IntroduceController{
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $id =$_GET['id'];
         $data = $this->introduceModel->GetRecordsById($id);
         require_once SYSTEM_PATH. "/View/Admin/introduce/upload.php";

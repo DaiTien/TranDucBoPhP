@@ -11,6 +11,7 @@ class NewsAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $data = $this->newsAdminModel->GetAlldata();
         require_once SYSTEM_PATH. "/View/Admin/News/index.php";
     }
@@ -18,6 +19,7 @@ class NewsAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         require_once SYSTEM_PATH. "/View/Admin/News/insert.php";
     }
     function InsertSave()
@@ -41,6 +43,7 @@ class NewsAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $id =$_GET['id'];
         $data = $this->newsAdminModel->GetRecordsById($id);
         require_once SYSTEM_PATH. "/View/Admin/News/update.php";

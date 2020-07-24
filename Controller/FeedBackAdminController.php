@@ -13,6 +13,7 @@ class FeedBackAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $data = $this->feedbackModel->GetAllRecords();
         require_once SYSTEM_PATH . "/View/Admin/FeedBack/index.php";
     }
@@ -31,6 +32,7 @@ class FeedBackAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $id = $_GET['id'];
         $tdb_product = $this->feedbackModel->GetByID($id);
         require_once SYSTEM_PATH. '/View/Admin/FeedBack/update.php';

@@ -12,12 +12,14 @@ class ProductController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $data = $this ->productModel ->GetAllRecords();
         require_once SYSTEM_PATH. "/View/Admin/Product/index.php";
     }
     function insert(){
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         require_once SYSTEM_PATH."/View/Admin/Product/insert.php";
     }
     function Save(){
@@ -38,6 +40,7 @@ class ProductController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $id = $_GET['id'];
         $tdb_product = $this->productModel->GetByID($id);
         require_once SYSTEM_PATH. '/View/Admin/Product/update.php';

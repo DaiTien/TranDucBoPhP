@@ -12,6 +12,7 @@ class UserAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $data = $this ->useradminModel->GetAllRecords();
         require_once SYSTEM_PATH. "/View/Admin/User/index.php";
     }
@@ -19,6 +20,7 @@ class UserAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         require_once SYSTEM_PATH. "/View/Admin/User/insert.php";
     }
     function InsertSave()
@@ -44,6 +46,7 @@ class UserAdminController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $id =$_GET['id'];
         $data = $this->useradminModel->GetRecordsById($id);
         require_once SYSTEM_PATH. "/View/Admin/User/profile.php";

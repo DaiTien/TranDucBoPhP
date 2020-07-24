@@ -12,6 +12,7 @@ class LibraryImageController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $data = $this->imageModel->GetAllRecords();
         require_once SYSTEM_PATH. "/View/Admin/LibraryImage/index.php";
     }
@@ -19,6 +20,7 @@ class LibraryImageController
     {
         session_start();
         $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         require_once SYSTEM_PATH. "/View/Admin/LibraryImage/insert.php";
     }
     function SaveInsert()

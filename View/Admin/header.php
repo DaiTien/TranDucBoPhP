@@ -14,13 +14,13 @@
                 <i style="font-size: 30px" class="fas fa-user-secret"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <span class="dropdown-item dropdown-header">3 Notifications</span>
+                <span class="dropdown-item dropdown-header"><?php echo '<b>' .$user.'</b>' ?></span>
                 <div class="dropdown-divider"></div>
                 <a href="?c=indexadmin&a=index" class="dropdown-item text-center">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item text-center">
+                <a href="?c=indexadmin&a=profile" class="dropdown-item text-center">
                     <i class="fas fa-users mr-2"></i> My profile
                 </a>
                 <div class="dropdown-divider"></div>

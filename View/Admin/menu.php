@@ -1,3 +1,19 @@
+<style>
+    .image{
+        display: block;
+        background-color: red;
+        width: 57px;
+        height: 57px;
+        border-radius: 39px;
+        margin-left: 20px;
+        padding-left: 0 !important;
+    }
+    .image img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link text-center">
@@ -9,11 +25,14 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="asset/admin/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="<?php echo $avatarUser?>" class="img-circle">
             </div>
             <div class="info">
                 <!--<p><?php echo $_SESSION['admin']['ten'] ?></p> -->
-                <p style="color: white"><?php echo 'Xin chào <b>' .$user.'</b>' ?></p>
+                <p style="color: white"><?php echo 'Xin chào <b>' .$user.'</b>' ?>
+                </br>
+                    <span><i class="fas fa-circle text-success"></i> Online</span>
+                </p>
             </div>
         </div>
         <!-- Sidebar Menu -->
