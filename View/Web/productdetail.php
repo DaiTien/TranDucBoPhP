@@ -29,9 +29,9 @@
             <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('/TranDucBoPhP/asset/web/images/breadbg1.jpg');">
                 <div class="container">
                     <div class="breadcrumb-inner">
-                        <h2>ANNA TAYLOR</h2>
-                        <a href="#">Home</a>
-                        <span>Teams</span>
+                        <h2>Sản Phẩm</h2>
+                        <a href="#">Thức Uống</a>
+                        <span>LATTE SERIES</span>
                     </div>
                 </div>
             </section>
@@ -47,18 +47,22 @@
                             <div class="col-md-4 col-sm-5 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <div class="team-single-left">
                                     <div class="team-single-blog">
-                                        <img src="/TranDucBoPhP/asset/web/images/chef3.png" alt="">
+                                        <img src="/TranDucBoPhP/asset/web/images/lt-okinawa.png" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-8 col-sm-7 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <div class="team-single-right">
-                                    <h3>Anna Taylor</h3>
-                                    <h6>Head Chief</h6>
-                                    <p>Phone: <a href="#">(123) 456-78-90</a>
-                                        <br> E-mail: <a href="#">example@mail.com</a></p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam. ex ea commodo consequatuis aute irure. Dolor in volue eu fugiat nulla pariatur.</p>
-                                    <div class="social-top">
+                                    <h3>Latte Okinawa</h3>
+                                    <!-- <h6>55.000 vnđ</h6> -->
+                                    <p style="display: inline-block;">Size M: &nbsp;<h6 style="color: #e4b95b;display:inline-block">45.000vnđ</h6><a href="#">&nbsp;(Không bao gồm Topping) </a>
+                                        <br> Size L: &nbsp;<h6 style="color: #e4b95b;display:inline-block">55.000vnđ </h6>  <a href="#"> &nbsp;(Có cả Topping)</a></p>
+                                    <p style="display: -webkit-box;
+                                            -webkit-line-clamp: 6;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                    ">Sữa tươi Okinawa là sự kết hợp đan xen giữa lớp đường nâu được nấu thành dạng syrup ướp cùng trân châu đen nằm ở dưới đáy ly, sau đó đổ sữa tươi trên mặt. Cách thưởng thức cũng tuỳ vào sở thích của khách hàng. Nếu là fan hảo ngọt, bạn sẽ không bỏ qua lớp đường phía dưới cùng trân châu để cảm nhận được hết mật đường tự nhiên với lớp trân châu dẻo dai. Nếu là fan thích vị ngọt nhẹ, thanh mát thì chỉ cần khuấy đều để cảm nhận lớp sữa tươi cùng hương thơm mật đường thoang thoảng đan xen trong vị sữa.</p>
+                                    <!-- <div class="social-top">
                                         <ul>
                                             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -67,14 +71,14 @@
                                             <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
                                             <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="team-award">
                         <div class="build-title">
-                            <h2>Honors &amp; Awards</h2>
+                            <h2>Danh Hiệu &amp; Giải Thưởng</h2>
                         </div>
                         <div class="row">
                             <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -94,7 +98,7 @@
                 </div>
             </section>
             <!-- end team single -->
-            <section class="anna-form home-icon bg-skeen wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <!-- <section class="anna-form home-icon bg-skeen wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="icon-default icon-skeen">
                     <a href="#"><img src="/TranDucBoPhP/asset/web/images/scroll-arrow.png" alt=""></a>
                 </div>
@@ -119,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
     </main>
     <!-- End Main -->

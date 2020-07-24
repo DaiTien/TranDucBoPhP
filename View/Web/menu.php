@@ -38,7 +38,7 @@
                         <div class="menu-main">
                             <ul>
                                 <li class="has-child">
-                                    <a class="menu__link" href="#slide">Trang Chủ</a>
+                                    <a href="index.php">Trang Chủ</a>
                                     <!-- <ul class="drop-nav">
                                         <li><a href="trangchu.html">Home Page 1</a></li>
                                         <li><a href="homepage1.html">Home Page 2</a></li>
@@ -72,7 +72,7 @@
                             </ul>
                         </div>
                         <div class="logo">
-                            <a class="menu__link" href="#slide"><img src="/TranDucBoPhp/asset/web/images/logo.png" alt=""></a>
+                            <a href="index.php"><img src="/TranDucBoPhp/asset/web/images/logo.png" alt=""></a>
                         </div>
                     </div>
                 </div>
