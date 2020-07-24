@@ -54,7 +54,7 @@
                                         </div>
                                         <input hidden type="file" name="file" id="inputFile">
                                         <input hidden type="submit" name="file" id="avatars">
-                                        <img id="imgUser" style="display: block" class="profile-user-img img-fluid img-circle"
+                                        <img id="imgUser" style="display: block;width: 100px;height: 100px" class="profile-user-img img-fluid img-circle"
                                              src="<?php echo $avatarUser?>"
                                         />
                                     </div>
