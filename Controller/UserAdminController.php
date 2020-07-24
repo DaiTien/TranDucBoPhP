@@ -13,7 +13,7 @@ class UserAdminController
         session_start();
         $user = $_SESSION['userAdmin'];
         $avatarUser = $_SESSION['avatarUser'];
-        $data = $this ->useradminModel->GetAllRecords();
+        $data = $this ->useradminModel->GetAllRecords($user);
         require_once SYSTEM_PATH. "/View/Admin/User/index.php";
     }
     function Insert()

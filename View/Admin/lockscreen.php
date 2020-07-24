@@ -29,7 +29,7 @@
     <div class="lockscreen-item">
         <!-- lockscreen image -->
         <div class="lockscreen-image">
-            <img src="asset/admin/AdminLTE/dist/img/user1-128x128.jpg" alt="User Image">
+            <img src="<?php echo $avatarUser?>" alt="User Image">
         </div>
         <!-- /.lockscreen-image -->
 
