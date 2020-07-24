@@ -113,6 +113,7 @@ class IndexAdminController
         session_start();
         $user = $_SESSION['userAdmin'];
         $avatarUser = $_SESSION['avatarUser'];
+        $data = $this ->adminModel->getPassword($user);
         require_once SYSTEM_PATH."/View/Admin/profile.php";
     }
 }
