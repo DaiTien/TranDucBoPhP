@@ -30,7 +30,7 @@ include 'asset/Scripts/ScriptHeader.php';
                 <div class="col-xs-12" style="width: 100%;">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title"><b>GIỚI THIỆU</b></h3>
+                            <h3 class="card-title"><b>Giới Thiệu</b></h3>
                         </div>
                         <p style="color: red">
                             <?php
@@ -54,11 +54,11 @@ include 'asset/Scripts/ScriptHeader.php';
                                 <tr id="tbheader">
                                     <th>STT</th>
                                     <th>ID</th>
-                                    <th>title</th>
-                                    <th>summary</th>
-                                    <th>content</th>
-                                    <th>image</th>
-                                    <th>DateUp</th>
+                                    <th>Tiêu đề</th>
+                                    <th>Tóm lược</th>
+                                    <th>Nội dung</th>
+                                    <th>Ảnh</th>
+                                    <th>THời gian đăng</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
