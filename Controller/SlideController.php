@@ -51,7 +51,14 @@ class SlideController
         $id = $_POST['id'];
         if ($_FILES["file"]["error"] > 0)
         {
-            header('location:index.php?c=Slide&a=Update&id='.$id.'&r=3');
+            $image = $_POST['name'];
+            $result = $this->imageSlideModel->UpdateRecord(new Slide($id,$image));
+            if ($result == true)
+            {
+                header('location:index.php?c=Slide&a=index&r=1&action=Update');
+            }else{
+                header('location:index.php?c=Slide&a=index&r=0&action=Update');
+            }
         }
         else
         {

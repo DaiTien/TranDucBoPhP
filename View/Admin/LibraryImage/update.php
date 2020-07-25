@@ -72,6 +72,7 @@
                                     <label for="exampleInputFile">File input</label>
                                     <input type="file" name="file" id="inputFile">
                                     <img class="imageShow" id="showImage" src="<?=$data->image?>"/>
+                                    <input hidden type="text" name="image" value="<?=$data->image?>">
                                 </div>
                             </div>
                             <!-- /.box-body -->

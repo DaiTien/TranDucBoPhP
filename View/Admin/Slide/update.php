@@ -64,12 +64,12 @@
                                     <label for="exampleInputEmail1">ID</label>
                                     <input type="text" readonly class="form-control" value="<?=$data->id?>" name="id" placeholder="Enter Name">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" hidden>
                                     <label for="exampleInputEmail1">Images</label>
                                     <input type="text" class="form-control" value="<?=$data->imageSlide?>" name="name" placeholder="Enter Name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">File input</label>
+                                    <label for="exampleInputFile">Image</label>
                                     <input type="file" name="file" id="inputFile">
                                     <img class="imageShow" id="showImage" src="<?=$data->imageSlide?>"/>
                                 </div>

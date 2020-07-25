@@ -46,15 +46,26 @@ class LibraryImageController
     function Update()
     {
         $id =$_GET['id'];
+        session_start();
+        $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $data = $this->imageModel->GetRecordById($id);
         require_once  SYSTEM_PATH. "/View/Admin/LibraryImage/update.php";
     }
     function SaveUpdate()
     {
         $id = $_POST['id'];
+        $name = $_POST['name'];
         if ($_FILES["file"]["error"] > 0)
         {
-            header('location:index.php?c=LibraryImage&a=Update&id='.$id.'&r=3');
+            $image = $_POST['image'];
+            $result = $this->imageModel->UpdateRecord(new LibraryImage($id,$image,$name));
+            if ($result == true)
+            {
+                header('location:index.php?c=LibraryImage&a=index&r=1&action=Update');
+            }else{
+                header('location:index.php?c=LibraryImage&a=index&r=0&action=Update');
+            }
         }
         else
         {
@@ -65,7 +76,6 @@ class LibraryImageController
             else
             {
                 move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/".$_FILES["file"]["name"]);
-                $name = $_POST['name'];
                 $image = "UpLoadFile/".$_FILES["file"]["name"];
                 $result = $this->imageModel->UpdateRecord(new LibraryImage($id,$image,$name));
                 if ($result == true)
