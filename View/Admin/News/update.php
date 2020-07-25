@@ -28,7 +28,7 @@
                 <div class="col-md-6">
                     <div class="card mt-2 card-info">
                         <div class="card-header with-border">
-                            <h3 class="card-title font-weight-bold">UPDATE NEW</h3>
+                            <h3 class="card-title font-weight-bold">Update Tin Tức</h3>
                         </div>
                         <form role="form" method="post" action="?c=NewsAdmin&a=Save">
                             <div class="card-body">
@@ -41,28 +41,26 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Title</label>
+                                            <label for="exampleInputPassword1">Tiêu đề</label>
                                             <input type="text" class="form-control" name="title" value="<?=$data->title?>">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Sammary</label>
-                                            <input type="text" class="form-control" name="summary" value="<?=$data->summary?>">
+                                            <label for="exampleInputPassword1">Tóm lược</label>
+                                        <textarea name="summary" id="my-textarea" value="<?=$data->summary?>" cols="65" rows="4"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Nội dung</label>
+                                            <textarea name="content" id="my-textarea" value="<?=$data->content?>" cols="65" rows="4"></textarea>
                                         </div>
                                     </div>
-                                   
-                                </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">image</label>
+                                    <label for="exampleInputPassword1">Ảnh</label>
                                     <input type="text" class="form-control" name="image" value="<?=$data->image?>">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Content</label>
-                                    <input type="text" class="form-control" name="content" value="<?=$data->content?>">
-                                </div>
+                               
 
                             </div>
                             <div class="card-footer">

@@ -44,31 +44,29 @@
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Title</label>
+                                            <label for="exampleInputPassword1">Tiêu đề</label>
                                             <input type="text" class="form-control" name="title" >
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Summary</label>
-                                            <input type="text" class="form-control" name="summary" >
+                                            <label for="exampleInputPassword1">Tóm lược</label>
+                                            <textarea name="summary" id="my-textarea" cols="65" rows="4"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Content</label>
-                                            <input type="text" class="form-control" name="content" >
+                                            <label for="exampleInputPassword1">Nội dung</label>
+                                            <textarea name="content" id="my-textarea" cols="65" rows="4"></textarea>
                                         </div>
                                     </div>
-                                </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Image</label>
+                                    <label for="exampleInputPassword1">Ảnh</label>
                                     <input type="text" class="form-control" name="image" >
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">DateUp</label>
+                                    <label for="exampleInputPassword1">Thời gian đăng</label>
                                     <input type="text" class="form-control" name="dateup" >
                                 </div>
                             </div>

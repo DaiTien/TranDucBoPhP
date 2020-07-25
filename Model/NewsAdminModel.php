@@ -36,7 +36,7 @@ class NewsAdminModel
     
     function InsertRecord(NewsAdmin $newsAdmin)
     {
-        $query = "insert into tdb_news(title,summary,image,content) VALUE ('$newAdmin->title','$newAdmin->summary','$newsAdmin->image','$newsAdmin->content')";
+        $query = "insert into tdb_news(title,summary,image,content) VALUE ('$newsAdmin->title','$newsAdmin->summary','$newsAdmin->image','$newsAdmin->content')";
         $result = $this->mysqli->query($query);
         return $result;
     }

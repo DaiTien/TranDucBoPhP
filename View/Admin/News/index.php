@@ -40,10 +40,10 @@
                                 <tr id="tbheader">
                                     <th>STT</th>
                                     <th>ID</th>
-                                    <th>Title</th>
-                                    <th>summary</th>
-                                    <th>Imgae</th>
-                                    <th>Content</th>
+                                    <th>Tiêu đề</th>
+                                    <th>Tóm lược</th>
+                                    <th>Nội dung</th>
+                                    <th>Ảnh</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -57,8 +57,8 @@
                                         <td><?=$value->id?></td>
                                         <td><?=$value->title?></td>
                                         <td><?=$value->summary?></td>
-                                        <td><?=$value->image?></td>
                                         <td><?=$value->content?></td>
+                                        <td><?=$value->image?></td>
                                         <td class="text-center">
                                             <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=NewsAdmin&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
                                             <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=NewsAdmin&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
