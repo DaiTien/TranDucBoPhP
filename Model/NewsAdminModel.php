@@ -52,7 +52,7 @@ class NewsAdminModel
     }
     function UpdateRecord(NewsAdmin $newsAdmin)
     {
-        $query ="Update tdb_news set id=$newsAdmin->id,title ='$newsAdmin->title',summary ='$newsAdmin->summary',img='$newsAdmin->img',content='$newsAdmin->content'";
+        $query ="Update tdb_news set title ='$newsAdmin->title',summary ='$newsAdmin->summary',image='$newsAdmin->image',content='$newsAdmin->content' where  id = $newsAdmin->id";
         $result = $this->mysqli->query($query);
         return $result;
     }

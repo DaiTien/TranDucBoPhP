@@ -7,6 +7,16 @@
     <?php
     include 'asset/Scripts/ScriptHeader.php';
     ?>
+    <style>
+        .imagee{
+            display: block;
+            width: 130px;
+            height: auto;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -57,8 +67,12 @@
                                         <td><?=$value->id?></td>
                                         <td><?=$value->title?></td>
                                         <td><?=$value->summary?></td>
-                                        <td><?=$value->content?></td>
-                                        <td><?=$value->image?></td>
+                                        <td>
+                                            <textarea class="textarea form-control" ><?=$value->content?></textarea>
+                                        </td>
+                                        <td>
+                                            <img class="imagee" src="<?=$value->image?>">
+                                        </td>
                                         <td class="text-center">
                                             <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=NewsAdmin&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
                                             <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=NewsAdmin&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>

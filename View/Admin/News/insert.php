@@ -27,44 +27,63 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card mt-2 card-info">
                         <div class="card-header with-border">
-                            <h3 class="card-title font-weight-bold">Insert Tin Tức</h3>
+                            <h3 class="card-title font-weight-bold">Thêm Tin Tức</h3>
                         </div>
-                        <form role="form" method="post" action="?c=NewsAdmin&a=InsertSave">
+                        <form role="form" method="post" action="?c=NewsAdmin&a=InsertSave" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" hidden>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">ID</label>
                                             <input type="text" readonly class="form-control" name="id">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Tiêu đề</label>
                                             <input type="text" class="form-control" name="title" >
                                         </div>
                                     </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Image</label>
+                                            <div class="input-group">
+                                                <div class="custom-file">
+                                                    <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                                                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                </div>
+                                            </div>
+                                            <p class="text-primary">
+                                                <?php
+                                                if (isset($_GET['r']))
+                                                {
+                                                    if ($_GET['r'] == 2)
+                                                    {
+                                                        echo 'Vui lòng chọn hình ảnh';
+                                                    }
+                                                }
+                                                ?>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                          <div class="form-group">
                                             <label for="my-exampleInputPassword1">Tóm lược</label>
-                                            <textarea name="summary" id="my-textarea" cols="65" rows="4"></textarea>
+                                            <textarea class="form-control" name="summary" id="my-textarea" cols="65" rows="4"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Nội dung</label>
-                                            <textarea id="my-textarea" name="content" cols="65" rows="4"></textarea>
+                                            <div class="">
+                                                <textarea name="content" class="textarea form-control" placeholder="Place some text here" style="font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                            </div>
                                         </div>
                                     </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Image</label>
-                                    <input type="textarea " class="form-control" name="image" >
-                                </div>
                             </div>
                             <div class="card-footer">
                                 <input type="submit" class="btn ml-3 btn-primary" value="Thêm">
@@ -72,13 +91,6 @@
                                 <a href="?c=NewsAdmin&a=index" class="btn btn-danger">Cancel</a>
                             </div>
                         </form>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -94,6 +106,15 @@
 <?php include "asset/Scripts/ScriptFooter.php";?>
 <script>
     $('#qltintuc').addClass('active');
+</script>
+<script>
+    $(function () {
+        // Summernote
+        $('.textarea').summernote()
+    })
+    $(document).ready(function () {
+        bsCustomFileInput.init();
+    });
 </script>
 </body>
 </html>

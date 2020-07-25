@@ -32,6 +32,8 @@
 <script src="asset/admin/AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="asset/admin/AdminLTE/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="asset/admin/AdminLTE/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="asset/admin/AdminLTE/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- page script -->
 <script>
     $(function () {
