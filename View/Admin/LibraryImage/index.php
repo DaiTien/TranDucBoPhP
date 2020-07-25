@@ -40,7 +40,7 @@
                 <div class="col-xs-12" style="width: 100%">
                     <div class="card">
                         <div class="card-header">
-                            <h3 style="font-size: 30px" class="card-title"><i class="fas fa-images"></i><b> Library Image</b></h3>
+                            <h3 class="card-title text-primary " style="font-size: 30px"><i class="fas fa-images"></i><b> Thư Viện Hình Ảnh</b></h3>
                         </div>
                         <p style="color: red">
                             <?php
@@ -56,7 +56,7 @@
                             }
                             ?>
                         </p>
-                        <a href="?c=LibraryImage&a=Insert" class="col-1 ml-3 mt-2 btn btn-primary glyphicon glyphicon-plus"><i class="fas fa-plus"></i> Add</a>
+                        <a href="?c=LibraryImage&a=Insert" class="col-1 ml-3 mt-2 btn btn-primary"><i class="fas fa-plus"></i> Add</a>
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
@@ -82,8 +82,8 @@
                                         </td>
                                         <td class="text-center"><?=$value->name?></td>
                                         <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=LibraryImage&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=LibraryImage&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
+                                            <a class="btn btn-danger btn-sm" href="?c=LibraryImage&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a class="btn btn-primary btn-sm" href="?c=LibraryImage&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
                                     </tr>
                                     <?php
@@ -112,6 +112,7 @@ include 'asset/Scripts/ScriptFooter.php';
 ?>
 <script>
     $('#qltvanh').addClass('active');
+    $('#anh').addClass('active');
 </script>
 </body>
 </html>

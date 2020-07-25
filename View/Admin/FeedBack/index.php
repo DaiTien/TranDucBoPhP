@@ -28,7 +28,7 @@
                 <div class="col-xs-12" style="width: 100%">
                     <div class="card">
                         <div class="card-header">
-                            <h3 style="font-size: 30px" class="card-title font-weight-bold"><i class="fas fa-tasks"></i> <b>PHẢN HỒI KHÁCH HÀNG</b></h3>
+                            <h3 class="card-title text-primary " style="font-size: 30px"><i class="fas fa-tasks"></i> <b>PHẢN HỒI KHÁCH HÀNG</b></h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="card-body">
@@ -86,6 +86,7 @@
 <?php include "asset/Scripts/ScriptFooter.php";?>
 <script>
     $('#qlwebsite').addClass('active');
+    $('#feedback').addClass('active');
 </script>
 </body>
 </html>

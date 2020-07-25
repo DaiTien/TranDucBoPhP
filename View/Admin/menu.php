@@ -58,19 +58,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a class="nav-link" href="?c=Slide&a=index"><i class="far fa-circle nav-icon"></i> Slide</a>
+                            <a class="nav-link" id="slide" href="?c=Slide&a=index"><i class="far fa-circle nav-icon"></i> Slide</a>
                         </li>
                         <!--<li>
                             <a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i> Hệ thống chi nhánh</a>
                         </li>-->
-                        <li>
-                            <a class="nav-link" href="?c=Introduce&a=index"><i class="far fa-circle nav-icon"></i> Giới thiệu</a>
+                        <li class="nav-item">
+                            <a class="nav-link" id="gioithieu" href="?c=Introduce&a=index"><i class="far fa-circle nav-icon"></i> Giới thiệu</a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="?c=FeedBackAdmin&a=index"><i class="far fa-circle nav-icon"></i> Phản hồi khách hàng</a>
+                        <li class="nav-item">
+                            <a class="nav-link" id="feedback" href="?c=FeedBackAdmin&a=index"><i class="far fa-circle nav-icon"></i> Phản hồi khách hàng</a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="?c=SocialNetworkAdmin&a=index"><i class="far fa-circle nav-icon"></i> Mạng Xã Hội</a>
+                        <li class="nav-item">
+                            <a class="nav-link" id="mxh" href="?c=SocialNetworkAdmin&a=index"><i class="far fa-circle nav-icon"></i> Mạng Xã Hội</a>
                         </li>
                     </ul>
                 </li>
@@ -84,7 +84,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="?c=Product&a=index" class="nav-link">
+                            <a href="?c=Product&a=index" id="sanpham" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sản phẩm</p>
                             </a>
@@ -101,7 +101,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="?c=LibraryImage&a=index" class="nav-link">
+                            <a href="?c=LibraryImage&a=index" id="anh" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Ảnh</p>
                             </a>

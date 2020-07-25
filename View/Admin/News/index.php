@@ -40,7 +40,7 @@
                 <div class="col-xs-12" style="width: 100%">
                     <div class="card">
                         <div class="card-header">
-                            <h3 style="font-size: 30px" class="card-title"><i class="far fa-newspaper"></i><b> List News</b></h3>
+                            <h3 class="card-title text-primary " style="font-size: 30px"><i class="far fa-newspaper"></i><b> List News</b></h3>
                         </div>
                         <a href="?c=NewsAdmin&a=Insert" class="col-1 ml-3 mt-2 btn btn-primary glyphicon glyphicon-plus"><i class="fas fa-plus"></i> Add</a>
                         <!-- /.box-header -->

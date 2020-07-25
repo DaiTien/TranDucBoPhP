@@ -47,13 +47,13 @@ class IntroduceModel
         $data = $result ->fetch_all();
         if (count($data))
         {
-            return new Introduce($data[0][0],$data[0][1],$data[0][2],$data[0][3],$data[0][4],$data[0][6]);
+            return new Introduce($data[0][0],$data[0][1],$data[0][2],$data[0][3],$data[0][4],$data[0][5]);
         }
         return null;
     }
     function UpdateRecord(Introduce $introduce)
     {
-        $query ="Update tdb_introduce set id=$introduce->id,title ='$introduce->title',summary ='$introduce->summary',content='$introduce->content',img='$introduce->img',dateup='$introduce->dateup'";
+        $query ="Update tdb_introduce set title ='$introduce->title',summary ='$introduce->summary',content='$introduce->content',image='$introduce->image',dateup='$introduce->dateup' where id = $introduce->id";
         $result = $this->mysqli->query($query);
         return $result;
     }

@@ -23,14 +23,14 @@ class IntroduceController{
     }
     function InsertSave()
     {
-        $id = $_POST['id'];
         $title = $_POST['title'];
         $summary = $_POST['summary'];   
         $content = $_POST['content'];   
-        $image = $_POST['image'];
         $dateup = $_POST['dateup'];
-       
-        $result = $this->introduceModel->InsertRecord(new Introduce($id,$title,$summary,$content,$image,$dateup));
+
+        move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/Introduce/".$_FILES["file"]["name"]);
+        $image = "UpLoadFile/Introduce/".$_FILES["file"]["name"];
+        $result = $this->introduceModel->InsertRecord(new Introduce(null,$title,$summary,$content,$image,$dateup));
         if ($result == true)
         {
             header('location:index.php?c=Introduce&a=index&r=1&action=Insert');
@@ -48,21 +48,39 @@ class IntroduceController{
         $data = $this->introduceModel->GetRecordsById($id);
         require_once SYSTEM_PATH. "/View/Admin/introduce/upload.php";
     }
-    function Save()
+    function SaveUpdate()
     {
         $id = $_POST['id'];
         $title = $_POST['title'];
         $summary = $_POST['summary'];   
-        $content = $_POST['content'];   
-        $image = $_POST['image'];
-        $dateup = $_POST['dateup'];
-        $result = $this->introduceModel->InsertRecord(new Introduce($id,$title,$summary,$content,$image,$dateup));
-        if ($result == true)
+        $content = $_POST['content'];
+        $dateup = $_POST['date'];
+        if ($_FILES["file"]["error"] > 0)
         {
-            header('location:index.php?c=Introduce&a=index&r=1&action=Update');
-        }else {
-            header('location:index.php?c=Introduce&a=index&r=0&action=Update');
+            $image = $_POST['image'];
+            $result = $this->introduceModel->UpdateRecord(new Introduce($id,$title,$summary,$content,$image,$dateup));
+            if ($result == true)
+            {
+                header('location:index.php?c=Introduce&a=index&r=1&action=Update');
+            }else {
+                header('location:index.php?c=Introduce&a=index&r=0&action=Update');
+            }
         }
+        else
+        {
+            move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/Introduce/".$_FILES["file"]["name"]);
+            $image = "UpLoadFile/Introduce/".$_FILES["file"]["name"];
+            $result = $this->introduceModel->UpdateRecord(new Introduce($id,$title,$summary,$content,$image,$dateup));
+            if ($result == true)
+            {
+                header('location:index.php?c=Introduce&a=index&r=1&action=Update');
+            }else {
+                header('location:index.php?c=Introduce&a=index&r=0&action=Update');
+            }
+        }
+
+
+
     }
     function Delete()
     {

@@ -30,7 +30,7 @@
                 <div class="col-xs-12" style="width: 100%;">
                     <div class="card">
                         <div class="card-header">
-                            <h3 style="font-size: 30px" class="box-title"><i class="fas fa-share-alt-square"></i><b>Mạng Xã Hội</b></h3>
+                            <h3 class="card-title text-primary " style="font-size: 30px"><i class="fas fa-share-alt-square"></i><b>Mạng Xã Hội</b></h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="card-body">
@@ -90,6 +90,7 @@ include "asset/Scripts/ScriptFooter.php";
 ?>
 <script>
     $('#qlwebsite').addClass('active');
+    $('#mxh').addClass('active');
 </script>
 </body>
 </html>

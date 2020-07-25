@@ -31,7 +31,7 @@
                 <div class="col-xs-12" style="width: 100%">
                     <div class="card">
                         <div class="card-header">
-                            <h3 style="font-size: 30px" class="card-title"><i class="fas fa-align-justify"></i> <b>Sản Phẩm</b></h3>
+                            <h3 class="card-title text-primary " style="font-size: 30px"><i class="fas fa-align-justify"></i> <b>Sản Phẩm</b></h3>
                         </div>
                         <p style="color: red">
                             <?php
@@ -110,6 +110,7 @@ include 'asset/Scripts/ScriptFooter.php';
 ?>
 <script>
     $('#qlsanpham').addClass('active');
+    $('#sanpham').addClass('active');
 </script>
 </body>
 </html>
