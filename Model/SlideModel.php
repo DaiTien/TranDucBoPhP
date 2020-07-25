@@ -32,7 +32,7 @@ class SlideImageModel
     }
     function GetRecordById($id)
     {
-        $result = $this->mysqli->query("select * from tdb_slide where id =$id");
+        $result = $this->mysqli->query("select * from tdb_slide where id = $id");
         $data = $result->fetch_all();
         if (count($data)) {
             return new Slide($data[0][0], $data[0][1]);
@@ -41,7 +41,12 @@ class SlideImageModel
     }
     function UpdateRecord(Slide $image)
     {
-        $result = $this->mysqli->query("update tdb_sdlie set image ='$image->imageSlide' where id = $image->id");
+        $result = $this->mysqli->query("update tdb_slide set imageSlide ='$image->imageSlide' where id = $image->id");
+        return $result;
+    }
+    function DeleteRecord($id)
+    {
+        $result = $this->mysqli->query("delete from tdb_slide where id =$id");
         return $result;
     }
 }

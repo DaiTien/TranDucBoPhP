@@ -10,7 +10,7 @@
     <style>
         .imagee{
             display: block;
-            width: 130px;
+            width: 210px;
             height: auto;
             background-color: antiquewhite;
             border-radius: 20px;
@@ -42,7 +42,7 @@
                         <div class="card-header">
                             <h3 style="font-size: 30px" class="card-title"><i class="fas fa-images"></i><b> Slide</b></h3>
                         </div>
-                        <p style="color: red">
+                        <p class="pl-3" style="color: red">
                             <?php
                             if (isset($_GET['r']))
                             {
@@ -80,8 +80,8 @@
                                             <img class="imagee" src="<?=$value->imageSlide?>">
                                         </td>
                                         <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=Slide&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=Slide&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
+                                            <a class="btn btn-danger btn-sm" href="?c=Slide&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a class="btn btn-primary btn-sm" href="?c=Slide&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
                                     </tr>
                                     <?php

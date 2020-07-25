@@ -39,7 +39,7 @@
                 <div class="col-md-6" style="margin-left: 246px;">
                     <div class="card card-info mt-2">
                         <div class="card-header with-border">
-                            <h3 class="card-title">Update Image</h3>
+                            <h3 class="card-title">Update Image Slide</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
@@ -97,7 +97,7 @@
 include 'asset/Scripts/ScriptFooter.php';
 ?>
 <script>
-    $('#qltvanh').addClass('active');
+    $('#qlwebsite').addClass('active');
     $('document').ready(function () {
         $("#inputFile").change(function () {
             if (this.files && this.files[0]) {

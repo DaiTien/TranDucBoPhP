@@ -39,8 +39,43 @@ class SlideController
     }
     function Update()
     {
+        session_start();
+        $user = $_SESSION['userAdmin'];
+        $avatarUser = $_SESSION['avatarUser'];
         $id =$_GET['id'];
         $data = $this->imageSlideModel->GetRecordById($id);
         require_once  SYSTEM_PATH. "/View/Admin/Slide/update.php";
     }
+    function SaveUpdate()
+    {
+        $id = $_POST['id'];
+        if ($_FILES["file"]["error"] > 0)
+        {
+            header('location:index.php?c=Slide&a=Update&id='.$id.'&r=3');
+        }
+        else
+        {
+                move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/Slide/".$_FILES["file"]["name"]);
+                $image = "UpLoadFile/Slide/".$_FILES["file"]["name"];
+                $result = $this->imageSlideModel->UpdateRecord(new Slide($id,$image));
+                if ($result == true)
+                {
+                    header('location:index.php?c=Slide&a=index&r=1&action=Update');
+                }else{
+                    header('location:index.php?c=Slide&a=index&r=0&action=Update');
+                }
+        }
+    }
+    function Delete()
+    {
+        $id = $_GET['id'];
+        $result = $this->imageSlideModel->DeleteRecord($id);
+        if ($result == true)
+        {
+            header('location:index.php?c=Slide&a=index&r=1&action=Delete');
+        }else{
+            header('location:index.php?c=Slide&a=index&r=0&action=Delete');
+        }
+    }
+
 }

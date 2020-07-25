@@ -85,7 +85,7 @@
 include 'asset/Scripts/ScriptFooter.php';
 ?>
 <script>
-    $('#qltvanh').addClass('active');
+    $('#qlwebsite').addClass('active');
     $('document').ready(function () {
         $("#inputFile").change(function () {
             if (this.files && this.files[0]) {
