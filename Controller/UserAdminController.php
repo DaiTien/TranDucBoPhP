@@ -33,14 +33,24 @@ class UserAdminController
         $phone = $_POST['phone'];
         $email = $_POST['email'];
         $role = $_POST['role'];
-        $result = $this ->useradminModel->InsertRecord(new UserAdmin($id,$userName,$password,$fullName,$gender,$phone,$email,$role));
-        if ($result == true)
+        if ($userName == null || $password == null|| $email == null)
         {
-            header('location:index.php?c=UserAdmin&a=index&r=1&action=Insert');
-        }else {
-            header('location:index.php?c=UserAdmin&a=index&r=0&action=Insert');
+            header('location:index.php?c=UserAdmin&a=Insert&r=3');
+        }else{
+            $result = $this ->useradminModel->InsertRecord(new UserAdmin($id,$userName,$password,$fullName,$gender,$phone,$email,$role));
+            if ($result == true)
+            {
+                header('location:index.php?c=UserAdmin&a=index&r=1&action=Insert');
+            }
+            if ($result == 1)
+            {
+                header('location:index.php?c=UserAdmin&a=Insert&r=2');
+            }
+            if ($result == false)
+            {
+                header('location:index.php?c=UserAdmin&a=Insert&r=0');
+            }
         }
-
     }
     function Update()
     {
@@ -66,7 +76,7 @@ class UserAdminController
         {
             header('location:index.php?c=UserAdmin&a=index&r=1&action=Update');
         }else {
-            header('location:index.php?c=UserAdmin&a=index&r=0&action=Update');
+            header('location:index.php?c=UserAdmin&a=Update&id='.$id.'&r=0');
         }
     }
     function Delete()

@@ -32,7 +32,7 @@ include 'asset/Scripts/ScriptHeader.php';
                         <div class="card-header">
                             <h3 style="font-size: 30px" class="card-title text-dark"><i class="fas fa-address-card"></i> <b>THÀNH VIÊN</b> </h3>
                         </div>
-                        <p style="color: red">
+                        <p class="pl-3" style="color: red">
                             <?php
                             if (isset($_GET['r']))
                             {

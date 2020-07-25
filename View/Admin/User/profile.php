@@ -69,6 +69,17 @@
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Email</label>
                                     <input type="text" class="form-control" name="email" value="<?=$data->email?>">
+                                    <p class="text-danger">
+                                        <?php
+                                        if (isset($_GET['r']))
+                                        {
+                                            if ($_GET['r'] == 0)
+                                            {
+                                                echo 'Email này đã được đăng ký, vui lòng sử dụng email khác';
+                                            }
+                                        }
+                                        ?>
+                                    </p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">

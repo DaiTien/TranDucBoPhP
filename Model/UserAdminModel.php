@@ -51,9 +51,16 @@ class UserAdminModel
     }
     function UpdateRecord(UserAdmin $user)
     {
-        $query ="Update tdb_adminuser set id=$user->id,username ='$user->userName',password ='$user->password',fullname='$user->fullName',gender='$user->gender',phone='$user->phone',email='$user->email',role='$user->role' where id =$user->id";
-        $result = $this->mysqli->query($query);
-        return $result;
+        $checkEmail = $this->mysqli->query("select * from tdb_adminuser where email='$user->email'");
+        $check = mysqli_num_rows($checkEmail);
+        if ($check == 1)
+        {
+            return false;
+        }else{
+            $query ="Update tdb_adminuser set id=$user->id,username ='$user->userName',password ='$user->password',fullname='$user->fullName',gender='$user->gender',phone='$user->phone',email='$user->email',role='$user->role' where id =$user->id";
+            $result = $this->mysqli->query($query);
+            return $result;
+        }
     }
     function DeleteRecord($id)
     {
@@ -63,8 +70,23 @@ class UserAdminModel
     }
     function InsertRecord(UserAdmin $user)
     {
-        $query = "insert into tdb_adminuser(username,password,fullname,gender,phone,email,role) value ('$user->userName','$user->password','$user->fullName','$user->gender','$user->phone','$user->email','$user->role')";
-        $result = $this->mysqli->query($query);
-        return $result;
+        $checkUser = $this->mysqli->query("select * from tdb_adminuser where username = '$user->userName'");
+        $check1 = mysqli_num_rows($checkUser);
+        if ($check1 == 1)
+        {
+            return $check1;
+        }else{
+            $checkEmail = $this ->mysqli->query("select * from tdb_adminuser where email = '$user->email'");
+            $check2 = mysqli_num_rows($checkEmail);
+            if ($check2 == 1)
+            {
+                return false;
+            }else{
+                $query = "insert into tdb_adminuser(username,password,fullname,gender,phone,email,role) value ('$user->userName','$user->password','$user->fullName','$user->gender','$user->phone','$user->email','$user->role')";
+                $result = $this->mysqli->query($query);
+                return $result;
+            }
+        }
+
     }
 }

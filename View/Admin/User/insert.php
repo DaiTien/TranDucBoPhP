@@ -31,13 +31,24 @@
                         <div class="card-header with-border">
                             <h3 class="card-title font-weight-bold">THÊM THÀNH VIÊN</h3>
                         </div>
+                        <p class="text-danger text-center pt-3">
+                            <?php
+                            if (isset($_GET['r']))
+                            {
+                                if ($_GET['r'] == 3)
+                                {
+                                    echo 'Vui lòng không để trống phần có [ * ]';
+                                }
+                            }
+                            ?>
+                        </p>
                         <form role="form" method="post" action="?c=UserAdmin&a=InsertSave">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">ID</label>
-                                            <input type="text" disabled class="form-control" name="id">
+                                            <input type="text" readonly class="form-control" name="id">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -51,13 +62,24 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">User Name</label>
+                                            <label for="exampleInputPassword1">User Name <sup class="text-danger" style="font-size: 15px">*</sup></label>
                                             <input type="text" class="form-control" name="userName" >
+                                            <p class="text-danger">
+                                                <?php
+                                                if (isset($_GET['r']))
+                                                {
+                                                    if ($_GET['r'] == 2)
+                                                    {
+                                                        echo 'UserName đã tồn tại!';
+                                                    }
+                                                }
+                                                ?>
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Mật Khẩu</label>
+                                            <label for="exampleInputPassword1">Mật Khẩu <sup class="text-danger" style="font-size: 15px">*</sup></label>
                                             <input type="text" class="form-control" name="password" >
                                         </div>
                                     </div>
@@ -67,8 +89,19 @@
                                     <input type="text" class="form-control" name="phone" >
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Email</label>
+                                    <label for="exampleInputPassword1">Email <sup class="text-danger" style="font-size: 15px">*</sup></label>
                                     <input type="text" class="form-control" name="email" >
+                                    <p class="text-danger">
+                                        <?php
+                                        if (isset($_GET['r']))
+                                        {
+                                            if ($_GET['r'] == 0)
+                                            {
+                                                echo 'Email này đã được sử dụng, vui lòng dùng email khác';
+                                            }
+                                        }
+                                        ?>
+                                    </p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -80,7 +113,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Chức Vụ</label>
-                                            <input type="text" class="form-control" name="role" >
+                                            <input type="text" readonly value="Admin" class="form-control" name="role" >
                                         </div>
                                     </div>
                                 </div>
