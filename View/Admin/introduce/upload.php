@@ -64,7 +64,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Tóm lược</label>
-                                            <textarea name="summary" class="form-control" id="my-textarea" cols="65" rows="3"><?=$data->summary?></textarea>
+                                            <textarea name="summary" class="form-control"  cols="65" rows="3"><?=$data->summary?></textarea>
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -79,7 +79,7 @@
                                     <div class="form-group col-12">
                                         <label for="exampleInputPassword1">Nội dung</label>
                                         <div class="">
-                                            <textarea name="content" class="textarea form-control" placeholder="Place some text here" style="font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?=$data->content?></textarea>
+                                            <textarea name="content" id="my_Textarea" cols="65" rows="4" class="textarea form-control" placeholder="Place some text here"><?=$data->content?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -109,12 +109,9 @@ include 'asset/Scripts/ScriptFooter.php';
     $('#qlwebsite').addClass('active');
 </script>
 <script>
-    $(function () {
-        // Summernote
-        $('.textarea').summernote()
-    })
     $(document).ready(function () {
         bsCustomFileInput.init();
+        $('#my_Textarea').summernote();
     });
     function dateFunciton() {
         document.getElementById("datee").value = document.getElementById("dateUpp").value;

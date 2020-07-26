@@ -68,7 +68,7 @@
                                         <td><?=$value->title?></td>
                                         <td><?=$value->summary?></td>
                                         <td>
-                                            <textarea class="textarea form-control" ><?=$value->content?></textarea>
+                                            <textarea class="textarea form-control" cols="155" rows="5" ><?=$value->content?></textarea>
                                         </td>
                                         <td>
                                             <img class="imagee" src="<?=$value->image?>">

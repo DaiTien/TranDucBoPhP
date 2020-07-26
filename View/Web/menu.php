@@ -37,24 +37,7 @@
                         <div class="menu-main">
                             <ul>
                                 <li class="has-child">
-                                    <a href="index.php">Trang Chủ</a>
-                                    <!-- <ul class="drop-nav">
-                                        <li><a href="trangchu.html">Home Page 1</a></li>
-                                        <li><a href="homepage1.html">Home Page 2</a></li>
-                                        <li><a href="homepage2.html">Home Page 3</a></li>
-                                        <li><a href="homepage3.html">Home Page 4</a></li>
-                                        <li><a href="homepage4.html">Home Page 5</a></li>
-                                        <li class="drop-has-child">
-                                            <a href="#">Headers</a>
-                                            <ul class="drop-nav">
-                                                <li><a href="trangchu.html">Header 1</a></li>
-                                                <li><a href="homepage1.html">Header 2</a></li>
-                                                <li><a href="homepage2.html">Header 3</a></li>
-                                                <li><a href="homepage3.html">Header 4</a></li>
-                                                <li><a href="homepage4.html">Header 5</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul> -->
+                                    <a href="?c=web">Trang Chủ</a>
                                 </li>
                                 <li class="mega-menu">
                                     <a class="menu__link" href="#products">Sản Phẩm</a>

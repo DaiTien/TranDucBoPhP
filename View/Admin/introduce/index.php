@@ -93,7 +93,6 @@ include 'asset/Scripts/ScriptHeader.php';
                                             <a class="btn btn-danger btn-sm" href="?c=Introduce&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
                                             <a class="btn btn-primary btn-sm" href="?c=Introduce&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
-
                                     </tr>
                                     <?php
                                 }

@@ -80,7 +80,7 @@
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Nội dung</label>
                                             <div class="">
-                                                <textarea name="content" class="textarea form-control" placeholder="Place some text here" style="font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                                <textarea name="content" class="textarea form-control" placeholder="Place some text here" ></textarea>
                                             </div>
                                         </div>
                                     </div>
