@@ -25,6 +25,8 @@
 <script src="asset/admin/AdminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="asset/admin/AdminLTE/dist/js/adminlte.js"></script>
+<!-- Select2 -->
+<script src="asset/admin/AdminLTE/plugins/select2/js/select2.full.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="asset/admin/AdminLTE/dist/js/demo.js"></script>
 <!-- DataTables -->

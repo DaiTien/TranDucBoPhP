@@ -89,6 +89,12 @@
                                 <p>Sản phẩm</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="?c=ProductType&a=index" id="loaiSanpham" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Loại sản phẩm</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">

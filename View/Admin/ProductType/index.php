@@ -31,7 +31,7 @@
                 <div class="col-xs-12" style="width: 100%">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title text-primary " style="font-size: 30px"><i class="fas fa-align-justify"></i> <b>Sản Phẩm</b></h3>
+                            <h3 class="card-title text-primary " style="font-size: 30px"><i class="fas fa-align-justify"></i> <b>Loại Sản Phẩm</b></h3>
                         </div>
                         <p class="pl-3" style="color: red">
                             <?php
@@ -46,21 +46,16 @@
                             }
                             ?>
                         </p>
-                        <a class="col-1 ml-3 btn btn-primary btn-sm" href="?c=Product&a=insert"><i class="fas fa-plus"></i> Thêm</a>
+                        <a class="col-1 ml-3 btn btn-primary btn-sm" href="?c=ProductType&a=insert"><i class="fas fa-plus"></i> Thêm</a>
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr id="tbheader">
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Mã loại SP</th>
-                                    <th>Tên Sản Phẩm</th>
-                                    <th>Hình Ảnh</th>
-                                    <th>Giới Thiệu</th>
-                                    <th>Số Lượng</th>
-                                    <th>Giá</th>
-                                    <th>Hành động</th>
+                                    <th class="text-center">STT</th>
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">Tên Loại Sản Phẩm</th>
+                                    <th class="text-center">Hành động</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -71,19 +66,11 @@
                                     <tr>
                                         <td class="text-center"><?=$stt++?></td>
                                         <td class="text-center"><?=$value->id?></td>
-                                        <td class="text-center"><?=$value->type?></td>
                                         <td class="text-center"><?=$value->name?></td>
                                         <td class="text-center">
-                                            <img class="imagee" style="width: 105px" height="100px" src="<?=$value->image?>">
+                                            <a class="btn btn-danger btn-sm" href="?c=ProductType&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a class="btn btn-primary btn-sm" href="?c=ProductType&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
-                                        <td class="text-center"><?=$value->summary?></td>
-                                        <td class="text-center"><?=$value->soLuong?></td>
-                                        <td class="text-center"><?=$value->price?></td>
-                                        <td class="text-center">
-                                            <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=Product&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
-                                            <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=Product&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
-                                        </td>
-
                                     </tr>
                                     <?php
                                 }
@@ -106,13 +93,12 @@
     include 'View/Admin/footer.php';
     ?>
 </div>
-
 <?php
 include 'asset/Scripts/ScriptFooter.php';
 ?>
 <script>
     $('#qlsanpham').addClass('active');
-    $('#sanpham').addClass('active');
+    $('#loaiSanpham').addClass('active');
 </script>
 </body>
 </html>

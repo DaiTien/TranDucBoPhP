@@ -1,11 +1,14 @@
 <?php
 require_once SYSTEM_PATH. "/Model/ProductModel.php";
+require_once SYSTEM_PATH."/Model/ProductTypeModel.php";
 class ProductController
 {
     private $productModel;
+    private $productTypeModel;
     public function __construct()
     {
         $this->productModel=new ProductModel();
+        $this->productTypeModel=new ProductTypeModel();
     }
 
     function index()
@@ -20,6 +23,7 @@ class ProductController
         session_start();
         $user = $_SESSION['userAdmin'];
         $avatarUser = $_SESSION['avatarUser'];
+        $productType = $this->productTypeModel->GetAllRecords();
         require_once SYSTEM_PATH."/View/Admin/Product/insert.php";
     }
     function Save(){
@@ -34,10 +38,11 @@ class ProductController
         $id = $_POST['id'];
         $name = $_POST['name'];
         $soLuong = $_POST['soLuong'];
+        $type = $_POST['type'];
         $image = "UpLoadFile/product/".$_FILES["file"]["name"];
         $summary = $_POST['summary'];
         $price = $_POST['price'];
-        $result = $this->productModel->insert( new Product($id, $name, $image, $summary,$soLuong, $price));
+        $result = $this->productModel->insert( new Product($id, $name, $image, $summary,$soLuong, $price,$type));
         if($result == true){
             header('location:index.php?c=Product&a=index&r=1&action=Insert');
         }else{
@@ -66,10 +71,11 @@ class ProductController
                 move_uploaded_file($_FILES["file"]["tmp_name"], "UpLoadFile/product/" . $_FILES["file"]["name"]);
                 $name = $_POST['name'];
                 $soLuong = $_POST['soLuong'];
+                $type = $_POST['type'];
                 $image = "UpLoadFile/product/" . $_FILES["file"]["name"];
                 $summary = $_POST['summary'];
                 $price = $_POST['price'];
-                $result = $this->productModel->Update(new product($id, $name, $image, $summary, $soLuong, $price));
+                $result = $this->productModel->Update(new product($id, $name, $image, $summary, $soLuong, $price,$type));
                 if ($result == true) {
                     header('location:index.php?c=Product&a=index&r=1&action=Update');
                 } else {

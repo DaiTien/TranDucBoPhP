@@ -62,23 +62,38 @@
                                 <input type="text"  class="form-control" name="name" placeholder="Tên Sản Phẩm">
                             </div>
                             </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Loại Sản Phẩm</label>
+                                    <select name="type" class="form-control">
+                                        <?php
+                                        foreach ($productType as $value){
+                                        ?>
+                                            <option value="<?=$value->id?>"><?=$value->name?></option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Số lượng </label>
-                                <input type="text"  class="form-control" name="soLuong" placeholder="">
+                                <input type="text"  class="form-control" autocomplete="off" name="soLuong" placeholder="">
                             </div>
                             </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Gía </label>
+                                        <input type="text"  class="form-control" name="price" placeholder="Gía">
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">GIỚI THIỆU</label>
                                 <textarea type="text" class="form-control" name="summary" placeholder="Giới Thiệu"></textarea>
                             </div>
-                            <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Gía </label>
-                                <input type="text"  class="form-control" name="price" placeholder="Gía">
-                            </div>
-                            </div>
+
                             <div class="form-group">
                                 <label for="exampleInputFile">File input</label>
                                 <input type="file" name="file" id="inputFile">
@@ -120,7 +135,19 @@ include "asset/Scripts/ScriptFooter.php";
 ?>
 <script>
     $('#qlsanpham').addClass('active');
+    $('#sanpham').addClass('active');
+
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
+    });
 </script>
+
 </body>
 </html>
 
