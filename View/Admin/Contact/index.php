@@ -89,7 +89,7 @@ include "asset/Scripts/ScriptFooter.php";
 ?>
 <script>
     $('#qlwebsite').addClass('active');
-    $('#mxh').addClass('active');
+    $('#thongtin').addClass('active');
 </script>
 </body>
 </html>

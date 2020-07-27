@@ -99,7 +99,7 @@ include "asset/Scripts/ScriptFooter.php";
 ?>
 <script>
     $('#qlsanpham').addClass('active');
-    $('#sanpham').addClass('active');
+    $('#thongtin').addClass('active');
 
     $(function () {
         //Initialize Select2 Elements

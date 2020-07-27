@@ -42,9 +42,17 @@
                             <div class="col-md-4 col-sm-4 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <address>
                                     <span class="text-primary co-title">Địa Chỉ Của Chúng Tôi .</span>
-                                    <p>33 Xô Viết Nghệ Tĩnh - Quận Hải Châu - Tp. Đà Nẵng</p>
-                                    <p><a href="tel:1234567890">033 452 3321</a>
-                                        <br> <a href="mailto:support@despina.com">bobomilktea@gmail.com</a></p>
+                                    <?php
+                                    foreach ($contact as $value)
+                                    {
+                                        ?>
+                                        <p><?=$value->address?></p>
+                                        <p><a href="tel:<?=$value->phone?>"><?=$value->phone?></a>
+                                            <br> <a href="mailto:<?=$value->email?>"><?=$value->email?></a></p>
+                                        <?php
+                                    }
+                                    ?>
+
                                 </address>
                                 <h5 class="text-coffee">Giờ Mở Cửa</h5>
                                 <ul class="time-list">

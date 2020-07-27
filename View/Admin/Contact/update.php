@@ -89,6 +89,7 @@
 <?php include "asset/Scripts/ScriptFooter.php";?>
 <script>
     $('#qlwebsite').addClass('active');
+    $('#thongtin').addClass('active');
 </script>
 </body>
 </html>

@@ -5,27 +5,34 @@
                 </div>
                 <div class="container">
                     <div class="footer-inner">
-                        <div class="footer-info">
-                            <h3>BoBo MilkTea</h3>
-                            <p>33 Xô Viết Nghệ Tĩnh - Quận Hải Châu - Tp. Đà Nẵng</p>
-                            <p><a href="#">033 452 3321</a></p>
-                            <p><a href="#">bobomilktea@gmail.com</a></p>
-                        </div>
+                        <?php
+                        foreach ($contact as $value)
+                        {
+                        ?>
+                            <div class="footer-info">
+                                <h3>Trần Đức Bo MilkTea</h3>
+                                <p><?=$value->address?></p>
+                                <p><a href="#"><?=$value->phone?></a></p>
+                                <p><a href="#"><?=$value->email?></a></p>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
                     </div>
                     <div class="copy-right">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12 copyright-before">
-                                <span>Copyright &copy; 2020 by Bobo MilkTea .</span>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12 copyright-after">
                                 <div class="social-round">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                        <li><a href="<?=$mxh->facebook?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="<?=$mxh->twitter?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="<?=$mxh->instagram?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        <!--<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>-->
+                                        <li><a href="<?=$mxh->google?>"><i class="fa fa-google" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
