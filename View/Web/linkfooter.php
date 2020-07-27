@@ -14,3 +14,6 @@
     <script src="/TranDucBoPhp/asset/web/js/jquery.stellar.js"></script>
     <script src="/TranDucBoPhp/asset/web/js/app.js"></script>
     <script src="/TranDucBoPhp/asset/web/js/script.js"></script>
+    <!-- jquery-validation -->
+    <script src="asset/admin/AdminLTE/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="asset/admin/AdminLTE/plugins/jquery-validation/additional-methods.min.js"></script>

@@ -10,31 +10,31 @@
                         <div class="row">
                             <div class="col-md-8 col-sm-8 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <h5 class="text-coffee">Hãy để lại cho chúng tôi lời nhắn</h5>
-                                <form class="form" method="post" name="contact-form">
+                                <form id="quickForm" method="post" action="?c=IndexWebsite&a=sendFeedback">
                                     <div class="alert-container"></div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <label>First Name *</label>
-                                            <input name="first_name" type="text" required>
+                                            <label>Họ *</label>
+                                            <input name="ho" type="text" required>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <label>Last Name *</label>
-                                            <input name="last_name" type="text" required>
+                                            <label>Tên *</label>
+                                            <input name="ten" type="text" required>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <label>Email *</label>
                                             <input name="email" type="email" required>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <label>Subject *</label>
-                                            <input name="subject" type="text" required>
+                                            <label>Chủ đề *</label>
+                                            <input name="title" type="text" required>
                                         </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <label>Your Message *</label>
-                                            <textarea name="message" required></textarea>
+                                            <label>Nội dung *</label>
+                                            <textarea name="content" required></textarea>
                                         </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input name="submit" value="SEND MESSAGE" class="btn-black pull-right send_message" type="submit">
+                                        <div class="col-md-11 col-sm-11 col-xs-11">
+                                            <input value="SEND MESSAGE" class="btn-black pull-right" type="submit">
                                         </div>
                                     </div>
                                 </form>
