@@ -72,6 +72,9 @@
                         <li class="nav-item">
                             <a class="nav-link" id="mxh" href="?c=SocialNetworkAdmin&a=index"><i class="far fa-circle nav-icon"></i> Mạng Xã Hội</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="thongtin" href="?c=Contact&a=index"><i class="far fa-circle nav-icon"></i> Thông tin</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">
