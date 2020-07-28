@@ -57,25 +57,19 @@
                                 <div class="blog-right-section">
                                     <div class="blog-right-listing wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                         <div class="feature-img">
-                                            <img src="/TranDucBoPhP/asset/Web/images/lt-okinawa.png" alt="">
+                                            <img src="<?=$news->image?>" alt="">
                                             <!-- <div class="date-feature">27
                                                 <br> <small>may</small></div> -->
                                         </div>
                                         <div class="feature-info feature-info--modify">
                                             <!-- <span><i class="icon-user-1"></i> By Ali TUFAN</span>
                                             <span><i class="icon-comment-5"></i> 5 Comments</span> -->
-                                            <h5>Series Long Nhãn Táo Đỏ đã trở lại trong hè này</h5>
-                                            <p>Các Fan BoBo MilkTea ơi! Món thức uống chào hè đã quay trở lại sau 1 năm xa cách đây! Nguyên liệu từ nhãn nhục và táo đỏ được Gong Cha kết hợp khéo léo với trà nguyên chất và sữa tươi để mang trở lại 3 siêu phẩm mà các Fan yêu thích hè năm ngoái nhưng chưa kịp thưởng thức vì nhanh chóng “sold out”.
-                                                Tất nhiên ưu đãi dòng sản phẩm chào hè đồng giá 💸39.000đ (M) và 💸45.000đ (L) dành cho Fan trong tuần đầu “come back” là không thể thiếu rồi!
-                                                📌 Lưu ý:
-                                                - Chương trình áp dụng khi mua trực tiếp tại cửa hàng hoặc đặt hàng qua hotline giao hàng của cửa hàng
-                                                - Không áp dụng chung với các CTKM khác
-                                                - Không áp dụng giảm thêm với thành viên của Gong Cha E-members
-                                                - Không áp dụng giá ưu đãi trên kênh giao hàng Now, GrabFood, Baemin…</p>
+                                            <h5><?=$news->title?></h5>
+                                            <p><?=$news->content?></p>
                                             <!-- <a href="blog_single.html" class="button-default">Read More <i class="icon-right-4"></i></a> -->
                                         </div>
                                     </div>
-                                    <div class="gallery-pagination">
+                                    <!--<div class="gallery-pagination">
                                         <div class="gallery-pagination-inner">
                                             <ul>
                                                 <li><a href="#" class="pagination-prev"><i class="icon-left-4"></i> <span>PREV page</span></a></li>
@@ -85,7 +79,7 @@
                                                 <li><a href="#" class="pagination-next"><span>next page</span> <i class="icon-right-4"></i></a></li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>

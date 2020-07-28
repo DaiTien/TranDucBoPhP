@@ -61,5 +61,21 @@ class IndexWebsiteController
 
         }
     }
+    function about()
+    {
+        $contact = $this ->contactModel->GetAllRecords();
+        $mxh = $this->mXh->GetByID(1);
+        $introduce = $this ->introduceModel->GetAlldata();
+        require_once SYSTEM_PATH."/View/Web/about.php";
+    }
+    function news()
+    {
+        $id = $_GET['id'];
+        $contact = $this ->contactModel->GetAllRecords();
+        $mxh = $this->mXh->GetByID(1);
+        $news = $this->newModel->GetRecordsById($id);
+
+        require_once SYSTEM_PATH."/View/Web/news.php";
+    }
 
 }
