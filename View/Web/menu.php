@@ -1,3 +1,17 @@
+<style>
+    #btnLogout{
+        border: 1px solid white;
+        display: block;
+        width: 73px;
+        height: 35px;
+        position: absolute;
+        right: -69%;
+        bottom: 20%;
+        text-align: center;
+        line-height: 30px;
+        padding: 0;
+    }
+</style>
 <div class="header-bottom">
                     <div class="container">
                         <div class="header-info">
@@ -11,16 +25,27 @@
                                         <a class="menu__link" id="lienhe" href="#contract">Liên Hệ</a>
                                     </li>
                                     <li class="has-child">
-                                        <a class="menu__link" href="#login">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>
+                                        <?php
+
+                                        if (isset($_GET['lg']) && $_GET['lg'] == 1)
+                                        {
+                                            echo '<a class="menu__link">Xin chào ' .$user .'</a>';
+                                            echo '<a href="?c=IndexWebsite&a=Index" id="btnLogout" class="btn">Logout</a>';
+                                        }
+                                        else
+                                        {
+                                            echo "<a class=\"menu__link\" id=\"login_register\" href=\"#login\">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>";
+                                        }
+                                        ?>
                                     </li>
                                 </ul>
-                                <div class="search-part">
+                                <!--<div class="search-part">
                                     <a class="search-part" href="#"></a>
                                     <div class="search-box">
                                         <input type="text" name="txt" placeholder="Search">
                                         <input type="submit" name="submit" value=" ">
                                     </div>
-                                </div>
+                                </div>-->
 
                             </div>
                         </div>

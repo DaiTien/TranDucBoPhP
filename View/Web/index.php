@@ -5,6 +5,7 @@
     <?php
     include 'linkheader.php';
     ?>
+
 </head>
 
 <body>
@@ -140,7 +141,16 @@
         <!-- End Main -->
         <!-- Login  -->
         <?php
-        include 'login.php';
+        if (isset($_GET['lg']))
+        {
+            if ($_GET['lg'] == 1)
+            {
+                echo '';
+            }
+        }
+        else{
+            include 'login.php';
+        }
         ?>
         <!-- Register -->
         <!-- Start Footer -->
@@ -162,6 +172,10 @@
         if ($_GET['action'] == "SendMessage")
         {
             echo "<script type=\"text/javascript\"> $(document).ready(function(){ $('#lienhe').click()});</script>";
+        }
+        if ($_GET['action'] == "Register")
+        {
+            echo "<script type=\"text/javascript\"> $(document).ready(function(){ $('#login_register').click()});</script>";
         }
     }
     ?>

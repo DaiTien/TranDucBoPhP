@@ -12,20 +12,30 @@
                 <div class="login-wrap form-common">
                     <div class="title text-center">
                         <h3 class="text-coffee">Đăng Nhập</h3>
+                        <span class="text-uppercase text-danger">
+                            <?php
+                            if (isset($_GET['lg']))
+                            {
+                                if ($_GET['lg'] == 0)
+                                {
+                                    echo 'Tài khoản hoặc mật khẩu không đúng!';
+                                }
+                            }
+                            ?>
+                        </span>
                     </div>
-                    <form class="login-form" method="post" name="login">
+                    <form class="login-form" method="post" name="login" action="?c=IndexWebsite&a=Login">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="text" name="txt" placeholder="Username or email address" class="input-fields">
+                                <input type="text" name="user" placeholder="Username" class="input-fields" required>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="password" name="password" placeholder="********" class="input-fields">
+                                <input type="password" name="password" placeholder="********" class="input-fields" required>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <label>
-                                            <input type="checkbox" name="chkbox">Nhớ mật khẩu</label>
+
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <a href="#" class="pull-right">Quên mật khẩu</a>
@@ -55,23 +65,39 @@
                 <div class="register-wrap form-common">
                     <div class="title text-center">
                         <h3 class="text-coffee">Đăng Ký</h3>
+                        <span class="text-uppercase text-danger">
+                            <?php
+                            if (isset($_GET['g']))
+                            {
+                                if ($_GET['g'] == 1)
+                                {
+                                    echo 'Đăng ký tài khoản thành công!';
+                                }else if ($_GET['g'] == 2)
+                                {
+                                    echo 'Xác nhận mật khẩu không chính xác!';
+                                }else{
+                                    echo 'Email or Tên đăng nhập đã tồn tại!';
+                                }
+                            }
+                            ?>
+                        </span>
                     </div>
-                    <form class="register-form" method="post" name="register">
+                    <form class="register-form" method="post" name="register" action="?c=IndexWebsite&a=Register">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="text" name="txt" placeholder="Tên Đăng Nhập" class="input-fields">
+                                <input type="text" name="userName" placeholder="Tên Đăng Nhập" class="input-fields" required>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="text" name="txt" placeholder="Email" class="input-fields">
+                                <input type="email" name="email" placeholder="Email" class="input-fields" required>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="text" name="txt" placeholder="Số điện thoại" class="input-fields">
+                                <input type="text" name="phone" placeholder="Số điện thoại" class="input-fields">
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="password" name="password" placeholder="Mật Khẩu" class="input-fields">
+                                <input type="password" name="password" placeholder="Mật Khẩu" class="input-fields" required>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="password" name="password" placeholder="Nhập Lại Mật Khẩu" class="input-fields">
+                                <input type="password" name="confirmPassword" placeholder="Nhập Lại Mật Khẩu" class="input-fields" required>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <input type="submit" name="submit" class="button-default button-default-submit" value="Đăng Ký">
