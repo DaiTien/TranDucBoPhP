@@ -11,16 +11,32 @@ class ContactController
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this->contactModel->GetAllRecords();
-        require_once SYSTEM_PATH. "/View/Admin/Contact/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this->contactModel->GetAllRecords();
+            require_once SYSTEM_PATH. "/View/Admin/Contact/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function insert(){
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        require_once SYSTEM_PATH."/View/Admin/Contact/insert.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            require_once SYSTEM_PATH."/View/Admin/Contact/insert.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function Save(){
             $id = $_POST['id'];
@@ -38,11 +54,18 @@ class ContactController
     function Update()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $id = $_GET['id'];
-        $contact = $this->contactModel->GetByID($id);
-        require_once SYSTEM_PATH. '/View/Admin/Contact/update.php';
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $id = $_GET['id'];
+            $contact = $this->contactModel->GetByID($id);
+            require_once SYSTEM_PATH. '/View/Admin/Contact/update.php';
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
     }
     function  LuuSua(){
         $id = $_POST['id'];

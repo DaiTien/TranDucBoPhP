@@ -11,7 +11,6 @@
                             <div class="col-md-8 col-sm-8 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <h5 class="text-coffee">Hãy để lại cho chúng tôi lời nhắn</h5>
                                 <form id="quickForm" method="post" action="?c=IndexWebsite&a=sendFeedback">
-                                    <div class="alert-container"></div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <label>Họ *</label>
@@ -34,6 +33,16 @@
                                             <textarea name="content" required></textarea>
                                         </div>
                                         <div class="col-md-11 col-sm-11 col-xs-11">
+                                            <span class="text-danger">
+                                                <?php
+                                                if (isset($_GET['r']))
+                                                {
+                                                    if ($_GET['r']==1){
+                                                        echo $_GET['action'] .' thành công! Cảm ơn bạn đã đóng góp ý kiến';
+                                                    }
+                                                }
+                                                ?>
+                                            </span>
                                             <input value="SEND MESSAGE" class="btn-black pull-right" type="submit">
                                         </div>
                                     </div>

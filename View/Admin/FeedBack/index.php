@@ -40,6 +40,7 @@
                                     <th>Tên Khách Hàng</th>
                                     <th>Chủ đề</th>
                                     <th>Nội dung</th>
+                                    <th>Email</th>
                                     <th>Ngày gửi</th>
                                     <th>Hành động</th>
                                 </tr>
@@ -55,6 +56,7 @@
                                         <td><?=$value->name?></td>
                                         <td><?=$value->title?></td>
                                         <td><?=$value->content?></td>
+                                        <td><?=$value->email?></td>
                                         <td><?=$value->date?></td>
                                         <td class="text-center">
                                             <a class="btn btn-primary glyphicon glyphicon-trash btn-sm" href="?c=FeedBackAdmin&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>

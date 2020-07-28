@@ -11,17 +11,33 @@ class UserAdminController
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this ->useradminModel->GetAllRecords($user);
-        require_once SYSTEM_PATH. "/View/Admin/User/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this ->useradminModel->GetAllRecords($user);
+            require_once SYSTEM_PATH. "/View/Admin/User/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function Insert()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        require_once SYSTEM_PATH. "/View/Admin/User/insert.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            require_once SYSTEM_PATH. "/View/Admin/User/insert.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function InsertSave()
     {
@@ -55,11 +71,19 @@ class UserAdminController
     function Update()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $id =$_GET['id'];
-        $data = $this->useradminModel->GetRecordsById($id);
-        require_once SYSTEM_PATH. "/View/Admin/User/profile.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $id =$_GET['id'];
+            $data = $this->useradminModel->GetRecordsById($id);
+            require_once SYSTEM_PATH. "/View/Admin/User/profile.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function Save()
     {

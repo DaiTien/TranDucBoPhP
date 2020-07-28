@@ -14,17 +14,33 @@ class ProductController
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this ->productModel ->GetAllRecords();
-        require_once SYSTEM_PATH. "/View/Admin/Product/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this ->productModel ->GetAllRecords();
+            require_once SYSTEM_PATH. "/View/Admin/Product/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function insert(){
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $productType = $this->productTypeModel->GetAllRecords();
-        require_once SYSTEM_PATH."/View/Admin/Product/insert.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $productType = $this->productTypeModel->GetAllRecords();
+            require_once SYSTEM_PATH."/View/Admin/Product/insert.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function Save(){
         if ($_FILES["file"]["error"] > 0)
@@ -53,11 +69,19 @@ class ProductController
     function Update()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $id = $_GET['id'];
-        $tdb_product = $this->productModel->GetByID($id);
-        require_once SYSTEM_PATH. '/View/Admin/Product/update.php';
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $id = $_GET['id'];
+            $tdb_product = $this->productModel->GetByID($id);
+            require_once SYSTEM_PATH. '/View/Admin/Product/update.php';
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function  LuuSua()
     {
@@ -85,12 +109,21 @@ class ProductController
         }
     }
     function delete(){
-        $id = $_GET['id'];
-        $tdb_product = $this->productModel->delete($id);
-        if($tdb_product == true){
-            header('location:index.php?c=Product&a=index&r=1&action=Delete');
-        }else{
-            header('location:index.php?c=Product&a=index&r=0&action=Delete');
+        session_start();
+        if (isset($_SESSION['userAdmin']))
+        {
+            $id = $_GET['id'];
+            $tdb_product = $this->productModel->delete($id);
+            if($tdb_product == true){
+                header('location:index.php?c=Product&a=index&r=1&action=Delete');
+            }else{
+                header('location:index.php?c=Product&a=index&r=0&action=Delete');
+            }
         }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
 }

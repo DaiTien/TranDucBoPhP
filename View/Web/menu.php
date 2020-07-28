@@ -8,7 +8,7 @@
 
                                     </li>
                                     <li class="has-child">
-                                        <a class="menu__link" href="#contract">Liên Hệ</a>
+                                        <a class="menu__link" id="lienhe" href="#contract">Liên Hệ</a>
                                     </li>
                                     <li class="has-child">
                                         <a class="menu__link" href="#login">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>
@@ -37,7 +37,7 @@
                         <div class="menu-main">
                             <ul>
                                 <li class="has-child">
-                                    <a href="?c=web">Trang Chủ</a>
+                                    <a href="?c=IndexWebsite">Trang Chủ</a>
                                 </li>
                                 <li class="mega-menu">
                                     <a class="menu__link" href="#products">Sản Phẩm</a>

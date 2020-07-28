@@ -11,17 +11,33 @@ class LibraryImageController
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this->imageModel->GetAllRecords();
-        require_once SYSTEM_PATH. "/View/Admin/LibraryImage/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this->imageModel->GetAllRecords();
+            require_once SYSTEM_PATH. "/View/Admin/LibraryImage/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function Insert()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        require_once SYSTEM_PATH. "/View/Admin/LibraryImage/insert.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            require_once SYSTEM_PATH. "/View/Admin/LibraryImage/insert.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function SaveInsert()
     {
@@ -45,12 +61,20 @@ class LibraryImageController
     }
     function Update()
     {
-        $id =$_GET['id'];
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this->imageModel->GetRecordById($id);
-        require_once  SYSTEM_PATH. "/View/Admin/LibraryImage/update.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $id =$_GET['id'];
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this->imageModel->GetRecordById($id);
+            require_once  SYSTEM_PATH. "/View/Admin/LibraryImage/update.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function SaveUpdate()
     {
@@ -89,14 +113,23 @@ class LibraryImageController
     }
     function Delete()
     {
-        $id = $_GET['id'];
-        $result = $this->imageModel->DeleteRecord($id);
-        if ($result == true)
+        session_start();
+        if (isset($_SESSION['userAdmin']))
         {
-            header('location:index.php?c=LibraryImage&a=index&r=1&action=Delete');
-        }else{
-            header('location:index.php?c=LibraryImage&a=index&r=0&action=Delete');
+            $id = $_GET['id'];
+            $result = $this->imageModel->DeleteRecord($id);
+            if ($result == true)
+            {
+                header('location:index.php?c=LibraryImage&a=index&r=1&action=Delete');
+            }else{
+                header('location:index.php?c=LibraryImage&a=index&r=0&action=Delete');
+            }
         }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
 
 }

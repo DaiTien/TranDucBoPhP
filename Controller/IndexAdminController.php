@@ -89,19 +89,31 @@ class IndexAdminController
     function trangchu()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $totalMember = $this -> adminModel ->CountMember();
-        $totalFeedBack = $this ->feedbackModel ->CountFeedBack();
-        $totalProduct = $this ->productModel ->CountProduct();
-        require_once SYSTEM_PATH."/View/Admin/dashboard.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $totalMember = $this -> adminModel ->CountMember();
+            $totalFeedBack = $this ->feedbackModel ->CountFeedBack();
+            $totalProduct = $this ->productModel ->CountProduct();
+            require_once SYSTEM_PATH."/View/Admin/dashboard.php";
+        }
+        else
+        {
+            require_once SYSTEM_PATH . "/View/Admin/login.php";
+        }
     }
     function lockscreen()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        require_once SYSTEM_PATH."/View/Admin/lockscreen.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            require_once SYSTEM_PATH."/View/Admin/lockscreen.php";
+        }else{
+            require_once SYSTEM_PATH . "/View/Admin/login.php";
+        }
     }
     function openscreen()
     {
@@ -121,10 +133,15 @@ class IndexAdminController
     function profile()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this ->adminModel->getPassword($user);
-        require_once SYSTEM_PATH."/View/Admin/profile.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this ->adminModel->getPassword($user);
+            require_once SYSTEM_PATH."/View/Admin/profile.php";
+        }else{
+            require_once SYSTEM_PATH . "/View/Admin/login.php";
+        }
     }
     function UpdateProfile()
     {

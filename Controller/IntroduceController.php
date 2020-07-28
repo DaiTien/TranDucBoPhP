@@ -9,17 +9,33 @@ class IntroduceController{
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this->introduceModel->GetAlldata();
-        require_once SYSTEM_PATH. "/View/Admin/introduce/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this->introduceModel->GetAlldata();
+            require_once SYSTEM_PATH. "/View/Admin/introduce/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function insert()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        require_once SYSTEM_PATH. "/View/Admin/introduce/insert.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            require_once SYSTEM_PATH. "/View/Admin/introduce/insert.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function InsertSave()
     {
@@ -42,11 +58,19 @@ class IntroduceController{
     function Update()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $id =$_GET['id'];
-        $data = $this->introduceModel->GetRecordsById($id);
-        require_once SYSTEM_PATH. "/View/Admin/introduce/upload.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $id =$_GET['id'];
+            $data = $this->introduceModel->GetRecordsById($id);
+            require_once SYSTEM_PATH. "/View/Admin/introduce/upload.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function SaveUpdate()
     {
@@ -84,13 +108,22 @@ class IntroduceController{
     }
     function Delete()
     {
-        $id = $_GET['id'];
-        $result = $this->introduceModel->DeleteRecord($id);
-        if ($result == true)
+        session_start();
+        if (isset($_SESSION['userAdmin']))
         {
-            header('location:index.php?c=Introduce&a=index&r=1&action=Delete');
-        }else {
-            header('location:index.php?c=Introduce&a=index&r=0&action=Delete');
+            $id = $_GET['id'];
+            $result = $this->introduceModel->DeleteRecord($id);
+            if ($result == true)
+            {
+                header('location:index.php?c=Introduce&a=index&r=1&action=Delete');
+            }else {
+                header('location:index.php?c=Introduce&a=index&r=0&action=Delete');
+            }
         }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
 }

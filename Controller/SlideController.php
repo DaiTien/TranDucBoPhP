@@ -10,17 +10,33 @@ class SlideController
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this->imageSlideModel->GetAllRecords();
-        require_once SYSTEM_PATH . "/View/Admin/Slide/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this->imageSlideModel->GetAllRecords();
+            require_once SYSTEM_PATH . "/View/Admin/Slide/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function Insert()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        require_once SYSTEM_PATH . "/View/Admin/Slide/insert.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            require_once SYSTEM_PATH . "/View/Admin/Slide/insert.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function SaveInsert()
     {
@@ -40,11 +56,19 @@ class SlideController
     function Update()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $id =$_GET['id'];
-        $data = $this->imageSlideModel->GetRecordById($id);
-        require_once  SYSTEM_PATH. "/View/Admin/Slide/update.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $id =$_GET['id'];
+            $data = $this->imageSlideModel->GetRecordById($id);
+            require_once  SYSTEM_PATH. "/View/Admin/Slide/update.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function SaveUpdate()
     {
@@ -75,14 +99,23 @@ class SlideController
     }
     function Delete()
     {
-        $id = $_GET['id'];
-        $result = $this->imageSlideModel->DeleteRecord($id);
-        if ($result == true)
+        session_start();
+        if (isset($_SESSION['userAdmin']))
         {
-            header('location:index.php?c=Slide&a=index&r=1&action=Delete');
-        }else{
-            header('location:index.php?c=Slide&a=index&r=0&action=Delete');
+            $id = $_GET['id'];
+            $result = $this->imageSlideModel->DeleteRecord($id);
+            if ($result == true)
+            {
+                header('location:index.php?c=Slide&a=index&r=1&action=Delete');
+            }else{
+                header('location:index.php?c=Slide&a=index&r=0&action=Delete');
+            }
         }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
 
 }

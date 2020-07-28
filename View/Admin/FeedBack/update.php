@@ -54,14 +54,20 @@
                                             <input type="text"value="<?=$tdb_product->date?>"  class="form-control" name="soLuong" readonly placeholder="">
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Email </label>
+                                            <input type="text"value="<?=$tdb_product->email?>"  class="form-control" name="email" readonly placeholder="">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Bạn Muốn Phản Ánh Gì</label>
-                                    <textarea type="text" value="<?=$tdb_product->title?>" class="form-control" name="summary" readonly placeholder="Chủ đề"></textarea>
+                                    <textarea type="text"  class="form-control" name="summary" readonly placeholder="Chủ đề"><?=$tdb_product->title?></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Nội Dung Phản Ánh</label>
-                                    <textarea type="text" value="<?=$tdb_product->content?>" class="form-control" name="summary" readonly placeholder="Nội dung"></textarea>
+                                    <textarea type="text"  class="form-control" name="summary" readonly placeholder="Nội dung"><?=$tdb_product->content?></textarea>
 
                                 </div>
                             </div>

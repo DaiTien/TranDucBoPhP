@@ -10,17 +10,33 @@ class ProductTypeController
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this->producttypeModel->GetAllRecords();
-        require_once SYSTEM_PATH . "/View/Admin/ProductType/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this->producttypeModel->GetAllRecords();
+            require_once SYSTEM_PATH . "/View/Admin/ProductType/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function insert()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        require_once SYSTEM_PATH . "/View/Admin/ProductType/insert.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            require_once SYSTEM_PATH . "/View/Admin/ProductType/insert.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function SaveInsert()
     {
@@ -41,11 +57,19 @@ class ProductTypeController
     function Update()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $id = $_GET['id'];
-        $data = $this->producttypeModel->GetRecordById($id);
-        require_once SYSTEM_PATH . "/View/Admin/ProductType/update.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $id = $_GET['id'];
+            $data = $this->producttypeModel->GetRecordById($id);
+            require_once SYSTEM_PATH . "/View/Admin/ProductType/update.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function SaveUpdate()
     {

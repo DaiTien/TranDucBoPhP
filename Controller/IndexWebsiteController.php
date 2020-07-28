@@ -8,6 +8,7 @@ require_once SYSTEM_PATH."/Model/ProductTypeModel.php";
 require_once SYSTEM_PATH."/Model/ProductModel.php";
 require_once SYSTEM_PATH."/Model/ContactModel.php";
 require_once SYSTEM_PATH."/Model/SocialNetworkAdminModel.php";
+require_once SYSTEM_PATH."/Model/FeedBackAdminModel.php";
 class IndexWebsiteController
 {
     private $slideModel;
@@ -18,6 +19,7 @@ class IndexWebsiteController
     private $productModel;
     private $contactModel;
     private $mXh;
+    private $feedBack;
     public function __construct()
     {
         $this->slideModel = new SlideImageModel();
@@ -28,6 +30,7 @@ class IndexWebsiteController
         $this->productModel = new ProductModel();
         $this->contactModel = new ContactModel();
         $this->mXh = new SocialNetworkAdminModel();
+        $this->feedBack= new FeedBackAdminModel();
     }
 
     function index()
@@ -46,9 +49,17 @@ class IndexWebsiteController
     {
         $ho = $_POST['ho'];
         $ten = $_POST['ten'];
+        $email = $_POST['email'];
         $fullName = $ho .' '.$ten;
         $title =$_POST['title'];
         $content = $_POST['content'];
+
+        $result = $this->feedBack->InsertRecord(new FeedBackAdmin(null,$fullName,$title,$content,date("Y/m/d"),$email,null));
+        if ($result == true)
+        {
+            header('location:index.php?c=IndexWebsite&a=index&r=1&action=SendMessage');
+
+        }
     }
 
 }

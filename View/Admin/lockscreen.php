@@ -61,7 +61,7 @@
         Đăng nhập với mật khẩu của bạn để tiếp tục
     </div>
     <div class="text-center">
-        <a href="?c=indexadmin&a=index">Đăng nhập với tài khoản khác</a>
+        <a href="?c=indexadmin&a=logout">Đăng nhập với tài khoản khác</a>
     </div>
     <div class="lockscreen-footer text-center">
         Group 4 <b>TĐB</b><br>

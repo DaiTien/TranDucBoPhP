@@ -16,7 +16,7 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <span class="dropdown-item dropdown-header"><?php echo '<b>' .$user.'</b>' ?></span>
                 <div class="dropdown-divider"></div>
-                <a href="?c=indexadmin&a=index" class="dropdown-item text-center">
+                <a href="?c=indexadmin&a=logout" class="dropdown-item text-center">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
                 <div class="dropdown-divider"></div>

@@ -11,19 +11,35 @@ class SocialNetworkAdminController
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this->socialModel->GetAllRecords();
-        require_once SYSTEM_PATH. "/View/Admin/SocialNetwork/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this->socialModel->GetAllRecords();
+            require_once SYSTEM_PATH. "/View/Admin/SocialNetwork/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function Update()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $id = $_GET['id'];
-        $socialNetworkAdmin = $this->socialModel->GetByID($id);
-        require_once SYSTEM_PATH. '/View/Admin/SocialNetwork/update.php';
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $id = $_GET['id'];
+            $socialNetworkAdmin = $this->socialModel->GetByID($id);
+            require_once SYSTEM_PATH. '/View/Admin/SocialNetwork/update.php';
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function  LuuSua(){
         $id = $_POST['id'];

@@ -10,17 +10,33 @@ class NewsAdminController
     function index()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $data = $this->newsAdminModel->GetAlldata();
-        require_once SYSTEM_PATH. "/View/Admin/News/index.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $data = $this->newsAdminModel->GetAlldata();
+            require_once SYSTEM_PATH. "/View/Admin/News/index.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function insert()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        require_once SYSTEM_PATH. "/View/Admin/News/insert.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            require_once SYSTEM_PATH. "/View/Admin/News/insert.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
     function InsertSave()
     {
@@ -42,11 +58,18 @@ class NewsAdminController
     function Update()
     {
         session_start();
-        $user = $_SESSION['userAdmin'];
-        $avatarUser = $_SESSION['avatarUser'];
-        $id =$_GET['id'];
-        $data = $this->newsAdminModel->GetRecordsById($id);
-        require_once SYSTEM_PATH. "/View/Admin/News/update.php";
+        if (isset($_SESSION['userAdmin']))
+        {
+            $user = $_SESSION['userAdmin'];
+            $avatarUser = $_SESSION['avatarUser'];
+            $id =$_GET['id'];
+            $data = $this->newsAdminModel->GetRecordsById($id);
+            require_once SYSTEM_PATH. "/View/Admin/News/update.php";
+        }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
     }
     function SaveUpdate()
     {
@@ -78,13 +101,22 @@ class NewsAdminController
     }
     function Delete()
     {
-        $id = $_GET['id'];
-        $result = $this->newsAdminModel->DeleteRecord($id);
-        if ($result == true)
+        session_start();
+        if (isset($_SESSION['userAdmin']))
         {
-            header('location:index.php?c=NewsAdmin&a=index&r=1&action=Delete');
-        }else {
-            header('location:index.php?c=NewsAdmin&a=index&r=0&action=Delete');
+            $id = $_GET['id'];
+            $result = $this->newsAdminModel->DeleteRecord($id);
+            if ($result == true)
+            {
+                header('location:index.php?c=NewsAdmin&a=index&r=1&action=Delete');
+            }else {
+                header('location:index.php?c=NewsAdmin&a=index&r=0&action=Delete');
+            }
         }
+        else
+        {
+            require_once  SYSTEM_PATH. "/View/Admin/login.php";
+        }
+
     }
 }
