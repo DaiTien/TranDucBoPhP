@@ -13,8 +13,13 @@
         width: 100%;
         height: 100%;
     }
+    #menuAdmin{
+        left: 0;
+        position: fixed;
+        top: 0;
+    }
 </style>
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside id="menuAdmin" class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link text-center">
         <span class="brand-text font-weight-light">Admin <b>Trần Đức Bo</b></span>
