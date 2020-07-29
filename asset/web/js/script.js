@@ -177,6 +177,11 @@ $(document).ready(function() {
 function myFunction(x) {
     x.classList.toggle("icon__dislike");
 }
-document.querySelector(".icon__like--add").addEventListener('click', function() {
+function functionAlert(x)
+{
     swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");
-});
+}
+
+//document.querySelector(".icon__like--add").addEventListener('click', function() {
+    //swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");
+//});

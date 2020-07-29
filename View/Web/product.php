@@ -41,7 +41,7 @@
                         </a>
                         <div class="menu__icon">
                             <i onclick="myFunction(this)" class="fa fa-heart icon__like"> <span>Yêu Thích</span> </i>
-                            <i class="fa fa-plus-square icon__like icon__like--add" aria-hidden="true"> <span>Thêm giỏ hàng</span> </i>
+                            <i onclick="functionAlert(this)" class="fa fa-plus-square icon__like icon__like--add" aria-hidden="true"> <span>Thêm giỏ hàng</span> </i>
                             <i class="fa fa-cart-plus icon__like" aria-hidden="true"> <span>Order</span> </i>
                         </div>
 
