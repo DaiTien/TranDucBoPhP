@@ -29,7 +29,7 @@
                 <?php
                 foreach ($product as $value) {
                 ?>
-                    <div class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product <?= $value->type ?>">
+                    <div id="<?=$value->id?>" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product <?= $value->type ?>">
                         <a href="#">
                             <div class="menu-list">
                                 <span class="menu-list-product">

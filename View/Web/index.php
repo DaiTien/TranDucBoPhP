@@ -179,6 +179,24 @@
         }
     }
     ?>
+<script>
+
+    function myFunction(x) {
+        x.classList.toggle("icon__dislike");
+    }
+    function functionAlert(x)
+    {
+        <?php
+            if (isset($_SESSION['login']) && $_SESSION['login'] == 1)
+            {
+               echo 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
+            }else
+            {
+               echo 'swal("Bạn Chưa Đăng nhập", "Vui lòng đăng nhập!", "success");' ;
+            }
+        ?>
+    }
+</script>
 </body>
 
 </html>
