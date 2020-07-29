@@ -17,3 +17,4 @@
     <!-- jquery-validation -->
     <script src="asset/admin/AdminLTE/plugins/jquery-validation/jquery.validate.min.js"></script>
     <script src="asset/admin/AdminLTE/plugins/jquery-validation/additional-methods.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

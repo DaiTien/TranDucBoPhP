@@ -29,14 +29,18 @@
 
                                         if (isset($_SESSION['login']) && $_SESSION['login'] == 1)
                                         {
-                                            echo '<a class="menu__link">Xin chào ' .$user .'</a>';
+                                            echo '<a >Xin chào ' .$user .'</a>';
                                             echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
                                         }
                                         else
                                         {
-                                            echo "<a class=\"menu__link\" id=\"login_register\" href=\"#login\">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>";
+                                            echo "<a id=\"login_register\" href=\"#login\">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>";
                                         }
                                         ?>
+                                        <ul class="drop-nav">
+                                        <li><a href="homepage1.html">Giỏ hàng</a></li>
+                                        <li><a href="homepage2.html">Sản phẩm yêu thích</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                                 <!--<div class="search-part">
