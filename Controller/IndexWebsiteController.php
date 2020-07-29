@@ -39,7 +39,13 @@ class IndexWebsiteController
     function index()
     {
         session_start();
-        $user = $_SESSION['userWebsite'];
+        if (isset($_SESSION['userWebsite']) && isset($_SESSION['login']))
+        {
+            if ($_SESSION['login'] == 1)
+            {
+                $user = $_SESSION['userWebsite'];
+            }
+        }
         $slide = $this ->slideModel->GetAllRecords();
         $image = $this->libaryImageModel->GetAllRecords();
         $introduce = $this ->introduceModel->GetAlldata();
@@ -48,6 +54,7 @@ class IndexWebsiteController
         $product = $this ->productModel->GetAllRecords();
         $contact = $this ->contactModel->GetAllRecords();
         $mxh = $this->mXh->GetByID(1);
+        $feedBack = $this->feedBack->GetAllRecords();
         require_once SYSTEM_PATH. "/View/Web/index.php";
     }
     function sendFeedback()
@@ -63,24 +70,45 @@ class IndexWebsiteController
         if ($result == true)
         {
             header('location:index.php?c=IndexWebsite&a=index&r=1&action=SendMessage');
-
         }
     }
     function about()
     {
-        $contact = $this ->contactModel->GetAllRecords();
-        $mxh = $this->mXh->GetByID(1);
-        $introduce = $this ->introduceModel->GetAlldata();
-        require_once SYSTEM_PATH."/View/Web/about.php";
+        session_start();
+        if (isset($_SESSION['userWebsite']) && isset($_SESSION['login']))
+        {
+            $user = $_SESSION['userWebsite'];
+            $contact = $this ->contactModel->GetAllRecords();
+            $mxh = $this->mXh->GetByID(1);
+            $introduce = $this ->introduceModel->GetAlldata();
+            require_once SYSTEM_PATH."/View/Web/about.php";
+        }else{
+            $contact = $this ->contactModel->GetAllRecords();
+            $mxh = $this->mXh->GetByID(1);
+            $introduce = $this ->introduceModel->GetAlldata();
+            require_once SYSTEM_PATH."/View/Web/about.php";
+        }
+
     }
     function news()
     {
-        $id = $_GET['id'];
-        $contact = $this ->contactModel->GetAllRecords();
-        $mxh = $this->mXh->GetByID(1);
-        $news = $this->newModel->GetRecordsById($id);
+        session_start();
+        if (isset($_SESSION['userWebsite']) && isset($_SESSION['login']))
+        {
+            $user = $_SESSION['userWebsite'];
+            $id = $_GET['id'];
+            $contact = $this ->contactModel->GetAllRecords();
+            $mxh = $this->mXh->GetByID(1);
+            $news = $this->newModel->GetRecordsById($id);
+            require_once SYSTEM_PATH."/View/Web/news.php";
+        }else{
+            $id = $_GET['id'];
+            $contact = $this ->contactModel->GetAllRecords();
+            $mxh = $this->mXh->GetByID(1);
+            $news = $this->newModel->GetRecordsById($id);
+            require_once SYSTEM_PATH."/View/Web/news.php";
+        }
 
-        require_once SYSTEM_PATH."/View/Web/news.php";
     }
     function Register()
     {
@@ -114,10 +142,27 @@ class IndexWebsiteController
         {
             header('location:index.php?c=IndexWebsite&a=index&lg=1');
             $_SESSION['userWebsite'] = $user;
+            $_SESSION['login'] = $result;
 
         }else{
             header('location:index.php?c=IndexWebsite&a=index&lg=0&action=Register');
         }
+    }
+    function Logout()
+    {
+        session_start();
+        unset($_SESSION['userWebsite']);
+        unset($_SESSION['login']);
+        session_destroy();
+        $slide = $this ->slideModel->GetAllRecords();
+        $image = $this->libaryImageModel->GetAllRecords();
+        $introduce = $this ->introduceModel->GetAlldata();
+        $news = $this->newModel->GetAlldata();
+        $productType = $this->productTypeModel->GetAllRecords();
+        $product = $this ->productModel->GetAllRecords();
+        $contact = $this ->contactModel->GetAllRecords();
+        $mxh = $this->mXh->GetByID(1);
+        require_once SYSTEM_PATH. "/View/Web/index.php";
     }
 
 }

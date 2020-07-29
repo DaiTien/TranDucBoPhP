@@ -27,10 +27,10 @@
                                     <li class="has-child">
                                         <?php
 
-                                        if (isset($_GET['lg']) && $_GET['lg'] == 1)
+                                        if (isset($_SESSION['login']) && $_SESSION['login'] == 1)
                                         {
                                             echo '<a class="menu__link">Xin chào ' .$user .'</a>';
-                                            echo '<a href="?c=IndexWebsite&a=Index" id="btnLogout" class="btn">Logout</a>';
+                                            echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
                                         }
                                         else
                                         {

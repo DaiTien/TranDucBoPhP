@@ -30,7 +30,7 @@
                 <div class="container">
                     <div class="breadcrumb-inner">
                         <h2>GIỚI THIỆU</h2>
-                        <a href="?c=IndexWebsite&a=index">Home</a>
+                        <a href="?c=IndexWebsite&a=index">Trang Chủ</a>
                     </div>
                 </div>
             </section>

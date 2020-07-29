@@ -141,9 +141,9 @@
         <!-- End Main -->
         <!-- Login  -->
         <?php
-        if (isset($_GET['lg']))
+        if (isset($_SESSION['login']))
         {
-            if ($_GET['lg'] == 1)
+            if ($_SESSION['login'] == 1)
             {
                 echo '';
             }
