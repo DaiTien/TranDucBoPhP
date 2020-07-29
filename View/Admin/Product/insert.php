@@ -27,7 +27,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
             <form method="post" action="index.php?c=Product&a=Save" enctype="multipart/form-data">
                 <!-- general form elements -->
                 <div class="card mt-2 card-info">
@@ -51,21 +51,17 @@
                                     ?>
                                 </label>
                             </div>
-                            <div hidden class="form-group">
-                                <label for="exampleInputEmail1">MÃ ĐƠN HÀNG</label>
-                                <input type="text"  class="form-control" name="id" readonly  placeholder="Mã Đơn Hàng">
-                            </div>
                             <div class="row">
                             <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputPassword1">TÊN SẢN PHẨM</label>
-                                <input type="text"  class="form-control" name="name" placeholder="Tên Sản Phẩm">
+                                <input type="text" class="form-control" name="tenSan" placeholder="Tên Sản Phẩm">
                             </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label>Loại Sản Phẩm</label>
-                                    <select name="type" class="form-control">
+                                    <select name="productType" class="form-control">
                                         <?php
                                         foreach ($productType as $value){
                                         ?>
@@ -78,26 +74,45 @@
                             </div>
                             <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Số lượng </label>
-                                <input type="text"  class="form-control" autocomplete="off" name="soLuong" placeholder="">
+                                <label for="exampleInputPassword1">Giá (Size L) </label>
+                                <input type="text"  class="form-control" name="priceL" placeholder="Nhập giá cho size lớn">
                             </div>
                             </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Gía </label>
-                                        <input type="text"  class="form-control" name="price" placeholder="Gía">
+                                        <label for="exampleInputPassword1">Gía (Size M) </label>
+                                        <input type="text"  class="form-control" name="priceM" placeholder="Nhập giá cho size nhỏ">
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">GIỚI THIỆU</label>
-                                <textarea type="text" class="form-control" name="summary" placeholder="Giới Thiệu"></textarea>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Giới thiệu</label>
+                                        <textarea type="text" class="form-control" name="summary" rows="5" placeholder="Giới Thiệu"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Nội dung</label>
+                                        <textarea type="text" class="form-control" name="content" rows="5" placeholder="Nội dung sản phẩm"></textarea>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputFile">File input</label>
-                                <input type="file" name="file" id="inputFile">
-                                <img class="imageShow" id="showImage" src=""/>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Số lượng </label>
+                                        <input type="text"  class="form-control" autocomplete="off" name="total" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">Ảnh mô tả</label>
+                                        <input type="file" name="file" id="inputFile">
+                                        <img class="imageShow" id="showImage" src=""/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -113,13 +128,7 @@
                 </table>
             </form>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- /.row -->
         </section>

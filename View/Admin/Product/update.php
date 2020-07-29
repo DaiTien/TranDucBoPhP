@@ -27,7 +27,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card card-info mt-2">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Chỉnh Sửa Đơn Hàng</h3>
@@ -51,16 +51,60 @@
                                     </label>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" hidden>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">MÃ ĐƠN HÀNG</label>
-                                            <input type="text"value="<?=$tdb_product->id?>"  class="form-control" name="id" readonly  placeholder="Mã Đơn Hàng">
+                                            <input type="text"  value="<?=$tdb_product->id?>"  class="form-control" name="id" readonly  placeholder="Mã Đơn Hàng">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">TÊN SẢN PHẨM</label>
-                                            <input type="text"value="<?=$tdb_product->name?>"  class="form-control" name="name" placeholder="Tên Sản Phẩm">
+                                            <input type="text" value="<?=$tdb_product->name?>"  class="form-control" name="name" placeholder="Tên Sản Phẩm">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Loại sản phẩm</label>
+                                            <select name="productType" class="form-control">
+                                                <option value="<?=$productType2->id?>" selected="selected"><?=$productType2->name?></option>
+                                                <?php
+                                                foreach ($productType as $value){
+                                                    ?>
+                                                    <option value="<?=$value->id?>"><?=$value->name?></option>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Gía (Size L) </label>
+                                            <input type="text" value="<?=$tdb_product->priceL?>"  class="form-control" name="priceL" placeholder="Gía">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Gía (Size M) </label>
+                                            <input type="text" value="<?=$tdb_product->priceM?>"  class="form-control" name="sizeM" placeholder="Gía">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Giới thiệu</label>
+                                            <textarea type="text" class="form-control" name="title" rows="5" placeholder="Giới Thiệu"><?=$tdb_product->summary?></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Nội dung</label>
+                                            <textarea type="text" class="form-control" name="noiDung" rows="5" placeholder="Nội dung sản phẩm"><?=$tdb_product->content?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -68,26 +112,17 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Số lượng </label>
-                                            <input type="text"value="<?=$tdb_product->soLuong?>"  class="form-control" name="soLuong" placeholder="">
+                                            <input type="text" value="<?=$tdb_product->soLuong?>"  class="form-control" name="soLuong" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Gía </label>
-                                            <input type="text"value="<?=$tdb_product->price?>"  class="form-control" name="price" placeholder="Gía">
+                                            <label for="exampleInputFile">Ảnh mô tả:</label>
+                                            <input type="file" name="file" id="inputFile">
+                                            <input type="text" name="fileImg" value="<?=$tdb_product->image?>" hidden>
+                                            <img class="imageShow" id="showImage" style="width: 150px" height="100px" src="<?=$tdb_product->image?>"/>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">GIỚI THIỆU</label>
-                                    <input type="text" value="<?=$tdb_product->summary?>" class="form-control" name="summary" placeholder="Giới Thiệu">
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="exampleInputFile">File input</label>
-                                    <input type="file" name="file" id="inputFile">
-                                    <img class="imageShow" id="showImage" style="width: 150px" height="100px" src="<?=$tdb_product->image?>"/>
                                 </div>
                             </div>
                                     <div class="card-footer">
@@ -96,13 +131,6 @@
                                         <a href="?c=Product&a=index" class="btn btn-danger">Cancel</a>
                                     </div>
                         </form>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
                     </div>
                 </div>
             </div>

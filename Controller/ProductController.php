@@ -50,15 +50,15 @@ class ProductController
         else
         {
             move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/product/".$_FILES["file"]["name"]);
-
-        $id = $_POST['id'];
-        $name = $_POST['name'];
-        $soLuong = $_POST['soLuong'];
-        $type = $_POST['type'];
+        $tenSan = $_POST['tenSan'];
+        $soLuong = $_POST['total'];
+        $type = $_POST['productType'];
         $image = "UpLoadFile/product/".$_FILES["file"]["name"];
         $summary = $_POST['summary'];
-        $price = $_POST['price'];
-        $result = $this->productModel->insert( new Product($id, $name, $image, $summary,$soLuong, $price,$type));
+        $content = $_POST['content'];
+        $priceM = $_POST['priceM'];
+        $priceL = $_POST['priceL'];
+        $result = $this->productModel->insert( new Product(null,$tenSan,$image,$summary,$content,$soLuong,$priceM,$priceL,$type,null));
         if($result == true){
             header('location:index.php?c=Product&a=index&r=1&action=Insert');
         }else{
@@ -75,6 +75,8 @@ class ProductController
             $avatarUser = $_SESSION['avatarUser'];
             $id = $_GET['id'];
             $tdb_product = $this->productModel->GetByID($id);
+            $productType = $this->productTypeModel->GetAllRecords();
+            $productType2 = $this->productTypeModel->GetRecordById($tdb_product->type);
             require_once SYSTEM_PATH. '/View/Admin/Product/update.php';
         }
         else
@@ -87,7 +89,21 @@ class ProductController
     {
         $id = $_POST['id'];
         if ($_FILES["file"]["error"] > 0) {
-            header('location:index.php?c=Product&a=Update&id=' . $id . '&r=3');
+            $name = $_POST['name'];
+            $soLuong = $_POST['soLuong'];
+            $type = $_POST['productType'];
+            $image = $_POST['fileImg'];
+            $title = $_POST['title'];
+            $noiDung = $_POST['noiDung'];
+            $sizeM = $_POST['sizeM'];
+            $priceL = $_POST['priceL'];
+
+            $result = $this->productModel->Update(new product($id, $name, $image, $title,$noiDung, $soLuong, $sizeM,$priceL,$type,null));
+            if ($result == true) {
+                header('location:index.php?c=Product&a=index&r=1&action=Update');
+            } else {
+                header('location:index.php?c=Product&a=index&r=0&action=Update');
+            }
         } else {
             if (file_exists("UpLoadFile/" . $_FILES["file"]["name"])) {
                 header('location:index.php?c=Product&a=Update&id=' . $id . '&r=2');
@@ -95,11 +111,13 @@ class ProductController
                 move_uploaded_file($_FILES["file"]["tmp_name"], "UpLoadFile/product/" . $_FILES["file"]["name"]);
                 $name = $_POST['name'];
                 $soLuong = $_POST['soLuong'];
-                $type = $_POST['type'];
                 $image = "UpLoadFile/product/" . $_FILES["file"]["name"];
-                $summary = $_POST['summary'];
-                $price = $_POST['price'];
-                $result = $this->productModel->Update(new product($id, $name, $image, $summary, $soLuong, $price,$type));
+                $type = $_POST['productType'];
+                $title = $_POST['title'];
+                $noiDung = $_POST['noiDung'];
+                $sizeM = $_POST['sizeM'];
+                $priceL = $_POST['priceL'];
+                $result = $this->productModel->Update(new product($id, $name, $image, $title,$noiDung, $soLuong, $sizeM,$priceL,$type,null));
                 if ($result == true) {
                     header('location:index.php?c=Product&a=index&r=1&action=Update');
                 } else {

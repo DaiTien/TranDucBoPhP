@@ -78,7 +78,7 @@
                                         </td>
                                         <td class="text-center"><?=$value->summary?></td>
                                         <td class="text-center"><?=$value->soLuong?></td>
-                                        <td class="text-center"><?=$value->price?></td>
+                                        <td class="text-center"><?=$value->priceM?></td>
                                         <td class="text-center">
                                             <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=Product&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
                                             <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=Product&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
