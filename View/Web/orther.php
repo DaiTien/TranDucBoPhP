@@ -166,25 +166,90 @@
                                 <a href="#" class="btn-medium btn-skin pull-right">UPDATE cart</a>
                             </div> -->
                         </div>
-                        <div class="cart-total wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <div class="cart-total-title">
-                                <h5>Hóa Đơn</h5>
+                        <div class="row">
+                            <div class="col-md-7 col-sm-7 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                <div class="shop-checkout-left">
+                                    <h6>Thông Tin Người Chuyển Hàng</h6>
+                                    <form class="form-checkout" name="form" method="post">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <h5>Thông Tin Chi Tiết</h5>
+                                            </div>
+                                            <!-- <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <input type="text" name="txt" placeholder="First Name">
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <input type="text" name="txt" placeholder="Last Name">
+                                            </div> -->
+                                            <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <input type="text" name="txt" placeholder="Company Name">
+                                            </div> -->
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <input type="text" name="txt" placeholder="Tên Người Nhận">
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <input type="text" name="text" placeholder="Số Điện Thoại">
+                                            </div>
+                                            <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <select class="select-dropbox">
+                                                    <option>Country</option>
+                                                    <option>India</option>
+                                                    <option>USA</option>
+                                                    <option>London</option>
+                                                </select>
+                                            </div> -->
+                                            <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <textarea placeholder="Địa Chỉ"></textarea>
+                                            </div> -->
+                                            <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <select class="select-dropbox">
+                                                    <option>Province</option>
+                                                    <option>list 1</option>
+                                                    <option>list 2</option>
+                                                    <option>list 3</option>
+                                                </select>
+                                            </div> -->
+                                            <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <label>
+                                                    <input type="checkbox" name="checkbox">Create an account ?</label>
+                                            </div> -->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <h5>Địa Chỉ Giao Hàng</h5>
+                                            </div>
+                                            <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <label>
+                                                    <input type="checkbox" name="checkbox">Ship to a different address ?</label>
+                                            </div> -->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <textarea placeholder="Địa Chỉ Giao Hàng"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="product-cart-total">
-                                <small>Tổng Sản Phẩm</small>
-                                <span>$140.00</span>
-                            </div>
-                            <div class="product-cart-total">
-                                <small>Tổng Tiền Vận Chuyển</small>
-                                <span>$15.00</span>
-                            </div>
-                            <div class="grand-total">
-                                <h5>Tổng Tiền <span>$140.00</span></h5>
-                            </div>
-                            <div class="proceed-check">
-                                <a href="shop_checkout.html" class="btn-primary-gold btn-medium">Thanh Toán</a>
+                            <div class="col-md-5 col-sm-5 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                <div class="cart-total wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                    <div class="cart-total-title">
+                                        <h5>Hóa Đơn</h5>
+                                    </div>
+                                    <div class="product-cart-total">
+                                        <small>Tổng Sản Phẩm</small>
+                                        <span>$140.00</span>
+                                    </div>
+                                    <div class="product-cart-total">
+                                        <small>Tổng Tiền Vận Chuyển</small>
+                                        <span>$15.00</span>
+                                    </div>
+                                    <div class="grand-total">
+                                        <h5>Tổng Tiền <span>$140.00</span></h5>
+                                    </div>
+                                    <div class="proceed-check">
+                                        <a href="shop_checkout.html" class="btn-primary-gold btn-medium">Thanh Toán</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
             </div>
