@@ -153,6 +153,9 @@ class IndexWebsiteController
         session_start();
         unset($_SESSION['userWebsite']);
         unset($_SESSION['login']);
+        unset($_SESSION['Cart']);
+        unset($_SESSION['success']);
+        unset($_SESSION['total']);
         session_destroy();
         $slide = $this ->slideModel->GetAllRecords();
         $image = $this->libaryImageModel->GetAllRecords();
@@ -163,6 +166,68 @@ class IndexWebsiteController
         $contact = $this ->contactModel->GetAllRecords();
         $mxh = $this->mXh->GetByID(1);
         require_once SYSTEM_PATH. "/View/Web/index.php";
+    }
+    function productLike()
+    {
+        $id = $_GET['id'];
+        //Mãng lưu trữ các sản phẩm yêu thích
+        $array = [];
+        if (in_array($id,$array))
+        {
+
+        }else{
+            array_push($array,$id);
+        }
+        print_r($array);
+    }
+    function addCart()
+    {
+        session_start();
+        $id = $_GET['id'];
+        $product = $this->productModel->GetByID($id);
+        $name = $product ->name;
+        $gia = $product->priceM;
+        $img = $product->image;
+        $_SESSION['total'] = $_SESSION['total'] + 1;
+        if (!isset($_SESSION['Cart'][$id]))
+        {
+            $_SESSION['Cart'][$id]['qty'] = 1;
+            $_SESSION['Cart'][$id]['name'] = $name;
+            $_SESSION['Cart'][$id]['gia'] = $gia;
+            $_SESSION['Cart'][$id]['img'] = $img;
+            $_SESSION['Cart'][$id]['tongTien'] = $gia;
+            header('location:index.php?c=indexwebsite&a=index&action=SanPham');
+            $_SESSION['success'] = 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
+        }else{
+            if (isset($_SESSION['Cart'][$id]))
+            {
+                $_SESSION['Cart'][$id]['qty'] += 1;
+            }else{
+                $_SESSION['Cart'][$id]['qty'] = 1;
+            }
+            $_SESSION['Cart'][$id]['name'] = $name;
+            $_SESSION['Cart'][$id]['gia'] = $gia;
+            $_SESSION['Cart'][$id]['img'] = $img;
+            $_SESSION['Cart'][$id]['tongTien'] = $gia * $_SESSION['Cart'][$id]['qty'];
+            header('location:index.php?c=indexwebsite&a=index&action=SanPham');
+            $_SESSION['success'] = 'swal("Sản phẩm đã có", "Đã cập nhật số lượng!", "success");';
+        }
+
+    }
+    function Order()
+    {
+        session_start();
+        if (isset($_SESSION['userWebsite']) && isset($_SESSION['login']))
+        {
+            $user = $_SESSION['userWebsite'];
+            $contact = $this ->contactModel->GetAllRecords();
+            $mxh = $this->mXh->GetByID(1);
+            require_once SYSTEM_PATH."/View/Web/orther.php";
+        }else{
+            $contact = $this ->contactModel->GetAllRecords();
+            $mxh = $this->mXh->GetByID(1);
+            require_once SYSTEM_PATH."/View/Web/orther.php";
+        }
     }
 
 }

@@ -31,16 +31,17 @@
                                         {
                                             echo '<a >Xin chào ' .$user .'</a>';
                                             echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
+                                            echo '<ul class="drop-nav">';
+                                            echo '<li><a href="homepage1.html">Giỏ hàng</a></li>';
+                                            echo '<li><a href="homepage2.html">Sản phẩm yêu thích</a></li>';
+                                            echo '</ul>';
+
                                         }
                                         else
                                         {
                                             echo "<a id=\"login_register\" href=\"#login\">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>";
                                         }
                                         ?>
-                                        <ul class="drop-nav">
-                                        <li><a href="homepage1.html">Giỏ hàng</a></li>
-                                        <li><a href="homepage2.html">Sản phẩm yêu thích</a></li>
-                                        </ul>
                                     </li>
                                 </ul>
                                 <!--<div class="search-part">
@@ -69,7 +70,7 @@
                                     <a href="?c=IndexWebsite">Trang Chủ</a>
                                 </li>
                                 <li class="mega-menu">
-                                    <a class="menu__link" href="#products">Sản Phẩm</a>
+                                    <a class="menu__link" id="san_pham" href="#products">Sản Phẩm</a>
                                     
                                 </li>
                                 <li class="has-child">

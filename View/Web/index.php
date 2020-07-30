@@ -109,10 +109,19 @@
                     </div>
                 </section>
 
-                <a href="View/Web/orther.php">
+                <a href="?c=IndexWebsite&a=Order">
                     <div class="cart">
                         <i class="fa fa-shopping-cart cart__fixed" aria-hidden="true"></i>
-                        <span class="cart__count" id="displayCount">0</span>
+                        <span class="cart__count" id="displayCount">
+                            <?php
+                            if (isset($_SESSION['total']))
+                            {
+                                echo $_SESSION['total'];
+                            }else{
+                                echo '0';
+                            }
+                            ?>
+                        </span>
                     </div>
                 </a>
 
@@ -179,14 +188,43 @@
         if ($_GET['action'] == "Register") {
             echo "<script type=\"text/javascript\"> $(document).ready(function(){ $('#login_register').click()});</script>";
         }
+        if ($_GET['action'] == "SanPham") {
+            echo "<script type=\"text/javascript\"> $(document).ready(function(){ $('#san_pham').click()});</script>";
+        }
     }
     ?>
     <script>
         function myFunction(x) {
-            x.classList.toggle("icon__dislike");
+            alert(x.id);
+            document.getElementById('a'+x.id).click();
+            <?php
+            if (isset($_SESSION['login']) && $_SESSION['login'] == 1)
+            {
+                echo 'x.classList.toggle("icon__dislike");';
+            }else
+            {
+                echo 'swal("Bạn Chưa Đăng nhập", "Vui lòng đăng nhập!", "warning");';
+            }
+            ?>
         }
-
         function functionAlert(x) {
+            <?php
+            if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
+            ?>
+            document.getElementById('cart'+x.id).click();
+            <?php
+                if (isset($_SESSION['success']))
+                {
+                    echo $_SESSION['success'];
+                }else{
+                    //echo 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
+                }
+            } else {
+                echo 'swal("Bạn Chưa Đăng nhập", "Vui lòng đăng nhập!", "warning");';
+            }
+            ?>
+        }
+        function functionOrder(x) {
             <?php
             if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
                 echo 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';

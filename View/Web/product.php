@@ -24,6 +24,7 @@
                                     <a href="javascript:;" data-filter=".freshfood">TRÀ NGUYÊN CHẤT</a>
                                     <a href="javascript:;" data-filter=".lunch">THỨC UỐNG ĐÁ XAY</a>-->
                 </div>
+
             </div>
             <div class="portfolioContainer row">
                 <?php
@@ -40,11 +41,11 @@
                             </div>
                         </a>
                         <div class="menu__icon">
-                            <i onclick="myFunction(this)" class="fa fa-heart icon__like"> <span>Yêu Thích</span> </i>
-                            <i onclick="functionAlert(this)" class="fa fa-plus-square icon__like icon__like--add" id="countButton" aria-hidden="true"> <span>Thêm giỏ hàng</span> </i>
-                            <a href="View/Web/orther.php">
-                                <i class="fa fa-cart-plus icon__like" aria-hidden="true"> <span>Order</span> </i>
-                            </a>
+                            <i onclick="myFunction(this)" id="like<?=$value->id?>" class="fa fa-heart icon__like"> <span>Yêu Thích</span> </i>
+                            <a hidden id="alike<?=$value->id?>" href="?c=IndexWebsite&a=productLike&id=<?=$value->id?>"></a>
+                            <i onclick="functionAlert(this)" id="add<?=$value->id?>" class="fa fa-plus-square icon__like icon__like--add" id="countButton" aria-hidden="true"> <span>Thêm giỏ hàng</span> </i>
+                            <a hidden id="cartadd<?=$value->id?>" href="?c=IndexWebsite&a=addCart&id=<?=$value->id?>"></a>
+                            <i onclick="functionOrder(this)" id="order<?=$value->id?>" class="fa fa-cart-plus icon__like" aria-hidden="true"> <span>Order</span> </i>
                         </div>
 
                     </div>
