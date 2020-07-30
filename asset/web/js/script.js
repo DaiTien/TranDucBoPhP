@@ -174,8 +174,20 @@ $(document).ready(function() {
     });
 });
 //Click Scroll link
+//count
+function functionAlert(x) {
+    var count = 0;
+    var countButton = document.getElementById("countButton");
+    var displayCount = document.getElementById("displayCount");
+    countButton.onclick = function() {
+        count++;
+        displayCount.innerHTML = count;
+    }
+}
 
+
+//end 
 
 //document.querySelector(".icon__like--add").addEventListener('click', function() {
-    //swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");
+//swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");
 //});

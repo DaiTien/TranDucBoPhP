@@ -156,3 +156,33 @@
         opacity: 1;
         transform: translateY(0);
     }
+    
+    .cart {
+        position: fixed;
+        bottom: 30%;
+        right: 3%;
+        z-index: 9999;
+    }
+    
+    .cart .cart__fixed {
+        font-size: 40px;
+        color: #e4b95b;
+        position: relative;
+    }
+    
+    .cart .cart__count {
+        width: 30px;
+        height: 30px;
+        background-color: #e4b95b;
+        color: #fff;
+        position: absolute;
+        top: -35%;
+        right: -50%;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 18px;
+    }
+    
+    .product-cart img {
+        width: 15rem;
+    }
