@@ -114,11 +114,17 @@
                         <i class="fa fa-shopping-cart cart__fixed" aria-hidden="true"></i>
                         <span class="cart__count" id="displayCount">
                             <?php
-                            if (isset($_SESSION['total']))
+                            $tongSanPham = 0;
+                            if (isset($_SESSION['Cart']))
                             {
-                                echo $_SESSION['total'];
-                            }else{
-                                echo '0';
+                                foreach ($_SESSION['Cart'] as $val)
+                                {
+                                    $tongSanPham = $tongSanPham + $val['qty'];
+                                }
+                                echo $tongSanPham;
+                            }
+                            else{
+                                echo $tongSanPham;
                             }
                             ?>
                         </span>
@@ -213,12 +219,7 @@
             ?>
             document.getElementById('cart'+x.id).click();
             <?php
-                if (isset($_SESSION['success']))
-                {
-                    echo $_SESSION['success'];
-                }else{
-                    //echo 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
-                }
+                echo 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
             } else {
                 echo 'swal("Bạn Chưa Đăng nhập", "Vui lòng đăng nhập!", "warning");';
             }
@@ -227,6 +228,9 @@
         function functionOrder(x) {
             <?php
             if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
+            ?>
+            document.getElementById('a'+x.id).click();
+            <?php
                 echo 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
             } else {
                 echo 'swal("Bạn Chưa Đăng nhập", "Vui lòng đăng nhập!", "warning");';
@@ -234,6 +238,7 @@
             ?>
         }
     </script>
+
 </body>
 
 </html>

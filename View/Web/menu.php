@@ -32,7 +32,7 @@
                                             echo '<a >Xin chào ' .$user .'</a>';
                                             echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
                                             echo '<ul class="drop-nav">';
-                                            echo '<li><a href="homepage1.html">Giỏ hàng</a></li>';
+                                            echo '<li><a href="?c=IndexWebsite&a=Order">Giỏ hàng</a></li>';
                                             echo '<li><a href="homepage2.html">Sản phẩm yêu thích</a></li>';
                                             echo '</ul>';
 

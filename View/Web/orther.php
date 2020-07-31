@@ -59,72 +59,90 @@
                             </ul>
                         </div> -->
                         <div class="shop-cart-list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <table class="shop-cart-table">
-                                <thead>
+                            <form method="post" action="?c=IndexWebsite&a=UpdateCart">
+                                <table class="shop-cart-table">
+                                    <thead>
                                     <tr>
                                         <th>Sản Phẩm</th>
                                         <th>Giá (VNĐ)</th>
                                         <th class="text-center">Số Lượng</th>
                                         <th>Tổng Tiền</th>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                foreach ($_SESSION['Cart'] as $key => $value)
-                                {
-                                ?>
-                                    <tr>
-                                        <td>
-                                            <div class="product-cart">
-                                                <img src="<?=$value['img']?>" alt="">
-                                            </div>
-                                            <div class="product-cart-title">
-                                                <span><?=$value['name']?></span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <strong id="giaTien"><?=$value['gia']?></strong>
-                                            <!--<del>$5400.00</del>-->
-                                        </td>
-                                        <td>
-                                            <div class="price-textbox">
-                                                <!--<span class="minus-text"><i class="icon-minus"></i></span>-->
-                                                <input id="soLuong" readonly name="txt" value="<?=$value['qty']?>" placeholder="1" type="text">
-                                                <!--<span class="plus-text"><i class="icon-plus"></i></span>-->
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    if (isset($_SESSION['Cart'])&& $_SESSION['Cart'] != null)
+                                    {
+                                        foreach ($_SESSION['Cart'] as $key => $value)
+                                        {
+                                            ?>
+                                            <tr>
+                                                <td>
+                                                    <div class="product-cart">
+                                                        <img src="<?=$value['img']?>" alt="">
+                                                    </div>
+                                                    <div class="product-cart-title">
+                                                        <span><?=$value['name']?></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <strong id="giaTien"><?=$value['gia']?></strong>
+                                                    <!--<del>$5400.00</del>-->
+                                                </td>
+                                                <td>
+                                                    <div class="price-textbox">
+                                                        <!--<span class="minus-text"><i class="icon-minus"></i></span>-->
+                                                        <input id="soLuong" name='txtsoLuong' readonly value="<?=$value['qty']?>" placeholder="1" type="text">
+                                                        <!--<span class="plus-text"><i class="icon-plus"></i></span>-->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span id="tongTien"><?=$value['tongTien']?></span>
+                                                </td>
+                                                <td class="shop-cart-close">
+                                                    <a href="?c=IndexWebsite&a=DeleteCart&id=<?=$key?>" class="icon-cancel-5"></a>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                        }
 
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span id="tongTien"><?=$value['tongTien']?></span>
-                                        </td>
-                                        <td class="shop-cart-close"><i class="icon-cancel-5"></i></td>
-                                    </tr>
-                                <?php
-                                }
-                                ?>
-                                </tbody>
-                            </table>
+
+                                    }else{
+                                        echo '<tr><td>Chưa Có Sản phẩm nào</td></tr>';
+                                    }
+                                    ?>
+
+
+                                    </tbody>
+                                </table>
+                            </form>
                         </div>
                         <div class="row">
-                            <form class="login-form" method="post" name="login">
+                            <form class="login-form" method="post" action="?c=IndexWebsite&a=ThanhToan" name="login">
                                 <div class="col-md-7 col-sm-7 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                     <div class="shop-checkout-left">
                                         <h6>Thông Tin Người Chuyển Hàng</h6>
                                             <div class="row">
-                                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <h5>Thông Tin Chi Tiết</h5>
+                                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                                    <h5>Tên người nhận</h5>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                                    <h5>Số điện thoại</h5>
+                                                </div>
+                                                <div hidden class="col-md-6 col-sm-12 col-xs-12">
+                                                    <input type="text"  name="cusId" value="<?=$profile->id?>" placeholder="Tên Người Nhận" required>
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <input type="text" name="userName" placeholder="Tên Người Nhận" required>
+                                                    <input type="text" name="userName" value="<?=$profile->userName?>" placeholder="Tên Người Nhận" required>
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <input type="text" name="phone" placeholder="Số Điện Thoại" required>
+                                                    <input type="text" name="phone" value="<?=$profile->phone?>" placeholder="Số Điện Thoại" required>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <h5>Địa Chỉ Giao Hàng</h5>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <textarea placeholder="Địa Chỉ Giao Hàng" required></textarea>
+                                                    <textarea placeholder="Địa Chỉ Giao Hàng" name="address" required></textarea>
                                                 </div>
                                             </div>
                                     </div>
@@ -136,14 +154,42 @@
                                         </div>
                                         <div class="product-cart-total">
                                             <small>Tổng Sản Phẩm</small>
-                                            <span><?=$_SESSION['total']?></span>
+                                            <span>
+                                                <?php
+                                                $tongSanPham = 0;
+                                                if (isset($_SESSION['Cart']))
+                                                {
+                                                    foreach ($_SESSION['Cart'] as $val)
+                                                    {
+                                                        $tongSanPham = $tongSanPham + $val['qty'];
+                                                    }
+                                                    echo $tongSanPham;
+                                                }
+                                                ?>
+                                            </span>
+                                            <input name="totalProduct" hidden value="<?=$tongSanPham?>"/>
                                         </div>
                                         <div class="product-cart-total">
                                             <small>Tiền Vận Chuyển</small>
                                             <span>15000 VNĐ</span>
                                         </div>
                                         <div class="grand-total">
-                                            <h5>Tổng Tiền <span>Chưa tính được</span></h5>
+                                            <h5>Tổng Tiền
+                                                <span>
+                                                    <?php
+                                                    $tongTien = 0;
+                                                    if (isset($_SESSION['Cart']))
+                                                    {
+                                                        foreach ($_SESSION['Cart'] as $val)
+                                                        {
+                                                            $tongTien = $tongTien + $val['tongTien'];
+                                                        }
+                                                        echo $tongTien + 15000;
+                                                    }
+                                                    ?>
+                                                </span>
+                                                <input name="totalPrice" hidden value="<?=$tongTien + 15000?>"/>
+                                            </h5>
                                         </div>
                                         <div class="proceed-check">
                                             <input type="submit" value="Thanh Toán" class="btn-primary-gold btn-medium"/>
@@ -174,14 +220,6 @@
     <?php
     include 'linkfooter.php';
     ?>
-    <script>
-        $(document).ready(function()
-        {
-            var gia = document.getElementById('giaTien').value();
-            var soLuong = document.getElementById('soLuong').value();
-            $('#tongTien').innerHTML = gia * soLuong;
-        });
-    </script>
 </body>
 
 </html>

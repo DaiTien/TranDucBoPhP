@@ -39,10 +39,22 @@ class CustomerModel
         $data = $result->fetch_all();
         if (count($data))
         {
-            return new Customer($data[0][1],$data[0][2],$data[0][3],$data[0][4],$data[0][5]);
+            return new Customer($data[0][0],$data[0][1],$data[0][2],$data[0][3],$data[0][4]);
         }
         return null;
     }
+    function GetProfileByUser($user)
+    {
+        $query = "select * from tdb_customer where username = '$user'";
+        $result = $this->mysqli->query($query);
+        $array = $result->fetch_all();
+        if (count($array))
+        {
+            return new Customer($array[0][0],$array[0][1],$array[0][2],$array[0][3],$array[0][4]);
+        }
+        return null;
+    }
+
     function UpdateRecord(Customer $cus)
     {
         $result = $this->mysqli->query("update tdb_customer set username='$cus->userName',password='$cus->password',phone ='$cus->phone',email='$cus->email' where id = $cus->id");

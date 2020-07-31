@@ -10,6 +10,7 @@ require_once SYSTEM_PATH."/Model/ContactModel.php";
 require_once SYSTEM_PATH."/Model/SocialNetworkAdminModel.php";
 require_once SYSTEM_PATH."/Model/FeedBackAdminModel.php";
 require_once SYSTEM_PATH."/Model/CustomerModel.php";
+require_once SYSTEM_PATH."/Model/OrderModel.php";
 class IndexWebsiteController
 {
     private $slideModel;
@@ -22,6 +23,7 @@ class IndexWebsiteController
     private $mXh;
     private $feedBack;
     private $customerModel;
+    private $orderModel;
     public function __construct()
     {
         $this->slideModel = new SlideImageModel();
@@ -34,6 +36,7 @@ class IndexWebsiteController
         $this->mXh = new SocialNetworkAdminModel();
         $this->feedBack= new FeedBackAdminModel();
         $this->customerModel= new CustomerModel();
+        $this->orderModel= new OrderModel();
     }
 
     function index()
@@ -188,7 +191,6 @@ class IndexWebsiteController
         $name = $product ->name;
         $gia = $product->priceM;
         $img = $product->image;
-        $_SESSION['total'] = $_SESSION['total'] + 1;
         if (!isset($_SESSION['Cart'][$id]))
         {
             $_SESSION['Cart'][$id]['qty'] = 1;
@@ -197,7 +199,7 @@ class IndexWebsiteController
             $_SESSION['Cart'][$id]['img'] = $img;
             $_SESSION['Cart'][$id]['tongTien'] = $gia;
             header('location:index.php?c=indexwebsite&a=index&action=SanPham');
-            $_SESSION['success'] = 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
+
         }else{
             if (isset($_SESSION['Cart'][$id]))
             {
@@ -210,9 +212,38 @@ class IndexWebsiteController
             $_SESSION['Cart'][$id]['img'] = $img;
             $_SESSION['Cart'][$id]['tongTien'] = $gia * $_SESSION['Cart'][$id]['qty'];
             header('location:index.php?c=indexwebsite&a=index&action=SanPham');
-            $_SESSION['success'] = 'swal("Sản phẩm đã có", "Đã cập nhật số lượng!", "success");';
         }
-
+    }
+    function OrderNow()
+    {
+        session_start();
+        $id = $_GET['id'];
+        $product = $this->productModel->GetByID($id);
+        $name = $product ->name;
+        $gia = $product->priceM;
+        $img = $product->image;
+        if (!isset($_SESSION['Cart'][$id]))
+        {
+            $_SESSION['Cart'][$id]['qty'] = 1;
+            $_SESSION['Cart'][$id]['name'] = $name;
+            $_SESSION['Cart'][$id]['gia'] = $gia;
+            $_SESSION['Cart'][$id]['img'] = $img;
+            $_SESSION['Cart'][$id]['tongTien'] = $gia;
+            header('location:index.php?c=IndexWebsite&a=Order');
+        }
+        else{
+            if (isset($_SESSION['Cart'][$id]))
+            {
+                $_SESSION['Cart'][$id]['qty'] += 1;
+            }else{
+                $_SESSION['Cart'][$id]['qty'] = 1;
+            }
+            $_SESSION['Cart'][$id]['name'] = $name;
+            $_SESSION['Cart'][$id]['gia'] = $gia;
+            $_SESSION['Cart'][$id]['img'] = $img;
+            $_SESSION['Cart'][$id]['tongTien'] = $gia * $_SESSION['Cart'][$id]['qty'];
+            header('location:index.php?c=IndexWebsite&a=Order');
+        }
     }
     function Order()
     {
@@ -222,12 +253,51 @@ class IndexWebsiteController
             $user = $_SESSION['userWebsite'];
             $contact = $this ->contactModel->GetAllRecords();
             $mxh = $this->mXh->GetByID(1);
+            //Lấy thông tin của người order
+            $profile = $this->customerModel->GetProfileByUser($user);
             require_once SYSTEM_PATH."/View/Web/orther.php";
         }else{
             $contact = $this ->contactModel->GetAllRecords();
             $mxh = $this->mXh->GetByID(1);
             require_once SYSTEM_PATH."/View/Web/orther.php";
         }
+    }
+    function DeleteCart()
+    {
+        session_start();
+        $id = $_GET['id'];
+        unset($_SESSION['Cart'][$id]);
+        header('location:index.php?c=IndexWebsite&a=Order');
+    }
+    function ThanhToan()
+    {
+        session_start();
+
+        if (isset($_SESSION['Cart']))
+        {
+            $cusId = $_POST['cusId'];
+            $userName = $_POST['userName'];
+            $phone = $_POST['phone'];
+            $address = $_POST['address'];
+            $totalProduct = $_POST['totalProduct'];
+            $totalPrice = $_POST['totalPrice'];
+            $content ='';
+            foreach ($_SESSION['Cart'] as $value)
+            {
+                $content = $content .',' .$value['qty'] .' '.$value['name'];
+            }
+            $result = $this->orderModel->InsertRecords(new Order(null,$cusId,$userName,$phone,$address,$content,$totalProduct,$totalPrice));
+            if ($result == true)
+            {
+                header('location:index.php?c=IndexWebsite&a=Order&r=1');
+                unset($_SESSION['Cart']);
+            }else{
+                header('location:index.php?c=IndexWebsite&a=Order&r=0');
+            }
+        }else{
+            echo 'Khong tồn tại';
+        }
+
     }
 
 }
