@@ -111,6 +111,22 @@
                                         echo '<tr><td>Chưa Có Sản phẩm nào</td></tr>';
                                     }
                                     ?>
+                                    <tr class="text-center ">
+                                        <td>
+                                            <h1 class="text-danger">
+                                                <?php
+                                                if (isset($_GET['order']) && $_GET['order'] != null)
+                                                {
+                                                    if ($_GET['order'] == 1)
+                                                    {
+                                                        echo 'Đặt Hàng Thành Công, Shipper sẽ liên lạc với bạn!';
+                                                    }
+                                                }
+                                                ?>
+                                            </h1>
+
+                                        </td>
+                                    </tr>
 
 
                                     </tbody>
@@ -192,7 +208,7 @@
                                             </h5>
                                         </div>
                                         <div class="proceed-check">
-                                            <input type="submit" value="Thanh Toán" class="btn-primary-gold btn-medium"/>
+                                            <input type="submit" value="Đặt hàng" class="btn-primary-gold btn-medium"/>
                                         </div>
                                     </div>
                                 </div>

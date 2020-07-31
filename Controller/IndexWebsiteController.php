@@ -170,19 +170,6 @@ class IndexWebsiteController
         $mxh = $this->mXh->GetByID(1);
         require_once SYSTEM_PATH. "/View/Web/index.php";
     }
-    function productLike()
-    {
-        $id = $_GET['id'];
-        //Mãng lưu trữ các sản phẩm yêu thích
-        $array = [];
-        if (in_array($id,$array))
-        {
-
-        }else{
-            array_push($array,$id);
-        }
-        print_r($array);
-    }
     function addCart()
     {
         session_start();
@@ -289,10 +276,10 @@ class IndexWebsiteController
             $result = $this->orderModel->InsertRecords(new Order(null,$cusId,$userName,$phone,$address,$content,$totalProduct,$totalPrice));
             if ($result == true)
             {
-                header('location:index.php?c=IndexWebsite&a=Order&r=1');
+                header('location:index.php?c=IndexWebsite&a=Order&order=1');
                 unset($_SESSION['Cart']);
             }else{
-                header('location:index.php?c=IndexWebsite&a=Order&r=0');
+                header('location:index.php?c=IndexWebsite&a=Order&order=0');
             }
         }else{
             echo 'Khong tồn tại';
