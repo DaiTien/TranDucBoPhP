@@ -53,4 +53,28 @@
             "responsive": true,
         });
     });
+    function fucAlert(id) {
+        Swal.fire({
+            title: 'Bạn muốn xóa?',
+            text: "Nếu xóa bạn không thể khôi phục nó!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Hủy',
+            confirmButtonText: 'Tôi muốn!'
+        }).then((result) => {
+            if (result.value) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Bạn đã chọn xóa!',
+                    showConfirmButton: false,
+                    timer: 1500
+                }).then(function () {
+                    document.getElementById('a'+id).click();
+                });
+            }
+        });
+    }
 </script>

@@ -68,7 +68,8 @@
                                         <td class="text-center"><?=$value->id?></td>
                                         <td class="text-center"><?=$value->name?></td>
                                         <td class="text-center">
-                                            <a class="btn btn-danger btn-sm" href="?c=ProductType&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a hidden href="?c=ProductType&a=Delete&id=<?=$value->id?>" id="a<?=$value->id?>"></a>
                                             <a class="btn btn-primary btn-sm" href="?c=ProductType&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
                                     </tr>

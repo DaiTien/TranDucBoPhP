@@ -23,6 +23,7 @@
 <!-- DataTables -->
 <link rel="stylesheet" href="asset/admin/AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="asset/admin/AdminLTE/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <style>
     .custom-banner{
         max-height: 400px;

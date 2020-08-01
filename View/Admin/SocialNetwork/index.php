@@ -59,7 +59,8 @@
                                         <td><?=$value->instagram?></td>
                                         <td><?=$value->google?></td>
                                         <td class="text-center">
-                                            <a hidden class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="?c=SocialNetworkAdmin&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a hidden class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a hidden  href="?c=SocialNetworkAdmin&a=Delete&id=<?=$value->id?>" id="a<?=$value->id?>"></a>
                                             <a class="btn btn-primary glyphicon glyphicon-pencil btn-sm" href="?c=SocialNetworkAdmin&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
 

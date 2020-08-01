@@ -90,7 +90,8 @@ include 'asset/Scripts/ScriptHeader.php';
                                         </td>
                                         <td><?=$value->dateup?></td>
                                         <td class="text-center">
-                                            <a class="btn btn-danger btn-sm" href="?c=Introduce&a=Delete&id=<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                            <a hidden href="?c=Introduce&a=Delete&id=<?=$value->id?>" id="a<?=$value->id?>"></a>
                                             <a class="btn btn-primary btn-sm" href="?c=Introduce&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
                                         </td>
                                     </tr>
