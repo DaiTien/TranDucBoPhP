@@ -201,7 +201,7 @@
     ?>
     <script>
         function myFunction(x) {
-            alert(x.id);
+            //alert(x.id);
             //document.getElementById('a'+x.id).click();
             <?php
             if (isset($_SESSION['login']) && $_SESSION['login'] == 1)
