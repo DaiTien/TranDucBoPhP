@@ -97,7 +97,7 @@
 include "asset/Scripts/ScriptFooter.php";
 ?>
 <script>
-    $('#qlwebsite').addClass('active');
+    $('#qlsanpham').addClass('active');
     $('#mxh').addClass('active');
 </script>
 </body>
