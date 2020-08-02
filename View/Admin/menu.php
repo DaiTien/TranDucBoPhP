@@ -107,7 +107,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" id="order" class="nav-link">
+                            <a href="?c=Oder&a=index" id="order" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Đơn hàng</p>
                             </a>

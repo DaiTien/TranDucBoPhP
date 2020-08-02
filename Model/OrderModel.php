@@ -34,4 +34,36 @@ class OrderModel
         $result = $this->mysqli->query($query);
         return $result;
     }
+    public function GetAllRecords()
+    {
+        $query ="select * from tdb_order";
+        $result = $this->mysqli->query($query);
+        $data = [];
+        foreach ($result->fetch_all() as $value)
+        {
+            array_push($data, new Order($value[0],$value[1],$value[2],$value[3],$value[4],$value[5],$value[6],$value[7]));
+        }
+        return $data;
+    }
+    function GetByID($id)
+    {
+        $query = "SELECT
+                        * 
+                    FROM
+                        tdb_order
+                    WHERE
+                        Id = '$id' LIMIT 1";
+        $result = $this->mysqli->query($query);
+        $data = $result->fetch_all();
+        if (count($data)) {
+            return new Order($data[0][0], $data[0][1], $data[0][2], $data[0][3],$data[0][4], $data[0][5], $data[0][6],$data[0][7]);
+        }
+        return null;
+    }
+    function delete( $id)
+    {
+        $query = "DELETE from tdb_order WHERE Id = '$id'";
+        $result = $this->mysqli->query($query);
+        return $result;
+    }
 }
