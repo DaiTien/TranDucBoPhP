@@ -81,7 +81,7 @@
                             <a class="nav-link" id="thongtin" href="?c=Contact&a=index"><i class="far fa-circle nav-icon"></i> Thông tin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="customer" href="#"><i class="far fa-circle nav-icon"></i> Tài khoản khách hàng</a>
+                            <a class="nav-link" id="customer" href="?c=Customer&a=index"><i class="far fa-circle nav-icon"></i> Tài khoản khách hàng</a>
                         </li>
                     </ul>
                 </li>

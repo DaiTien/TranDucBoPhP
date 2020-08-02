@@ -55,12 +55,12 @@ class CustomerModel
         return null;
     }
 
-    function UpdateRecord(Customer $cus)
+    function Update(Customer $cus)
     {
         $result = $this->mysqli->query("update tdb_customer set username='$cus->userName',password='$cus->password',phone ='$cus->phone',email='$cus->email' where id = $cus->id");
         return $result;
     }
-    function InsertRecord(Customer $cus)
+    function insert(Customer $cus)
     {
         $check = $this->mysqli->query("select * from tdb_customer where username = '$cus->userName' or email='$cus->email'");
         $checkCount = mysqli_num_rows($check);
@@ -78,6 +78,12 @@ class CustomerModel
         $query ="select * from tdb_customer where username = '$user' and password ='$pass'";
         $login = $this->mysqli->query($query);
         return mysqli_num_rows($login);
+    }
+    function delete( $id)
+    {
+        $query = "DELETE from tdb_customer WHERE Id = '$id'";
+        $result = $this->mysqli->query($query);
+        return $result;
     }
 
 }
