@@ -1,113 +1,131 @@
+html,
 body {
+    height: 100%;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    background-image: url(/asset/web/images/slider7.jpg);
+    margin: 0 auto;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    top: 120px;
+    left: 15%;
+}
+
+.wrapper h1 {
     margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-image: url(/asset/web/images/cocsu.jpg);
+    font-size: 50px;
+    color: rgb(204, 238, 52);
+    font-weight: 800;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: rgb(216, 125, 6) 0.1em 0.1em 0.2em
 }
 
-.nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(112, 105, 105, 0.2);
-    display: block;
-}
-
-.check-input {
+.wrap {
+    height: 100%;
     display: flex;
-    margin: 0;
-    font-size: 15px;
-    font-weight: 100;
+    align-items: center;
+    justify-content: space-around;
+    margin: -100px 300px 0 300px;
 }
 
-input[type=checkbox],
-input[type=radio] {
-    margin-left: 10px;
-    margin-right: 5px;
-    margin-top: 1px\9;
-    line-height: normal;
+.button {
+    min-width: 200px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    z-index: 11;
 }
 
-.box {
-    width: 400px;
-    padding: 40px;
+.button a {
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    color: white;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.button a:hover {
+    text-decoration: none;
+}
+
+button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(200px + 11px);
+    min-height: calc(60px + 11px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(221, 221, 220, 0.8);
-    text-align: center;
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+    z-index: -1;
 }
 
-.box h1 {
-    color: white;
-    font-size: 45px;
-    text-transform: uppercase;
-    font-weight: 550;
-    font-family: 'Crimson Text', serif;
+.button:hover,
+.button:focus {
+    color: #313133;
+    transform: translateY(-6px);
 }
 
-.box input[type="text"],
-.box input[type="password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #3498db;
-    padding: 10px 10px;
-    width: 200px;
-    outline: none;
-    color: black;
-    border-radius: 24px;
-    transition: 0.25s;
+button:hover::before,
+button:focus::before {
+    opacity: 1;
 }
 
-.box input[type="text"]:focus,
-.box input[type="password"]:focus {
-    width: 280px;
-    border-color: #2ecc71;
+button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
 }
 
-.box input[type="submit"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #2ecc71;
-    padding: 8px 40px;
-    outline: none;
-    color: black;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
+button:hover::after,
+button:focus::after {
+    animation: none;
+    display: none;
 }
 
-.box input[type="submit"]:hover {
-    background: #2ecc71;
-}
-
-.psw {
-    position: relative;
-    top: -20px;
-    left: 75px;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer .title {
-    padding-top: 15px;
-}
-
-.footer .icon-link {
-    font-size: 20px;
-    margin-top: 15px;
-    margin-left: 15px;
-    color: rgb(51, 139, 223);
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
 }
