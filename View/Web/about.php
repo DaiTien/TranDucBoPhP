@@ -26,7 +26,7 @@
                 </div>
             </header>
             <!-- Start Breadcrumb Part -->
-            <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('/TranDucBoPhP/asset/web/images/breadbg1.jpg');">
+            <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('asset/web/images/breadbg1.jpg');">
                 <div class="container">
                     <div class="breadcrumb-inner">
                         <h2>GIỚI THIỆU</h2>
@@ -38,7 +38,7 @@
             <!-- Start Welcome Part -->
             <section class="welcome-part home-icon wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="icon-default">
-                    <a href="#"><img src="/TranDucBoPhP/asset/web/images/scroll-arrow.png" alt=""></a>
+                    <a href="#"><img src="asset/web/images/scroll-arrow.png" alt=""></a>
                 </div>
                 <?php
                 foreach ($introduce as $value){
@@ -51,7 +51,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <p id="txtContent"><?=$value->content?></p>
-                                <p><img style="width: 170px;border-radius: 37px;" src="/TranDucBoPhp/asset/web/images/signature.png" alt=""></p>
+                                <p><img style="width: 170px;border-radius: 37px;" src="asset/web/images/signature.png" alt=""></p>
                                 <p><a href="?c=IndexWebsite&a=index" class="btn-black">HOME</a></p>
                             </div>
                             <div style="display:block; width: 555px;height: 392px" class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -65,9 +65,9 @@
             </section>
             <!-- End Welcome Part -->
             <!-- Start Food Hours -->
-            <section class="food-hours banner-bg home-icon wow fadeInDown" data-background="/TranDucBoPhP/asset/web/images/banner2.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <section class="food-hours banner-bg home-icon wow fadeInDown" data-background="asset/web/images/banner2.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="icon-default icon-gold">
-                    <img src="/TranDucBoPhP/asset/web/images/icon19.png" alt="">
+                    <img src="asset/web/images/icon19.png" alt="">
                 </div>
                 <div class="container">
                     <div class="food-blog">
@@ -76,7 +76,7 @@
                                 <div class="food-blog-inner">
                                     <div class="food-item">
                                         <div class="food-item-inner">
-                                            <img src="/TranDucBoPhP/asset/web/images/icon15.png" alt="">
+                                            <img src="asset/web/images/icon15.png" alt="">
                                         </div>
                                     </div>
                                     <h2>Breakfast</h2>
@@ -87,7 +87,7 @@
                                 <div class="food-blog-inner">
                                     <div class="food-item">
                                         <div class="food-item-inner">
-                                            <img src="/TranDucBoPhP/asset/web/images/icon16.png" alt="">
+                                            <img src="asset/web/images/icon16.png" alt="">
                                         </div>
                                     </div>
                                     <h2>Lunch</h2>
@@ -98,7 +98,7 @@
                                 <div class="food-blog-inner">
                                     <div class="food-item">
                                         <div class="food-item-inner">
-                                            <img src="/TranDucBoPhP/asset/web/images/icon17.png" alt="">
+                                            <img src="asset/web/images/icon17.png" alt="">
                                         </div>
                                     </div>
                                     <h2>Dinner</h2>
@@ -109,7 +109,7 @@
                                 <div class="food-blog-inner">
                                     <div class="food-item">
                                         <div class="food-item-inner">
-                                            <img src="/TranDucBoPhP/asset/web/images/icon18.png" alt="">
+                                            <img src="asset/web/images/icon18.png" alt="">
                                         </div>
                                     </div>
                                     <h2>Dessert</h2>

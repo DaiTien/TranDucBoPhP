@@ -1,6 +1,6 @@
 <?php
 define('SYSTEM_PATH',__DIR__);
-require_once('config/config.php');
+require_once('config/connection.php');
 
 
 $get_controller = empty($_GET['c']) ? 'Home' : $_GET['c'];

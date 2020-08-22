@@ -1,4 +1,3 @@
-
 <?php
 define('DB_SERVER', '112.78.2.94');
 define('DB_USERNAME', 'super_tranducbo');

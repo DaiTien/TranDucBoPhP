@@ -12,7 +12,7 @@
     <!-- <div id="pre-loader">
         <div class="loader-holder">
             <div class="frame">
-                <img src="/TranDucBoPhp/asset/web/images/Preloader.gif" alt="Laboom" />
+                <img src="asset/web/images/Preloader.gif" alt="Laboom" />
             </div>
         </div>
     </div> -->
@@ -55,7 +55,7 @@
                 <!-- Start Food Hours -->
                 <section class="food-hours home-icon wow fadeInDown" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" data-wow-duration="1000ms" data-wow-delay="300ms" style="background-image: url('/TranDucBoPhp/asset/web/images/banner2.jpg');">
                     <div class="icon-default icon-gold">
-                        <img src="/TranDucBoPhp/asset/web/images/icon19.png" alt="">
+                        <img src="asset/web/images/icon19.png" alt="">
                     </div>
                     <div class="container">
                         <div class="food-blog">
@@ -64,7 +64,7 @@
                                     <div class="food-blog-inner">
                                         <div class="food-item">
                                             <div class="food-item-inner">
-                                                <img src="/TranDucBoPhp/asset/web/images/icon15.png" alt="">
+                                                <img src="asset/web/images/icon15.png" alt="">
                                             </div>
                                         </div>
                                         <h2>Breakfast</h2>
@@ -75,7 +75,7 @@
                                     <div class="food-blog-inner">
                                         <div class="food-item">
                                             <div class="food-item-inner">
-                                                <img src="/TranDucBoPhp/asset/web/images/icon16.png" alt="">
+                                                <img src="asset/web/images/icon16.png" alt="">
                                             </div>
                                         </div>
                                         <h2>Lunch</h2>
@@ -86,7 +86,7 @@
                                     <div class="food-blog-inner">
                                         <div class="food-item">
                                             <div class="food-item-inner">
-                                                <img src="/TranDucBoPhp/asset/web/images/icon17.png" alt="">
+                                                <img src="asset/web/images/icon17.png" alt="">
                                             </div>
                                         </div>
                                         <h2>Dinner</h2>
@@ -97,7 +97,7 @@
                                     <div class="food-blog-inner">
                                         <div class="food-item">
                                             <div class="food-item-inner">
-                                                <img src="/TranDucBoPhp/asset/web/images/icon18.png" alt="">
+                                                <img src="asset/web/images/icon18.png" alt="">
                                             </div>
                                         </div>
                                         <h2>Dessert</h2>
