@@ -21,7 +21,7 @@ class NewsAdminModel
     private $mysqli;
     public function __construct()
     {
-        $this->mysqli = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+        $this->mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
     }
     function GetAlldata()
     {
