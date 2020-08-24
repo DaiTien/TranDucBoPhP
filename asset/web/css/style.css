@@ -192,3 +192,13 @@
         width: 555px;
         height: 392px;
     }
+    
+    .feature-img__newsind {
+        display: block;
+        width: 360px;
+        height: 240px;
+    }
+    
+    .feature-img__newsind {
+        width: 100%;
+    }
