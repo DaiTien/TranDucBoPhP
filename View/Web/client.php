@@ -4,7 +4,7 @@
                     </div>
                     <div class="container">
                         <div class="build-title">
-                            <h2>Họ Nói Gì Về BoBo MiklTea</h2>
+                            <h2>Họ Nói Gì Về BoBo MilkTea</h2>
                             <h6>Hơn 1500+ Hài Lòng</h6>
                         </div>
                         <div class="client-say">
