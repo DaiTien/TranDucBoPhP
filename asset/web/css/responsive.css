@@ -1092,7 +1092,22 @@
     }
     .slide__images {
         width: 1920px;
-        height: 500px;
+        height: 400px;
+    }
+    .portfolioFilter a {
+        padding: 13px 28px;
+    }
+    .menu-list h5 {
+        font-size: 19px;
+        padding-right: 110px;
+    }
+    .owl-carousel .owl-item img {
+        width: 82%;
+        height: 100%;
+    }
+    .owl-carousel .owl-item .client__img {
+        width: 10%;
+        height: 10%;
     }
 }
 

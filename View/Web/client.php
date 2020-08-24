@@ -14,7 +14,7 @@
                                 {
                                 ?>
                                     <div class="item">
-                                        <p><img src="asset/web/images/client1.png" alt=""></p>
+                                        <p><img class="client__img" src="asset/web/images/client1.png" alt=""></p>
                                         <h5><?=$value->name?></h5>
                                         <p>Chủ đề: <?=$value->title?></p>
                                         <p><?=$value->content?></p>

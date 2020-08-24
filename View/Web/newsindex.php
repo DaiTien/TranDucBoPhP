@@ -15,8 +15,7 @@
                                     <div class="item">
                                         <a href="?c=IndexWebsite&a=news&id=<?=$value->id?>">
                                             <div class="feature-img" style="display: block;width: 360px;height: 240px">
-                                                <img style="width: 100%;height: 100%" src="<?=$value->image?>" alt="">
-
+                                                <img src="<?=$value->image?>" alt="">
                                             </div>
                                             <div class="feature-info">
                                                 <!--<span><i class="icon-user"></i> By Ali TUFAN</span>

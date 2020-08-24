@@ -15,7 +15,7 @@
                     </p>
                     <a class="btn btn-danger btn--buy" href="">Mua Ngay</a>
                 </div>
-                <img class="slide__images"  src="<?=$value->imageSlide?>" alt="">
+                <img class="slide__images" src="<?=$value->imageSlide?>" alt="">
             </div>
         <?php
         }
