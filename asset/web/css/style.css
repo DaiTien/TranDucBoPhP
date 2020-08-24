@@ -186,3 +186,9 @@
     .product-cart img {
         width: 15rem;
     }
+    
+    .about__images {
+        display: block;
+        width: 555px;
+        height: 392px;
+    }

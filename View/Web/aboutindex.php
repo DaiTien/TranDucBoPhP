@@ -24,7 +24,7 @@
                                     <p><img style="width: 170px;border-radius: 37px;" src="asset/web/images/signature.png" alt=""></p>
                                     <p><a href="?c=IndexWebsite&a=about" class="btn-black">Xem Thêm</a></p>
                                 </div>
-                                <div style="display:block; width: 555px;height: 392px" class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                <div  class="col-md-6 col-sm-6 col-xs-12 about__images wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                                     <img src="<?=$value->image?>" alt="" style="border-radius:10%;width: 100%;height: 100%;box-shadow:5px 7px 10px rgba(0,0,0,0.5);">
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 @font-face {
     font-family: "FontAwesome";
-    src: url("asset/web/fonts/fontawesome-webfont.eot?v=4.7.0");
-    src: url("asset/web/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("asset/web/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("asset/web/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("asset/web/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("asset/web/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+    src: url("/asset/web/fonts/fontawesome-webfont.eot?v=4.7.0");
+    src: url("/asset/web/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("/asset/web/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("/asset/web/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("/asset/web/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("/asset/web/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -3040,8 +3040,8 @@
 
 @font-face {
     font-family: "fontello";
-    src: url("asset/web/fonts/fontello.eot");
-    src: url("asset/web/fonts/fontello.eot#iefix") format("embedded-opentype"), url("asset/web/fonts/fontello.woff") format("woff"), url("asset/web/fonts/fontello.ttf") format("truetype"), url("asset/web/fonts/fontello.svg#fontello") format("svg");
+    src: url("/asset/web/fonts/fontello.eot");
+    src: url("/asset/web/fonts/fontello.eot#iefix") format("embedded-opentype"), url("/asset/web/fonts/fontello.woff") format("woff"), url("/asset/web/fonts/fontello.ttf") format("truetype"), url("/asset/web/fonts/fontello.svg#fontello") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -8619,7 +8619,7 @@
     content: "\ed58";
 }
 
-.icon-asset/web/fontsize:before {
+.icon-/asset/web/fontsize:before {
     content: "\ed59";
 }
 
@@ -10323,7 +10323,7 @@
     content: "\ef17";
 }
 
-.icon-asset/web/fontsize-1:before {
+.icon-/asset/web/fontsize-1:before {
     content: "\ef18";
 }
 
