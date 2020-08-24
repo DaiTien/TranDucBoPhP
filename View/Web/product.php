@@ -1,6 +1,6 @@
 <section id="products" class="special-menu bg-skeen home-icon wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
     <div class="icon-default icon-skeen">
-        <img src="/TranDucBoPhp/asset/web/images/icon6.png" alt="">
+        <img src="asset/web/images/icon6.png" alt="">
     </div>
     <div class="container">
         <div class="build-title">
@@ -61,16 +61,16 @@
     </div>
     <div class="float-main">
         <div class="icon-top-left">
-            <img src="/TranDucBoPhp/asset/web/images/icon7.png" alt="">
+            <img src="asset/web/images/icon7.png" alt="">
         </div>
         <div class="icon-bottom-left">
-            <img src="/TranDucBoPhp/asset/web/images/icon8.png" alt="">
+            <img src="asset/web/images/icon8.png" alt="">
         </div>
         <div class="icon-top-right">
-            <img src="/TranDucBoPhp/asset/web/images/icon9.png" alt="">
+            <img src="asset/web/images/icon9.png" alt="">
         </div>
         <div class="icon-bottom-right">
-            <img src="/TranDucBoPhp/asset/web/images/icon10.png" alt="">
+            <img src="asset/web/images/icon10.png" alt="">
         </div>
     </div>
 </section>

@@ -53,7 +53,7 @@
                 <!-- Start Chef -->
                 <!-- End Chef -->
                 <!-- Start Food Hours -->
-                <section class="food-hours home-icon wow fadeInDown" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" data-wow-duration="1000ms" data-wow-delay="300ms" style="background-image: url('/TranDucBoPhp/asset/web/images/banner2.jpg');">
+                <section class="food-hours home-icon wow fadeInDown" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" data-wow-duration="1000ms" data-wow-delay="300ms" style="background-image: url('asset/web/images/banner2.jpg');">
                     <div class="icon-default icon-gold">
                         <img src="asset/web/images/icon19.png" alt="">
                     </div>

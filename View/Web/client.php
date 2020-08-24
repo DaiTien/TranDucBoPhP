@@ -1,6 +1,6 @@
-<section class="client banner-bg invert invert-black home-icon wow fadeInDown" data-background="/TranDucBoPhp/asset/web/images/banner3.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
+<section class="client banner-bg invert invert-black home-icon wow fadeInDown" data-background="asset/web/images/banner3.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="icon-default icon-black">
-                        <img src="/TranDucBoPhp/asset/web/images/icon21.png" alt="">
+                        <img src="asset/web/images/icon21.png" alt="">
                     </div>
                     <div class="container">
                         <div class="build-title">
@@ -14,7 +14,7 @@
                                 {
                                 ?>
                                     <div class="item">
-                                        <p><img src="/TranDucBoPhp/asset/web/images/client1.png" alt=""></p>
+                                        <p><img src="asset/web/images/client1.png" alt=""></p>
                                         <h5><?=$value->name?></h5>
                                         <p>Chủ đề: <?=$value->title?></p>
                                         <p><?=$value->content?></p>

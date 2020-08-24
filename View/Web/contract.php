@@ -1,6 +1,6 @@
 <section id="contract" class="default-section contact-part home-icon">
                     <div class="icon-default">
-                        <img src="/TranDucBoPhP/asset/web/images/icon20.png" alt="">
+                        <img src="asset/web/images/icon20.png" alt="">
                     </div>
                     <div class="container">
                         <div class="title text-center">

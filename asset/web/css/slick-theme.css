@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 .slick-slider {
     position: relative;
     display: block;
@@ -50,7 +50,7 @@
 .slick-track:before,
 .slick-track:after {
     display: table;
-    content: '';
+    content: "";
 }
 
 .slick-track:after {
@@ -68,7 +68,7 @@
     min-height: 1px;
 }
 
-[dir='rtl'] .slick-slide {
+[dir="rtl"] .slick-slide {
     float: right;
 }
 
@@ -103,15 +103,15 @@
 }
 
 .slick-loading .slick-list {
-    background: #fff url('/TranDucBoPhp/asset/web/images/ajax-loader.gif') center center no-repeat;
+    background: #fff url("asset/web/images/ajax-loader.gif") center center no-repeat;
 }
 
 @font-face {
-    font-family: 'slick';
+    font-family: "slick";
     font-weight: normal;
     font-style: normal;
-    src: url('/TranDucBoPhp/asset/web/fonts/slick.eot');
-    src: url('/TranDucBoPhp/asset/web/fonts/slick.eot?#iefix') format('embedded-opentype'), url('/TranDucBoPhp/asset/web/fonts/slick.woff') format('woff'), url('/TranDucBoPhp/asset/web/fonts/slick.ttf') format('truetype'), url('/TranDucBoPhp/asset/web/fonts/slick.svg#slick') format('svg');
+    src: url("asset/web/fonts/slick.eot");
+    src: url("asset/web/fonts/slick.eot?#iefix") format("embedded-opentype"), url("asset/web/fonts/slick.woff") format("woff"), url("asset/web/fonts/slick.ttf") format("truetype"), url("asset/web/fonts/slick.svg#slick") format("svg");
 }
 
 .slick-prev,
@@ -157,7 +157,7 @@
 
 .slick-prev:before,
 .slick-next:before {
-    font-family: 'slick';
+    font-family: "slick";
     font-size: 20px;
     line-height: 1;
     color: #20202f;
@@ -169,34 +169,34 @@
     left: 64px;
 }
 
-[dir='rtl'] .slick-prev {
+[dir="rtl"] .slick-prev {
     right: 64px;
     left: auto;
 }
 
 .slick-prev:before {
-    content: '←';
+    content: "←";
 }
 
-[dir='rtl'] .slick-prev:before {
-    content: '→';
+[dir="rtl"] .slick-prev:before {
+    content: "→";
 }
 
 .slick-next {
     right: 64px;
 }
 
-[dir='rtl'] .slick-next {
+[dir="rtl"] .slick-next {
     right: auto;
     left: 64px;
 }
 
 .slick-next:before {
-    content: '→';
+    content: "→";
 }
 
-[dir='rtl'] .slick-next:before {
-    content: '←';
+[dir="rtl"] .slick-next:before {
+    content: "←";
 }
 
 .slick-dotted.slick-slider {
@@ -249,7 +249,7 @@
 }
 
 .slick-dots li button:before {
-    font-family: 'slick';
+    font-family: "slick";
     font-size: 6px;
     line-height: 20px;
     position: absolute;
@@ -257,7 +257,7 @@
     left: 0;
     width: 20px;
     height: 20px;
-    content: '•';
+    content: "•";
     text-align: center;
     opacity: .25;
     color: black;

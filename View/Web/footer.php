@@ -1,7 +1,7 @@
 <footer>
             <div class="footer-part wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="icon-default icon-dark">
-                    <img src="/TranDucBoPhp/asset/web/images/footer-logo.png" alt="">
+                    <img src="asset/web/images/footer-logo.png" alt="">
                 </div>
                 <div class="container">
                     <div class="footer-inner">
@@ -41,14 +41,14 @@
                 </div>
                 <div class="icon-find">
                     <a href="#">
-                        <img class="icon__footer" src="/TranDucBoPhp/asset/web/images/favicon.png" alt="">
+                        <img class="icon__footer" src="asset/web/images/favicon.png" alt="">
                         <!-- <span>Find us on Map</span> -->
                     </a>
                 </div>
                 <div class="location-footer-map">
                     <div class="icon-find-location">
                         <a href="#">
-                            <img src="/TranDucBoPhp/asset/web/images/location.png" alt="">
+                            <img src="asset/web/images/location.png" alt="">
                             <span>Find us on Map</span>
                         </a>
                     </div>

@@ -26,7 +26,7 @@
                 </div>
             </header>
             <!-- Start Breadcrumb Part -->
-            <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('/TranDucBoPhP/asset/web/images/breadbg1.jpg');">
+            <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('asset/web/images/breadbg1.jpg');">
                 <div class="container">
                     <div class="breadcrumb-inner">
                         <h2>Sản Phẩm</h2>
@@ -39,7 +39,7 @@
             <!-- Start team-page -->
             <section class="team-single home-icon wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="icon-default">
-                    <a href="#"><img src="/TranDucBoPhP/asset/web/images/scroll-arrow.png" alt=""></a>
+                    <a href="#"><img src="asset/web/images/scroll-arrow.png" alt=""></a>
                 </div>
                 <div class="container">
                     <div class="team-single-info">
@@ -47,7 +47,7 @@
                             <div class="col-md-4 col-sm-5 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <div class="team-single-left">
                                     <div class="team-single-blog">
-                                        <img src="/TranDucBoPhP/asset/web/images/lt-okinawa.png" alt="">
+                                        <img src="asset/web/images/lt-okinawa.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -82,16 +82,16 @@
                         </div>
                         <div class="row">
                             <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                <a href="#"><img src="/TranDucBoPhP/asset/web/images/award1.jpg" alt=""></a>
+                                <a href="#"><img src="asset/web/images/award1.jpg" alt=""></a>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                <a href="#"><img src="/TranDucBoPhP/asset/web/images/award2.jpg" alt=""></a>
+                                <a href="#"><img src="asset/web/images/award2.jpg" alt=""></a>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                <a href="#"><img src="/TranDucBoPhP/asset/web/images/award3.jpg" alt=""></a>
+                                <a href="#"><img src="asset/web/images/award3.jpg" alt=""></a>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                <a href="#"><img src="/TranDucBoPhP/asset/web/images/award4.jpg" alt=""></a>
+                                <a href="#"><img src="asset/web/images/award4.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
             <!-- end team single -->
             <!-- <section class="anna-form home-icon bg-skeen wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="icon-default icon-skeen">
-                    <a href="#"><img src="/TranDucBoPhP/asset/web/images/scroll-arrow.png" alt=""></a>
+                    <a href="#"><img src="asset/web/images/scroll-arrow.png" alt=""></a>
                 </div>
                 <div class="container">
                     <div class="build-title">

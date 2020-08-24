@@ -1,6 +1,6 @@
 <section id="login" class="home-icon login-register bg-skeen">
     <div class="icon-default icon-skeen">
-        <img src="/TranDucBoPhP/asset/web/images/icon11.png" alt="">
+        <img src="asset/web/images/icon11.png" alt="">
     </div>
     <div class="container">
         <div class="row">

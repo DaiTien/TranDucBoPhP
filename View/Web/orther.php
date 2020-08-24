@@ -15,7 +15,7 @@
     <!-- <div id="pre-loader">
         <div class="loader-holder">
             <div class="frame">
-                <img src="/TranDucBoPhp/asset/web//TranDucBoPhP/asset/Web//TranDucBoPhP/asset/web/images/Preloader.gif" alt="Laboom" />
+                <img src="asset/web/asset/Web/asset/web/images/Preloader.gif" alt="Laboom" />
             </div>
         </div>
     </div> -->
@@ -36,7 +36,7 @@
         <main>
             <div class="main-part">
                 <!-- Start Breadcrumb Part -->
-                <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('/TranDucBoPhP/asset/web/images/breadbg1.jpg');">
+                <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('asset/web/images/breadbg1.jpg');">
                     <div class="container">
                         <div class="breadcrumb-inner">
                             <h2>ORTHER</h2>
@@ -48,7 +48,7 @@
                 <!-- End Breadcrumb Part -->
                 <section class="home-icon shop-cart bg-skeen">
                     <div class="icon-default icon-skeen">
-                        <img src="/TranDucBoPhP/asset/web/images/scroll-arrow.png" alt="">
+                        <img src="asset/web/images/scroll-arrow.png" alt="">
                     </div>
                     <div class="container">
                         <!-- <div class="checkout-wrap wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">

@@ -1,6 +1,6 @@
 <section id="gallery" class="instagram-main home-icon wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="icon-default">
-                        <img src="/TranDucBoPhp/asset/web/images/icon23.png" alt="">
+                        <img src="asset/web/images/icon23.png" alt="">
                     </div>
                     <div class="container">
                         <div class="build-title">

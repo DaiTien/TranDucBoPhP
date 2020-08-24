@@ -26,7 +26,7 @@
                 </div>
             </header>
             <!-- Start Breadcrumb Part -->
-            <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('/TranDucBoPhP/asset/web/images/breadbg1.jpg');">
+            <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('asset/web/images/breadbg1.jpg');">
                     <div class="container">
                         <div class="breadcrumb-inner">
                             <h2>Gallery</h2>
@@ -38,7 +38,7 @@
                 <!-- End Breadcrumb Part -->
                 <section class="home-icon">
                     <div class="icon-default">
-                        <img src="/TranDucBoPhP/asset/web/images/scroll-arrow.png" alt="">
+                        <img src="asset/web/images/scroll-arrow.png" alt="">
                     </div>
                     <div class="container">
                         <div class="gallery-royal">
@@ -54,8 +54,8 @@
                             <div class="row gallery-filter">
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item vegetarian italian">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery22.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery22.jpg" alt="">
+                                        <a href="asset/web/images/gallery22.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery22.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -69,8 +69,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item chinese">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery23.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery23.jpg" alt="">
+                                        <a href="asset/web/images/gallery23.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery23.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -84,8 +84,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item italian">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery24.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery24.jpg" alt="">
+                                        <a href="asset/web/images/gallery24.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery24.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -99,8 +99,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item mexican">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery25.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery25.jpg" alt="">
+                                        <a href="asset/web/images/gallery25.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery25.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -114,8 +114,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item chinese vegetarian">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery26.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery26.jpg" alt="">
+                                        <a href="asset/web/images/gallery26.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery26.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -129,8 +129,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item italian">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery27.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery27.jpg" alt="">
+                                        <a href="asset/web/images/gallery27.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery27.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -144,8 +144,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item vegetarian italian">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery28.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery28.jpg" alt="">
+                                        <a href="asset/web/images/gallery28.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery28.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -159,8 +159,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item chinese">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery29.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery29.jpg" alt="">
+                                        <a href="asset/web/images/gallery29.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery29.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -174,8 +174,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item italian">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery30.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery30.jpg" alt="">
+                                        <a href="asset/web/images/gallery30.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery30.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -189,8 +189,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item vegetarian italian">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery31.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery31.jpg" alt="">
+                                        <a href="asset/web/images/gallery31.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery31.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -204,8 +204,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item chinese">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery32.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery32.jpg" alt="">
+                                        <a href="asset/web/images/gallery32.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery32.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">
@@ -219,8 +219,8 @@
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-12 isotope-item italian">
                                     <div class="gallery-megic-blog">
-                                        <a href="/TranDucBoPhP/asset/web/images/gallery33.jpg" class="magnific-popup">
-                                            <img src="/TranDucBoPhP/asset/web/images/gallery33.jpg" alt="">
+                                        <a href="asset/web/images/gallery33.jpg" class="magnific-popup">
+                                            <img src="asset/web/images/gallery33.jpg" alt="">
                                             <div class="gallery-megic-inner">
                                                 <div class="gallery-megic-out">
                                                     <div class="gallery-megic-detail">

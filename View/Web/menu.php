@@ -62,7 +62,7 @@
                             </a>
                         </div>
                         <div class="book-table header-collect book-sm">
-                            <a href="#" data-toggle="modal" data-target="#booktable"><img src="/TranDucBoPhp/asset/web/images/icon-table.png" alt="">Book a Table</a>
+                            <a href="#" data-toggle="modal" data-target="#booktable"><img src="asset/web/images/icon-table.png" alt="">Book a Table</a>
                         </div>
                         <div class="menu-main">
                             <ul>
@@ -84,7 +84,7 @@
                             </ul>
                         </div>
                         <div class="logo">
-                            <a href="index.php"><img src="/TranDucBoPhp/asset/web/images/logo.png" alt=""></a>
+                            <a href="index.php"><img src="asset/web/images/logo.png" alt=""></a>
                         </div>
                     </div>
                 </div>

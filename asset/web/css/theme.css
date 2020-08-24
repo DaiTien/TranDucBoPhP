@@ -74,7 +74,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 300;
-    src: local('Quicksand Light'), local('Quicksand-Light'), url(/TranDucBoPhP/asset/web/fonts/qhfoJiLu10kFjChCCTvGlP8zf_FOSsgRmwsS7Aa9k2w.woff2) format('woff2');
+    src: local('Quicksand Light'), local('Quicksand-Light'), url(asset/web/fonts/qhfoJiLu10kFjChCCTvGlP8zf_FOSsgRmwsS7Aa9k2w.woff2) format('woff2');
     unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
 }
 
@@ -82,7 +82,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 300;
-    src: local('Quicksand Light'), local('Quicksand-Light'), url(/TranDucBoPhP/asset/web/fonts/qhfoJiLu10kFjChCCTvGlD0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
+    src: local('Quicksand Light'), local('Quicksand-Light'), url(asset/web/fonts/qhfoJiLu10kFjChCCTvGlD0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
     unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -90,7 +90,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 300;
-    src: local('Quicksand Light'), local('Quicksand-Light'), url(/TranDucBoPhP/asset/web/fonts/qhfoJiLu10kFjChCCTvGlOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+    src: local('Quicksand Light'), local('Quicksand-Light'), url(asset/web/fonts/qhfoJiLu10kFjChCCTvGlOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -98,7 +98,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
-    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(/TranDucBoPhP/asset/web/fonts/NUrn2XQrRfyGZp5MknntaRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(asset/web/fonts/NUrn2XQrRfyGZp5MknntaRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
     unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
 }
 
@@ -106,7 +106,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
-    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(/TranDucBoPhP/asset/web/fonts/s2PXW4WrV3VLrOUpHiqsfRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(asset/web/fonts/s2PXW4WrV3VLrOUpHiqsfRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
     unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -114,7 +114,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
-    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(/TranDucBoPhP/asset/web/fonts/sKd0EMYPAh5PYCRKSryvW1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(asset/web/fonts/sKd0EMYPAh5PYCRKSryvW1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -122,7 +122,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 500;
-    src: local('Quicksand Medium'), local('Quicksand-Medium'), url(/TranDucBoPhP/asset/web/fonts/FRGja7LlrG1Mypm0hCq0Dv8zf_FOSsgRmwsS7Aa9k2w.woff2) format('woff2');
+    src: local('Quicksand Medium'), local('Quicksand-Medium'), url(asset/web/fonts/FRGja7LlrG1Mypm0hCq0Dv8zf_FOSsgRmwsS7Aa9k2w.woff2) format('woff2');
     unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
 }
 
@@ -130,7 +130,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 500;
-    src: local('Quicksand Medium'), local('Quicksand-Medium'), url(/TranDucBoPhP/asset/web/fonts/FRGja7LlrG1Mypm0hCq0Dj0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
+    src: local('Quicksand Medium'), local('Quicksand-Medium'), url(asset/web/fonts/FRGja7LlrG1Mypm0hCq0Dj0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
     unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -138,7 +138,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 500;
-    src: local('Quicksand Medium'), local('Quicksand-Medium'), url(/TranDucBoPhP/asset/web/fonts/FRGja7LlrG1Mypm0hCq0Dugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+    src: local('Quicksand Medium'), local('Quicksand-Medium'), url(asset/web/fonts/FRGja7LlrG1Mypm0hCq0Dugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -146,7 +146,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
-    src: local('Quicksand Bold'), local('Quicksand-Bold'), url(/TranDucBoPhP/asset/web/fonts/32nyIRHyCu6iqEka_hbKsv8zf_FOSsgRmwsS7Aa9k2w.woff2) format('woff2');
+    src: local('Quicksand Bold'), local('Quicksand-Bold'), url(asset/web/fonts/32nyIRHyCu6iqEka_hbKsv8zf_FOSsgRmwsS7Aa9k2w.woff2) format('woff2');
     unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
 }
 
@@ -154,7 +154,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
-    src: local('Quicksand Bold'), local('Quicksand-Bold'), url(/TranDucBoPhP/asset/web/fonts/32nyIRHyCu6iqEka_hbKsj0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
+    src: local('Quicksand Bold'), local('Quicksand-Bold'), url(asset/web/fonts/32nyIRHyCu6iqEka_hbKsj0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
     unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -162,7 +162,7 @@
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
-    src: local('Quicksand Bold'), local('Quicksand-Bold'), url(/TranDucBoPhP/asset/web/fonts/32nyIRHyCu6iqEka_hbKsugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+    src: local('Quicksand Bold'), local('Quicksand-Bold'), url(asset/web/fonts/32nyIRHyCu6iqEka_hbKsugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -392,50 +392,50 @@
 
 @font-face {
     font-family: 'Graviola-Regular';
-    src: url('/TranDucBoPhp/asset/web/fonts/Graviola-Regular.eot?#iefix') format('embedded-opentype'), url('/TranDucBoPhp/asset/web/fonts/Graviola-Regular.otf') format('opentype'), url('/TranDucBoPhp/asset/web/fonts/Graviola-Regular.woff') format('woff'), url('/TranDucBoPhp/asset/web/fonts/Graviola-Regular.ttf') format('truetype'), url('/TranDucBoPhp/asset/web/fonts/Graviola-Regular.svg#Graviola-Regular') format('svg');
+    src: url('asset/web/fonts/Graviola-Regular.eot?#iefix') format('embedded-opentype'), url('asset/web/fonts/Graviola-Regular.otf') format('opentype'), url('asset/web/fonts/Graviola-Regular.woff') format('woff'), url('asset/web/fonts/Graviola-Regular.ttf') format('truetype'), url('asset/web/fonts/Graviola-Regular.svg#Graviola-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GraviolaSoft-Medium';
-    src: url('/TranDucBoPhp/asset/web/fonts/GraviolaSoft-Medium.eot?#iefix') format('embedded-opentype'), url('/TranDucBoPhp/asset/web/fonts/GraviolaSoft-Medium.otf') format('opentype'), url('/TranDucBoPhp/asset/web/fonts/GraviolaSoft-Medium.woff') format('woff'), url('/TranDucBoPhp/asset/web/fonts/GraviolaSoft-Medium.ttf') format('truetype'), url('/TranDucBoPhp/asset/web/fonts/GraviolaSoft-Medium.svg#GraviolaSoft-Medium') format('svg');
+    src: url('asset/web/fonts/GraviolaSoft-Medium.eot?#iefix') format('embedded-opentype'), url('asset/web/fonts/GraviolaSoft-Medium.otf') format('opentype'), url('asset/web/fonts/GraviolaSoft-Medium.woff') format('woff'), url('asset/web/fonts/GraviolaSoft-Medium.ttf') format('truetype'), url('asset/web/fonts/GraviolaSoft-Medium.svg#GraviolaSoft-Medium') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'QuicksandBook-Regular';
-    src: url('/TranDucBoPhp/asset/web/fonts/QuicksandBook-Regular.eot?#iefix') format('embedded-opentype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandBook-Regular.otf') format('opentype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandBook-Regular.woff') format('woff'), url('/TranDucBoPhp/asset/web/fonts/QuicksandBook-Regular.ttf') format('truetype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandBook-Regular.svg#QuicksandBook-Regular') format('svg');
+    src: url('asset/web/fonts/QuicksandBook-Regular.eot?#iefix') format('embedded-opentype'), url('asset/web/fonts/QuicksandBook-Regular.otf') format('opentype'), url('asset/web/fonts/QuicksandBook-Regular.woff') format('woff'), url('asset/web/fonts/QuicksandBook-Regular.ttf') format('truetype'), url('asset/web/fonts/QuicksandBook-Regular.svg#QuicksandBook-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'QuicksandBold-Regular';
-    src: url('/TranDucBoPhp/asset/web/fonts/QuicksandBold-Regular.eot?#iefix') format('embedded-opentype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandBold-Regular.otf') format('opentype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandBold-Regular.woff') format('woff'), url('/TranDucBoPhp/asset/web/fonts/QuicksandBold-Regular.ttf') format('truetype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandBold-Regular.svg#QuicksandBold-Regular') format('svg');
+    src: url('asset/web/fonts/QuicksandBold-Regular.eot?#iefix') format('embedded-opentype'), url('asset/web/fonts/QuicksandBold-Regular.otf') format('opentype'), url('asset/web/fonts/QuicksandBold-Regular.woff') format('woff'), url('asset/web/fonts/QuicksandBold-Regular.ttf') format('truetype'), url('asset/web/fonts/QuicksandBold-Regular.svg#QuicksandBold-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'QuicksandLight-Regular';
-    src: url('/TranDucBoPhp/asset/web/fonts/QuicksandLight-Regular.eot?#iefix') format('embedded-opentype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandLight-Regular.otf') format('opentype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandLight-Regular.woff') format('woff'), url('/TranDucBoPhp/asset/web/fonts/QuicksandLight-Regular.ttf') format('truetype'), url('/TranDucBoPhp/asset/web/fonts/QuicksandLight-Regular.svg#QuicksandLight-Regular') format('svg');
+    src: url('asset/web/fonts/QuicksandLight-Regular.eot?#iefix') format('embedded-opentype'), url('asset/web/fonts/QuicksandLight-Regular.otf') format('opentype'), url('asset/web/fonts/QuicksandLight-Regular.woff') format('woff'), url('asset/web/fonts/QuicksandLight-Regular.ttf') format('truetype'), url('asset/web/fonts/QuicksandLight-Regular.svg#QuicksandLight-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'jey';
-    src: url('/TranDucBoPhp/asset/web/fonts/jey.eot?#iefix') format('embedded-opentype'), url('/TranDucBoPhp/asset/web/fonts/jey.woff') format('woff'), url('/TranDucBoPhp/asset/web/fonts/jey.ttf') format('truetype'), url('/TranDucBoPhp/asset/web/fonts/jey.svg#jey') format('svg');
+    src: url('asset/web/fonts/jey.eot?#iefix') format('embedded-opentype'), url('asset/web/fonts/jey.woff') format('woff'), url('asset/web/fonts/jey.ttf') format('truetype'), url('asset/web/fonts/jey.svg#jey') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'icomoon';
-    src: url('/TranDucBoPhp/asset/web/fonts/icomoon.eot');
-    src: url('/TranDucBoPhp/asset/web/fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('/TranDucBoPhp/asset/web/fonts/icomoon.woff2') format('woff2'), url('/TranDucBoPhp/asset/web/fonts/icomoon.woff') format('woff'), url('/TranDucBoPhp/asset/web/fonts/icomoon.ttf') format('truetype'), url('/TranDucBoPhp/asset/web/fonts/icomoon.svg#icomoon') format('svg');
+    src: url('asset/web/fonts/icomoon.eot');
+    src: url('asset/web/fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('asset/web/fonts/icomoon.woff2') format('woff2'), url('asset/web/fonts/icomoon.woff') format('woff'), url('asset/web/fonts/icomoon.ttf') format('truetype'), url('asset/web/fonts/icomoon.svg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -754,7 +754,7 @@ p {
     display: inline-block;
     border: none;
     box-shadow: none;
-    background: url('/TranDucBoPhp/asset/web/images/btn1-bg.jpg') repeat-y 0 0;
+    background: url('asset/web/images/btn1-bg.jpg') repeat-y 0 0;
     background-size: 100% auto;
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
@@ -780,7 +780,7 @@ p {
 
 .btn-black:hover {
     color: #ffffff;
-    background: url('/TranDucBoPhp/asset/web/images/btn2-bg.jpg') repeat-y 0 0;
+    background: url('asset/web/images/btn2-bg.jpg') repeat-y 0 0;
     background-size: 100% auto;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
@@ -798,7 +798,7 @@ p {
     display: inline-block;
     border: none;
     box-shadow: none;
-    background: url('/TranDucBoPhp/asset/web/images/btn2-bg.jpg') repeat-y 0 0;
+    background: url('asset/web/images/btn2-bg.jpg') repeat-y 0 0;
     background-size: 100% auto;
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
@@ -824,7 +824,7 @@ p {
 
 .btn-main:hover {
     color: #ffffff;
-    background: url('/TranDucBoPhp/asset/web/images/btn1-bg.jpg') repeat-y 0 0;
+    background: url('asset/web/images/btn1-bg.jpg') repeat-y 0 0;
     background-size: 100% auto;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
@@ -1008,7 +1008,7 @@ input[type="number"] {
     left: 50%;
     top: -59px;
     width: 254px;
-    background: url('/TranDucBoPhp/asset/web/images/pattern-white.png') no-repeat center center;
+    background: url('asset/web/images/pattern-white.png') no-repeat center center;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -1033,19 +1033,19 @@ input[type="number"] {
 }
 
 .icon-black {
-    background: url('/TranDucBoPhp/asset/web/images/pattern-black.png') no-repeat center center;
+    background: url('asset/web/images/pattern-black.png') no-repeat center center;
 }
 
 .icon-skeen {
-    background: url('/TranDucBoPhp/asset/web/images/pattern-skeen.png') no-repeat center center;
+    background: url('asset/web/images/pattern-skeen.png') no-repeat center center;
 }
 
 .icon-gold {
-    background: url('/TranDucBoPhp/asset/web/images/pattern-gold.png') no-repeat center center;
+    background: url('asset/web/images/pattern-gold.png') no-repeat center center;
 }
 
 .icon-dark {
-    background: url('/TranDucBoPhp/asset/web/images/pattern-dark.png') no-repeat center center;
+    background: url('asset/web/images/pattern-dark.png') no-repeat center center;
 }
 
 .banner-bg {
@@ -1316,7 +1316,7 @@ textarea {
 .top-arrow {
     position: fixed;
     bottom: 50px;
-    background: url('/TranDucBoPhp/asset/web/images/arrow-top.png') no-repeat 0 0;
+    background: url('asset/web/images/arrow-top.png') no-repeat 0 0;
     width: 40px;
     height: 40px;
     right: 30px;
@@ -1995,7 +1995,7 @@ textarea {
 }
 
 .search-part>a {
-    background: url('/TranDucBoPhp/asset/web/images/icon-zoom.png') no-repeat right 0;
+    background: url('asset/web/images/icon-zoom.png') no-repeat right 0;
     width: 28px;
     height: 28px;
     display: inline-block;
@@ -2003,7 +2003,7 @@ textarea {
 }
 
 .search-part.active>a {
-    background: url('/TranDucBoPhp/asset/web/images/close.png') no-repeat right 0;
+    background: url('asset/web/images/close.png') no-repeat right 0;
 }
 
 .search-box {
@@ -2063,7 +2063,7 @@ textarea {
     height: 28px;
     border: none;
     box-shadow: none;
-    background: url('/TranDucBoPhp/asset/web/images/icon-zoom.png') no-repeat right 0;
+    background: url('asset/web/images/icon-zoom.png') no-repeat right 0;
     position: absolute;
     right: 30px;
     margin-top: 11px;
@@ -2084,7 +2084,7 @@ textarea {
     position: absolute;
     top: -18px;
     right: -18px;
-    background: #e4b95b url('/TranDucBoPhp/asset/web/images/close.png') no-repeat center center;
+    background: #e4b95b url('asset/web/images/close.png') no-repeat center center;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
@@ -2232,7 +2232,7 @@ textarea {
     right: 0px;
     width: 12px;
     height: 15px;
-    background: url('/TranDucBoPhp/asset/web/images/delete.png') no-repeat center center;
+    background: url('asset/web/images/delete.png') no-repeat center center;
     top: 10px;
 }
 
@@ -2292,21 +2292,21 @@ textarea {
 .tp-leftarrow {
     width: 50px;
     height: 50px;
-    background: url('/TranDucBoPhp/asset/web/images/arrow-left.png') no-repeat center center !important;
+    background: url('asset/web/images/arrow-left.png') no-repeat center center !important;
 }
 
 .tp-leftarrow:hover {
-    background: url('/TranDucBoPhp/asset/web/images/arrow-left-active.png') no-repeat center center !important;
+    background: url('asset/web/images/arrow-left-active.png') no-repeat center center !important;
 }
 
 .tp-rightarrow {
     width: 50px;
     height: 50px;
-    background: url('/TranDucBoPhp/asset/web/images/arrow-right.png') no-repeat center center !important;
+    background: url('asset/web/images/arrow-right.png') no-repeat center center !important;
 }
 
 .tp-rightarrow:hover {
-    background: url('/TranDucBoPhp/asset/web/images/arrow-right-active.png') no-repeat center center !important;
+    background: url('asset/web/images/arrow-right-active.png') no-repeat center center !important;
 }
 
 .tp-caption span {
@@ -2383,7 +2383,7 @@ textarea {
 .slick-prev,
 .slick-prev:hover,
 .slick-prev:focus {
-    background: url('/TranDucBoPhp/asset/web/images/slider-arrow-left.png') no-repeat center center;
+    background: url('asset/web/images/slider-arrow-left.png') no-repeat center center;
     width: 32px;
     height: 24px;
     color: #fff;
@@ -2393,7 +2393,7 @@ textarea {
 .slick-next,
 .slick-next:hover,
 .slick-next:focus {
-    background: url('/TranDucBoPhp/asset/web/images/slider-arrow-right.png') no-repeat center center;
+    background: url('asset/web/images/slider-arrow-right.png') no-repeat center center;
     width: 32px;
     height: 24px;
 }
@@ -2686,7 +2686,7 @@ textarea {
 }
 
 .owl-theme .owl-nav .owl-prev {
-    background: url("/TranDucBoPhp/asset/web/images/arrow-black-left.png") no-repeat center center;
+    background: url("asset/web/images/arrow-black-left.png") no-repeat center center;
     float: left;
     height: 50px;
     left: -120px;
@@ -2702,11 +2702,11 @@ textarea {
 }
 
 .owl-theme .owl-nav .owl-prev:hover {
-    background: url("/TranDucBoPhp/asset/web/images/arrow-left-active.png") no-repeat center center;
+    background: url("asset/web/images/arrow-left-active.png") no-repeat center center;
 }
 
 .owl-theme .owl-nav .owl-next {
-    background: url("/TranDucBoPhp/asset/web/images/arrow-black-right.png") no-repeat center center;
+    background: url("asset/web/images/arrow-black-right.png") no-repeat center center;
     float: left;
     height: 50px;
     right: -120px;
@@ -2722,7 +2722,7 @@ textarea {
 }
 
 .owl-theme .owl-nav .owl-next:hover {
-    background: url("/TranDucBoPhp/asset/web/images/arrow-right-active.png") no-repeat center center;
+    background: url("asset/web/images/arrow-right-active.png") no-repeat center center;
 }
 
 .chef-blog .social-top {
@@ -2825,7 +2825,7 @@ textarea {
     position: absolute;
     top: 59px;
     right: 100%;
-    background: url('/TranDucBoPhp/asset/web/images/line.png') no-repeat center center;
+    background: url('asset/web/images/line.png') no-repeat center center;
     height: 2px;
     width: 180px;
     content: "";
@@ -2927,7 +2927,7 @@ textarea {
 }
 
 .icon-user {
-    background: url('/TranDucBoPhp/asset/web/images/user.png') no-repeat center center;
+    background: url('asset/web/images/user.png') no-repeat center center;
     width: 17px;
     height: 22px;
     vertical-align: middle;
@@ -2937,7 +2937,7 @@ textarea {
 }
 
 .icon-comment {
-    background: url('/TranDucBoPhp/asset/web/images/comment.png') no-repeat center center;
+    background: url('asset/web/images/comment.png') no-repeat center center;
     width: 23px;
     height: 21px;
     vertical-align: middle;
@@ -2947,7 +2947,7 @@ textarea {
 }
 
 .icon-more {
-    background: url('/TranDucBoPhp/asset/web/images/more-arrow.png') no-repeat center center;
+    background: url('asset/web/images/more-arrow.png') no-repeat center center;
     width: 17px;
     height: 11px;
     vertical-align: middle;
@@ -3079,7 +3079,7 @@ textarea {
 
 .gallery-overlay-inner {
     position: relative;
-    background: url('/TranDucBoPhp/asset/web/images/gradient-bg.png') no-repeat center center;
+    background: url('asset/web/images/gradient-bg.png') no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -3232,7 +3232,7 @@ textarea {
     left: 50%;
     bottom: 0px;
     width: 254px;
-    background: url('/TranDucBoPhp/asset/web/images/find-us.png') no-repeat center center;
+    background: url('asset/web/images/find-us.png') no-repeat center center;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -3280,7 +3280,7 @@ textarea {
     position: absolute;
     left: 50%;
     width: 254px;
-    background: url('/TranDucBoPhp/asset/web/images/pattern-dark.png') no-repeat center center;
+    background: url('asset/web/images/pattern-dark.png') no-repeat center center;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -3416,11 +3416,11 @@ textarea {
 }
 
 .feature-label .icon-user {
-    background: url('/TranDucBoPhp/asset/web/images/user1.png') no-repeat center center;
+    background: url('asset/web/images/user1.png') no-repeat center center;
 }
 
 .feature-label .icon-comment {
-    background: url('/TranDucBoPhp/asset/web/images/comment1.png') no-repeat center center;
+    background: url('asset/web/images/comment1.png') no-repeat center center;
 }
 
 .feature-label .date-feature {
@@ -3687,19 +3687,19 @@ textarea {
 }
 
 .wrapper-spacer-bg .owl-theme .owl-nav .owl-prev {
-    background: url("/TranDucBoPhp/asset/web/images/arrow-left.png") no-repeat center center;
+    background: url("asset/web/images/arrow-left.png") no-repeat center center;
 }
 
 .wrapper-spacer-bg .owl-theme .owl-nav .owl-next {
-    background: url("/TranDucBoPhp/asset/web/images/arrow-right.png") no-repeat center center;
+    background: url("asset/web/images/arrow-right.png") no-repeat center center;
 }
 
 .wrapper-spacer-bg .owl-theme .owl-nav .owl-prev:hover {
-    background: url("/TranDucBoPhp/asset/web/images/arrow-left-active.png") no-repeat center center;
+    background: url("asset/web/images/arrow-left-active.png") no-repeat center center;
 }
 
 .wrapper-spacer-bg .owl-theme .owl-nav .owl-next:hover {
-    background: url("/TranDucBoPhp/asset/web/images/arrow-right-active.png") no-repeat center center;
+    background: url("asset/web/images/arrow-right-active.png") no-repeat center center;
 }
 
 .wrapper-spacer-bg .chef-slote .chef-inner {
@@ -3735,11 +3735,11 @@ textarea {
 }
 
 .wrapper-spacer-bg .feature-label .icon-user {
-    background: url("/TranDucBoPhp/asset/web/images/user1.png") no-repeat center center;
+    background: url("asset/web/images/user1.png") no-repeat center center;
 }
 
 .wrapper-spacer-bg .feature-label .icon-comment {
-    background: url("/TranDucBoPhp/asset/web/images/comment1.png") no-repeat center center;
+    background: url("asset/web/images/comment1.png") no-repeat center center;
 }
 
 .wrapper-spacer-bg .owl-theme .owl-dots .owl-dot.active span,
@@ -3901,19 +3901,19 @@ textarea {
 }
 
 .feature-extra .owl-theme .owl-nav .owl-prev {
-    background: url(/TranDucBoPhp/asset/web/images/direction-left.png) no-repeat center center;
+    background: url(asset/web/images/direction-left.png) no-repeat center center;
 }
 
 .feature-extra .owl-theme .owl-nav .owl-prev:hover {
-    background: url(/TranDucBoPhp/asset/web/images/direction-left-active.png) no-repeat center center;
+    background: url(asset/web/images/direction-left-active.png) no-repeat center center;
 }
 
 .feature-extra .owl-theme .owl-nav .owl-next {
-    background: url(/TranDucBoPhp/asset/web/images/direction-right.png) no-repeat center center;
+    background: url(asset/web/images/direction-right.png) no-repeat center center;
 }
 
 .feature-extra .owl-theme .owl-nav .owl-next:hover {
-    background: url(/TranDucBoPhp/asset/web/images/direction-right-active.png) no-repeat center center;
+    background: url(asset/web/images/direction-right-active.png) no-repeat center center;
 }
 
 .food-extra .food-blog {
@@ -3935,19 +3935,19 @@ textarea {
 }
 
 .instagram-trail .owl-theme .owl-nav .owl-prev {
-    background: url(/TranDucBoPhp/asset/web/images/direction-left.png) no-repeat center center;
+    background: url(asset/web/images/direction-left.png) no-repeat center center;
 }
 
 .instagram-trail .owl-theme .owl-nav .owl-prev:hover {
-    background: url(/TranDucBoPhp/asset/web/images/direction-left-active.png) no-repeat center center;
+    background: url(asset/web/images/direction-left-active.png) no-repeat center center;
 }
 
 .instagram-trail .owl-theme .owl-nav .owl-next {
-    background: url(/TranDucBoPhp/asset/web/images/direction-right.png) no-repeat center center;
+    background: url(asset/web/images/direction-right.png) no-repeat center center;
 }
 
 .instagram-trail .owl-theme .owl-nav .owl-next:hover {
-    background: url(/TranDucBoPhp/asset/web/images/direction-right-active.png) no-repeat center center;
+    background: url(asset/web/images/direction-right-active.png) no-repeat center center;
 }
 
 .footer-form {
@@ -4097,11 +4097,11 @@ textarea {
 }
 
 .header-expert .search-part>a {
-    background-image: url("/TranDucBoPhp/asset/web/images/icon-zoom-blue.png");
+    background-image: url("asset/web/images/icon-zoom-blue.png");
 }
 
 .header-expert .search-part.active>a {
-    background-image: url("/TranDucBoPhp/asset/web/images/close-blue.png");
+    background-image: url("asset/web/images/close-blue.png");
 }
 
 .header-expert .header-collect a {
@@ -4113,25 +4113,25 @@ textarea {
 }
 
 .dishes-expand .slick-prev {
-    background: url('/TranDucBoPhp/asset/web/images/arrow-black-left.png') no-repeat center center;
+    background: url('asset/web/images/arrow-black-left.png') no-repeat center center;
     width: 50px;
     height: 50px;
 }
 
 .dishes-expand .slick-prev:hover,
 .dishes-expand .slick-prev:focus {
-    background: url('/TranDucBoPhp/asset/web/images/arrow-left-active.png') no-repeat center center;
+    background: url('asset/web/images/arrow-left-active.png') no-repeat center center;
 }
 
 .dishes-expand .slick-next {
-    background: url('/TranDucBoPhp/asset/web/images/arrow-black-right.png') no-repeat center center;
+    background: url('asset/web/images/arrow-black-right.png') no-repeat center center;
     width: 50px;
     height: 50px;
 }
 
 .dishes-expand .slick-next:hover,
 .dishes-expand .slick-next:focus {
-    background: url('/TranDucBoPhp/asset/web/images/arrow-right-active.png') no-repeat center center;
+    background: url('asset/web/images/arrow-right-active.png') no-repeat center center;
 }
 
 .menu-return .portfolioFilter-inner {
@@ -5035,7 +5035,7 @@ textarea {
 }
 
 .read-arrow {
-    background: url('/TranDucBoPhp/asset/web/images/learn-arrow.png') no-repeat right center;
+    background: url('asset/web/images/learn-arrow.png') no-repeat right center;
     padding-right: 34px;
 }
 
@@ -5460,7 +5460,7 @@ textarea {
 }
 
 .star-review span.star-review-customer {
-    background: rgba(0, 0, 0, 0) url("/TranDucBoPhp/asset/web/images/star.png") repeat-x scroll left 0;
+    background: rgba(0, 0, 0, 0) url("asset/web/images/star.png") repeat-x scroll left 0;
     display: inline-block;
     height: 16px;
     position: relative;
@@ -5505,11 +5505,11 @@ textarea {
 }
 
 .star-review span.star-review-customer a:hover {
-    background: rgba(0, 0, 0, 0) url("/TranDucBoPhp/asset/web/images/star.png") repeat-x scroll left -32px;
+    background: rgba(0, 0, 0, 0) url("asset/web/images/star.png") repeat-x scroll left -32px;
 }
 
 .comment-blog .star-review span.star-review-customer {
-    background: rgba(0, 0, 0, 0) url("/TranDucBoPhp/asset/web/images/star.png") repeat-x scroll left -16px;
+    background: rgba(0, 0, 0, 0) url("asset/web/images/star.png") repeat-x scroll left -16px;
     margin-left: 15px;
 }
 
@@ -5677,7 +5677,7 @@ textarea {
 .shop-single .slick-prev,
 .shop-single .slick-prev:hover,
 .shop-single .slick-prev:focus {
-    background: rgba(0, 0, 0, 0) url("/TranDucBoPhp/asset/web/images/slider-arrow-left-black.png") no-repeat scroll center center;
+    background: rgba(0, 0, 0, 0) url("asset/web/images/slider-arrow-left-black.png") no-repeat scroll center center;
     height: 13px;
     width: 20px;
     background-size: 20px 13px;
@@ -5686,7 +5686,7 @@ textarea {
 .shop-single .slick-next,
 .shop-single .slick-next:hover,
 .shop-single .slick-next:focus {
-    background: rgba(0, 0, 0, 0) url("/TranDucBoPhp/asset/web/images/slider-arrow-right-black.png") no-repeat scroll center center;
+    background: rgba(0, 0, 0, 0) url("asset/web/images/slider-arrow-right-black.png") no-repeat scroll center center;
     height: 13px;
     width: 20px;
     background-size: 20px 13px;
@@ -6790,5 +6790,5 @@ body main .team-page {
 }
 
 .client.banner-bg.invert.invert-black .icon-black {
-    background: url('/TranDucBoPhp/asset/web/images/pattern-black-sketch.png') no-repeat center center;
+    background: url('asset/web/images/pattern-black-sketch.png') no-repeat center center;
 }

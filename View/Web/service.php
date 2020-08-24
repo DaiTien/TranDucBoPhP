@@ -1,6 +1,6 @@
 <section id="service" class="bg-skeen feature-list text-center home-icon wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="icon-default icon-skeen">
-                        <img src="/TranDucBoPhp/asset/web/images/icon22.png" alt="">
+                        <img src="asset/web/images/icon22.png" alt="">
                     </div>
                     <div class="container">
                         <div class="build-title">
@@ -11,7 +11,7 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="feature-list-icon">
                                     <div class="feature-icon-table">
-                                        <img src="/TranDucBoPhp/asset/web/images/img9.png" alt="">
+                                        <img src="asset/web/images/img9.png" alt="">
                                     </div>
                                 </div>
                                 <h5>Thức Uống Chất Lượng</h5>
@@ -20,7 +20,7 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="feature-list-icon">
                                     <div class="feature-icon-table">
-                                        <img src="/TranDucBoPhp/asset/web/images/img10.png" alt="">
+                                        <img src="asset/web/images/img10.png" alt="">
                                     </div>
                                 </div>
                                 <h5>Menu Đa Dạng</h5>
@@ -31,7 +31,7 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="feature-list-icon">
                                     <div class="feature-icon-table">
-                                        <img src="/TranDucBoPhp/asset/web/images/img11.png" alt="">
+                                        <img src="asset/web/images/img11.png" alt="">
                                     </div>
                                 </div>
                                 <h5>Phục Vụ Chuyên Nghiệp</h5>
@@ -40,7 +40,7 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="feature-list-icon">
                                     <div class="feature-icon-table">
-                                        <img src="/TranDucBoPhp/asset/web/images/img12.png" alt="">
+                                        <img src="asset/web/images/img12.png" alt="">
                                     </div>
                                 </div>
                                 <h5>Giao Hàng Nhanh Chóng</h5>

@@ -7,7 +7,7 @@
                 {
                 ?>
                     <a href="#" class="top-cell">
-                        <img src="/TranDucBoPhp/asset/web/images/fon.png" alt="">
+                        <img src="asset/web/images/fon.png" alt="">
                         <span><?=$value->phone?></span>
                     </a>
                     <a href="#" class="top-email">

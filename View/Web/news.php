@@ -15,7 +15,7 @@
     <!-- <div id="pre-loader">
         <div class="loader-holder">
             <div class="frame">
-                <img src="/TranDucBoPhp/asset/web//TranDucBoPhP/asset/Web/images/Preloader.gif" alt="Laboom" />
+                <img src="asset/web/asset/Web/images/Preloader.gif" alt="Laboom" />
             </div>
         </div>
     </div> -->
@@ -36,7 +36,7 @@
         <main>
             <div class="main-part">
                 <!-- Start Breadcrumb Part -->
-                <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('/TranDucBoPhP/asset/Web/images/breadbg1.jpg');">
+                <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('asset/Web/images/breadbg1.jpg');">
                     <div class="container">
                         <div class="breadcrumb-inner">
                             <h2>Tin Tức</h2>
@@ -49,7 +49,7 @@
                 <!-- Start Blog List -->
                 <section class="home-icon blog-main-section text-center blog-main-full wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="icon-default">
-                        <img src="/TranDucBoPhP/asset/Web/images/scroll-arrow.png" alt="">
+                        <img src="asset/Web/images/scroll-arrow.png" alt="">
                     </div>
                     <div class="container">
                         <div class="row">

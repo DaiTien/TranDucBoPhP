@@ -1,6 +1,6 @@
 <section id="news" class="feature-blog-wrap bg-skeen home-icon wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="icon-default icon-skeen">
-                        <img src="/TranDucBoPhp/asset/web/images/icon20.png" alt="">
+                        <img src="asset/web/images/icon20.png" alt="">
                     </div>
                     <div class="container">
                         <div class="build-title">

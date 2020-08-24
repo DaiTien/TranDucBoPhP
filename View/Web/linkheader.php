@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/png" href="/TranDucBoPhP/asset/Web/images/favicon.png">
+<link rel="shortcut icon" type="image/png" href="asset/Web/images/favicon.png">
 <title>WebSite Trà Sữa Trần Đức Bo</title>
 <link href="asset/web/css/bootstrap.css" rel="stylesheet">
 <link href="asset/web/css/datepicker.css" rel="stylesheet">
