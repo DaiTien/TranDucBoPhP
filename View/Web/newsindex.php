@@ -1,42 +1,38 @@
 <section id="news" class="feature-blog-wrap bg-skeen home-icon wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <div class="icon-default icon-skeen">
-                        <img src="asset/web/images/icon20.png" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="build-title">
-                            <h2>Tin Tức</h2>
-                            <h6>Đọc Những Tin Tức Mới Nhất Của BoBo MilkTea</h6>
-                        </div>
-                        <div class="feature-blog">
-                            <div class="owl-carousel owl-theme" data-items="3" data-laptop="3" data-tablet="2" data-mobile="1" data-nav="true" data-dots="false" data-autoplay="true" data-speed="1800" data-autotime="5000">
-                                <?php
-                                foreach ($news as $value){
-                                ?>
-                                    <div class="item">
-                                        <a href="?c=IndexWebsite&a=news&id=<?=$value->id?>">
-<<<<<<< HEAD
-                                            <div class="feature-img" style="display: block;width: 360px;height: 240px">
-                                                <img src="<?=$value->image?>" alt="">
-=======
-                                            <div class="feature-img feature-img__newsind">
-                                                <img src="<?=$value->image?>" alt="">
-
->>>>>>> 58d090f93c335132ebfe1960c78dd9c30a7c8a32
-                                            </div>
-                                            <div class="feature-info">
-                                                <!--<span><i class="icon-user"></i> By Ali TUFAN</span>
+    <div class="icon-default icon-skeen">
+        <img src="asset/web/images/icon20.png" alt="">
+    </div>
+    <div class="container">
+        <div class="build-title">
+            <h2>Tin Tức</h2>
+            <h6>Đọc Những Tin Tức Mới Nhất Của BoBo MilkTea</h6>
+        </div>
+        <div class="feature-blog">
+            <div class="owl-carousel owl-theme" data-items="3" data-laptop="3" data-tablet="2" data-mobile="1" data-nav="true" data-dots="false" data-autoplay="true" data-speed="1800" data-autotime="5000">
+                <?php
+                foreach ($news as $value) {
+                ?>
+                    <div class="item">
+                        <a href="?c=IndexWebsite&a=news&id=<?= $value->id ?>">
+                            <div class="feature-img">
+                                <div class="feature-img feature-img__newsind">
+                                    <img src="<?= $value->image ?>" alt="">
+                                </div>
+                                <div class="feature-info">
+                                    <!--<span><i class="icon-user"></i> By Ali TUFAN</span>
                                                 <span><i class="icon-comment"></i> 5 Comments</span>-->
-                                                <h5><?=$value->title?></h5>
-                                                <p><?=$value->summary?></p>
-                                                <a href="?c=IndexWebsite&a=news&id=<?=$value->id?>">Read More <i class="icon-more"></i></a>
-                                            </div>
-                                        </a>
-                                    </div>
-                                <?php
-                                }
-                                ?>
-
+                                    <h5><?= $value->title ?></h5>
+                                    <p><?= $value->summary ?></p>
+                                    <a href="?c=IndexWebsite&a=news&id=<?= $value->id ?>">Read More <i class="icon-more"></i></a>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </section>
+                <?php
+                }
+                ?>
+
+            </div>
+        </div>
+    </div>
+</section>
