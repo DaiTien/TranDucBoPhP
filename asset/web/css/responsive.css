@@ -1114,17 +1114,15 @@
 /* Tablet  */
 
 @media (min-width:768px) and (max-width:1023.99px) {
-<<<<<<< HEAD
     .slide__images {
         height: 400px;
-=======
+    }
     .header-top-left {
         margin-left: 15rem;
     }
     .menu-list h5 {
         font-size: 15px;
         padding-right: 110px;
->>>>>>> b201a3050305d55b0cb43f17d155708c62a63ca2
     }
 }
 
