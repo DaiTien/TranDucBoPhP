@@ -5,8 +5,8 @@
         width: 73px;
         height: 35px;
         position: absolute;
-        right: -69%;
-        bottom: 20%;
+        top: 10px;
+        bottom: 0;
         text-align: center;
         line-height: 30px;
         padding: 0;
@@ -24,26 +24,23 @@
                     <li class="has-child">
                         <a class="menu__link" id="lienhe" href="#contract">Liên Hệ</a>
                     </li>
-                    <li class="has-child">
                         <?php
-
                         if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
+                            echo '<li class="has-child">';
                             echo '<a >Xin chào ' . $user . '</a>';
-                            echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
                             echo '<ul class="drop-nav">';
                             echo '<li><a href="?c=IndexWebsite&a=Order">Giỏ hàng</a></li>';
-                            echo '<li><a href="#">Sản phẩm yêu thích</a></li>';
                             echo '</ul>';
+                            echo '</li>';
+                            echo '<li class="has-child">';
+                            echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
+                            echo '</li>';
                         } else {
+                            echo '<li class="has-child">';
                             echo "<a class=\"menu__link\" id=\"login_register\" href=\"#login\">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>";
+                            echo '</li>';
                         }
                         ?>
-                    </li>
-                    <li class="has-child">
-
-                    </li>
-
-
                 </ul>
                 <!--<div class="search-part">
                                     <a class="search-part" href="#"></a>
