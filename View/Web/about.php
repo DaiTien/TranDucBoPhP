@@ -41,25 +41,25 @@
                     <a href="#"><img src="asset/web/images/scroll-arrow.png" alt=""></a>
                 </div>
                 <?php
-                foreach ($introduce as $value){
-                    ?>
+                foreach ($introduce as $value) {
+                ?>
                     <div class="container">
                         <div class="build-title">
-                            <h2><?=$value->title?></h2>
-                            <h6><?=$value->summary?></h6>
+                            <h2><?= $value->title ?></h2>
+                            <h6><?= $value->summary ?></h6>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                <p id="txtContent"><?=$value->content?></p>
+                                <p id="txtContent"><?= $value->content ?></p>
                                 <p><img style="width: 170px;border-radius: 37px;" src="asset/web/images/signature.png" alt=""></p>
                                 <p><a href="?c=IndexWebsite&a=index" class="btn-black">HOME</a></p>
                             </div>
                             <div style="display:block; width: 555px;height: 392px" class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                <img src="<?=$value->image?>" alt="" style="border-radius:10%;width: 100%;height: 100%;box-shadow:5px 7px 10px rgba(0,0,0,0.5);">
+                                <img class="about__images" src="<?= $value->image ?>" alt="" >
                             </div>
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
             </section>

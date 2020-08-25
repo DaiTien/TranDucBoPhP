@@ -190,7 +190,9 @@
     .about__images {
         display: block;
         width: 555px;
-        height: 392px;
+        border-radius: 10%;
+        width: 100%;
+        box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.5);
     }
     
     .feature-img__newsind {
@@ -201,4 +203,10 @@
     
     .feature-img__newsind {
         width: 100%;
+    }
+    
+    .slide__images {
+        height: 100vh;
+        width: 100%;
+        min-height: 520px;
     }
