@@ -16,7 +16,7 @@
                         <a href="?c=IndexWebsite&a=news&id=<?= $value->id ?>">
                             <div class="feature-img">
                                 <div class="feature-img feature-img__newsind">
-                                    <img src="<?= $value->image ?>" alt="">
+                                    <img class="news__slide" src="<?= $value->image ?>" alt="">
                                 </div>
                                 <div class="feature-info">
                                     <!--<span><i class="icon-user"></i> By Ali TUFAN</span>

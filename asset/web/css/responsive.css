@@ -1100,13 +1100,16 @@
         font-size: 19px;
         padding-right: 110px;
     }
-    .owl-carousel .owl-item img {
-        width: 82%;
-        height: 100%;
-    }
     .owl-carousel .owl-item .client__img {
         width: 10%;
         height: 10%;
+    }
+    .header-top-left {
+        margin-left: none;
+    }
+    .feature-img .news__slide {
+        height: 100%;
+        width: 82%;
     }
 }
 
@@ -1123,6 +1126,11 @@
     .menu-list h5 {
         font-size: 15px;
         padding-right: 110px;
+    }
+    .portfolioFilter a {
+        padding: 0px 28px;
+        font-size: 10px;
+        font-weight: 500;
     }
 }
 
