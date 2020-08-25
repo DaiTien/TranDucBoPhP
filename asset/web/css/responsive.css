@@ -1114,7 +1114,15 @@
 
 /* Tablet  */
 
-@media (min-width:768px) and (max-width:1023.99px) {}
+@media (min-width:768px) and (max-width:1023.99px) {
+    .header-top-left {
+        margin-left: 15rem;
+    }
+    .menu-list h5 {
+        font-size: 15px;
+        padding-right: 110px;
+    }
+}
 
 
 /* Mobile  */
