@@ -1086,7 +1086,7 @@
 
 /* Tablet Pro */
 
-@media (min-width:1024px) and (max-width:1199.99px) {
+@media (min-width:992px) and (max-width:1199.98px) {
     .about__images {
         width: 485px;
     }
@@ -1116,7 +1116,7 @@
 
 /* Tablet  */
 
-@media (min-width:768px) and (max-width:1023.99px) {
+@media (min-width:768px) and (max-width:991.98px) {
     .slide__images {
         height: 400px;
     }
@@ -1131,6 +1131,9 @@
         padding: 0px 28px;
         font-size: 10px;
         font-weight: 500;
+    }
+    .book-table {
+        display: none;
     }
 }
 
@@ -1165,7 +1168,7 @@
     }
     .feature-img__newsind {
         display: block;
-        width: 360px;
-        height: 267px;
+        width: 344px;
+        height: 245px;
     }
 }
