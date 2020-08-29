@@ -8,7 +8,7 @@
             <h6>The role of a good cook ware in the preparation of a sumptuous meal cannot be <br> over emphasized then one consider white bread</h6>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="feature-list-icon">
                     <div class="feature-icon-table">
                         <img src="asset/web/images/img9.png" alt="">
@@ -17,7 +17,7 @@
                 <h5>Thức Uống Chất Lượng</h5>
                 <p>An toàn, vệ sinh và ngon miệng. Việc sử dụng các nguyên liệu an toàn, tự nhiên và vệ sinh là ưu tiên hàng đầu của Gong Cha. Hương vị tuyệt hảo của các món thức uống là mục đích quan trọng tiếp theo mà chúng tôi muốn hướng đến.</p>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="feature-list-icon">
                     <div class="feature-icon-table">
                         <img src="asset/web/images/img10.png" alt="">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="feature-list-icon">
                     <div class="feature-icon-table">
                         <img src="asset/web/images/img11.png" alt="">
@@ -39,7 +39,7 @@
                 <h5>Phục Vụ Chuyên Nghiệp</h5>
                 <p>BoBo MilkTea mong muốn làm hài lòng khách hàng tốt nhất với tác phong phục vụ chuyên nghiệp và thân thiện, luôn lắng nghe những đóng góp của khách hàng.</p>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="feature-list-icon">
                     <div class="feature-icon-table">
                         <img src="asset/web/images/img12.png" alt="">

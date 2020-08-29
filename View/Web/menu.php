@@ -24,23 +24,23 @@
                     <li class="has-child">
                         <a class="menu__link" id="lienhe" href="#contract">Liên Hệ</a>
                     </li>
-                        <?php
-                        if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
-                            echo '<li class="has-child">';
-                            echo '<a >Xin chào ' . $user . '</a>';
-                            echo '<ul class="drop-nav">';
-                            echo '<li><a href="?c=IndexWebsite&a=Order">Giỏ hàng</a></li>';
-                            echo '</ul>';
-                            echo '</li>';
-                            echo '<li class="has-child">';
-                            echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
-                            echo '</li>';
-                        } else {
-                            echo '<li class="has-child">';
-                            echo "<a class=\"menu__link\" id=\"login_register\" href=\"#login\">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>";
-                            echo '</li>';
-                        }
-                        ?>
+                    <?php
+                    if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
+                        echo '<li class="has-child">';
+                        echo '<a >Xin chào ' . $user . '</a>';
+                        echo '<ul class="drop-nav">';
+                        echo '<li><a href="?c=IndexWebsite&a=Order">Giỏ hàng</a></li>';
+                        echo '</ul>';
+                        echo '</li>';
+                        echo '<li class="has-child">';
+                        echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
+                        echo '</li>';
+                    } else {
+                        echo '<li class="has-child">';
+                        echo "<a class=\"menu__link\" id=\"login_register\" href=\"#login\">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>";
+                        echo '</li>';
+                    }
+                    ?>
                 </ul>
                 <!--<div class="search-part">
                                     <a class="search-part" href="#"></a>
@@ -73,12 +73,18 @@
                 </li>
                 <li class="has-child">
                     <a class="menu__link" href="#reach-to">Giới Thiệu</a>
-
+                </li>
+                <li class="has-child has-child__none">
+                    <a class="menu__link" id="lienhe" href="#contract">Liên Hệ</a>
+                </li>
+                <li class="has-child has-child__none">
+                    <a class="menu__link" id="lienhe" href="#contract">Đăng Nhập&nbsp;/&nbsp;Đăng Ký</a>
                 </li>
                 <li class="has-child">
                     <a class="menu__link" href="#news">Tin Tức</a>
 
                 </li>
+
             </ul>
         </div>
         <div class="logo">
