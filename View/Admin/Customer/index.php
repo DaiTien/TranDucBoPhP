@@ -39,7 +39,7 @@
                                 <thead>
                                 <tr id="tbheader">
                                     <th>STT</th>
-                                    <th>ID</th>
+                                    <!-- <th>ID</th> -->
                                     <th>Username</th>
                                     <th>Passwword</th>
                                     <th>Phone</th>
@@ -54,7 +54,7 @@
                                     ?>
                                     <tr>
                                         <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
+                                        <!-- <td><?=$value->id?></td> -->
                                         <td><?=$value->userName?></td>
                                         <td><?=$value->password?></td>
                                         <td><?=$value->phone?></td>

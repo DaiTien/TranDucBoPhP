@@ -49,7 +49,7 @@
                                 <thead>
                                 <tr id="tbheader">
                                     <th>STT</th>
-                                    <th>ID</th>
+                                    <!-- <th>ID</th> -->
                                     <th>Tiêu đề</th>
                                     <th>Tóm lược</th>
                                     <th>Nội dung</th>
@@ -64,7 +64,7 @@
                                 ?>
                                     <tr>
                                         <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
+                                        <!-- <td><?=$value->id?></td> -->
                                         <td><?=$value->title?></td>
                                         <td><?=$value->summary?></td>
                                         <td>

@@ -27,7 +27,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" style="margin:0 auto">
                     <form method="post" action="index.php?c=Customer&a=Save" >
                         <!-- general form elements -->
                         <div class="card mt-2 card-info">
@@ -83,13 +83,13 @@
                         </table>
                     </form>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <div class="card mt-2 card-info">
                         <div class="card-header with-border">
                             <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- /.row -->
         </section>
