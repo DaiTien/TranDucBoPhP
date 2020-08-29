@@ -80,7 +80,7 @@
                             </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Gía (Size M) </label>
+                                        <label for="exampleInputPassword1">Giá (Size M) </label>
                                         <input type="text"  class="form-control" name="priceM" placeholder="Nhập giá cho size nhỏ">
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Giới thiệu</label>
+                                        <label for="exampleInputPassword1">Giới Thiệu</label>
                                         <textarea type="text" class="form-control" name="summary" rows="5" placeholder="Giới Thiệu"></textarea>
                                     </div>
                                 </div>
@@ -102,7 +102,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Số lượng </label>
+                                        <label for="exampleInputPassword1">Số Lượng </label>
                                         <input type="text"  class="form-control" autocomplete="off" name="total" placeholder="">
                                     </div>
                                 </div>

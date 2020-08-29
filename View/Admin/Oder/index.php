@@ -35,17 +35,17 @@
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead>
+                                <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th>STT</th>
-                                    <th>ID</th>
-                                    <th>CustomerId</th>
-                                    <th>Name</th>
-                                    <th>Phone</th>
-                                    <th>Address</th>
-                                    <th>Content</th>
-                                    <th>Totalproduct</th>
-                                    <th>Totalprice</th>
+
+
+                                    <th>Tên Khách Hàng</th>
+                                    <th>Số Điện Thoại</th>
+                                    <th>Địa chỉ</th>
+
+                                    <th>Số Lượng</th>
+                                    <th>Giá</th>
                                     <th>Hành động</th>
                                 </tr>
                                 </thead>
@@ -56,12 +56,12 @@
                                     ?>
                                     <tr>
                                         <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
-                                        <td><?=$value->customerId?></td>
+
+
                                         <td><?=$value->name?></td>
                                         <td><?=$value->phone?></td>
                                         <td><?=$value->address?></td>
-                                        <td><?=$value->content?></td>
+
                                         <td><?=$value->totalProduct?></td>
                                         <td><?=$value->totalPrice?></td>
                                         <td class="text-center">

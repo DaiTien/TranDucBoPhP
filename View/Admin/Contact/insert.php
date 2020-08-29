@@ -27,7 +27,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <form method="post" action="index.php?c=Contact&a=Save" >
                         <!-- general form elements -->
                         <div class="card mt-2 card-info">
@@ -52,13 +52,13 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Phone </label>
+                                                <label for="exampleInputPassword1">Số Điện Thoại </label>
                                                 <input type="text"  class="form-control" autocomplete="off" name="phone" placeholder="03xx">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Address </label>
+                                                <label for="exampleInputPassword1">Địa Chỉ </label>
                                                 <input type="text"  class="form-control" name="address" placeholder="Address">
                                             </div>
                                         </div>
@@ -77,13 +77,7 @@
                         </table>
                     </form>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- /.row -->
         </section>

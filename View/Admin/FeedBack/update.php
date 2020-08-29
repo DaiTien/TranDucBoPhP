@@ -25,7 +25,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card card-info mt-2">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Nội Dung Phản Ánh</h3>
@@ -34,41 +34,44 @@
                                 <!-- form start -->
                             <div class="card-body">
                                 <div class="row">
+
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">MÃ Khách Hàng</label>
-                                            <input type="text"value="<?=$tdb_product->id?>"  class="form-control" name="id" readonly  placeholder="Mã Đơn Hàng">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">TÊN Khách Hàng</label>
+                                            <label for="exampleInputPassword1">Tên Khách Hàng</label>
                                             <input type="text"value="<?=$tdb_product->name?>"  class="form-control" name="name" readonly placeholder="Tên Sản Phẩm">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Ngày Tháng </label>
                                             <input type="text"value="<?=$tdb_product->date?>"  class="form-control" name="soLuong" readonly placeholder="">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row">
+
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Email </label>
                                             <input type="text"value="<?=$tdb_product->email?>"  class="form-control" name="email" readonly placeholder="">
                                         </div>
                                     </div>
+
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Bạn Muốn Phản Ánh Gì</label>
                                     <textarea type="text"  class="form-control" name="summary" readonly placeholder="Chủ đề"><?=$tdb_product->title?></textarea>
                                 </div>
+                                    </div>
+                                    <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Nội Dung Phản Ánh</label>
                                     <textarea type="text"  class="form-control" name="summary" readonly placeholder="Nội dung"><?=$tdb_product->content?></textarea>
 
+                                </div>
+                                    </div>
                                 </div>
                             </div>
                                     <div class="card-footer">
@@ -77,13 +80,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             <!-- /.row -->

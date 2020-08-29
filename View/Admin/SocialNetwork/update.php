@@ -25,7 +25,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card card-info mt-2">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">Mạng Xã Hội</h3>
@@ -76,13 +76,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card card-info mt-2">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             <!-- /.row -->

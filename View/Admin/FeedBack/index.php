@@ -33,10 +33,10 @@
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead>
+                                <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th>STT</th>
-                                    <th>ID</th>
+
                                     <th>Tên Khách Hàng</th>
                                     <th>Chủ đề</th>
                                     <th>Nội dung</th>
@@ -52,7 +52,7 @@
                                 ?>
                                     <tr>
                                         <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
+
                                         <td><?=$value->name?></td>
                                         <td><?=$value->title?></td>
                                         <td><?=$value->content?></td>

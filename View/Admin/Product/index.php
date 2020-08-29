@@ -50,10 +50,10 @@
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead>
+                                <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th>STT</th>
-                                    <th>ID</th>
+
                                     <th>Mã loại SP</th>
                                     <th>Tên Sản Phẩm</th>
                                     <th>Hình Ảnh</th>
@@ -70,7 +70,7 @@
                                     ?>
                                     <tr>
                                         <td class="text-center"><?=$stt++?></td>
-                                        <td class="text-center"><?=$value->id?></td>
+
                                         <td class="text-center"><?=$value->type?></td>
                                         <td class="text-center"><?=$value->name?></td>
                                         <td class="text-center">

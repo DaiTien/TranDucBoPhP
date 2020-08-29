@@ -82,13 +82,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Gía (Size L) </label>
+                                            <label for="exampleInputPassword1">Giá (Size L) </label>
                                             <input type="text" value="<?=$tdb_product->priceL?>"  class="form-control" name="priceL" placeholder="Gía">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Gía (Size M) </label>
+                                            <label for="exampleInputPassword1">Giá (Size M) </label>
                                             <input type="text" value="<?=$tdb_product->priceM?>"  class="form-control" name="sizeM" placeholder="Gía">
                                         </div>
                                     </div>
