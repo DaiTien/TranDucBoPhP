@@ -31,22 +31,20 @@
                 foreach ($product as $value) {
                 ?>
                     <div id="<?= $value->id ?>" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product <?= $value->type ?>">
-                        <a href="View/Web/productdetail.php">
-                            <div class="menu-list">
-                                <span class="menu-list-product">
-                                    <img src="<?= $value->image ?>" alt="">
-                                </span>
-                                <h5><?= $value->name ?> <span><?= $value->priceM ?> vnd</span></h5>
-                                <p><?= $value->summary ?></p>
-                            </div>
-                        </a>
+                        <div class="menu-list">
+                            <span class="menu-list-product">
+                                <img src="<?= $value->image ?>" alt="">
+                            </span>
+                            <h5><?= $value->name ?> <span><?= $value->priceM ?> vnd</span></h5>
+                            <p><?= $value->summary ?></p>
+                        </div>
                         <div class="menu__icon">
-                            <i onclick="myFunction(this)" id="like<?=$value->id?>" class="fa fa-heart icon__like"> <span>Yêu Thích</span> </i>
-                            <a hidden id="alike<?=$value->id?>" href="?c=IndexWebsite&a=productLike&id=<?=$value->id?>"></a>
-                            <i onclick="functionAlert(this)" id="add<?=$value->id?>" class="fa fa-plus-square icon__like icon__like--add" id="countButton" aria-hidden="true"> <span>Thêm giỏ hàng</span> </i>
-                            <a hidden id="cartadd<?=$value->id?>" href="?c=IndexWebsite&a=addCart&id=<?=$value->id?>"></a>
-                            <i onclick="functionOrder(this)" id="order<?=$value->id?>" class="fa fa-cart-plus icon__like" aria-hidden="true"> <span>Order</span> </i>
-                            <a hidden id="aorder<?=$value->id?>" href="?c=IndexWebsite&a=OrderNow&id=<?=$value->id?>"></a>
+                            <i onclick="myFunction(this)" id="like<?= $value->id ?>" class="fa fa-heart icon__like"> <span>Yêu Thích</span> </i>
+                            <a hidden id="alike<?= $value->id ?>" href="?c=IndexWebsite&a=productLike&id=<?= $value->id ?>"></a>
+                            <i onclick="functionAlert(this)" id="add<?= $value->id ?>" class="fa fa-plus-square icon__like icon__like--add" id="countButton" aria-hidden="true"> <span>Thêm giỏ hàng</span> </i>
+                            <a hidden id="cartadd<?= $value->id ?>" href="?c=IndexWebsite&a=addCart&id=<?= $value->id ?>"></a>
+                            <i onclick="functionOrder(this)" id="order<?= $value->id ?>" class="fa fa-cart-plus icon__like" aria-hidden="true"> <span>Order</span> </i>
+                            <a hidden id="aorder<?= $value->id ?>" href="?c=IndexWebsite&a=OrderNow&id=<?= $value->id ?>"></a>
                         </div>
 
                     </div>
