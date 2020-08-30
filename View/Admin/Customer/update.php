@@ -27,7 +27,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <form method="post" action="index.php?c=Customer&a=LuuSua" >
                         <!-- general form elements -->
                         <div class="card mt-2 card-info">
@@ -46,19 +46,19 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Username</label>
+                                                <label for="exampleInputPassword1">Tên Khách Hàng</label>
                                                 <input type="text"value="<?=$cus->userName?>"  class="form-control" name="userName"  placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Password </label>
+                                                <label for="exampleInputPassword1">Mật Khẩu</label>
                                                 <input type="text"value="<?=$cus->password?>"  class="form-control" name="password"  placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">phone </label>
+                                                <label for="exampleInputPassword1">Số Điện Thoại </label>
                                                 <input type="text"value="<?=$cus->phone?>"  class="form-control" name="phone"  placeholder="">
                                             </div>
                                         </div>
@@ -76,20 +76,14 @@
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Thêm</button>
                                     <input type="reset" class="btn btn-info" value="Refresh">
-                                    <a href="?c=Customer&a=index" class="btn btn-danger">Cancel</a>
+                                    <a href="?c=Customer&a=index" class="btn btn-danger">Đóng</a>
                                 </div>
                             </form>
                         </div>
                         </table>
                     </form>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- /.row -->
         </section>

@@ -36,13 +36,13 @@
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead>
+                                <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th>STT</th>
                                     <!-- <th>ID</th> -->
-                                    <th>Username</th>
-                                    <th>Passwword</th>
-                                    <th>Phone</th>
+                                    <th>Tên Khách Hàng</th>
+                                    <th>Mật Khẩu</th>
+                                    <th>Số Điện Thoại</th>
                                     <th>Email</th>
                                     <th>Hành động</th>
                                 </tr>

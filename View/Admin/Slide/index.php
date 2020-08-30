@@ -56,16 +56,15 @@
                             }
                             ?>
                         </p>
-                        <a href="?c=Slide&a=Insert" class="col-1 ml-3 mt-2 btn btn-primary glyphicon glyphicon-plus"><i class="fas fa-plus"></i> Add</a>
+                        <a href="?c=Slide&a=Insert" class="col-2 ml-3 mt-2 btn btn-primary glyphicon glyphicon-plus"><i class="fas fa-plus"></i>Thêm slide</a>
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr id="tbheader">
                                     <th class="text-center">STT</th>
-                                    <th class="text-center">ID</th>
-                                    <th class="text-center">Image</th>
-                                    <th class="text-center">Action</th>
+                                    <th class="text-center">Hình Ảnh</th>
+                                    <th class="text-center">Hành Động</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -75,7 +74,7 @@
                                     ?>
                                     <tr>
                                         <td class="text-center"><?=$stt++?></td>
-                                        <td class="text-center"><?=$value->id?></td>
+
                                         <td class="text-center">
                                             <img class="imagee" src="<?=$value->imageSlide?>">
                                         </td>

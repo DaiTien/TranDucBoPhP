@@ -27,7 +27,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card card-info mt-2">
                         <div class="card-header">
                             <h3 class="card-title font-weight-bold">CHỈNH SỬA LOẠI SẢN PHẨM</h3>
@@ -35,12 +35,15 @@
                         <form method="post" action="index.php?c=ProductType&a=SaveUpdate" enctype="multipart/form-data">
                             <div class="card mt-2 card-info">
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">MÃ LOẠI SẢN PHẨM</label>
-                                        <input type="text"  class="form-control" value="<?=$data->id?>" name="id" readonly >
-                                    </div>
+
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">MÃ LOẠI SẢN PHẨM</label>
+                                            <input type="text"  class="form-control" value="<?=$data->id?>" name="id" readonly >
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Tên loại sản phẩm</label>
                                                 <input type="text"  class="form-control" value="<?=$data->name?>" name="name" placeholder="Tên loại sản phẩm">
@@ -50,20 +53,14 @@
                                 </div>
                             </div>
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary">Update</button>
+                                        <button type="submit" class="btn btn-primary">Cập Nhật</button>
                                         <button type="reset" class="btn btn-info">Refresh</button>
-                                        <a href="?c=ProductType&a=index" class="btn btn-danger">Cancel</a>
+                                        <a href="?c=ProductType&a=index" class="btn btn-danger">Đóng</a>
                                     </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             <!-- /.row -->

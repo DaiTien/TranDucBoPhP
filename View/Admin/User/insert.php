@@ -26,7 +26,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card mt-2 card-info">
                         <div class="card-header with-border">
                             <h3 class="card-title font-weight-bold">THÊM THÀNH VIÊN</h3>
@@ -46,31 +46,60 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">ID</label>
-                                            <input type="text" readonly class="form-control" name="id">
-                                        </div>
+
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Tên Thành Viên <sup class="text-danger" style="font-size: 15px">*</sup></label>
+                                                <input type="text" class="form-control" name="userName" >
+                                                <p class="text-danger">
+                                                    <?php
+                                                    if (isset($_GET['r']))
+                                                    {
+                                                        if ($_GET['r'] == 2)
+                                                        {
+                                                            echo 'UserName đã tồn tại!';
+                                                        }
+                                                    }
+                                                    ?>
+                                                </p>
+                                            </div>
+
                                     </div>
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Full Name</label>
+                                            <label for="exampleInputPassword1">Họ Và Tên</label>
                                             <input type="text" class="form-control" name="fullName" >
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
+
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">User Name <sup class="text-danger" style="font-size: 15px">*</sup></label>
-                                            <input type="text" class="form-control" name="userName" >
+                                            <label for="exampleInputPassword1">Mật Khẩu <sup class="text-danger" style="font-size: 15px">*</sup></label>
+                                            <input type="text" class="form-control" name="password" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Điện Thoại</label>
+                                            <input type="text" class="form-control" name="phone" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Email <sup class="text-danger" style="font-size: 15px">*</sup></label>
+                                            <input type="text" class="form-control" name="email" >
                                             <p class="text-danger">
                                                 <?php
                                                 if (isset($_GET['r']))
                                                 {
-                                                    if ($_GET['r'] == 2)
+                                                    if ($_GET['r'] == 0)
                                                     {
-                                                        echo 'UserName đã tồn tại!';
+                                                        echo 'Email này đã được sử dụng, vui lòng dùng email khác';
                                                     }
                                                 }
                                                 ?>
@@ -79,44 +108,14 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Mật Khẩu <sup class="text-danger" style="font-size: 15px">*</sup></label>
-                                            <input type="text" class="form-control" name="password" >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Điện Thoại</label>
-                                    <input type="text" class="form-control" name="phone" >
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Email <sup class="text-danger" style="font-size: 15px">*</sup></label>
-                                    <input type="text" class="form-control" name="email" >
-                                    <p class="text-danger">
-                                        <?php
-                                        if (isset($_GET['r']))
-                                        {
-                                            if ($_GET['r'] == 0)
-                                            {
-                                                echo 'Email này đã được sử dụng, vui lòng dùng email khác';
-                                            }
-                                        }
-                                        ?>
-                                    </p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
                                             <label for="exampleInputPassword1">Giới Tính</label>
                                             <input type="text" class="form-control" name="gender" >
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Chức Vụ</label>
-                                            <input type="text" readonly value="Admin" class="form-control" name="role" >
-                                        </div>
-                                    </div>
                                 </div>
+
+
+
 
                             </div>
                             <div class="box-footer">
@@ -127,13 +126,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- /.row -->
         </section>

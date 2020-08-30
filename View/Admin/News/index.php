@@ -42,19 +42,19 @@
                         <div class="card-header">
                             <h3 class="card-title text-primary " style="font-size: 30px"><i class="far fa-newspaper"></i><b> List News</b></h3>
                         </div>
-                        <a href="?c=NewsAdmin&a=Insert" class="col-1 ml-3 mt-2 btn btn-primary glyphicon glyphicon-plus"><i class="fas fa-plus"></i> Add</a>
+                        <a href="?c=NewsAdmin&a=Insert" class="col-1 ml-3 mt-2 btn btn-primary glyphicon glyphicon-plus"><i class="fas fa-plus"></i>Thêm</a>
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead>
+                                <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th>STT</th>
                                     <!-- <th>ID</th> -->
                                     <th>Tiêu đề</th>
                                     <th>Tóm lược</th>
                                     <th>Nội dung</th>
-                                    <th>Ảnh</th>
-                                    <th>Action</th>
+                                    <th>Hình Ảnh</th>
+                                    <th>Hành Động</th>
                                 </tr>
                                 </thead>
                                 <tbody>

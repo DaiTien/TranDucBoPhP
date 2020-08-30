@@ -77,9 +77,9 @@
                             <!-- /.box-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Cập Nhật</button>
                                 <button type="reset" class="btn btn-info">Refresh</button>
-                                <a href="?c=LibraryImage" class="btn btn-danger">Cancel</a>
+                                <a href="?c=LibraryImage" class="btn btn-danger">Đóng</a>
                             </div>
                         </form>
                     </div>

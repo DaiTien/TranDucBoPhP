@@ -28,7 +28,7 @@
                 <div class="col-md-12">
                     <div class="card mt-2 card-info">
                         <div class="card-header with-border">
-                            <h3 class="card-title font-weight-bold">Update Tin Tức</h3>
+                            <h3 class="card-title font-weight-bold">Cập Nhật Tin Tức</h3>
                         </div>
                         <form role="form" method="post" action="?c=NewsAdmin&a=SaveUpdate" enctype="multipart/form-data">
                             <div class="card-body">
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="exampleInputFile">Image</label>
+                                            <label for="exampleInputFile">Hình Ảnh</label>
                                             <div class="input-group">
                                                 <div class="custom-file">
                                                     <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="my-exampleInputPassword1">Tóm lược</label>
+                                        <label for="my-exampleInputPassword1">Tóm lượt</label>
                                         <textarea class="form-control" name="summary" id="my-textarea" cols="65" rows="3"><?=$data->summary?></textarea>
                                     </div>
                                 </div>
@@ -85,9 +85,9 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <input type="submit" class="btn btn-primary" value="Update">
+                                <input type="submit" class="btn btn-primary" value="Cập Nhật">
                                 <input type="reset" class="btn btn-info" value="Refresh">
-                                <a href="?c=NewsAdmin&a=index" class="btn btn-danger">Cancel</a>
+                                <a href="?c=NewsAdmin&a=index" class="btn btn-danger">Đóng</a>
                             </div>
                         </form>
                     </div>

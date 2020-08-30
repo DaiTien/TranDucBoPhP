@@ -27,10 +27,10 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="card mt-2 card-info">
                         <div class="card-header with-border">
-                            <h3 class="card-title text-center font-weight-bold">PROFILE</h3>
+                            <h3 class="card-title text-center font-weight-bold">Thông Tin</h3>
                         </div>
                         <form role="form" method="post" action="?c=UserAdmin&a=Save">
                             <div class="card-body">
@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Full Name</label>
+                                            <label for="exampleInputPassword1">Họ Và Tên</label>
                                             <input type="text" class="form-control" name="fullName" value="<?=$data->fullName?>">
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">User Name</label>
+                                            <label for="exampleInputPassword1">Tên Thành Viên</label>
                                             <input type="text" class="form-control" name="userName" value="<?=$data->userName?>">
                                         </div>
                                     </div>
@@ -62,25 +62,34 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Điện Thoại</label>
-                                    <input type="text" class="form-control" name="phone" value="<?=$data->phone?>">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Điện Thoại</label>
+                                            <input type="text" class="form-control" name="phone" value="<?=$data->phone?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Email</label>
+                                            <input type="text" class="form-control" name="email" value="<?=$data->email?>">
+                                            <p class="text-danger">
+                                                <?php
+                                                if (isset($_GET['r']))
+                                                {
+                                                    if ($_GET['r'] == 0)
+                                                    {
+                                                        echo 'Email này đã được đăng ký, vui lòng sử dụng email khác';
+                                                    }
+                                                }
+                                                ?>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Email</label>
-                                    <input type="text" class="form-control" name="email" value="<?=$data->email?>">
-                                    <p class="text-danger">
-                                        <?php
-                                        if (isset($_GET['r']))
-                                        {
-                                            if ($_GET['r'] == 0)
-                                            {
-                                                echo 'Email này đã được đăng ký, vui lòng sử dụng email khác';
-                                            }
-                                        }
-                                        ?>
-                                    </p>
-                                </div>
+
+
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -98,20 +107,14 @@
 
                             </div>
                             <div class="box-footer">
-                                <input type="submit" class="ml-2 mb-2 btn btn-primary" value="Update">
+                                <input type="submit" class="ml-2 mb-2 btn btn-primary" value="Cập Nhật">
                                 <input type="reset" class="btn mb-2 btn-info" value="Refresh">
-                                <a href="?c=UserAdmin&a=index" class="btn mb-2 btn-danger">Cancel</a>
+                                <a href="?c=UserAdmin&a=index" class="btn mb-2 btn-danger">Đóng</a>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mt-2 card-info">
-                        <div class="card-header with-border">
-                            <img style="display: block;width: 100%;margin: 2px 10px 2px 0px;" src="asset/admin/admin_images/logo2_p001.png"/>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- /.row -->
         </section>

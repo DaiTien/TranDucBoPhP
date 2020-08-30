@@ -50,10 +50,10 @@
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead>
+                                <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th class="text-center">STT</th>
-                                    <th class="text-center">ID</th>
+
                                     <th class="text-center">Tên Loại Sản Phẩm</th>
                                     <th class="text-center">Hành động</th>
                                 </tr>
@@ -65,7 +65,7 @@
                                     ?>
                                     <tr>
                                         <td class="text-center"><?=$stt++?></td>
-                                        <td class="text-center"><?=$value->id?></td>
+
                                         <td class="text-center"><?=$value->name?></td>
                                         <td class="text-center">
                                             <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>

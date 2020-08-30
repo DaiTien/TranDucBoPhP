@@ -60,7 +60,7 @@ include 'asset/Scripts/ScriptHeader.php';
                         <a href="?c=Introduce&a=Insert" class="col-1 ml-3 btn btn-primary "><i class="fas fa-plus"></i> Thêm</a>
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead>
+                                <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th>STT</th>
                                     <!-- <th>ID</th> -->

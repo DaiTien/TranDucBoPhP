@@ -36,10 +36,10 @@
         <section class="content">
             <div class="row">
                 <!-- left column -->
-                <div class="col-md-6" style="margin-left: 246px;">
+                <div class="col-md-12" >
                     <div class="card card-info mt-2">
                         <div class="card-header with-border">
-                            <h3 class="card-title">Update Image</h3>
+                            <h3 class="card-title">Cập Nhật Hình Ảnh</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
@@ -60,14 +60,16 @@
                                         ?>
                                     </label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">ID</label>
-                                    <input type="text" readonly class="form-control" value="<?=$data->id?>" name="id" placeholder="Enter Name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Name</label>
-                                    <input type="text" class="form-control" value="<?=$data->name?>" name="name" placeholder="Enter Name">
-                                </div>
+                               <div class="row">
+                                   <div class="col-md-6">
+                                       <div class="form-group">
+                                           <label for="exampleInputEmail1">Name</label>
+                                           <input type="text" class="form-control" value="<?=$data->name?>" name="name" placeholder="Enter Name">
+                                       </div>
+                                   </div>
+                                   <div class="col-md-6"></div>
+                               </div>
+
                                 <div class="form-group">
                                     <label for="exampleInputFile">File input</label>
                                     <input type="file" name="file" id="inputFile">
@@ -78,9 +80,9 @@
                             <!-- /.box-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Cập Nhật</button>
                                 <button type="reset" class="btn btn-info">Refresh</button>
-                                <a href="?c=LibraryImage" class="btn btn-danger">Cancel</a>
+                                <a href="?c=LibraryImage" class="btn btn-danger">Đóng</a>
                             </div>
                         </form>
                     </div>

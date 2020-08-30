@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                                     <div class="card-footer">
-                                        <a href="?c=FeedBackAdmin&a=index" class="btn btn-danger">BackList</a>
+                                        <a href="?c=FeedBackAdmin&a=index" class="btn btn-danger">Trở Về</a>
                                     </div>
                         </form>
                     </div>

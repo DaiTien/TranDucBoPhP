@@ -27,7 +27,7 @@
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="content">
             <div class="row">
-                <div class="col-md-6" style="margin:0 auto">
+                <div class="col-md-12" >
                     <form method="post" action="index.php?c=Customer&a=Save" >
                         <!-- general form elements -->
                         <div class="card mt-2 card-info">
@@ -46,19 +46,19 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Username</label>
+                                                <label for="exampleInputPassword1">Tên Khách Hàng</label>
                                                 <input type="text"  class="form-control" name="userName" placeholder="Nhập user">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Password </label>
+                                                <label for="exampleInputPassword1">Mật Khẩu </label>
                                                 <input type="text"  class="form-control"  name="password" placeholder="******">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">phone </label>
+                                                <label for="exampleInputPassword1">Số Điện Thoại </label>
                                                 <input type="text"  class="form-control" name="phone" placeholder="036xxx">
                                             </div>
                                         </div>

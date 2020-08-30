@@ -48,22 +48,22 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Phone </label>
+                                            <label for="exampleInputPassword1">Số Điện Thoại </label>
                                             <input type="text"value="<?=$contact->phone?>"  class="form-control" name="phone"  placeholder="">
                                         </div>
                                     </div>
                                 </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Address </label>
+                                            <label for="exampleInputPassword1">Địa Chỉ </label>
                                             <input type="text"value="<?=$contact->address?>"  class="form-control" name="address"  placeholder="">
                                         </div>
                                     </div>
                             </div>
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Update</button>
-                                <button type="reset" class="btn btn-info">Refresh</button>
-                                <a href="?c=Contact&a=index" class="btn btn-danger">Cancel</a>
+                                <button type="submit" class="btn btn-primary">Cập Nhật</button>
+                                    <button type="reset" class="btn btn-info">Refresh</button>
+                                <a href="?c=Contact&a=index" class="btn btn-danger">Đóng</a>
                             </div>
                         </form>
                     </div>

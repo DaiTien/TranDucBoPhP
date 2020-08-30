@@ -85,9 +85,9 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <input type="submit" class="btn btn-primary" value="Update">
+                                <input type="submit" class="btn btn-primary" value="Cập Nhật">
                                 <input type="reset" class="btn btn-info" value="Refresh">
-                                <a href="?c=Introduce&a=index" class="btn btn-danger">Cancel</a>
+                                <a href="?c=Introduce&a=index" class="btn btn-danger">Đóng</a>
                             </div>
                         </form>
                     </div>
