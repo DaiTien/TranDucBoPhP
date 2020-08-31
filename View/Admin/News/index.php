@@ -51,7 +51,7 @@
                                     <th>STT</th>
                                     <!-- <th>ID</th> -->
                                     <th>Tiêu đề</th>
-                                    <th>Tóm lược</th>
+                                    <!-- <th>Tóm lược</th>-->
                                     <th>Nội dung</th>
                                     <th>Hình Ảnh</th>
                                     <th>Hành Động</th>
@@ -66,7 +66,7 @@
                                         <td><?=$stt++?></td>
                                         <!-- <td><?=$value->id?></td> -->
                                         <td><?=$value->title?></td>
-                                        <td><?=$value->summary?></td>
+                                        <!-- <td><?=$value->summary?></td>-->
                                         <td>
                                             <textarea class="textarea form-control" cols="155" rows="5" ><?=$value->content?></textarea>
                                         </td>

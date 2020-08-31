@@ -65,7 +65,7 @@
                                     <th class="text-center">STT</th>
 
                                     <th class="text-center">Hình Ảnh</th>
-                                    <th class="text-center">Tên món</th>
+                                    <th class="text-center">Tên</th>
                                     <th class="text-center">Hành Động</th>
                                 </tr>
                                 </thead>

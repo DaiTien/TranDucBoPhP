@@ -41,7 +41,7 @@ class CustomerController
     function Save(){
             $id = $_POST['id'];
             $userName = $_POST['userName'];
-            $password = $_POST['password'];
+            $password = md5($_POST['password']);
             $phone = $_POST['phone'];
             $email = $_POST['email'];
             $result = $this->cusmoterModel->insert( new Customer($id, $userName, $password, $phone, $email));
@@ -71,7 +71,7 @@ class CustomerController
     function  LuuSua(){
         $id = $_POST['id'];
         $userName = $_POST['userName'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
         $phone = $_POST['phone'];
         $email = $_POST['email'];
         $result = $this->cusmoterModel->Update( new Customer($id, $userName, $password, $phone, $email));

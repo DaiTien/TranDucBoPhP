@@ -1,5 +1,4 @@
 <?php
-require_once SYSTEM_PATH."/Model/WebModel.php";
 require_once SYSTEM_PATH."/Model/SlideModel.php";
 require_once SYSTEM_PATH. "/Model/LibraryImageModel.php";
 require_once SYSTEM_PATH."/Model/IntroduceModel.php";
@@ -122,7 +121,8 @@ class IndexWebsiteController
         $phone = $_POST['phone'];
         if ($password == $confirmPassword)
         {
-            $result = $this->customerModel->InsertRecord(new Customer(null,$userName,$password,$phone,$email));
+            $passwordMD5 = md5($password);
+            $result = $this->customerModel->InsertRecord(new Customer(null,$userName,$passwordMD5,$phone,$email));
             if ($result == true)
             {
                 header('location:index.php?c=IndexWebsite&a=index&g=1&action=Register');
@@ -139,7 +139,7 @@ class IndexWebsiteController
     {
         session_start();
         $user = $_POST['user'];
-        $pass = $_POST['password'];
+        $pass = md5($_POST['password']);
         $result = $this->customerModel->LoginRecord($user,$pass);
         if ($result == 1)
         {

@@ -72,7 +72,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Email</label>
-                                            <input type="text" class="form-control" name="email" value="<?=$data->email?>">
+                                            <input type="text" class="form-control" readonly name="email" value="<?=$data->email?>">
                                             <p class="text-danger">
                                                 <?php
                                                 if (isset($_GET['r']))

@@ -66,7 +66,7 @@ include 'asset/Scripts/ScriptHeader.php';
                                     <!-- <th>ID</th> -->
                                     <th>Tiêu đề</th>
                                     <th>Tóm lược</th>
-                                    <th>Nội dung</th>
+                                    <!--<th>Nội dung</th>-->
                                     <th>Ảnh</th>
                                     <th>THời gian đăng</th>
                                     <th>Action</th>
@@ -81,9 +81,9 @@ include 'asset/Scripts/ScriptHeader.php';
                                         <td><?=$stt++?></td>
                                         <td><?=$value->title?></td>
                                         <td><?=$value->summary?></td>
-                                        <td>
+                                        <!--<td>
                                             <textarea class="textarea form-control" ><?=$value->content?></textarea>
-                                        </td>
+                                        </td>-->
                                         <td>
                                             <img class="imagee" src="<?=$value->image?>">
                                         </td>

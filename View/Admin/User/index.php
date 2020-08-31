@@ -27,7 +27,7 @@ include 'asset/Scripts/ScriptHeader.php';
         <!-- CONTEN HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="container-fluid">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12" style="width: 100%">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title text-primary " style="font-size: 30px"><i class="fas fa-address-card"></i> <b>THÀNH VIÊN</b> </h3>
@@ -53,14 +53,14 @@ include 'asset/Scripts/ScriptHeader.php';
                                 <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th>STT</th>
-
-                                    <th>Tên Thành Viên</th>
-                                    <th>Mật khẩu</th>
-                                    <th>Họ Và Tên</th>
+                                    <!--<th>ID</th>-->
+                                    <th>Tên đăng nhập</th>
+                                    <!--<th>Mật khẩu</th>-->
+                                    <th>Họ và tên</th>
                                     <th>Giới tính</th>
                                     <th>Điện thoại</th>
                                     <th>Email</th>
-                                    <th>Chức năng</th>
+                                    <!--<th>Chức năng</th>-->
                                     <th style="width: 56px">Hành động</th>
                                 </tr>
                                 </thead>
@@ -71,14 +71,14 @@ include 'asset/Scripts/ScriptHeader.php';
                                     ?>
                                     <tr>
                                         <td><?=$stt++?></td>
-                                        <td><?=$value->id?></td>
+                                        <!--<td><?=$value->id?></td>-->
                                         <td><?=$value->userName?></td>
-                                        <td><?=$value->password?></td>
+                                        <!--<td><?=$value->password?></td>-->
                                         <td><?=$value->fullName?></td>
                                         <td><?=$value->gender?></td>
                                         <td><?=$value->phone?></td>
                                         <td><?=$value->email?></td>
-                                        <td><?=$value->role?></td>
+                                        <!--<td><?=$value->role?></td>-->
                                         <td class="text-center">
                                             <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
                                             <a hidden href="?c=UserAdmin&a=Delete&id=<?=$value->id?>" id="a<?=$value->id?>"></a>

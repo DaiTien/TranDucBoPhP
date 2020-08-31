@@ -41,24 +41,24 @@ class UserAdminController
     }
     function InsertSave()
     {
-        $id = $_POST['id'];
         $userName = $_POST['userName'];
         $password = $_POST['password'];
+        $passwordMD5 = md5($password);
         $fullName = $_POST['fullName'];
         $gender = $_POST['gender'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
-        $role = $_POST['role'];
+        $role = 'Admin';
         if ($userName == null || $password == null|| $email == null)
         {
             header('location:index.php?c=UserAdmin&a=Insert&r=3');
         }else{
-            $result = $this ->useradminModel->InsertRecord(new UserAdmin($id,$userName,$password,$fullName,$gender,$phone,$email,$role));
+            $result = $this ->useradminModel->InsertRecord(new UserAdmin(null,$userName,$passwordMD5,$fullName,$gender,$phone,$email,$role));
             if ($result == true)
             {
                 header('location:index.php?c=UserAdmin&a=index&r=1&action=Insert');
             }
-            if ($result == 1)
+            if ($result == null)
             {
                 header('location:index.php?c=UserAdmin&a=Insert&r=2');
             }
@@ -90,12 +90,13 @@ class UserAdminController
         $id = $_POST['id'];
         $userName = $_POST['userName'];
         $password = $_POST['password'];
+        $passwordMD5 = md5($password);
         $fullName = $_POST['fullName'];
         $gender = $_POST['gender'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
         $role = $_POST['role'];
-        $result = $this ->useradminModel->UpdateRecord(new UserAdmin($id,$userName,$password,$fullName,$gender,$phone,$email,$role));
+        $result = $this ->useradminModel->UpdateRecord(new UserAdmin($id,$userName,$passwordMD5,$fullName,$gender,$phone,$email,$role));
         if ($result == true)
         {
             header('location:index.php?c=UserAdmin&a=index&r=1&action=Update');

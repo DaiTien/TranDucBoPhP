@@ -41,7 +41,7 @@
                                     <th>STT</th>
                                     <!-- <th>ID</th> -->
                                     <th>Tên Khách Hàng</th>
-                                    <th>Mật Khẩu</th>
+                                    <!-- <th>Mật Khẩu</th> -->
                                     <th>Số Điện Thoại</th>
                                     <th>Email</th>
                                     <th>Hành động</th>
@@ -56,7 +56,7 @@
                                         <td><?=$stt++?></td>
                                         <!-- <td><?=$value->id?></td> -->
                                         <td><?=$value->userName?></td>
-                                        <td><?=$value->password?></td>
+                                        <!-- <td><?=$value->password?></td> -->
                                         <td><?=$value->phone?></td>
                                         <td><?=$value->email?></td>
                                         <td class="text-center">

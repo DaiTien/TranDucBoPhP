@@ -34,6 +34,7 @@ class IndexAdminController
     {
         $userName = $_POST['username'];
         $password = $_POST['password'];
+        $passwordMD5 = md5($password);
         $role = 'Admin';
         $confirm_password = $_POST['confirm_password'];
         $email = $_POST['email'];
@@ -44,7 +45,7 @@ class IndexAdminController
         else
         if ($password == $confirm_password)
         {
-            $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$password,null,null,null,$email,$role,null));
+            $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$passwordMD5,null,null,null,$email,$role,null));
             if ($result == true)
             {
                 header('location:index.php?c=indexadmin&a=register&r=1&action=Create');
@@ -62,7 +63,7 @@ class IndexAdminController
     {
         session_start();
         $user = $_POST['user'];
-        $pass = $_POST['pass'];
+        $pass = md5($_POST['pass']);
         $result = $this ->adminModel->loginRecord($user,$pass);
         $avatar = $this ->adminModel->getPassword($user);
         $avatarUser = $avatar ->avatar;
@@ -118,7 +119,7 @@ class IndexAdminController
     function openscreen()
     {
         session_start();
-        $matkhau =$_POST['matkhau'];
+        $matkhau =md5($_POST['matkhau']);
         $user = $_SESSION['userAdmin'];
         $avatarUser = $_SESSION['avatarUser'];
         $result = $this ->adminModel ->getPassword($user);
@@ -194,6 +195,7 @@ class IndexAdminController
         //Random mật khẩu
         $randoom = rand(100,999);
         $password = 'abc'.$randoom;
+        $passwordMD5 = md5($password);
         $result = $this->adminModel->forgotPassword($email);
         if ($result ==1)
         {
@@ -219,7 +221,7 @@ class IndexAdminController
                 $mail->AltBody = '';
 
                 $mail->send();
-                $this ->adminModel ->updatePasswordByEmail($email,$password);
+                $this ->adminModel ->updatePasswordByEmail($email,$passwordMD5);
                 header('location:index.php?c=indexadmin&a=forgotPassword&r=1');
 
             }catch (Exception $e)

@@ -38,14 +38,11 @@
                                 <thead style="text-align: center">
                                 <tr id="tbheader">
                                     <th>STT</th>
-
-
-                                    <th>Tên Khách Hàng</th>
-                                    <th>Số Điện Thoại</th>
+                                    <th>Tên khách hàng</th>
+                                    <th>Số điện thoại</th>
                                     <th>Địa chỉ</th>
-
-                                    <th>Số Lượng</th>
-                                    <th>Giá</th>
+                                    <!--<th>Số lượng sản phẩm</th>-->
+                                    <th>Tổng giá</th>
                                     <th>Hành động</th>
                                 </tr>
                                 </thead>
@@ -56,21 +53,16 @@
                                     ?>
                                     <tr>
                                         <td><?=$stt++?></td>
-
-
                                         <td><?=$value->name?></td>
                                         <td><?=$value->phone?></td>
                                         <td><?=$value->address?></td>
-
-                                        <td><?=$value->totalProduct?></td>
+                                        <!--<td><?=$value->totalProduct?></td>-->
                                         <td><?=$value->totalPrice?></td>
                                         <td class="text-center">
                                             <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
                                             <a  href="?c=Oder&a=Delete&id=<?=$value->id?>" id="a<?=$value->id?>"></a>
                                             <a class="btn btn-success glyphicon glyphicon-eye-open btn-sm" href="?c=Oder&a=Update&id=<?=$value->id?>"><i class="fas fa-eye"></i></a>
-
                                         </td>
-
                                     </tr>
                                     <?php
                                 }
@@ -98,7 +90,7 @@ include "asset/Scripts/ScriptFooter.php";
 ?>
 <script>
     $('#qlsanpham').addClass('active');
-    $('#mxh').addClass('active');
+    $('#order').addClass('active');
 </script>
 </body>
 </html>

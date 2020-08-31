@@ -60,7 +60,7 @@ class CustomerModel
         $result = $this->mysqli->query("update tdb_customer set username='$cus->userName',password='$cus->password',phone ='$cus->phone',email='$cus->email' where id = $cus->id");
         return $result;
     }
-    function insert(Customer $cus)
+    function InsertRecord(Customer $cus)
     {
         $check = $this->mysqli->query("select * from tdb_customer where username = '$cus->userName' or email='$cus->email'");
         $checkCount = mysqli_num_rows($check);
