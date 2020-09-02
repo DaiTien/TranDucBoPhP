@@ -48,7 +48,7 @@ class IndexWebsiteController
                 $user = $_SESSION['userWebsite'];
             }
         }
-        $slide = $this ->slideModel->GetAllRecords();
+        $slide = $this ->slideModel->GetRecordsActive();
         $image = $this->libaryImageModel->GetAllRecords();
         $introduce = $this ->introduceModel->GetAlldata();
         $news = $this->newModel->GetAlldata();
@@ -160,7 +160,7 @@ class IndexWebsiteController
         unset($_SESSION['success']);
         unset($_SESSION['total']);
         session_destroy();
-        $slide = $this ->slideModel->GetAllRecords();
+        $slide = $this ->slideModel->GetRecordsActive();
         $image = $this->libaryImageModel->GetAllRecords();
         $introduce = $this ->introduceModel->GetAlldata();
         $news = $this->newModel->GetAlldata();

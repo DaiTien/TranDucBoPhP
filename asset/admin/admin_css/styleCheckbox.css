@@ -1,0 +1,48 @@
+/*Style input*/
+
+[type=radio],
+[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+/**
+ * Giving Checkbox & Radio not checked a new appearance
+ */
+
+[type=radio],
+[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    border: solid 1px #cccccc;
+    margin-right: 8px;
+    position: relative;
+}
+
+
+/**
+ * Giving Checkbox & Radio checked state a new appearance
+ */
+
+[type=radio]:checked::before,
+[type=checkbox]:checked::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #3f6ad8;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+
+/**
+ * Rounding Radio inputs new appearance
+ */
+
+[type=radio],
+[type=radio]:checked::before {
+    border-radius: 100%;
+}

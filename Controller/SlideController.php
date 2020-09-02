@@ -45,7 +45,7 @@ class SlideController
         } else {
             move_uploaded_file($_FILES["file"]["tmp_name"], "UpLoadFile/Slide/" . $_FILES["file"]["name"]);
             $image = "UpLoadFile/Slide/" . $_FILES["file"]["name"];
-            $result = $this->imageSlideModel->InsertRecord(new Slide(null, $image));
+            $result = $this->imageSlideModel->InsertRecord(new Slide(null, $image,0));
             if ($result == true) {
                 header('location:index.php?c=Slide&a=index&r=1&action=Insert');
             } else {
@@ -95,6 +95,48 @@ class SlideController
                 }else{
                     header('location:index.php?c=Slide&a=index&r=0&action=Update');
                 }
+        }
+    }
+    //Func cập nhật tình trạng
+    //---Hiển thị
+    function UpActive()
+    {
+        if (!empty($_POST['duyet']))
+        {
+            if(!empty($_POST['array'])) {
+                foreach($_POST['array'] as $value){
+                    $result = $this->imageSlideModel->UpdateActive($value);
+                    if ($result == true)
+                    {
+                        header('location:index.php?c=Slide&a=index&r=1&action=Update Active');
+                    }else{
+                        header('location:index.php?c=Slide&a=index&r=0&action=Update Active');
+                    }
+                }
+            }
+            else{
+                header('location:index.php?c=Slide&a=index&r=2');
+            }
+        }else{
+            $this->UpActive2();
+        }
+
+    }
+    //---Không hiển thị
+    function UpActive2()
+    {
+        if(!empty($_POST['array'])) {
+            foreach($_POST['array'] as $value){
+                $result = $this->imageSlideModel->UpdateActive2($value);
+                if ($result == true)
+                {
+                    header('location:index.php?c=Slide&a=index&r=1&action=Update Active');
+                }else{
+                    header('location:index.php?c=Slide&a=index&r=0&action=Update Active');
+                }
+            }
+        }else{
+            header('location:index.php?c=Slide&a=index&r=2');
         }
     }
     function Delete()

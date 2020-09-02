@@ -50,46 +50,74 @@
                                 {
                                     echo $_GET['action']. ' Thành Công!';
                                     //echo "<script type='text/javascript'>alert('$message');</script>";
-                                }else{
+                                }else if ($_GET['r'] == 2){
+                                    echo "<script type='text/javascript'>alert('Vui lòng chọn đối tượng');</script>";
+                                }
+                                else{
                                     echo $_GET['action']. ' Không Thành Công!';
                                 }
                             }
                             ?>
                         </p>
-                        <a href="?c=Slide&a=Insert" class="col-2 ml-3 mt-2 btn btn-primary glyphicon glyphicon-plus"><i class="fas fa-plus"></i>Thêm slide</a>
-                        <!-- /.box-header -->
-                        <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <tr id="tbheader">
-                                    <th class="text-center">STT</th>
-                                    <th class="text-center">Hình Ảnh</th>
-                                    <th class="text-center">Hành Động</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                $stt =1;
-                                foreach ($data as $value){
-                                    ?>
-                                    <tr>
-                                        <td class="text-center"><?=$stt++?></td>
+                        <form action="?c=Slide&a=UpActive" method="post">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="?c=Slide&a=Insert" class="ml-3 mt-2 btn btn-primary"><i class="fas fa-plus"></i>Thêm slide</a>
+                                </div>
+                                <div class="col-1">
+                                    <input type="submit" name="duyet" class="ml-3 mt-2 btn btn-primary" value="Duyệt"/>
+                                </div>
+                                <div class="col-1">
+                                    <input type="submit" name="koduyet" class="ml-3 mt-2 btn btn-primary" value="Hủy Duyệt"/>
+                                </div>
+                            </div>
+                                <div class="card-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr id="tbheader">
+                                            <th class="text-center"></th>
+                                            <th class="text-center">STT</th>
+                                            <th class="text-center">Hình ảnh</th>
+                                            <th class="text-center">Tình trạng</th>
+                                            <th class="text-center">Hành động</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php
+                                        $stt =1;
+                                        foreach ($data as $value){
+                                            ?>
+                                            <tr>
+                                                <td class="text-center"><input type="checkbox" name='array[]' value="<?=$value->id?>"></td>
+                                                <td class="text-center"><?=$stt++?></td>
 
-                                        <td class="text-center">
-                                            <img class="imagee" src="<?=$value->imageSlide?>">
-                                        </td>
-                                        <td class="text-center">
-                                            <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
-                                            <a hidden href="?c=Slide&a=Delete&id=<?=$value->id?>" id="a<?=$value->id?>"></a>
-                                            <a class="btn btn-primary btn-sm" href="?c=Slide&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
-                                        </td>
-                                    </tr>
-                                    <?php
-                                }
-                                ?>
-                                </tbody>
-                            </table>
-                        </div>
+                                                <td class="text-center">
+                                                    <img class="imagee" src="<?=$value->imageSlide?>">
+                                                </td>
+                                                <td class="text-center">
+                                                    <?php
+                                                    if ($value->active == 1)
+                                                    {
+                                                        echo 'Đã duyệt';
+                                                    }else{
+                                                        echo 'Chưa duyệt';
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
+                                                    <a hidden href="?c=Slide&a=Delete&id=<?=$value->id?>" id="a<?=$value->id?>"></a>
+                                                    <a class="btn btn-primary btn-sm" href="?c=Slide&a=Update&id=<?=$value->id?>"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                        }
+                                        ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            <!-- /.box-header -->
+                        </form>
                         <!-- /.box-body -->
                     </div>
                     <!-- /.box -->
