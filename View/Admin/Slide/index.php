@@ -72,7 +72,7 @@
                                     <input type="submit" name="duyet" class="ml-3 mt-2 btn btn-primary" value="Duyệt"/>
                                 </div>
                                 <div class="col-1">
-                                    <input type="submit" name="koduyet" class="ml-3 mt-2 btn btn-primary" value="Hủy Duyệt"/>
+                                    <input type="submit" name="koduyet" class="ml-3 mt-2 btn btn-danger" value="Hủy Duyệt"/>
                                 </div>
                             </div>
                                 <div class="card-body">
@@ -102,9 +102,10 @@
                                                     <?php
                                                     if ($value->active == 1)
                                                     {
-                                                        echo 'Đã duyệt';
-                                                    }else{
-                                                        echo 'Chưa duyệt';
+                                                        echo '<i class="fas fa-eye text-primary" style="font-size: 36px"></i>';
+                                                    }
+                                                    else{
+                                                        echo '<i class="fas fa-eye-slash text-danger" style="font-size: 36px"></i>';
                                                     }
                                                     ?>
                                                 </td>

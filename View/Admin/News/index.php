@@ -72,7 +72,7 @@
                                     <input type="submit" name="duyet" class="ml-3 mt-2 btn btn-primary" value="Duyệt"/>
                                 </div>
                                 <div class="col-1">
-                                    <input type="submit" name="koduyet" class="ml-3 mt-2 btn btn-primary" value="Hủy Duyệt"/>
+                                    <input type="submit" name="koduyet" class="ml-3 mt-2 btn btn-danger" value="Hủy Duyệt"/>
                                 </div>
                             </div>
                             <!-- /.box-header -->
@@ -97,24 +97,25 @@
                                     foreach ($data as $value){
                                         ?>
                                         <tr>
-                                            <td><input type="checkbox" name='array[]' value="<?=$value->id?>"></td>
-                                            <td><?=$stt++?></td>
+                                            <td class="text-center"><input type="checkbox" name='array[]' value="<?=$value->id?>"></td>
+                                            <td class="text-center"><?=$stt++?></td>
                                             <!-- <td><?=$value->id?></td> -->
-                                            <td><?=$value->title?></td>
+                                            <td class="text-center"><?=$value->title?></td>
                                             <!-- <td><?=$value->summary?></td>-->
                                             <td>
                                                 <textarea class="textarea form-control" cols="155" rows="5" ><?=$value->content?></textarea>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <img class="imagee" src="<?=$value->image?>">
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <?php
-                                                if ($value->active==1)
+                                                if ($value->active == 1)
                                                 {
-                                                    echo 'Đã Duyệt';
-                                                }else{
-                                                    echo 'Chưa Duyệt';
+                                                    echo '<i class="fas fa-eye text-primary" style="font-size: 36px"></i>';
+                                                }
+                                                else{
+                                                    echo '<i class="fas fa-eye-slash text-danger" style="font-size: 36px"></i>';
                                                 }
                                                 ?>
                                             </td>

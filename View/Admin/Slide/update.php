@@ -79,7 +79,7 @@
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Cập Nhật</button>
                                 <button type="reset" class="btn btn-info">Refresh</button>
-                                <a href="?c=LibraryImage" class="btn btn-danger">Đóng</a>
+                                <a href="?c=Slide" class="btn btn-danger">Đóng</a>
                             </div>
                         </form>
                     </div>

@@ -50,7 +50,7 @@ class LibraryImageController
                 move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/".$_FILES["file"]["name"]);
                 $name = $_POST['name'];
                 $image = "UpLoadFile/".$_FILES["file"]["name"];
-                $result = $this->imageModel->InsertRecord(new LibraryImage(null,$image,$name));
+                $result = $this->imageModel->InsertRecord(new LibraryImage(null,$image,$name,0));
                 if ($result == true)
                 {
                     header('location:index.php?c=LibraryImage&a=index&r=1&action=Insert');
@@ -83,7 +83,7 @@ class LibraryImageController
         if ($_FILES["file"]["error"] > 0)
         {
             $image = $_POST['image'];
-            $result = $this->imageModel->UpdateRecord(new LibraryImage($id,$image,$name));
+            $result = $this->imageModel->UpdateRecord(new LibraryImage($id,$image,$name,null));
             if ($result == true)
             {
                 header('location:index.php?c=LibraryImage&a=index&r=1&action=Update');
@@ -101,7 +101,7 @@ class LibraryImageController
             {
                 move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/".$_FILES["file"]["name"]);
                 $image = "UpLoadFile/".$_FILES["file"]["name"];
-                $result = $this->imageModel->UpdateRecord(new LibraryImage($id,$image,$name));
+                $result = $this->imageModel->UpdateRecord(new LibraryImage($id,$image,$name,null));
                 if ($result == true)
                 {
                     header('location:index.php?c=LibraryImage&a=index&r=1&action=Update');
@@ -109,6 +109,48 @@ class LibraryImageController
                     header('location:index.php?c=LibraryImage&a=index&r=0&action=Update');
                 }
             }
+        }
+    }
+    //Func cập nhật tình trạng
+    //---Hiển thị
+    function UpActive()
+    {
+        if (!empty($_POST['duyet']))
+        {
+            if(!empty($_POST['array'])) {
+                foreach($_POST['array'] as $value){
+                    $result = $this->imageModel->UpdateActive($value);
+                    if ($result == true)
+                    {
+                        header('location:index.php?c=LibraryImage&a=index&r=1&action=Update Active');
+                    }else{
+                        header('location:index.php?c=LibraryImage&a=index&r=0&action=Update Active');
+                    }
+                }
+            }
+            else{
+                header('location:index.php?c=LibraryImage&a=index&r=2');
+            }
+        }else{
+            $this->UpActive2();
+        }
+
+    }
+    //---Không hiển thị
+    function UpActive2()
+    {
+        if(!empty($_POST['array'])) {
+            foreach($_POST['array'] as $value){
+                $result = $this->imageModel->UpdateActive2($value);
+                if ($result == true)
+                {
+                    header('location:index.php?c=LibraryImage&a=index&r=1&action=Update Active');
+                }else{
+                    header('location:index.php?c=LibraryImage&a=index&r=0&action=Update Active');
+                }
+            }
+        }else{
+            header('location:index.php?c=LibraryImage&a=index&r=2');
         }
     }
     function Delete()

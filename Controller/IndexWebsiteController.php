@@ -49,7 +49,7 @@ class IndexWebsiteController
             }
         }
         $slide = $this ->slideModel->GetRecordsActive();
-        $image = $this->libaryImageModel->GetAllRecords();
+        $image = $this->libaryImageModel->GetRecordsByActive();
         $introduce = $this ->introduceModel->GetAlldata();
         $news = $this->newModel->GetRecordsByActive();
         $productType = $this->productTypeModel->GetAllRecords();
@@ -161,7 +161,7 @@ class IndexWebsiteController
         unset($_SESSION['total']);
         session_destroy();
         $slide = $this ->slideModel->GetRecordsActive();
-        $image = $this->libaryImageModel->GetAllRecords();
+        $image = $this->libaryImageModel->GetRecordsByActive();
         $introduce = $this ->introduceModel->GetAlldata();
         $news = $this->newModel->GetRecordsByActive();
         $productType = $this->productTypeModel->GetAllRecords();

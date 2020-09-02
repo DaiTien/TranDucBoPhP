@@ -80,7 +80,7 @@ class NewsAdminController
         if ($_FILES["file"]["tmp_name"] == null)
         {
             $image = $_POST['image'];
-            $result = $this ->newsAdminModel->UpdateRecord(new NewsAdmin($id,$title,$summary,$image,$content));
+            $result = $this ->newsAdminModel->UpdateRecord(new NewsAdmin($id,$title,$summary,$image,$content,null));
             if ($result == true)
             {
                 header('location:index.php?c=NewsAdmin&a=index&r=1&action=Update');
@@ -90,7 +90,7 @@ class NewsAdminController
         }else{
             move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/News/".$_FILES["file"]["name"]);
             $image = "UpLoadFile/News/".$_FILES["file"]["name"];
-            $result = $this->newsAdminModel->UpdateRecord(new NewsAdmin($id,$title,$summary,$image,$content));
+            $result = $this->newsAdminModel->UpdateRecord(new NewsAdmin($id,$title,$summary,$image,$content,null));
             if ($result == true)
             {
                 header('location:index.php?c=NewsAdmin&a=index&r=1&action=Update');

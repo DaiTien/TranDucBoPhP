@@ -76,7 +76,7 @@ class SlideController
         if ($_FILES["file"]["error"] > 0)
         {
             $image = $_POST['name'];
-            $result = $this->imageSlideModel->UpdateRecord(new Slide($id,$image));
+            $result = $this->imageSlideModel->UpdateRecord(new Slide($id,$image,null));
             if ($result == true)
             {
                 header('location:index.php?c=Slide&a=index&r=1&action=Update');
@@ -88,7 +88,7 @@ class SlideController
         {
                 move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/Slide/".$_FILES["file"]["name"]);
                 $image = "UpLoadFile/Slide/".$_FILES["file"]["name"];
-                $result = $this->imageSlideModel->UpdateRecord(new Slide($id,$image));
+                $result = $this->imageSlideModel->UpdateRecord(new Slide($id,$image,null));
                 if ($result == true)
                 {
                     header('location:index.php?c=Slide&a=index&r=1&action=Update');

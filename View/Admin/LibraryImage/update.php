@@ -61,6 +61,12 @@
                                     </label>
                                 </div>
                                <div class="row">
+                                   <div class="col-md-6" hidden>
+                                       <div class="form-group">
+                                           <label for="exampleInputEmail1">ID</label>
+                                           <input type="text" class="form-control" readonly value="<?=$data->id?>" name="id" placeholder="Enter Name">
+                                       </div>
+                                   </div>
                                    <div class="col-md-6">
                                        <div class="form-group">
                                            <label for="exampleInputEmail1">Name</label>
