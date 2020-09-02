@@ -51,7 +51,11 @@
                                     echo $_GET['action']. ' Thành Công!';
                                     //echo "<script type='text/javascript'>alert('$message');</script>";
                                 }else if ($_GET['r'] == 2){
-                                    echo "<script type='text/javascript'>alert('Vui lòng chọn đối tượng');</script>";
+                                    echo "<script type='text/javascript'>Swal.fire({";
+                                    echo "icon: 'error',";
+                                    echo "title: 'Bạn chưa chọn đối tượng nào!!',";
+                                    echo "text: 'Vui lòng chọn đối tượng!',";
+                                    echo "})</script>";
                                 }
                                 else{
                                     echo $_GET['action']. ' Không Thành Công!';

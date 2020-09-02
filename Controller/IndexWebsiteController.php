@@ -51,7 +51,7 @@ class IndexWebsiteController
         $slide = $this ->slideModel->GetRecordsActive();
         $image = $this->libaryImageModel->GetAllRecords();
         $introduce = $this ->introduceModel->GetAlldata();
-        $news = $this->newModel->GetAlldata();
+        $news = $this->newModel->GetRecordsByActive();
         $productType = $this->productTypeModel->GetAllRecords();
         $product = $this ->productModel->GetAllRecords();
         $contact = $this ->contactModel->GetAllRecords();
@@ -163,7 +163,7 @@ class IndexWebsiteController
         $slide = $this ->slideModel->GetRecordsActive();
         $image = $this->libaryImageModel->GetAllRecords();
         $introduce = $this ->introduceModel->GetAlldata();
-        $news = $this->newModel->GetAlldata();
+        $news = $this->newModel->GetRecordsByActive();
         $productType = $this->productTypeModel->GetAllRecords();
         $product = $this ->productModel->GetAllRecords();
         $contact = $this ->contactModel->GetAllRecords();

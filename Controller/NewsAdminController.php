@@ -47,7 +47,7 @@ class NewsAdminController
 
             move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/News/".$_FILES["file"]["name"]);
             $image = "UpLoadFile/News/".$_FILES["file"]["name"];
-            $result = $this->newsAdminModel->InsertRecord(new NewsAdmin(null,$title,$summary,$image,$content));
+            $result = $this->newsAdminModel->InsertRecord(new NewsAdmin(null,$title,$summary,$image,$content,0));
             if ($result == true)
             {
                 header('location:index.php?c=NewsAdmin&a=index&r=1&action=Insert');
@@ -97,6 +97,48 @@ class NewsAdminController
             }else {
                 header('location:index.php?c=NewsAdmin&a=index&r=0&action=Update');
             }
+        }
+    }
+    //Func cập nhật tình trạng
+    //---Hiển thị
+    function UpActive()
+    {
+        if (!empty($_POST['duyet']))
+        {
+            if(!empty($_POST['array'])) {
+                foreach($_POST['array'] as $value){
+                    $result = $this->newsAdminModel->UpdateActive($value);
+                    if ($result == true)
+                    {
+                        header('location:index.php?c=NewsAdmin&a=index&r=1&action=Update Active');
+                    }else{
+                        header('location:index.php?c=NewsAdmin&a=index&r=0&action=Update Active');
+                    }
+                }
+            }
+            else{
+                header('location:index.php?c=NewsAdmin&a=index&r=2');
+            }
+        }else{
+            $this->UpActive2();
+        }
+
+    }
+    //---Không hiển thị
+    function UpActive2()
+    {
+        if(!empty($_POST['array'])) {
+            foreach($_POST['array'] as $value){
+                $result = $this->newsAdminModel->UpdateActive2($value);
+                if ($result == true)
+                {
+                    header('location:index.php?c=NewsAdmin&a=index&r=1&action=Update Active');
+                }else{
+                    header('location:index.php?c=NewsAdmin&a=index&r=0&action=Update Active');
+                }
+            }
+        }else{
+            header('location:index.php?c=NewsAdmin&a=index&r=2');
         }
     }
     function Delete()
