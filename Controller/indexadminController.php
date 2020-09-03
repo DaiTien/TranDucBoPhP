@@ -150,10 +150,11 @@ class indexadminController
         $user = $_SESSION['userAdmin'];
         $avatarUser = $_SESSION['avatarUser'];
         $pass = $_POST['password'];
+        $passMd5 = md5($pass );
         $fullName = $_POST['fullName'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-        $result = $this->adminModel->UpdateRecord(new Admin(null,$user,$pass,$fullName,null,$phone,$email,null,null));
+        $result = $this->adminModel->UpdateRecord(new Admin(null,$user,$passMd5,$fullName,null,$phone,$email,null,null));
         if ($result == true)
         {
             header('location:index.php?c=indexadmin&a=profile&r=1&action=Update');
