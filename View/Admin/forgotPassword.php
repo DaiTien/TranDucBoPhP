@@ -16,7 +16,7 @@
         <div class="card-body login-card-body">
             <p class="login-box-msg">Bạn quên mật khẩu? Tại đây bạn có thể dễ dàng lấy lại một mật khẩu mới.</p>
 
-            <form action="?c=indexadmin&a=requestPassword" method="post">
+            <form action="?c=IndexAdmin&a=requestPassword" method="post">
                 <div class="input-group mb-2 justify-content-center">
                     <span class="text-danger">
                         <?php
@@ -49,10 +49,10 @@
             </form>
 
             <p class="mt-3 mb-1">
-                <a href="?c=indexadmin">Đăng nhập.</a>
+                <a href="?c=IndexAdmin">Đăng nhập.</a>
             </p>
             <p class="mb-0">
-                <a href="?c=indexadmin&a=register" class="text-center">Đăng ký thành viên mới.</a>
+                <a href="?c=IndexAdmin&a=register" class="text-center">Đăng ký thành viên mới.</a>
             </p>
         </div>
         <!-- /.login-card-body -->

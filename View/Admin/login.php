@@ -31,7 +31,7 @@
                   }
              ?>
          </p>
-        <form action="?c=indexadmin&a=login" method="post">
+        <form action="?c=IndexAdmin&a=login" method="post">
             <div class="form-group input-group has-feedback">
                 <input type="text" name="user" class="form-control" placeholder="UserName">
                 <div class="input-group-append">
@@ -59,10 +59,10 @@
         <!-- <a href="#">I forgot my password</a><br> -->
         <div class="row">
             <div class="col-6">
-                <a href="index.php?c=indexadmin&a=register" class="text-center">Đăng ký thành viên mới</a>
+                <a href="index.php?c=IndexAdmin&a=register" class="text-center">Đăng ký thành viên mới</a>
             </div>
             <div class="col-6">
-                <a href="index.php?c=indexadmin&a=forgotPassword" class="text-center">Quên mật khẩu ?</a>
+                <a href="index.php?c=IndexAdmin&a=forgotPassword" class="text-center">Quên mật khẩu ?</a>
             </div>
         </div>
         </br>
