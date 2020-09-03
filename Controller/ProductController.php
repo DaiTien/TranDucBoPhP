@@ -105,9 +105,9 @@ class ProductController
                 header('location:index.php?c=Product&a=index&r=0&action=Update');
             }
         } else {
-            if (file_exists("UpLoadFile/" . $_FILES["file"]["name"])) {
-                header('location:index.php?c=Product&a=Update&id=' . $id . '&r=2');
-            } else {
+            //if (file_exists("UpLoadFile/product/" . $_FILES["file"]["name"])) {
+                //header('location:index.php?c=Product&a=Update&id=' . $id . '&r=2');
+            //} else {
                 move_uploaded_file($_FILES["file"]["tmp_name"], "UpLoadFile/product/" . $_FILES["file"]["name"]);
                 $name = $_POST['name'];
                 $soLuong = $_POST['soLuong'];
@@ -123,7 +123,7 @@ class ProductController
                 } else {
                     header('location:index.php?c=Product&a=index&r=0&action=Update');
                 }
-            }
+            //}
         }
     }
     function delete(){

@@ -150,6 +150,17 @@ include "asset/Scripts/ScriptFooter.php";
 <script>
     $('#qlsanpham').addClass('active');
     $('#sanpham').addClass('active');
+    $('document').ready(function () {
+        $("#inputFile").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
 </script>
 </body>
 </html>
