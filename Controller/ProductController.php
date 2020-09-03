@@ -49,11 +49,11 @@ class ProductController
         }
         else
         {
-            move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/product/".$_FILES["file"]["name"]);
+            move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/Product/".$_FILES["file"]["name"]);
         $tenSan = $_POST['tenSan'];
         $soLuong = $_POST['total'];
         $type = $_POST['productType'];
-        $image = "UpLoadFile/product/".$_FILES["file"]["name"];
+        $image = "UpLoadFile/Product/".$_FILES["file"]["name"];
         $summary = $_POST['summary'];
         $content = $_POST['content'];
         $priceM = $_POST['priceM'];
