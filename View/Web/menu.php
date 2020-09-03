@@ -29,11 +29,11 @@
                         echo '<li class="has-child">';
                         echo '<a >Xin chào ' . $user . '</a>';
                         echo '<ul class="drop-nav">';
-                        echo '<li><a href="?c=IndexWebsite&a=Order">Giỏ hàng</a></li>';
+                        echo '<li><a href="?c=indexwebsite&a=Order">Giỏ hàng</a></li>';
                         echo '</ul>';
                         echo '</li>';
                         echo '<li class="has-child">';
-                        echo '<a href="?c=IndexWebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
+                        echo '<a href="?c=indexwebsite&a=Logout" id="btnLogout" class="btn">Logout</a>';
                         echo '</li>';
                     } else {
                         echo '<li class="has-child">';
@@ -65,7 +65,7 @@
         <div class="menu-main">
             <ul>
                 <li class="has-child">
-                    <a href="?c=IndexWebsite">Trang Chủ</a>
+                    <a href="?c=indexwebsite">Trang Chủ</a>
                 </li>
                 <li class="mega-menu">
                     <a class="menu__link" id="san_pham" href="#products">Sản Phẩm</a>

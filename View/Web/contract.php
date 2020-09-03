@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-md-8 col-sm-8 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <h5 class="text-coffee">Hãy để lại cho chúng tôi lời nhắn</h5>
-                                <form id="quickForm" method="post" action="?c=IndexWebsite&a=sendFeedback">
+                                <form id="quickForm" method="post" action="?c=indexwebsite&a=sendFeedback">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <label>Họ *</label>

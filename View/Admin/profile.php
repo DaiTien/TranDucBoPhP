@@ -47,7 +47,7 @@
                         <!-- Profile Image -->
                         <div class="card card-primary card-outline">
                             <div class="card-body box-profile">
-                                <form method="post" enctype="multipart/form-data" action="?c=IndexAdmin&a=updateAvatar">
+                                <form method="post" enctype="multipart/form-data" action="?c=indexadmin&a=updateAvatar">
                                     <div class="text-center imgs">
                                         <div class="imgChanger">
                                             <a href="#" onclick="upAvatar()"><i style="font-size: 30px;padding-top: 36%; color: white" class="fas fa-camera-retro"></i></a>
@@ -97,7 +97,7 @@
                             <div class="card-body">
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="settings">
-                                        <form method="post" action="?c=IndexAdmin&a=UpdateProfile" class="form-horizontal">
+                                        <form method="post" action="?c=indexadmin&a=UpdateProfile" class="form-horizontal">
                                             <div class="form-group row">
                                                 <div class="col-6 row">
                                                     <label class="col-4 col-form-label">UserName</label>

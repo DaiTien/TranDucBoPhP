@@ -24,7 +24,7 @@
                             ?>
                         </span>
                     </div>
-                    <form class="login-form" method="post" name="login" action="?c=IndexWebsite&a=Login">
+                    <form class="login-form" method="post" name="login" action="?c=indexwebsite&a=Login">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <input type="text" name="user" placeholder="Username" class="input-fields" required>
@@ -82,7 +82,7 @@
                             ?>
                         </span>
                     </div>
-                    <form class="register-form" method="post" name="register" action="?c=IndexWebsite&a=Register">
+                    <form class="register-form" method="post" name="register" action="?c=indexwebsite&a=Register">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <input type="text" name="userName" placeholder="Tên Đăng Nhập" class="input-fields" required>

@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 require_once SYSTEM_PATH. "/Model/AdminModel.php";
 require_once SYSTEM_PATH. "/Model/FeedBackAdminModel.php";
 require_once SYSTEM_PATH. "/Model/ProductModel.php";
-class IndexAdminController
+class indexadminController
 {
     private $adminModel;
     private $feedbackModel;

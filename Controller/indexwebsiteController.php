@@ -10,7 +10,7 @@ require_once SYSTEM_PATH."/Model/SocialNetworkAdminModel.php";
 require_once SYSTEM_PATH."/Model/FeedBackAdminModel.php";
 require_once SYSTEM_PATH."/Model/CustomerModel.php";
 require_once SYSTEM_PATH."/Model/OrderModel.php";
-class IndexWebsiteController
+class indexwebsiteController
 {
     private $slideModel;
     private $libaryImageModel;
@@ -71,7 +71,7 @@ class IndexWebsiteController
         $result = $this->feedBack->InsertRecord(new FeedBackAdmin(null,$fullName,$title,$content,date("Y/m/d"),$email,null));
         if ($result == true)
         {
-            header('location:index.php?c=IndexWebsite&a=index&r=1&action=SendMessage');
+            header('location:index.php?c=indexwebsite&a=index&r=1&action=SendMessage');
         }
     }
     function about()
@@ -125,14 +125,14 @@ class IndexWebsiteController
             $result = $this->customerModel->InsertRecord(new Customer(null,$userName,$passwordMD5,$phone,$email));
             if ($result == true)
             {
-                header('location:index.php?c=IndexWebsite&a=index&g=1&action=Register');
+                header('location:index.php?c=indexwebsite&a=index&g=1&action=Register');
             }else
             {
                 //Email or user đã tồn tại
-                header('location:index.php?c=IndexWebsite&a=index&g=0&action=Register');
+                header('location:index.php?c=indexwebsite&a=index&g=0&action=Register');
             }
         }else{
-            header('location:index.php?c=IndexWebsite&a=index&g=2&action=Register');
+            header('location:index.php?c=indexwebsite&a=index&g=2&action=Register');
         }
     }
     function Login()
@@ -143,12 +143,12 @@ class IndexWebsiteController
         $result = $this->customerModel->LoginRecord($user,$pass);
         if ($result == 1)
         {
-            header('location:index.php?c=IndexWebsite&a=index&lg=1');
+            header('location:index.php?c=indexwebsite&a=index&lg=1');
             $_SESSION['userWebsite'] = $user;
             $_SESSION['login'] = $result;
 
         }else{
-            header('location:index.php?c=IndexWebsite&a=index&lg=0&action=Register');
+            header('location:index.php?c=indexwebsite&a=index&lg=0&action=Register');
         }
     }
     function Logout()
@@ -216,7 +216,7 @@ class IndexWebsiteController
             $_SESSION['Cart'][$id]['gia'] = $gia;
             $_SESSION['Cart'][$id]['img'] = $img;
             $_SESSION['Cart'][$id]['tongTien'] = $gia;
-            header('location:index.php?c=IndexWebsite&a=Order');
+            header('location:index.php?c=indexwebsite&a=Order');
         }
         else{
             if (isset($_SESSION['Cart'][$id]))
@@ -229,7 +229,7 @@ class IndexWebsiteController
             $_SESSION['Cart'][$id]['gia'] = $gia;
             $_SESSION['Cart'][$id]['img'] = $img;
             $_SESSION['Cart'][$id]['tongTien'] = $gia * $_SESSION['Cart'][$id]['qty'];
-            header('location:index.php?c=IndexWebsite&a=Order');
+            header('location:index.php?c=indexwebsite&a=Order');
         }
     }
     function Order()
@@ -254,7 +254,7 @@ class IndexWebsiteController
         session_start();
         $id = $_GET['id'];
         unset($_SESSION['Cart'][$id]);
-        header('location:index.php?c=IndexWebsite&a=Order');
+        header('location:index.php?c=indexwebsite&a=Order');
     }
     function ThanhToan()
     {
@@ -276,10 +276,10 @@ class IndexWebsiteController
             $result = $this->orderModel->InsertRecords(new Order(null,$cusId,$userName,$phone,$address,$content,$totalProduct,$totalPrice));
             if ($result == true)
             {
-                header('location:index.php?c=IndexWebsite&a=Order&order=1');
+                header('location:index.php?c=indexwebsite&a=Order&order=1');
                 unset($_SESSION['Cart']);
             }else{
-                header('location:index.php?c=IndexWebsite&a=Order&order=0');
+                header('location:index.php?c=indexwebsite&a=Order&order=0');
             }
         }else{
             echo 'Khong tồn tại';

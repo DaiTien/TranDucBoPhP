@@ -24,7 +24,7 @@
             {
                 if ($_GET['r'] == 1)
                 {
-                    echo $_GET['action'] . ' Account Thành Công <a href="?c=IndexAdmin&a=index">Login</a>' ;
+                    echo $_GET['action'] . ' Account Thành Công <a href="?c=indexadmin&a=index">Login</a>' ;
                 }else if($_GET['r'] == 2){
                     echo 'Confirm Password Không Đúng, vui lòng đăng ký lại';
                 } else if ($_GET['r'] == 3){
@@ -37,7 +37,7 @@
             ?>
         </p>
 
-        <form action="?c=IndexAdmin&a=signUp" method="post" id="quickForm">
+        <form action="?c=indexadmin&a=signUp" method="post" id="quickForm">
             <div class="form-group input-group has-feedback">
                 <input type="text" class="form-control" autocomplete="off" name="username" placeholder="User Name">
                 <div class="input-group-append">
@@ -81,7 +81,7 @@
                 <!-- /.col -->
             </div>
         </form>
-        <a href="?c=IndexAdmin&a=index" class="text-center">Đăng nhập với tài khoản đã có.</a>
+        <a href="?c=indexadmin&a=index" class="text-center">Đăng nhập với tài khoản đã có.</a>
     </div>
     <!-- /.form-box -->
 </div>

@@ -109,7 +109,7 @@
                     </div>
                 </section>
 
-                <a href="?c=IndexWebsite&a=Order">
+                <a href="?c=indexwebsite&a=Order">
                     <div class="cart">
                         <i class="fa fa-shopping-cart cart__fixed" aria-hidden="true"></i>
                         <span class="cart__count" id="displayCount">

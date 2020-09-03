@@ -59,7 +59,7 @@
                             </ul>
                         </div> -->
                         <div class="shop-cart-list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <form method="post" action="?c=IndexWebsite&a=UpdateCart">
+                            <form method="post" action="?c=indexwebsite&a=UpdateCart">
                                 <table class="shop-cart-table">
                                     <thead>
                                     <tr>
@@ -100,7 +100,7 @@
                                                     <span id="tongTien"><?=$value['tongTien']?></span>
                                                 </td>
                                                 <td class="shop-cart-close">
-                                                    <a href="?c=IndexWebsite&a=DeleteCart&id=<?=$key?>" class="icon-cancel-5"></a>
+                                                    <a href="?c=indexwebsite&a=DeleteCart&id=<?=$key?>" class="icon-cancel-5"></a>
                                                 </td>
                                             </tr>
                                             <?php
@@ -134,7 +134,7 @@
                             </form>
                         </div>
                         <div class="row">
-                            <form class="login-form" method="post" action="?c=IndexWebsite&a=ThanhToan" name="login">
+                            <form class="login-form" method="post" action="?c=indexwebsite&a=ThanhToan" name="login">
                                 <div class="col-md-7 col-sm-7 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                     <div class="shop-checkout-left">
                                         <h6>Thông Tin Người Chuyển Hàng</h6>

@@ -40,11 +40,11 @@
                         </div>
                         <div class="menu__icon">
                             <i onclick="myFunction(this)" id="like<?= $value->id ?>" class="fa fa-heart icon__like"> <span>Yêu Thích</span> </i>
-                            <a hidden id="alike<?= $value->id ?>" href="?c=IndexWebsite&a=productLike&id=<?= $value->id ?>"></a>
+                            <a hidden id="alike<?= $value->id ?>" href="?c=indexwebsite&a=productLike&id=<?= $value->id ?>"></a>
                             <i onclick="functionAlert(this)" id="add<?= $value->id ?>" class="fa fa-plus-square icon__like icon__like--add" id="countButton" aria-hidden="true"> <span>Thêm giỏ hàng</span> </i>
-                            <a hidden id="cartadd<?= $value->id ?>" href="?c=IndexWebsite&a=addCart&id=<?= $value->id ?>"></a>
+                            <a hidden id="cartadd<?= $value->id ?>" href="?c=indexwebsite&a=addCart&id=<?= $value->id ?>"></a>
                             <i onclick="functionOrder(this)" id="order<?= $value->id ?>" class="fa fa-cart-plus icon__like" aria-hidden="true"> <span>Order</span> </i>
-                            <a hidden id="aorder<?= $value->id ?>" href="?c=IndexWebsite&a=OrderNow&id=<?= $value->id ?>"></a>
+                            <a hidden id="aorder<?= $value->id ?>" href="?c=indexwebsite&a=OrderNow&id=<?= $value->id ?>"></a>
                         </div>
 
                     </div>

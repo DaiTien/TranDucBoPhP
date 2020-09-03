@@ -13,7 +13,7 @@
                 foreach ($news as $value) {
                 ?>
                     <div class="item">
-                        <a href="?c=IndexWebsite&a=news&id=<?= $value->id ?>">
+                        <a href="?c=indexwebsite&a=news&id=<?= $value->id ?>">
                             <div class="feature-img">
                                 <div class="feature-img feature-img__newsind">
                                     <img class="news__slide" src="<?= $value->image ?>" alt="">
@@ -23,7 +23,7 @@
                                                 <span><i class="icon-comment"></i> 5 Comments</span>-->
                                     <h5><?= $value->title ?></h5>
                                     <p><?= $value->summary ?></p>
-                                    <a href="?c=IndexWebsite&a=news&id=<?= $value->id ?>">Read More <i class="icon-more"></i></a>
+                                    <a href="?c=indexwebsite&a=news&id=<?= $value->id ?>">Read More <i class="icon-more"></i></a>
                                 </div>
                             </div>
                         </a>

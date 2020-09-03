@@ -30,7 +30,7 @@
                 <div class="container">
                     <div class="breadcrumb-inner">
                         <h2>GIỚI THIỆU</h2>
-                        <a href="?c=IndexWebsite&a=index">Trang Chủ</a>
+                        <a href="?c=indexwebsite&a=index">Trang Chủ</a>
                     </div>
                 </div>
             </section>
@@ -52,7 +52,7 @@
                             <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <p id="txtContent"><?= $value->content ?></p>
                                 <p><img style="width: 170px;border-radius: 37px;" src="asset/web/images/signature.png" alt=""></p>
-                                <p><a href="?c=IndexWebsite&a=index" class="btn-black">HOME</a></p>
+                                <p><a href="?c=indexwebsite&a=index" class="btn-black">HOME</a></p>
                             </div>
                             <div style="display:block; width: 555px;height: 392px" class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                                 <img class="about__images" src="<?= $value->image ?>" alt="" >

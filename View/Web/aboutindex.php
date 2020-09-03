@@ -22,7 +22,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <p id="txtContent"><?= $value->content ?></p>
                     <p><img style="width: 170px;border-radius: 37px;" src="asset/web/images/signature.png" alt=""></p>
-                    <p><a href="?c=IndexWebsite&a=about" class="btn-black">Xem Thêm</a></p>
+                    <p><a href="?c=indexwebsite&a=about" class="btn-black">Xem Thêm</a></p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <img class="about__images" src="<?= $value->image ?>" alt="">
