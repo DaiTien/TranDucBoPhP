@@ -51,14 +51,12 @@ class ProductController
         {
             move_uploaded_file($_FILES["file"]["tmp_name"],"UpLoadFile/Product/".$_FILES["file"]["name"]);
         $tenSan = $_POST['tenSan'];
-        $soLuong = $_POST['total'];
         $type = $_POST['productType'];
         $image = "UpLoadFile/Product/".$_FILES["file"]["name"];
         $summary = $_POST['summary'];
         $content = $_POST['content'];
-        $priceM = $_POST['priceM'];
-        $priceL = $_POST['priceL'];
-        $result = $this->productModel->insert( new Product(null,$tenSan,$image,$summary,$content,$soLuong,$priceM,$priceL,$type,null));
+        $price = $_POST['price'];
+        $result = $this->productModel->insert( new Product(null,$tenSan,$image,$summary,$content,$price,$type,0));
         if($result == true){
             header('location:index.php?c=Product&a=index&r=1&action=Insert');
         }else{
@@ -90,15 +88,13 @@ class ProductController
         $id = $_POST['id'];
         if ($_FILES["file"]["error"] > 0) {
             $name = $_POST['name'];
-            $soLuong = $_POST['soLuong'];
             $type = $_POST['productType'];
             $image = $_POST['fileImg'];
             $title = $_POST['title'];
             $noiDung = $_POST['noiDung'];
-            $sizeM = $_POST['sizeM'];
-            $priceL = $_POST['priceL'];
+            $price = $_POST['price'];
 
-            $result = $this->productModel->Update(new product($id, $name, $image, $title,$noiDung, $soLuong, $sizeM,$priceL,$type,null));
+            $result = $this->productModel->Update(new product($id, $name, $image, $title,$noiDung,$price,$type,null));
             if ($result == true) {
                 header('location:index.php?c=Product&a=index&r=1&action=Update');
             } else {
@@ -110,20 +106,60 @@ class ProductController
             //} else {
                 move_uploaded_file($_FILES["file"]["tmp_name"], "UpLoadFile/product/" . $_FILES["file"]["name"]);
                 $name = $_POST['name'];
-                $soLuong = $_POST['soLuong'];
                 $image = "UpLoadFile/product/" . $_FILES["file"]["name"];
                 $type = $_POST['productType'];
                 $title = $_POST['title'];
                 $noiDung = $_POST['noiDung'];
-                $sizeM = $_POST['sizeM'];
-                $priceL = $_POST['priceL'];
-                $result = $this->productModel->Update(new product($id, $name, $image, $title,$noiDung, $soLuong, $sizeM,$priceL,$type,null));
+                $price = $_POST['price'];
+                $result = $this->productModel->Update(new product($id, $name, $image, $title,$noiDung,$price,$type,null));
                 if ($result == true) {
                     header('location:index.php?c=Product&a=index&r=1&action=Update');
                 } else {
                     header('location:index.php?c=Product&a=index&r=0&action=Update');
                 }
             //}
+        }
+    }
+    //Func cập nhật tình trạng
+    //---Hiển thị
+    function UpActive()
+    {
+        if (!empty($_POST['duyet']))
+        {
+            if(!empty($_POST['array'])) {
+                foreach($_POST['array'] as $value){
+                    $result = $this->productModel->UpdateActive($value);
+                    if ($result == true)
+                    {
+                        header('location:index.php?c=Product&a=index&r=1&action=Update Active');
+                    }else{
+                        header('location:index.php?c=Product&a=index&r=0&action=Update Active');
+                    }
+                }
+            }
+            else{
+                header('location:index.php?c=Product&a=index&r=2');
+            }
+        }else{
+            $this->UpActive2();
+        }
+
+    }
+    //---Không hiển thị
+    function UpActive2()
+    {
+        if(!empty($_POST['array'])) {
+            foreach($_POST['array'] as $value){
+                $result = $this->productModel->UpdateActive2($value);
+                if ($result == true)
+                {
+                    header('location:index.php?c=Product&a=index&r=1&action=Update Active');
+                }else{
+                    header('location:index.php?c=Product&a=index&r=0&action=Update Active');
+                }
+            }
+        }else{
+            header('location:index.php?c=Product&a=index&r=2');
         }
     }
     function delete(){

@@ -53,7 +53,7 @@ class indexwebsiteController
         $introduce = $this ->introduceModel->GetAlldata();
         $news = $this->newModel->GetRecordsByActive();
         $productType = $this->productTypeModel->GetAllRecords();
-        $product = $this ->productModel->GetAllRecords();
+        $product = $this ->productModel->GetRecordsByActive();
         $contact = $this ->contactModel->GetAllRecords();
         $mxh = $this->mXh->GetByID(1);
         $feedBack = $this->feedBack->GetAllRecords();
@@ -165,7 +165,7 @@ class indexwebsiteController
         $introduce = $this ->introduceModel->GetAlldata();
         $news = $this->newModel->GetRecordsByActive();
         $productType = $this->productTypeModel->GetAllRecords();
-        $product = $this ->productModel->GetAllRecords();
+        $product = $this ->productModel->GetRecordsByActive();
         $contact = $this ->contactModel->GetAllRecords();
         $mxh = $this->mXh->GetByID(1);
         require_once SYSTEM_PATH. "/View/Web/index.php";

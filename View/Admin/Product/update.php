@@ -30,7 +30,7 @@
                 <div class="col-md-12">
                     <div class="card card-info mt-2">
                         <div class="card-header">
-                            <h3 class="card-title font-weight-bold">Chỉnh Sửa Đơn Hàng</h3>
+                            <h3 class="card-title font-weight-bold">Chỉnh Sửa Sản Phẩm</h3>
                         </div>
                         <form method="post" action="index.php?c=Product&a=LuuSua" enctype="multipart/form-data">
                                 <!-- form start -->
@@ -82,18 +82,19 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Giá (Size L) </label>
-                                            <input type="text" value="<?=$tdb_product->priceL?>"  class="form-control" name="priceL" placeholder="Gía">
+                                            <label for="exampleInputPassword1">Giá </label>
+                                            <input type="text" value="<?=$tdb_product->price?>"  class="form-control" name="price" placeholder="Gía">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Giá (Size M) </label>
-                                            <input type="text" value="<?=$tdb_product->priceM?>"  class="form-control" name="sizeM" placeholder="Gía">
+                                            <label for="exampleInputFile">Ảnh mô tả:</label>
+                                            <input type="file" name="file" id="inputFile">
+                                            <input type="text" name="fileImg" value="<?=$tdb_product->image?>" hidden>
+                                            <img class="imageShow" id="showImage" style="width: 150px" height="100px" src="<?=$tdb_product->image?>"/>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
@@ -105,22 +106,6 @@
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Nội dung</label>
                                             <textarea type="text" class="form-control" name="noiDung" rows="5" placeholder="Nội dung sản phẩm"><?=$tdb_product->content?></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Số lượng </label>
-                                            <input type="text" value="<?=$tdb_product->soLuong?>"  class="form-control" name="soLuong" placeholder="">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="exampleInputFile">Ảnh mô tả:</label>
-                                            <input type="file" name="file" id="inputFile">
-                                            <input type="text" name="fileImg" value="<?=$tdb_product->image?>" hidden>
-                                            <img class="imageShow" id="showImage" style="width: 150px" height="100px" src="<?=$tdb_product->image?>"/>
                                         </div>
                                     </div>
                                 </div>

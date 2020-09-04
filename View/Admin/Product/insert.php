@@ -7,6 +7,12 @@
     <?php
     include "asset/Scripts/ScriptHeader.php";
     ?>
+    <style>
+        .imageShow{
+            width: 150px;
+            height=100px;
+        }
+    </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -74,14 +80,15 @@
                             </div>
                             <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Giá (Size L) </label>
-                                <input type="text"  class="form-control" name="priceL" placeholder="Nhập giá cho size lớn">
+                                <label for="exampleInputPassword1">Giá </label>
+                                <input type="text"  class="form-control" name="price" placeholder="Nhập giá cho size lớn">
                             </div>
                             </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Giá (Size M) </label>
-                                        <input type="text"  class="form-control" name="priceM" placeholder="Nhập giá cho size nhỏ">
+                                        <label for="exampleInputFile">Ảnh mô tả</label>
+                                        <input type="file" name="file" id="inputFile">
+                                        <img class="imageShow" id="showImage" src="asset/admin/AdminLTE/dist/img/up-img.png"/>
                                     </div>
                                 </div>
                             </div>
@@ -99,25 +106,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Số Lượng </label>
-                                        <input type="text"  class="form-control" autocomplete="off" name="total" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Ảnh mô tả</label>
-                                        <input type="file" name="file" id="inputFile">
-                                        <img class="imageShow" id="showImage" src=""/>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-
                         <!-- /.card-body -->
-
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Thêm</button>
                             <input type="reset" class="btn btn-info" value="Refresh">
@@ -154,6 +144,17 @@ include "asset/Scripts/ScriptFooter.php";
         $('.select2bs4').select2({
             theme: 'bootstrap4'
         })
+    });
+    $('document').ready(function () {
+        $("#inputFile").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
     });
 </script>
 
