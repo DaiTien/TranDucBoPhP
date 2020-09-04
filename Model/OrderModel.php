@@ -36,7 +36,7 @@ class OrderModel
     }
     public function GetAllRecords()
     {
-        $query ="select * from tdb_order";
+        $query ="select * from tdb_order order by id DESC";
         $result = $this->mysqli->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value)

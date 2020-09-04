@@ -27,7 +27,7 @@ class IntroduceModel
     }
     function GetAlldata()
     {
-        $result = $this->mysqli->query("select * from tdb_introduce");
+        $result = $this->mysqli->query("select * from tdb_introduce order by id DESC");
         $data=[];
         foreach($result->fetch_all() as $value)
         {

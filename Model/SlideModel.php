@@ -20,7 +20,7 @@ class SlideImageModel
     }
     function GetAllRecords()
     {
-        $result = $this->mysqli->query("select * from tdb_slide");
+        $result = $this->mysqli->query("select * from tdb_slide order by id DESC");
         $data = [];
         foreach ($result->fetch_all() as $value) {
             array_push($data, new Slide($value[0], $value[1],$value[2]));

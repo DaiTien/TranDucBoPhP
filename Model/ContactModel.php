@@ -24,7 +24,7 @@ class ContactModel
 
     public function GetAllRecords()
     {
-        $query ="select * from tdb_contact";
+        $query ="select * from tdb_contact order by id DESC";
         $result = $this->mysqli->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value)

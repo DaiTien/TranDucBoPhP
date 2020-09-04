@@ -25,7 +25,7 @@ class LibraryImageModel
 
     function GetAllRecords()
     {
-        $result = $this ->mysqli->query("select * from tdb_image");
+        $result = $this ->mysqli->query("select * from tdb_image order by id DESC");
         $data =[];
         foreach ($result->fetch_all() as $value)
         {

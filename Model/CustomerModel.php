@@ -25,7 +25,7 @@ class CustomerModel
 
     function GetAllRecords()
     {
-        $result = $this->mysqli->query("select * from tdb_customer");
+        $result = $this->mysqli->query("select * from tdb_customer order by id DESC");
         $data = [];
         foreach ($result->fetch_all() as $value)
         {

@@ -19,7 +19,7 @@ class ProductTypeModel
     }
     function GetAllRecords()
     {
-        $result = $this->mysqli->query("select * from tdb_producttype");
+        $result = $this->mysqli->query("select * from tdb_producttype order by id DESC");
         $data = [];
         foreach ($result->fetch_all() as $value)
         {

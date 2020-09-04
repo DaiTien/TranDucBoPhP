@@ -27,7 +27,7 @@ class NewsAdminModel
     }
     function GetAlldata()
     {
-        $result = $this->mysqli->query("select * from tdb_news");
+        $result = $this->mysqli->query("select * from tdb_news order by id DESC");
         $data=[];
         foreach($result->fetch_all() as $value)
         {

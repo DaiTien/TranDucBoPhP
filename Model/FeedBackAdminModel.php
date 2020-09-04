@@ -31,7 +31,7 @@ class FeedBackAdminModel
     //Dashboard
     function CountFeedBack()
     {
-        $query ="select * from tdb_customerfeedback";
+        $query ="select * from tdb_customerfeedback order by id DESC";
         $result = $this ->mysqli->query($query);
         $data = [];
         foreach ( $result->fetch_all() as $value)

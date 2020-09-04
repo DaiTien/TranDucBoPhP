@@ -31,7 +31,7 @@ class UserAdminModel
     }
     function GetAllRecords($user)
     {
-        $result = $this->mysqli->query("select * from tdb_adminuser where username != '$user'");
+        $result = $this->mysqli->query("select * from tdb_adminuser where username != '$user' order by id DESC");
         $data =[];
         foreach ($result->fetch_all() as $value)
         {
