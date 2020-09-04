@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <?php
     include 'linkheader.php';
     ?>
@@ -40,7 +41,7 @@
                     <div class="container">
                         <div class="breadcrumb-inner">
                             <h2>Tin Tức</h2>
-                            <a href="#">Trang Chủ</a>
+                            <a href="?c=indexwebsite">Trang Chủ</a>
                             <span>Tin Tức</span>
                         </div>
                     </div>
