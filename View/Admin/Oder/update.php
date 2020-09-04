@@ -35,43 +35,50 @@
                             <div class="card-body">
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Tên Khách Hàng </label>
                                             <input type="text"value="<?=$tdb_order->name?>"  class="form-control" name="name" readonly placeholder="">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Số Điện Thoại </label>
                                             <input type="text"value="<?=$tdb_order->phone?>"  class="form-control" name="phone" readonly placeholder="">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Địa Chỉ </label>
-                                        <input type="text"value="<?=$tdb_order->address?>"  class="form-control" name="address" readonly placeholder="">
-                                    </div>
-                                </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Số Lượng </label>
                                             <input type="text"value="<?=$tdb_order->totalProduct?>"  class="form-control" name="totalProduct" readonly placeholder="">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Giá  </label>
-                                        <input type="text"value="<?=$tdb_order->totalPrice?>"  class="form-control" name="totalPrice" readonly placeholder="">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Tổng tiền </label>
+                                            <input type="text"value="<?=$tdb_order->totalPrice?> VNĐ"  class="form-control" name="totalPrice" readonly placeholder="">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Thông Tin Đơn Hàng</label>
-                                    <textarea type="text"  class="form-control" name="content" readonly placeholder=""><?=$tdb_order->content?></textarea>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Địa Chỉ </label>
+                                            <textarea type="text" rows="5"  class="form-control" name="address" readonly placeholder=""><?=$tdb_order->address?></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Thông Tin Đơn Hàng</label>
+                                            <textarea type="text" rows="5" class="form-control" name="content" readonly placeholder=""><?=$tdb_order->content?></textarea>
+                                        </div>
+                                    </div>
+
                                 </div>
+
+
                             </div>
                                     <div class="card-footer">
                                         <a href="?c=Oder&a=index" class="btn btn-danger">Trở Về</a>

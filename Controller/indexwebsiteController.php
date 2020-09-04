@@ -176,7 +176,7 @@ class indexwebsiteController
         $id = $_GET['id'];
         $product = $this->productModel->GetByID($id);
         $name = $product ->name;
-        $gia = $product->priceM;
+        $gia = $product->price;
         $img = $product->image;
         if (!isset($_SESSION['Cart'][$id]))
         {
@@ -207,7 +207,7 @@ class indexwebsiteController
         $id = $_GET['id'];
         $product = $this->productModel->GetByID($id);
         $name = $product ->name;
-        $gia = $product->priceM;
+        $gia = $product->price;
         $img = $product->image;
         if (!isset($_SESSION['Cart'][$id]))
         {
@@ -273,7 +273,7 @@ class indexwebsiteController
             {
                 $content = $content .',' .$value['qty'] .' '.$value['name'];
             }
-            $result = $this->orderModel->InsertRecords(new Order(null,$cusId,$userName,$phone,$address,$content,$totalProduct,$totalPrice));
+            $result = $this->orderModel->InsertRecords(new Order(null,$cusId,$userName,$phone,$address,$content,$totalProduct,$totalPrice,0,0));
             if ($result == true)
             {
                 header('location:index.php?c=indexwebsite&a=Order&order=1');

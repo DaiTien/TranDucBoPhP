@@ -40,11 +40,40 @@ class OderController
             $avatarUser = $_SESSION['avatarUser'];
             $id = $_GET['id'];
             $tdb_order = $this->oderModel->GetByID($id);
+            $this->UpActive();
             require_once SYSTEM_PATH. '/View/Admin/Oder/update.php';
         }
         else
         {
             require_once  SYSTEM_PATH. "/View/Admin/login.php";
         }
+    }
+    //Func cập nhật tình trạng
+    //---Hiển thị
+    function UpTransport()
+    {
+        if (!empty($_POST['duyet']))
+        {
+            if(!empty($_POST['array'])) {
+                foreach($_POST['array'] as $value){
+                    $result = $this->oderModel->UpdateTransport($value);
+                    if ($result == true)
+                    {
+                        header('location:index.php?c=Oder&a=index&r=1&action=Update Giao hàng');
+                    }else{
+                        header('location:index.php?c=Oder&a=index&r=0&action=Update Giao hàng');
+                    }
+                }
+            }
+            else{
+                header('location:index.php?c=Oder&a=index&r=2');
+            }
+        }
+
+    }
+    function UpActive()
+    {
+        $id = $_GET['id'];
+        $result = $this->oderModel->UpdateActive($id);
     }
 }

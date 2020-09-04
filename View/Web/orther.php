@@ -200,7 +200,7 @@
                                                         {
                                                             $tongTien = $tongTien + $val['tongTien'];
                                                         }
-                                                        echo $tongTien + 15000;
+                                                        echo $tongTien + 15000 .' VNĐ';
                                                     }
                                                     ?>
                                                 </span>

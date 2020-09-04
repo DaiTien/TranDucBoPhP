@@ -35,7 +35,7 @@
                             <span class="menu-list-product">
                                 <img src="<?= $value->image ?>" alt="">
                             </span>
-                            <h5><?= $value->name ?> <span><?= $value->priceM ?> vnd</span></h5>
+                            <h5><?= $value->name ?> <span><?= $value->price?> vnd</span></h5>
                             <p><?= $value->summary ?></p>
                         </div>
                         <div class="menu__icon">
