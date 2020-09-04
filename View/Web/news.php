@@ -36,7 +36,7 @@
         <main>
             <div class="main-part">
                 <!-- Start Breadcrumb Part -->
-                <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('asset/Web/images/breadbg1.jpg');">
+                <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5" style="background-image: url('asset/web/images/breadbg1.jpg');">
                     <div class="container">
                         <div class="breadcrumb-inner">
                             <h2>Tin Tức</h2>
@@ -49,7 +49,7 @@
                 <!-- Start Blog List -->
                 <section class="home-icon blog-main-section text-center blog-main-full wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="icon-default">
-                        <img src="asset/Web/images/scroll-arrow.png" alt="">
+                        <img src="asset/web/images/scroll-arrow.png" alt="">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -69,17 +69,6 @@
                                             <!-- <a href="blog_single.html" class="button-default">Read More <i class="icon-right-4"></i></a> -->
                                         </div>
                                     </div>
-                                    <!--<div class="gallery-pagination">
-                                        <div class="gallery-pagination-inner">
-                                            <ul>
-                                                <li><a href="#" class="pagination-prev"><i class="icon-left-4"></i> <span>PREV page</span></a></li>
-                                                <li class="active"><a href="#"><span>1</span></a></li>
-                                                <li><a href="#"><span>2</span></a></li>
-                                                <li><a href="#"><span>3</span></a></li>
-                                                <li><a href="#" class="pagination-next"><span>next page</span> <i class="icon-right-4"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>-->
                                 </div>
                             </div>
                         </div>

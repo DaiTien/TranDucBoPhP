@@ -13,7 +13,6 @@
                     <p class="slider__title">
                         Trà Sữa của chúng tôi không làm bạn thất vọng !!!
                     </p>
-                    <a class="btn btn-danger btn--buy" href="">Mua Ngay</a>
                 </div>
                 <img class="slide__images" src="<?=$value->imageSlide?>" alt="">
             </div>

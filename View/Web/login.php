@@ -38,7 +38,7 @@
 
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <a href="#" class="pull-right">Quên mật khẩu</a>
+                                        <!--<a href="#" class="pull-right">Quên mật khẩu</a>-->
                                     </div>
                                 </div>
                             </div>
@@ -51,14 +51,14 @@
                         <hr>
                         <span>Or</span>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12 col-xs-12">
-                            <a href="#" class="facebook-btn btn-change button-default"><i class="fa fa-facebook"></i>Đăng Nhập Facebook</a>
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12">
-                            <a href="#" class="tweeter-btn btn-change button-default"><i class="fa fa-twitter"></i>Đăng Nhập Twitter</a>
-                        </div>
-                    </div>
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-6 col-sm-12 col-xs-12">-->
+<!--                            <a href="#" class="facebook-btn btn-change button-default"><i class="fa fa-facebook"></i>Đăng Nhập Facebook</a>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-6 col-sm-12 col-xs-12">-->
+<!--                            <a href="#" class="tweeter-btn btn-change button-default"><i class="fa fa-twitter"></i>Đăng Nhập Twitter</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
