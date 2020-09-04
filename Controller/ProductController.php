@@ -104,9 +104,9 @@ class ProductController
             //if (file_exists("UpLoadFile/product/" . $_FILES["file"]["name"])) {
                 //header('location:index.php?c=Product&a=Update&id=' . $id . '&r=2');
             //} else {
-                move_uploaded_file($_FILES["file"]["tmp_name"], "UpLoadFile/product/" . $_FILES["file"]["name"]);
+                move_uploaded_file($_FILES["file"]["tmp_name"], "UpLoadFile/Product/" . $_FILES["file"]["name"]);
                 $name = $_POST['name'];
-                $image = "UpLoadFile/product/" . $_FILES["file"]["name"];
+                $image = "UpLoadFile/Product/" . $_FILES["file"]["name"];
                 $type = $_POST['productType'];
                 $title = $_POST['title'];
                 $noiDung = $_POST['noiDung'];
