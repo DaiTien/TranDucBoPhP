@@ -50,12 +50,12 @@
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead style="text-align: center">
+                                <thead style="text-align: left">
                                 <tr id="tbheader">
-                                    <th class="text-center">STT</th>
+                                    <th>STT</th>
 
-                                    <th class="text-center">Tên Loại Sản Phẩm</th>
-                                    <th class="text-center">Hành động</th>
+                                    <th>Tên Loại Sản Phẩm</th>
+                                    <th>Hành động</th>
                                 </tr>
                                 </thead>
                                 <tbody>

@@ -78,14 +78,14 @@
                             <!-- /.box-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
+                                    <thead style="text-align: left">
                                     <tr id="tbheader">
-                                        <th class="text-center"></th>
-                                        <th class="text-center">STT</th>
-                                        <th class="text-center">Hình ảnh</th>
-                                        <th class="text-center">Tên</th>
-                                        <th class="text-center">Tình trạng</th>
-                                        <th class="text-center">Hành động</th>
+                                        <th></th>
+                                        <th>STT</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Tên</th>
+                                        <th>Tình trạng</th>
+                                        <th>Hành động</th>
                                     </tr>
                                     </thead>
                                     <tbody>

@@ -36,7 +36,7 @@
                         <!-- /.box-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead style="text-align: center">
+                                <thead style="text-align: left">
                                 <tr id="tbheader">
                                     <th>STT</th>
 

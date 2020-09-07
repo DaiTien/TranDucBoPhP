@@ -48,7 +48,7 @@
                                     <div class="col-md-6">
 
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Tên Thành Viên <sup class="text-danger" style="font-size: 15px">*</sup></label>
+                                                <label for="exampleInputPassword1">Tên Đăng Nhập <sup class="text-danger" style="font-size: 15px">*</sup></label>
                                                 <input type="text" class="form-control" name="userName" >
                                                 <p class="text-danger">
                                                     <?php

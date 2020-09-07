@@ -143,7 +143,7 @@
                     <a id="qlthanhvien" href="?c=UserAdmin&a=index" class="nav-link">
                         <i class="nav-icon fa fa-users"></i>
                         <p>
-                            Quản Lý Thành Viên
+                            Quản Lý Người Dùng
                         </p>
                     </a>
                 </li>
