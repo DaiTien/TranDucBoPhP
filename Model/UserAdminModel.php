@@ -29,9 +29,9 @@ class UserAdminModel
     {
         $this->mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
     }
-    function GetAllRecords($user)
+    function GetAllRecords($user,$role)
     {
-        $result = $this->mysqli->query("select * from tdb_adminuser where username != '$user' order by id DESC");
+        $result = $this->mysqli->query("select * from tdb_adminuser where username != '$user' and roleuser = '$role' order by id DESC");
         $data =[];
         foreach ($result->fetch_all() as $value)
         {
@@ -51,7 +51,7 @@ class UserAdminModel
     }
     function UpdateRecord(UserAdmin $user)
     {
-            $query ="Update tdb_adminuser set id=$user->id,username ='$user->userName',password ='$user->password',fullname='$user->fullName',gender='$user->gender',phone='$user->phone',email='$user->email',role='$user->role' where id =$user->id";
+            $query ="Update tdb_adminuser set id=$user->id,fullname='$user->fullName',gender='$user->gender',phone='$user->phone' where id =$user->id";
             $result = $this->mysqli->query($query);
             return $result;
     }
@@ -61,23 +61,25 @@ class UserAdminModel
         $result = $this->mysqli->query($query);
         return $result;
     }
-    function InsertRecord(UserAdmin $user)
+    function InsertRecordAdmin(UserAdmin $user)
     {
-        $checkUser = $this->mysqli->query("select * from tdb_adminuser where username = '$user->userName'");
+        $checkUser = $this->mysqli->query("select * from tdb_adminuser where username = '$user->userName' and roleuser = '$user->role'");
         $check1 = mysqli_num_rows($checkUser);
-        if ($check1 == 1)
+        if ($check1 > 0)
         {
-            return null;
+            return "user";
         }else{
-            $checkEmail = $this ->mysqli->query("select * from tdb_adminuser where email = '$user->email'");
+            $checkEmail = $this ->mysqli->query("select * from tdb_adminuser where email = '$user->email' and roleuser = '$user->role'");
             $check2 = mysqli_num_rows($checkEmail);
-            if ($check2 == 1)
+            if ($check2 == 0)
             {
-                return false;
-            }else{
-                $query = "insert into tdb_adminuser(username,password,fullname,gender,phone,email,role) value ('$user->userName','$user->password','$user->fullName','$user->gender','$user->phone','$user->email','$user->role')";
+                $query = "insert into tdb_adminuser(username,password,fullname,gender,phone,email,roleuser) value ('$user->userName','$user->password','$user->fullName','$user->gender','$user->phone','$user->email','$user->role')";
                 $result = $this->mysqli->query($query);
                 return $result;
+            }else{
+                //$result = $this->mysqli->query("insert into tdb_adminuser(username,password,fullname,gender,phone,email,roleuser) value ('$user->userName','$user->password','$user->fullName','$user->gender','$user->phone','$user->email','$user->role')");
+                //return $result;
+                return false;
             }
         }
     }

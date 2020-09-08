@@ -75,7 +75,16 @@ include 'asset/Scripts/ScriptHeader.php';
                                         <td><?=$value->userName?></td>
                                         <!--<td><?=$value->password?></td>-->
                                         <td><?=$value->fullName?></td>
-                                        <td><?=$value->gender?></td>
+                                        <td>
+                                            <?php
+                                            if ($value->gender == 1)
+                                            {
+                                                echo 'Nam';
+                                            }else if ($value->gender == 0){
+                                                echo 'Nữ';
+                                            }
+                                            ?>
+                                        </td>
                                         <td><?=$value->phone?></td>
                                         <td><?=$value->email?></td>
                                         <!--<td><?=$value->role?></td>-->

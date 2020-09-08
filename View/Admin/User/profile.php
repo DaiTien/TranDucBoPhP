@@ -51,14 +51,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Tên Thành Viên</label>
-                                            <input type="text" class="form-control" name="userName" value="<?=$data->userName?>">
+                                            <label for="exampleInputPassword1">Tên Đăng Nhập</label>
+                                            <input type="text" readonly class="form-control" name="userName" value="<?=$data->userName?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Mật Khẩu</label>
-                                            <input type="text" class="form-control" name="password" value="<?=$data->password?>">
+                                            <input type="text" readonly class="form-control" name="password" value="<?=$data->password?>">
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +94,11 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Giới Tính</label>
-                                            <input type="text" class="form-control" name="gender" value="<?=$data->gender?>">
+                                            <select  name='gender' class="form-control">
+                                                <option value="" selected="selected">Chọn quốc gia</option>
+                                                <option value='1' <?php if($data->gender == 1) {?> selected="selected" <?php } ?> >Nam</option>
+                                                <option value='0' <?php if($data->gender == 0) {?> selected="selected" <?php } ?> >Nữ</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">

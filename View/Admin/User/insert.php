@@ -42,21 +42,25 @@
                             }
                             ?>
                         </p>
-                        <form role="form" method="post" action="?c=UserAdmin&a=InsertSave">
+                        <form role="form" method="POST" action="?c=UserAdmin&a=InsertSave">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
-
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Tên Đăng Nhập <sup class="text-danger" style="font-size: 15px">*</sup></label>
-                                                <input type="text" class="form-control" name="userName" >
+                                                <input id="input1" type="text" class="form-control" name="userName" value='<?php if (isset($_GET['n'])) {echo $_GET['n'];}?>' required>
                                                 <p class="text-danger">
                                                     <?php
                                                     if (isset($_GET['r']))
                                                     {
                                                         if ($_GET['r'] == 2)
                                                         {
-                                                            echo 'UserName đã tồn tại!';
+                                                            //echo 'UserName đã tồn tại!';
+                                                            echo "<script type='text/javascript'>Swal.fire({";
+                                                            echo "icon: 'error',";
+                                                            echo "title: 'Tên đăng nhập được sử dụng!',";
+                                                            echo "text: 'vui lòng dùng Tên khác!',";
+                                                            echo "})</script>";
                                                         }
                                                     }
                                                     ?>
@@ -65,25 +69,23 @@
 
                                     </div>
                                     <div class="col-md-6">
-
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Họ Và Tên</label>
-                                            <input type="text" class="form-control" name="fullName" >
+                                            <input type="text" class="form-control" name="fullName" value='<?php if (isset($_GET['ht'])) {echo $_GET['ht'];}?>' required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Mật Khẩu <sup class="text-danger" style="font-size: 15px">*</sup></label>
-                                            <input type="text" class="form-control" name="password" >
+                                            <input type="password" class="form-control" name="password" value='<?php if (isset($_GET['pass'])) {echo $_GET['pass'];}?>' required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Điện Thoại</label>
-                                            <input type="text" class="form-control" name="phone" >
+                                            <input type="text" class="form-control" name="phone" value='<?php if (isset($_GET['p'])) {echo $_GET['p'];}?>' required>
                                         </div>
                                     </div>
                                 </div>
@@ -92,14 +94,19 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Email <sup class="text-danger" style="font-size: 15px">*</sup></label>
-                                            <input type="text" class="form-control" name="email" >
+                                            <input type="email" class="form-control" name="email" value='<?php if (isset($_GET['e'])) {echo $_GET['e'];}?>' required>
                                             <p class="text-danger">
                                                 <?php
                                                 if (isset($_GET['r']))
                                                 {
                                                     if ($_GET['r'] == 0)
                                                     {
-                                                        echo 'Email này đã được sử dụng, vui lòng dùng email khác';
+                                                        //echo 'Email này đã được sử dụng, vui lòng dùng email khác';
+                                                        echo "<script type='text/javascript'>Swal.fire({";
+                                                        echo "icon: 'error',";
+                                                        echo "title: 'Email này đã được sử dụng!',";
+                                                        echo "text: 'vui lòng dùng email khác!',";
+                                                        echo "})</script>";
                                                     }
                                                 }
                                                 ?>
@@ -109,13 +116,14 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Giới Tính</label>
-                                            <input type="text" class="form-control" name="gender" >
+                                            <select name="gender" class="form-control" required>
+                                                <option value="">None</option>
+                                                <option value="True" <?php if(isset($_GET['g']) && $_GET['g']== "True") {?> selected="selected" <?php } ?>>Nam</option>
+                                                <option value="False" <?php if(isset($_GET['g']) && $_GET['g']== "False") {?> selected="selected" <?php } ?>>Nữ</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
-
-
-
 
                             </div>
                             <div class="box-footer">

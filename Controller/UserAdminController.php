@@ -15,7 +15,8 @@ class UserAdminController
         {
             $user = $_SESSION['userAdmin'];
             $avatarUser = $_SESSION['avatarUser'];
-            $data = $this ->useradminModel->GetAllRecords($user);
+            $role ='Admin';
+            $data = $this ->useradminModel->GetAllRecords($user,$role);
             require_once SYSTEM_PATH. "/View/Admin/User/index.php";
         }
         else
@@ -53,18 +54,18 @@ class UserAdminController
         {
             header('location:index.php?c=UserAdmin&a=Insert&r=3');
         }else{
-            $result = $this ->useradminModel->InsertRecord(new UserAdmin(null,$userName,$passwordMD5,$fullName,$gender,$phone,$email,$role));
+            $result = $this ->useradminModel->InsertRecordAdmin(new UserAdmin(null,$userName,$passwordMD5,$fullName,$gender,$phone,$email,$role));
             if ($result == true)
             {
                 header('location:index.php?c=UserAdmin&a=index&r=1&action=Insert');
             }
-            if ($result == null)
+            if ($result == "user")
             {
-                header('location:index.php?c=UserAdmin&a=Insert&r=2');
+                header('location:index.php?c=UserAdmin&a=Insert&r=2&n='.$userName.'&ht='.$fullName.'&p='.$phone.'&g='.$gender.'&pass='.$password.'&e='.$email);
             }
             if ($result == false)
             {
-                header('location:index.php?c=UserAdmin&a=Insert&r=0');
+                header('location:index.php?c=UserAdmin&a=Insert&r=0&n='.$userName.'&ht='.$fullName.'&p='.$phone.'&g='.$gender.'&pass='.$password.'&e='.$email);
             }
         }
     }
@@ -88,15 +89,13 @@ class UserAdminController
     function Save()
     {
         $id = $_POST['id'];
-        $userName = $_POST['userName'];
         $password = $_POST['password'];
         $passwordMD5 = md5($password);
         $fullName = $_POST['fullName'];
         $gender = $_POST['gender'];
         $phone = $_POST['phone'];
-        $email = $_POST['email'];
         $role = $_POST['role'];
-        $result = $this ->useradminModel->UpdateRecord(new UserAdmin($id,$userName,$passwordMD5,$fullName,$gender,$phone,$email,$role));
+        $result = $this ->useradminModel->UpdateRecord(new UserAdmin($id,null,$passwordMD5,$fullName,$gender,$phone,null,$role));
         if ($result == true)
         {
             header('location:index.php?c=UserAdmin&a=index&r=1&action=Update');
