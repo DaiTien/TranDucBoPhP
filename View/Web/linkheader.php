@@ -19,3 +19,4 @@
 <link href="asset/web/css/theme.css" rel="stylesheet">
 <link rel="stylesheet" href="asset/web/css/style.css">
 <link href="asset/web/css/responsive.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

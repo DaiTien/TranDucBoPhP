@@ -1,4 +1,13 @@
 <?php
+include  "PHPMailer-master/src/PHPMailer.php";
+include  "PHPMailer-master/src/Exception.php";
+include  "PHPMailer-master/src/OAuth.php";
+include  "PHPMailer-master/src/POP3.php";
+include  "PHPMailer-master/src/SMTP.php";
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 require_once SYSTEM_PATH."/Model/SlideModel.php";
 require_once SYSTEM_PATH. "/Model/LibraryImageModel.php";
 require_once SYSTEM_PATH."/Model/IntroduceModel.php";
@@ -10,6 +19,7 @@ require_once SYSTEM_PATH."/Model/SocialNetworkAdminModel.php";
 require_once SYSTEM_PATH."/Model/FeedBackAdminModel.php";
 require_once SYSTEM_PATH."/Model/CustomerModel.php";
 require_once SYSTEM_PATH."/Model/OrderModel.php";
+require_once SYSTEM_PATH."/Model/UserAdminModel.php";
 class indexwebsiteController
 {
     private $slideModel;
@@ -23,6 +33,7 @@ class indexwebsiteController
     private $feedBack;
     private $customerModel;
     private $orderModel;
+    private $userAdmin;
     public function __construct()
     {
         $this->slideModel = new SlideImageModel();
@@ -36,6 +47,7 @@ class indexwebsiteController
         $this->feedBack= new FeedBackAdminModel();
         $this->customerModel= new CustomerModel();
         $this->orderModel= new OrderModel();
+        $this->userAdmin = new UserAdminModel();
     }
 
     function index()
@@ -112,17 +124,68 @@ class indexwebsiteController
         }
 
     }
+    function forgotPassword()
+    {
+        $email = $_POST['email'];
+        $user = $_POST['userName'];
+        $role ='Member';
+        //Random mật khẩu
+        $randoom = rand(100000,999999);
+        $password = 'abc'.$randoom;
+        $passwordMD5 = md5($password);
+        //Kiểm tra UserName vs email nhập có tồn tại hay không
+        $result = $this->userAdmin->checkMember($user,$email,$role);
+        if ($result ==1)
+        {
+            $mail = new PHPMailer(true);
+            try {
+                //Server settings
+                $mail->SMTPDebug = 2;
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'tranducbo17a1.11@gmail.com';
+                $mail->Password = 'Abc123#!';
+                $mail->SMTPSecure = 'tls';
+                $mail->Port = 587;
+
+                $mail->CharSet = 'UTF-8';
+                $mail->setFrom('tranducbo17a1.11@gmail.com', 'Admin TRần Đức Bo');
+                $mail->addAddress($email);
+
+                $mail->isHTML(true);
+                $mail->Subject = 'Trần Đức Bo Xác nhận lấy lại mật khẩu';
+                $mail->Body    = 'Bạn đã yêu cầu mật khẩu mới, Mật khẩu mới của bạn là : '.$password;
+                $mail->AltBody = '';
+
+                $mail->send();
+                $this ->userAdmin ->resetPassword($passwordMD5,$email,$role);
+                header('location:index.php?c=indexwebsite&a=index&p=1');
+
+            }catch (Exception $e)
+            {
+                echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+            }
+        }else
+        {
+            header('location:index.php?c=indexwebsite&a=index&p=0');
+        }
+    }
     function Register()
     {
         $userName = $_POST['userName'];
+        $fullName = $_POST['fullName'];
+        $gender = $_POST['gender'];
         $password = $_POST['password'];
         $confirmPassword = $_POST['confirmPassword'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
+        $role = 'Member';
         if ($password == $confirmPassword)
         {
             $passwordMD5 = md5($password);
-            $result = $this->customerModel->InsertRecord(new Customer(null,$userName,$passwordMD5,$phone,$email));
+            //$result = $this->customerModel->InsertRecord(new Customer(null,$userName,$passwordMD5,$phone,$email));
+            $result = $this->userAdmin->InsertRecordWeb(new UserAdmin(null,$userName,$passwordMD5,$fullName,$gender,$phone,$email,$role));
             if ($result == true)
             {
                 header('location:index.php?c=indexwebsite&a=index&g=1&action=Register');
@@ -140,7 +203,8 @@ class indexwebsiteController
         session_start();
         $user = $_POST['user'];
         $pass = md5($_POST['password']);
-        $result = $this->customerModel->LoginRecord($user,$pass);
+        $role = 'Member';
+        $result = $this->userAdmin->LoginRecordWeb($user,$pass,$role);
         if ($result == 1)
         {
             header('location:index.php?c=indexwebsite&a=index&lg=1');

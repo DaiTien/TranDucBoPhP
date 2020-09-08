@@ -80,6 +80,46 @@ class UserAdminModel
                 return $result;
             }
         }
+    }
+    //Đăng nhập và đăng ký tài khoản trên website
+    function InsertRecordWeb(UserAdmin $user)
+    {
+        $checkMember = $this->mysqli->query("SELECT * FROM tdb_adminuser WHERE UserName = '$user->userName' and RoleUser = '$user->role'");
+        $resultCheck = mysqli_num_rows($checkMember);
+        if ($resultCheck > 0)
+        {
+            return false;
+        }else{
+            $checkEmail = $this ->mysqli->query("SELECT * FROM tdb_adminuser WHERE Email = '$user->email' and RoleUser = '$user->role'");
+            $resultCheckEmail = mysqli_num_rows($checkEmail);
+            if ($resultCheckEmail == 0)
+            {
+                $query = "insert into tdb_adminuser(username,password,fullname,gender,phone,email,roleuser) value ('$user->userName','$user->password','$user->fullName','$user->gender','$user->phone','$user->email','$user->role')";
+                $result = $this->mysqli->query($query);
+                return $result;
+            }else
+            {
+                return false;
+            }
 
+        }
+    }
+    function LoginRecordWeb($user,$pass,$role)
+    {
+        $query ="select * from tdb_adminuser where username = '$user' and roleuser ='$role' and password = '$pass'";
+        $login = $this->mysqli->query($query);
+        return mysqli_num_rows($login);
+    }
+    //Reset Password
+    function checkMember($user,$email,$role)
+    {
+        $check = $this->mysqli->query("select * from tdb_adminuser where username ='$user' and email = '$email' and roleuser ='$role'");
+        $result = mysqli_num_rows($check);
+        return $result;
+    }
+    //Cập nhật lại mật khẩu
+    function resetPassword($pass,$email,$role)
+    {
+        $result = $this->mysqli->query("update tdb_adminuser set password = '$pass' where email = '$email' and roleuser ='$role'");
     }
 }
