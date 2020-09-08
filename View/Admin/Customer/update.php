@@ -46,14 +46,20 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Tên Khách Hàng</label>
-                                                <input type="text"value="<?=$cus->userName?>"  class="form-control" name="userName"  placeholder="">
+                                                <label for="exampleInputPassword1">Tên đăng nhập</label>
+                                                <input type="text"value="<?=$cus->userName?>" readonly class="form-control" name="userName"  placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Mật Khẩu</label>
-                                                <input type="text"value="<?=$cus->password?>"  class="form-control" name="password"  placeholder="">
+                                                <input type="password"value="<?=$cus->password?>" readonly class="form-control" name="password"  placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Họ và tên </label>
+                                                <input type="text"value="<?=$cus->fullName?>"  class="form-control" name="fullName"  placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -65,7 +71,17 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Email </label>
-                                                <input type="text"value="<?=$cus->email?>"  class="form-control" name="email"  placeholder="">
+                                                <input type="text"value="<?=$cus->email?>" readonly class="form-control" name="email"  placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Giới Tính</label>
+                                                <select  name='gender' class="form-control">
+                                                    <option value="" selected="selected">Chọn quốc gia</option>
+                                                    <option value='1' <?php if($cus->gender == 1) {?> selected="selected" <?php } ?> >Nam</option>
+                                                    <option value='0' <?php if($cus->gender == 0) {?> selected="selected" <?php } ?> >Nữ</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -74,7 +90,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Thêm</button>
+                                    <button type="submit" class="btn btn-primary">Cập nhật</button>
                                     <input type="reset" class="btn btn-info" value="Refresh">
                                     <a href="?c=Customer&a=index" class="btn btn-danger">Đóng</a>
                                 </div>

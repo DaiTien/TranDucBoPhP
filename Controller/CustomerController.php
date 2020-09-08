@@ -1,11 +1,11 @@
 <?php
-require_once SYSTEM_PATH. "/Model/CustomerModel.php";
+require_once SYSTEM_PATH. "/Model/UserAdminModel.php";
 class CustomerController
 {
-    private $cusmoterModel;
+    private $userModel;
     public function __construct()
     {
-        $this->cusmoterModel = new CustomerModel();
+        $this->userModel = new UserAdminModel();
     }
 
     function index()
@@ -15,7 +15,8 @@ class CustomerController
         {
             $user = $_SESSION['userAdmin'];
             $avatarUser = $_SESSION['avatarUser'];
-            $data = $this->cusmoterModel->GetAllRecords();
+            $role = 'Member';
+            $data = $this->userModel->GetAllRecords(null,$role);
             require_once SYSTEM_PATH. "/View/Admin/Customer/index.php";
         }
         else
@@ -39,16 +40,19 @@ class CustomerController
 
     }
     function Save(){
-            $id = $_POST['id'];
             $userName = $_POST['userName'];
-            $password = md5($_POST['password']);
+            $fullName = $_POST['fullName'];
+            $password = $_POST['password'];
+            $passwordMD5 = md5($password);
             $phone = $_POST['phone'];
             $email = $_POST['email'];
-            $result = $this->cusmoterModel->insert( new Customer($id, $userName, $password, $phone, $email));
+            $gender = $_POST['gender'];
+            $role = 'Member';
+            $result = $this->userModel->InsertRecordWeb( new UserAdmin(null,$userName,$passwordMD5,$fullName,$gender,$phone,$email,$role));
             if($result == true){
                 header('location:index.php?c=Customer&a=index&r=1&action=Insert');
             }else{
-                header('location:index.php?c=Customer&a=index&r=0&action=Insert');
+                header('location:index.php?c=Customer&a=insert&r=0&u='.$userName.'&pass='.$password.'&full='.$fullName.'&phone='.$phone.'&email='.$email.'&gender='.$gender);
             }
 
     }
@@ -60,7 +64,7 @@ class CustomerController
             $user = $_SESSION['userAdmin'];
             $avatarUser = $_SESSION['avatarUser'];
             $id = $_GET['id'];
-            $cus = $this->cusmoterModel->GetRecordById($id);
+            $cus = $this->userModel->GetRecordsById($id);
             require_once SYSTEM_PATH. '/View/Admin/Customer/update.php';
         }
         else
@@ -68,22 +72,21 @@ class CustomerController
             require_once  SYSTEM_PATH. "/View/Admin/login.php";
         }
     }
-    function  LuuSua(){
+    function LuuSua(){
         $id = $_POST['id'];
-        $userName = $_POST['userName'];
-        $password = md5($_POST['password']);
         $phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $result = $this->cusmoterModel->Update( new Customer($id, $userName, $password, $phone, $email));
+        $fullName = $_POST['fullName'];
+        $gender = $_POST['gender'];
+        $result = $this->userModel->UpdateRecord(new UserAdmin($id,null,null,$fullName,$gender,$phone,null,null));
         if($result == true){
-            header('location:index.php?c=Customer&a=index&r=1&action=Insert');
+            header('location:index.php?c=Customer&a=index&r=1&action=Update');
         }else{
-            header('location:index.php?c=Customer&a=index&r=0&action=Insert');
+            header('location:index.php?c=Customer&a=index&r=0&action=Update');
         }
     }
     function delete(){
         $id = $_GET['id'];
-        $cus = $this->cusmoterModel->delete($id);
+        $cus = $this->userModel->DeleteRecord($id);
         if($cus == true){
             header('location:index.php?c=Customer&a=index&r=1&action=Delete');
         }else{

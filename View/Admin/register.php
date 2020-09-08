@@ -39,23 +39,16 @@
 
         <form action="?c=indexadmin&a=signUp" method="post" id="quickForm">
             <div class="form-group input-group has-feedback">
-                <input type="text" class="form-control" autocomplete="off" name="username" placeholder="User Name">
+                <input type="text" class="form-control" autocomplete="off" name="username" placeholder="Tên đăng nhập">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
             </div>
+
             <div class="form-group input-group has-feedback">
-                <input type="email" name="email" autocomplete="off" class="form-control" placeholder="Enter email">
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <i class="fas fa-at"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group input-group has-feedback">
-                <input type="password" name="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" class="form-control" placeholder="Mật khẩu">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <i class="fas fa-key"></i>
@@ -63,10 +56,46 @@
                 </div>
             </div>
             <div class="form-group input-group has-feedback">
-                <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password">
+                <input type="password" name="confirm_password" class="form-control" placeholder="Xác nhận mật khẩu">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <i class="fas fa-unlock-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group input-group has-feedback">
+                <input type="email" name="email" autocomplete="off" class="form-control" placeholder="Email">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <i class="fas fa-at"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group input-group has-feedback">
+                <input type="text" name="fullName" autocomplete="off" class="form-control" placeholder="Họ và tên">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group input-group has-feedback">
+                <input type="text" name="phone" autocomplete="off" class="form-control" placeholder="Số điện thoại">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group input-group has-feedback">
+                <select name="gender" class="form-control" required>
+                    <option>Giới tính</option>
+                    <option value="1">Nam</option>
+                    <option value="0">Nữ</option>
+                </select>
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <i class="fas fa-venus-mars"></i>
                     </div>
                 </div>
             </div>
@@ -107,6 +136,21 @@
                     required: true,
                     minlength: 3
                 },
+                username: {
+                    required: true
+                },
+                confirm_password: {
+                    required: true
+                },
+                fullName: {
+                    required: true
+                },
+                phone: {
+                    required: true
+                },
+                gender: {
+                    required: true
+                },
                 terms: {
                     required: true
                 },
@@ -119,6 +163,21 @@
                 password: {
                     required: "Vui lòng nhập mật khẩu",
                     minlength: "Mật khẩu có tối thiểu 3 ký tự"
+                },
+                username: {
+                    required: "Vui lòng không để trống",
+                },
+                confirm_password: {
+                    required: "Vui lòng không để trống",
+                },
+                fullName: {
+                    required: "Vui lòng không để trống",
+                },
+                phone: {
+                    required: "Vui lòng không để trống",
+                },
+                gender: {
+                    required: "Vui lòng không để trống",
                 },
                 terms: "Please accept our terms"
             },

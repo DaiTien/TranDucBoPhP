@@ -28,6 +28,21 @@
         <section class="content">
             <div class="row">
                 <div class="col-md-12" >
+                    <p>
+                        <?php
+                        if (isset($_GET['r']))
+                        {
+                            if ($_GET['r'] == 0)
+                            {
+                                echo "<script type='text/javascript'>Swal.fire({";
+                                echo "icon: 'error',";
+                                echo "title: 'Tên đăng nhập hoặc Email đã được sử dụng!',";
+                                echo "text: 'vui lòng kiểm tra lại!',";
+                                echo "})</script>";
+                            }
+                        }
+                        ?>
+                    </p>
                     <form method="post" action="index.php?c=Customer&a=Save" >
                         <!-- general form elements -->
                         <div class="card mt-2 card-info">
@@ -38,7 +53,6 @@
                             <!-- form start -->
                             <form role="form">
                                 <div class="card-body">
-
                                     <div hidden class="form-group">
                                         <label for="exampleInputEmail1">Id</label>
                                         <input type="text"  class="form-control" name="id" readonly  placeholder="">
@@ -46,26 +60,42 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Tên Khách Hàng</label>
-                                                <input type="text"  class="form-control" name="userName" placeholder="Nhập user">
+                                                <label for="exampleInputPassword1">Tên đăng nhập</label>
+                                                <input type="text" class="form-control" name="userName" placeholder="Nhập user" required value="<?php if (isset($_GET['u']) && $_GET['u'] != null ){echo $_GET['u'];}?>"/>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Mật Khẩu </label>
-                                                <input type="text"  class="form-control"  name="password" placeholder="******">
+                                                <input type="password" class="form-control" name="password" placeholder="******" required value="<?php if (isset($_GET['pass']) && $_GET['pass'] != null ){echo $_GET['pass'];}?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Họ và tên: </label>
+                                                <input type="text"  class="form-control" name="fullName" placeholder="Nguyễn Văn A" required value="<?php if (isset($_GET['full']) && $_GET['full'] != null ){echo $_GET['full'];}?>">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Số Điện Thoại </label>
-                                                <input type="text"  class="form-control" name="phone" placeholder="036xxx">
+                                                <input type="text" class="form-control" name="phone" placeholder="036xxx" required value="<?php if (isset($_GET['phone']) && $_GET['phone'] != null ){echo $_GET['phone'];}?>">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Email </label>
-                                                <input type="text"  class="form-control" name="email" placeholder="xxxx@gmail.com">
+                                                <input type="email" class="form-control" name="email" placeholder="xxxx@gmail.com" required value="<?php if (isset($_GET['email']) && $_GET['email'] != null ){echo $_GET['email'];}?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Giới Tính</label>
+                                                <select name="gender" class="form-control" required>
+                                                    <option value="">None</option>
+                                                    <option value="1" <?php if(isset($_GET['gender']) && $_GET['gender']== 1) {?> selected="selected" <?php } ?>>Nam</option>
+                                                    <option value="0" <?php if(isset($_GET['gender']) && $_GET['gender']== 0) {?> selected="selected" <?php } ?>>Nữ</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>

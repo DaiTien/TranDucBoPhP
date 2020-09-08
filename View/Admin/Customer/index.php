@@ -39,8 +39,8 @@
                                 <thead style="text-align: left">
                                 <tr id="tbheader">
                                     <th>STT</th>
-                                    <!-- <th>ID</th> -->
-                                    <th>Tên Khách Hàng</th>
+                                     <th>Tên đăng nhập</th>
+                                    <th>Tên khách hàng</th>
                                     <!-- <th>Mật Khẩu</th> -->
                                     <th>Số Điện Thoại</th>
                                     <th>Email</th>
@@ -54,11 +54,22 @@
                                     ?>
                                     <tr>
                                         <td><?=$stt++?></td>
-                                        <!-- <td><?=$value->id?></td> -->
                                         <td><?=$value->userName?></td>
+                                        <td><?=$value->fullName?></td>
                                         <!-- <td><?=$value->password?></td> -->
                                         <td><?=$value->phone?></td>
                                         <td><?=$value->email?></td>
+                                        <td>
+                                            <?php
+                                            if ($value->gender ==1)
+                                            {
+                                                echo 'Nam';
+                                            }else
+                                            {
+                                                echo 'Nữ';
+                                            }
+                                            ?>
+                                        </td>
                                         <td class="text-center">
                                             <a class="btn btn-danger glyphicon glyphicon-trash btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?=$value->id?>"><i class="fas fa-trash-alt"></i></a>
                                             <a href="?c=Customer&a=Delete&id=<?=$value->id?>" id="a<?=$value->id?>" hidden></a>

@@ -17,7 +17,6 @@ require_once SYSTEM_PATH."/Model/ProductModel.php";
 require_once SYSTEM_PATH."/Model/ContactModel.php";
 require_once SYSTEM_PATH."/Model/SocialNetworkAdminModel.php";
 require_once SYSTEM_PATH."/Model/FeedBackAdminModel.php";
-require_once SYSTEM_PATH."/Model/CustomerModel.php";
 require_once SYSTEM_PATH."/Model/OrderModel.php";
 require_once SYSTEM_PATH."/Model/UserAdminModel.php";
 class indexwebsiteController
@@ -31,7 +30,6 @@ class indexwebsiteController
     private $contactModel;
     private $mXh;
     private $feedBack;
-    private $customerModel;
     private $orderModel;
     private $userAdmin;
     public function __construct()
@@ -45,7 +43,6 @@ class indexwebsiteController
         $this->contactModel = new ContactModel();
         $this->mXh = new SocialNetworkAdminModel();
         $this->feedBack= new FeedBackAdminModel();
-        $this->customerModel= new CustomerModel();
         $this->orderModel= new OrderModel();
         $this->userAdmin = new UserAdminModel();
     }

@@ -118,8 +118,8 @@
                                             <label for="exampleInputPassword1">Giới Tính</label>
                                             <select name="gender" class="form-control" required>
                                                 <option value="">None</option>
-                                                <option value="True" <?php if(isset($_GET['g']) && $_GET['g']== "True") {?> selected="selected" <?php } ?>>Nam</option>
-                                                <option value="False" <?php if(isset($_GET['g']) && $_GET['g']== "False") {?> selected="selected" <?php } ?>>Nữ</option>
+                                                <option value="1" <?php if(isset($_GET['g']) && $_GET['g']== 1) {?> selected="selected" <?php } ?>>Nam</option>
+                                                <option value="0" <?php if(isset($_GET['g']) && $_GET['g']== 0) {?> selected="selected" <?php } ?>>Nữ</option>
                                             </select>
                                         </div>
                                     </div>
