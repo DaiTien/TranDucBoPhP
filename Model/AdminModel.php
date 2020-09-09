@@ -45,7 +45,7 @@ class AdminModel
             {
                 return false;
             }else{
-                $result = $this ->mysqli->query("Insert into tdb_adminuser(UserName,Password,Email,Role) value ('$admin->userName','$admin->passWord','$admin->email','$admin->role')");
+                $result = $this ->mysqli->query("Insert into tdb_adminuser(UserName,Password,FullName,Gender,Phone,Email,RoleUser,Avatar) value ('$admin->userName','$admin->passWord', '$admin->fullName','$admin->genDer','$admin->phone','$admin->email','$admin->role', '$admin->avatar')");
                 return $result;
             }
         }

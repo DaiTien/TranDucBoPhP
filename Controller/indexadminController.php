@@ -38,6 +38,10 @@ class indexadminController
         $role = 'Admin';
         $confirm_password = $_POST['confirm_password'];
         $email = $_POST['email'];
+        $fullName = $_POST['fullName'];
+        $phone = $_POST['phone'];
+        $gender = $_POST['gender'];
+        $avatar = 'UpLoadFile/Avatars/Logo2_p001.png';
         if($userName == null || $password == null  || $confirm_password ==null || $email==null)
         {
             header('location:index.php?c=indexadmin&a=register&r=3&action=Create');
@@ -45,17 +49,17 @@ class indexadminController
         else
         if ($password == $confirm_password)
         {
-            $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$passwordMD5,null,null,null,$email,$role,null));
+            $result = $this ->adminModel->registerRecord(new Admin(null,$userName,$passwordMD5,$fullName,$gender,$phone,$email,$role,$avatar));
             if ($result == true)
             {
                 header('location:index.php?c=indexadmin&a=register&r=1&action=Create');
             }else
             {
-                header('location:index.php?c=indexadmin&a=register&r=0&action=Create');
+                header('location:index.php?c=indexadmin&a=register&r=0&user='.$userName.'&email='.$email.'&fullName='.$fullName.'&phone='.$phone.'&gender='.$gender);
             }
         }else
         {
-            header('location:index.php?c=indexadmin&a=register&r=2&action=Create');
+            header('location:index.php?c=indexadmin&a=register&r=2&user='.$userName.'&email='.$email.'&fullName='.$fullName.'&phone='.$phone.'&gender='.$gender);
         }
 
     }

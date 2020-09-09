@@ -26,12 +26,22 @@
                 {
                     echo $_GET['action'] . ' Account Thành Công <a href="?c=indexadmin&a=index">Login</a>' ;
                 }else if($_GET['r'] == 2){
-                    echo 'Confirm Password Không Đúng, vui lòng đăng ký lại';
+                    //echo 'Confirm Password Không Đúng, vui lòng đăng ký lại';
+                    echo "<script type='text/javascript'>Swal.fire({";
+                    echo "icon: 'error',";
+                    echo "title: 'Xác nhận mật khẩu không khớp!',";
+                    echo "text: 'Vui lòng kiểm tra lại!',";
+                    echo "})</script>";
                 } else if ($_GET['r'] == 3){
                     echo 'Vui lòng điền đầy đủ thông tin, không để trống';
                 }else
                 {
-                    echo 'UserName hoặc Email đã tồn tại, vui lòng đăng ký lại';
+                    //echo 'UserName hoặc Email đã tồn tại, vui lòng đăng ký lại';
+                    echo "<script type='text/javascript'>Swal.fire({";
+                    echo "icon: 'error',";
+                    echo "title: 'Tên đăng nhập hoặc Email đã tồn tại!!',";
+                    echo "text: 'Vui lòng đăng ký lại!',";
+                    echo "})</script>";
                 }
             }
             ?>
@@ -39,7 +49,7 @@
 
         <form action="?c=indexadmin&a=signUp" method="post" id="quickForm">
             <div class="form-group input-group has-feedback">
-                <input type="text" class="form-control" autocomplete="off" name="username" placeholder="Tên đăng nhập">
+                <input type="text" class="form-control" autocomplete="off" name="username" placeholder="Tên đăng nhập" value="<?php if (isset($_GET['user']) && $_GET['user'] != null){echo $_GET['user'];}?>">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <i class="fas fa-user"></i>
@@ -64,7 +74,7 @@
                 </div>
             </div>
             <div class="form-group input-group has-feedback">
-                <input type="email" name="email" autocomplete="off" class="form-control" placeholder="Email">
+                <input type="email" name="email" autocomplete="off" class="form-control" placeholder="Email" value="<?php if (isset($_GET['email']) && $_GET['email'] != null){echo $_GET['email'];}?>">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <i class="fas fa-at"></i>
@@ -72,7 +82,7 @@
                 </div>
             </div>
             <div class="form-group input-group has-feedback">
-                <input type="text" name="fullName" autocomplete="off" class="form-control" placeholder="Họ và tên">
+                <input type="text" name="fullName" autocomplete="off" class="form-control" placeholder="Họ và tên" value="<?php if (isset($_GET['fullName']) && $_GET['fullName'] != null){echo $_GET['fullName'];}?>">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <i class="fas fa-file-signature"></i>
@@ -80,7 +90,7 @@
                 </div>
             </div>
             <div class="form-group input-group has-feedback">
-                <input type="text" name="phone" autocomplete="off" class="form-control" placeholder="Số điện thoại">
+                <input type="text" name="phone" autocomplete="off" class="form-control" placeholder="Số điện thoại" value="<?php if (isset($_GET['phone']) && $_GET['phone'] != null){echo $_GET['phone'];}?>">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <i class="fas fa-phone"></i>
@@ -88,10 +98,10 @@
                 </div>
             </div>
             <div class="form-group input-group has-feedback">
-                <select name="gender" class="form-control" required>
-                    <option>Giới tính</option>
-                    <option value="1">Nam</option>
-                    <option value="0">Nữ</option>
+                <select name="gender" class="form-control required">
+                    <option value="">Giới tính</option>
+                    <option value="1" <?php if (isset($_GET['gender']) && $_GET['gender'] == 1){?> selected="selected" <?php } ?>>Nam</option>
+                    <option value="0" <?php if (isset($_GET['gender']) && $_GET['gender'] == 0){?> selected="selected" <?php } ?>>Nữ</option>
                 </select>
                 <div class="input-group-append">
                     <div class="input-group-text">

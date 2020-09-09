@@ -71,7 +71,7 @@
                                         <b>Following</b> <a class="float-right">543</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <b>Gender</b> <a class="float-right"><?php echo $data->genDer?></a>
+                                        <b>Gender</b> <a class="float-right"><?php if ($data->genDer ==1){ echo 'Nam';}else{echo 'Nữ';}?></a>
                                     </li>
                                 </ul>
                             </div>
@@ -124,7 +124,7 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Email</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="email" value="<?=$data->email?>" placeholder="Email">
+                                                    <input type="text" class="form-control" readonly name="email" value="<?=$data->email?>" placeholder="Email">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
