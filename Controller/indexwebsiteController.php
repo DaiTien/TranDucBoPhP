@@ -302,7 +302,7 @@ class indexwebsiteController
             $contact = $this ->contactModel->GetAllRecords();
             $mxh = $this->mXh->GetByID(1);
             //Lấy thông tin của người order
-            $profile = $this->customerModel->GetProfileByUser($user);
+            $profile = $this->userAdmin->GetProfileByUser($user);
             require_once SYSTEM_PATH."/View/Web/orther.php";
         }else{
             $contact = $this ->contactModel->GetAllRecords();

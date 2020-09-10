@@ -203,40 +203,16 @@
         function myFunction(x) {
             //alert(x.id);
             //document.getElementById('a'+x.id).click();
-            <?php
-            if (isset($_SESSION['login']) && $_SESSION['login'] == 1)
-            {
-                echo 'x.classList.toggle("icon__dislike");';
-            }else
-            {
-                echo 'swal("Bạn Chưa Đăng nhập", "Vui lòng đăng nhập!", "warning");';
-            }
-            ?>
+            x.classList.toggle("icon__dislike");
         }
         function functionAlert(x) {
-            <?php
-            if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
-            ?>
             document.getElementById('cart'+x.id).click();
-            <?php
-                echo 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
-            } else {
-                echo 'swal("Bạn Chưa Đăng nhập", "Vui lòng đăng nhập!", "warning");';
-            }
-            ?>
+            swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");
         }
         function functionOrder(x) {
-            <?php
-            if (isset($_SESSION['login']) && $_SESSION['login'] == 1) {
-            ?>
             document.getElementById('a'+x.id).click();
-            <?php
-                echo 'swal("Bạn Đã Thêm Vào Giỏ Hàng", "Hãy kiểm tra giỏ hàng của bạn!", "success");';
-            } else {
-                echo 'swal("Bạn Chưa Đăng nhập", "Vui lòng đăng nhập!", "warning");';
-            }
-            ?>
         }
+
     </script>
 
 </body>

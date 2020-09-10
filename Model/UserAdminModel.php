@@ -49,6 +49,17 @@ class UserAdminModel
         }
         return null;
     }
+    function GetProfileByUser($user)
+    {
+        $getProfile = $this->mysqli->query("select * from tdb_adminuser where username = '$user'");
+        $data = $getProfile ->fetch_all();
+        if (count($data))
+        {
+            return new UserAdmin($data[0][0],$data[0][1],$data[0][2],$data[0][3],$data[0][4],$data[0][5],$data[0][6],$data[0][8]);
+        }
+        return null;
+
+    }
     function UpdateRecord(UserAdmin $user)
     {
             $query ="Update tdb_adminuser set id=$user->id,fullname='$user->fullName',gender='$user->gender',phone='$user->phone' where id =$user->id";

@@ -146,13 +146,13 @@
                                                     <h5>Số điện thoại</h5>
                                                 </div>
                                                 <div hidden class="col-md-6 col-sm-12 col-xs-12">
-                                                    <input type="text"  name="cusId" value="<?=$profile->id?>" placeholder="Tên Người Nhận" required>
+                                                    <input type="text" name="cusId" value="<?php if (isset($_SESSION['login']) && $_SESSION['login'] == 1) { echo $profile->id; }?>" placeholder="Tên Người Nhận" required>
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <input type="text" name="userName" value="<?=$profile->userName?>" placeholder="Tên Người Nhận" required>
+                                                    <input type="text" name="userName" value="<?php if (isset($_SESSION['login']) && $_SESSION['login'] == 1) { echo $profile->userName; }?>" placeholder="Tên Người Nhận" required>
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <input type="text" name="phone" value="<?=$profile->phone?>" placeholder="Số Điện Thoại" required>
+                                                    <input type="text" name="phone" value="<?php if (isset($_SESSION['login']) && $_SESSION['login'] == 1) { echo $profile->phone; }?>" placeholder="Số Điện Thoại" required>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <h5>Địa Chỉ Giao Hàng</h5>
@@ -208,7 +208,7 @@
                                             </h5>
                                         </div>
                                         <div class="proceed-check">
-                                            <input type="submit" value="Đặt hàng" class="btn-primary-gold btn-medium"/>
+                                            <input id="btnDathang" type="submit" value="Đặt hàng" onclick="checkLogin()" class="btn-primary-gold btn-medium"/>
                                         </div>
                                     </div>
                                 </div>
@@ -236,6 +236,23 @@
     <?php
     include 'linkfooter.php';
     ?>
+<script>
+    function checkLogin()
+    {
+        <?php
+        if (isset($_SESSION['login']) && $_SESSION['login'] == 1)
+        {
+        ?>
+        document.getElementById('btnDathang').click();
+        <?php
+        }
+        else{
+            echo 'swal("Vui lòng đăng nhập", "Để đặt hàng!", "warning");';
+        }
+        ?>
+
+    }
+</script>
 </body>
 
 </html>
