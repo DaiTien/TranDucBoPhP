@@ -121,6 +121,7 @@ include 'asset/Scripts/ScriptFooter.php';
 ?>
 <script>
     $('#qlthanhvien').addClass('active');
+    $('#userAdmin').addClass('active');
 </script>
 </body>
 </html>

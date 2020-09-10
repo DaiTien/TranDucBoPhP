@@ -80,9 +80,7 @@
                         <li class="nav-item">
                             <a class="nav-link" id="thongtin" href="?c=Contact&a=index"><i class="far fa-circle nav-icon"></i> Thông tin</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="customer" href="?c=Customer&a=index"><i class="far fa-circle nav-icon"></i> Tài khoản khách hàng</a>
-                        </li>
+
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">
@@ -139,13 +137,31 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a id="qlthanhvien" href="?c=UserAdmin&a=index" class="nav-link">
+<!--                <li class="nav-item">-->
+<!--                    <a id="qlthanhvien" href="?c=UserAdmin&a=index" class="nav-link">-->
+<!--                        <i class="nav-icon fa fa-users"></i>-->
+<!--                        <p>-->
+<!--                            Quản Lý Người Dùng-->
+<!--                        </p>-->
+<!--                    </a>-->
+<!--                </li>-->
+                <li class="nav-item has-treeview">
+                    <a id="qlthanhvien" href="#" class="nav-link">
                         <i class="nav-icon fa fa-users"></i>
                         <p>
                             Quản Lý Người Dùng
+                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a class="nav-link" id="userAdmin" href="?c=UserAdmin&a=index"><i class="far fa-circle nav-icon"></i> Tài khoản quản trị</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="customer" href="?c=Customer&a=index"><i class="far fa-circle nav-icon"></i> Tài khoản khách hàng</a>
+                        </li>
+
+                    </ul>
                 </li>
             </ul>
         </nav>

@@ -44,6 +44,7 @@
                                     <!-- <th>Mật Khẩu</th> -->
                                     <th>Số Điện Thoại</th>
                                     <th>Email</th>
+                                    <th>Giới tính</th>
                                     <th>Hành động</th>
                                 </tr>
                                 </thead>
@@ -102,7 +103,7 @@
 include "asset/Scripts/ScriptFooter.php";
 ?>
 <script>
-    $('#qlwebsite').addClass('active');
+    $('#qlthanhvien').addClass('active');
     $('#customer').addClass('active');
 
 </script>

@@ -85,7 +85,7 @@
                                         <!-- <th>ID</th> -->
                                         <th>Tiêu đề</th>
                                         <!-- <th>Tóm lược</th>-->
-                                        <th>Nội dung</th>
+                                        <!--<th>Nội dung</th>-->
                                         <th>Hình ảnh</th>
                                         <th>Tình trạng</th>
                                         <th>Hành động</th>
@@ -100,11 +100,11 @@
                                             <td class="text-center"><input type="checkbox" name='array[]' value="<?=$value->id?>"></td>
                                             <td class="text-center"><?=$stt++?></td>
                                             <!-- <td><?=$value->id?></td> -->
-                                            <td class="text-center"><?=$value->title?></td>
+                                            <td ><?=$value->title?></td>
                                             <!-- <td><?=$value->summary?></td>-->
-                                            <td>
+                                            <!--<td>
                                                 <textarea class="textarea form-control" cols="155" rows="5" ><?=$value->content?></textarea>
-                                            </td>
+                                            </td>-->
                                             <td class="text-center">
                                                 <img class="imagee" src="<?=$value->image?>">
                                             </td>
