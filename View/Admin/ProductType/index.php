@@ -42,6 +42,11 @@
                                     echo $_GET['action'] .' Thành Công';
                                 }else{
                                     echo $_GET['action'] .' Không Thành Công';
+                                    echo "<script type='text/javascript'>Swal.fire({";
+                                    echo "icon: 'warning',";
+                                    echo "title: 'Loại sản phẩm đang có tồn tại sản phẩm!!',";
+                                    echo "text: 'Vui lòng kiểm tra lại!',";
+                                    echo "})</script>";
                                 }
                             }
                             ?>

@@ -72,7 +72,7 @@
                                     <tr id="tbheader">
                                         <th></th>
                                         <th>STT</th>
-                                        <th>Mã loại</th>
+                                        <th>Loại sản phẩm</th>
                                         <th>Tên sản phẩm</th>
                                         <th>Hình ảnh</th>
                                         <th>Giới thiệu</th>
@@ -90,7 +90,18 @@
                                             <td class="text-center"><input type="checkbox" name='array[]' value="<?=$value->id?>"></td>
                                             <td class="text-center"><?=$stt++?></td>
 
-                                            <td class="text-center"><?=$value->type?></td>
+                                            <td class="text-center">
+                                                <!--<?=$value->type?>-->
+                                                <?php
+                                                $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                                                $getName = $mysqli->query("select Name from tdb_producttype where id = $value->type");
+                                                $data = $getName->fetch_all();
+                                                if (count($data))
+                                                {
+                                                    echo $data[0][0];
+                                                }
+                                                ?>
+                                            </td>
                                             <td class="text-center"><?=$value->name?></td>
                                             <td class="text-center">
                                                 <img class="imagee" style="width: 105px" height="100px" src="<?=$value->image?>">
