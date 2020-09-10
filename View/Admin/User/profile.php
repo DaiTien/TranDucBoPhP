@@ -66,7 +66,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Điện Thoại</label>
-                                            <input type="text" class="form-control" name="phone" value="<?=$data->phone?>">
+                                            <input type="text" class="form-control" name="phone" id="edit1" size="0" maxlength="11" value="<?=$data->phone?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

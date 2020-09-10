@@ -47,7 +47,7 @@
                         <!-- general form elements -->
                         <div class="card mt-2 card-info">
                             <div class="card-header">
-                                <h3 class="card-title font-weight-bold">Tài Khoảng khách hàng</h3>
+                                <h3 class="card-title font-weight-bold">Tài Khoản khách hàng</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
@@ -79,7 +79,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Số Điện Thoại </label>
-                                                <input type="text" class="form-control" name="phone" placeholder="036xxx" required value="<?php if (isset($_GET['phone']) && $_GET['phone'] != null ){echo $_GET['phone'];}?>">
+                                                <input type="text" class="form-control" name="phone" placeholder="036xxx" required id="edit1" size="0" maxlength="10" value="<?php if (isset($_GET['phone']) && $_GET['phone'] != null ){echo $_GET['phone'];}?>">
                                             </div>
                                         </div>
                                         <div class="col-md-6">

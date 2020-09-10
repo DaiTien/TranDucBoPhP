@@ -10,7 +10,7 @@
     <style>
         .imageShow{
             width: 150px;
-            height=100px;
+            height:100px;
         }
     </style>
 </head>
@@ -81,7 +81,7 @@
                             <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Giá </label>
-                                <input type="text"  class="form-control" name="price" placeholder="Nhập giá cho size lớn">
+                                <input type="text"  class="form-control" name="price" placeholder="Nhập giá " id="edit1" size="0" maxlength="11">
                             </div>
                             </div>
                                 <div class="col-md-6">

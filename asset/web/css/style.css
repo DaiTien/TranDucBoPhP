@@ -210,3 +210,7 @@
         width: 100%;
         min-height: 520px;
     }
+    
+    a#btnLogout.btn:hover {
+        color: #fff;
+    }

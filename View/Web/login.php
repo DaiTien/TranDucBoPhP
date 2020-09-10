@@ -144,7 +144,7 @@
                                 <input type="email" name="email" placeholder="Email" class="input-fields" required>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <input type="text" name="phone" placeholder="Số điện thoại" class="input-fields" required>
+                                <input type="text" name="phone" placeholder="Số điện thoại" class="input-fields" id="edit" size="0" maxlength="10" required>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <input type="password" name="password" placeholder="Mật Khẩu" class="input-fields" required>

@@ -83,7 +83,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Giá </label>
-                                            <input type="text" value="<?=$tdb_product->price?>"  class="form-control" name="price" placeholder="Gía">
+                                            <input type="text" value="<?=$tdb_product->price?>"  class="form-control" name="price" placeholder="Giá" id="edit1" size="0" maxlength="11">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

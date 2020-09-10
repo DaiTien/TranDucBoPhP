@@ -32,7 +32,7 @@
                         <!-- general form elements -->
                         <div class="card mt-2 card-info">
                             <div class="card-header">
-                                <h3 class="card-title font-weight-bold">Tài Khoảng khách hàng</h3>
+                                <h3 class="card-title font-weight-bold">Tài Khoản khách hàng</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
@@ -65,13 +65,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Số Điện Thoại </label>
-                                                <input type="text"value="<?=$cus->phone?>"  class="form-control" name="phone"  placeholder="">
+                                                <input type="text"value="<?=$cus->phone?>"  class="form-control" name="phone"  placeholder="036xxx" id="edit1" size="0" maxlength="10">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Email </label>
-                                                <input type="text"value="<?=$cus->email?>" readonly class="form-control" name="email"  placeholder="">
+                                                <input type="email"value="<?=$cus->email?>" readonly class="form-control" name="email"  placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">

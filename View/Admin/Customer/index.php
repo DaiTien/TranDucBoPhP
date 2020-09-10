@@ -30,7 +30,7 @@
                 <div class="col-xs-12" style="width: 100%;">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title text-primary " style="font-size: 30px"><b>Tài khoảng khách hàng</b></h3>
+                            <h3 class="card-title text-primary " style="font-size: 30px"><b>Tài khoản khách hàng</b></h3>
                         </div>
                         <a class="col-1 ml-3 btn btn-primary btn-sm" href="?c=Customer&a=insert" style="margin-top: 15px"><i class="fas fa-plus"></i> Thêm</a>
                         <!-- /.box-header -->

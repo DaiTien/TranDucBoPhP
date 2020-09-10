@@ -85,7 +85,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Điện Thoại</label>
-                                            <input type="text" class="form-control" name="phone" value='<?php if (isset($_GET['p'])) {echo $_GET['p'];}?>' required>
+                                            <input type="text" class="form-control" name="phone" value='<?php if (isset($_GET['p'])) {echo $_GET['p'];}?>' id="edit1" size="0" maxlength="10" required>
                                         </div>
                                     </div>
                                 </div>

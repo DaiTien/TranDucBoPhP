@@ -152,7 +152,7 @@
                                                     <input type="text" name="userName" value="<?php if (isset($_SESSION['login']) && $_SESSION['login'] == 1) { echo $profile->userName; }?>" placeholder="Tên Người Nhận" required>
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <input type="text" name="phone" value="<?php if (isset($_SESSION['login']) && $_SESSION['login'] == 1) { echo $profile->phone; }?>" placeholder="Số Điện Thoại" required>
+                                                    <input type="text" name="phone" value="<?php if (isset($_SESSION['login']) && $_SESSION['login'] == 1) { echo $profile->phone; }?>" placeholder="Số Điện Thoại" id="edit1" size="0" maxlength="10" readonly required>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <h5>Địa Chỉ Giao Hàng</h5>

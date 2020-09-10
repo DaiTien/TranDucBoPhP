@@ -47,13 +47,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Email</label>
-                                                <input type="text"  class="form-control" name="email" placeholder="Nhập email">
+                                                <input type="email"  class="form-control" name="email" placeholder="Nhập email">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Số Điện Thoại </label>
-                                                <input type="text"  class="form-control" autocomplete="off" name="phone" placeholder="03xx">
+                                                <input type="text"  class="form-control" autocomplete="off" name="phone" placeholder="03xx" id="edit1" size="0" maxlength="10">
                                             </div>
                                         </div>
                                         <div class="col-md-6">

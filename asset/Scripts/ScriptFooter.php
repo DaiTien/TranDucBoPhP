@@ -38,7 +38,7 @@
 <script src="asset/admin/AdminLTE/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- page script -->
 <script>
-    $(function () {
+    $(function() {
         $("#example1").DataTable({
             "responsive": true,
             "autoWidth": false,
@@ -53,6 +53,7 @@
             "responsive": true,
         });
     });
+
     function fucAlert(id) {
         Swal.fire({
             title: 'Bạn muốn xóa?',
@@ -71,11 +72,24 @@
                     title: 'Bạn đã chọn xóa!',
                     showConfirmButton: false,
                     timer: 1500
-                }).then(function () {
-                    document.getElementById('a'+id).click();
+                }).then(function() {
+                    document.getElementById('a' + id).click();
                 });
             }
         });
     }
+    $(document).ready(function() {
+        $('[id^=edit]').keypress(validateNumber);
+    });
 
+    function validateNumber(event) {
+        var key = window.event ? event.keyCode : event.which;
+        if (event.keyCode === 8 || event.keyCode === 46) {
+            return true;
+        } else if (key < 48 || key > 57) {
+            return false;
+        } else {
+            return true;
+        }
+    };
 </script>
