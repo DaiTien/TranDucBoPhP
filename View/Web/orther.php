@@ -12,13 +12,7 @@
 </head>
 
 <body>
-    <!-- <div id="pre-loader">
-        <div class="loader-holder">
-            <div class="frame">
-                <img src="asset/web/asset/Web/asset/web/images/Preloader.gif" alt="Laboom" />
-            </div>
-        </div>
-    </div> -->
+ 
     <div class="wrapper">
         <!-- Start Header -->
         <header>
@@ -51,13 +45,6 @@
                         <img src="asset/web/images/scroll-arrow.png" alt="">
                     </div>
                     <div class="container">
-                        <!-- <div class="checkout-wrap wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <ul class="checkout-bar">
-                                <li class="active">Shopping Cart</li>
-                                <li>Checkout</li>
-                                <li>Order Complete</li>
-                            </ul>
-                        </div> -->
                         <div class="shop-cart-list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                             <form method="post" action="?c=indexwebsite&a=UpdateCart">
                                 <table class="shop-cart-table">
@@ -87,13 +74,10 @@
                                                 </td>
                                                 <td>
                                                     <strong id="giaTien"><?=$value['gia']?></strong>
-                                                    <!--<del>$5400.00</del>-->
                                                 </td>
                                                 <td>
                                                     <div class="price-textbox">
-                                                        <!--<span class="minus-text"><i class="icon-minus"></i></span>-->
                                                         <input id="soLuong" name='txtsoLuong' readonly value="<?=$value['qty']?>" placeholder="1" type="text">
-                                                        <!--<span class="plus-text"><i class="icon-plus"></i></span>-->
                                                     </div>
                                                 </td>
                                                 <td>
@@ -105,8 +89,6 @@
                                             </tr>
                                             <?php
                                         }
-
-
                                     }else{
                                         echo '<tr><td>Chưa Có Sản phẩm nào</td></tr>';
                                     }
@@ -124,11 +106,8 @@
                                                 }
                                                 ?>
                                             </h1>
-
                                         </td>
                                     </tr>
-
-
                                     </tbody>
                                 </table>
                             </form>
@@ -212,11 +191,8 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </form>
-
                         </div>
-
                     </div>
                 </section>
             </div>
