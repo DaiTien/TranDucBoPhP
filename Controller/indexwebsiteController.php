@@ -19,6 +19,7 @@ require_once SYSTEM_PATH."/Model/SocialNetworkAdminModel.php";
 require_once SYSTEM_PATH."/Model/FeedBackAdminModel.php";
 require_once SYSTEM_PATH."/Model/OrderModel.php";
 require_once SYSTEM_PATH."/Model/UserAdminModel.php";
+require_once SYSTEM_PATH."/Model/HuongdanModel.php";
 class indexwebsiteController
 {
     private $slideModel;
@@ -32,6 +33,7 @@ class indexwebsiteController
     private $feedBack;
     private $orderModel;
     private $userAdmin;
+    private $huongdanModel;
     public function __construct()
     {
         $this->slideModel = new SlideImageModel();
@@ -45,6 +47,7 @@ class indexwebsiteController
         $this->feedBack= new FeedBackAdminModel();
         $this->orderModel= new OrderModel();
         $this->userAdmin = new UserAdminModel();
+        $this->huongdanModel = new HuongdanModel();
     }
 
     function index()
@@ -66,6 +69,7 @@ class indexwebsiteController
         $contact = $this ->contactModel->GetAllRecords();
         $mxh = $this->mXh->GetByID(1);
         $feedBack = $this->feedBack->GetAllRecords();
+        $huongdan = $this ->huongdanModel->GetAlldata();
         require_once SYSTEM_PATH. "/View/Web/index.php";
     }
     function sendFeedback()
@@ -120,6 +124,22 @@ class indexwebsiteController
             require_once SYSTEM_PATH."/View/Web/news.php";
         }
 
+    }
+    function huongdan(){
+        session_start();
+        if (isset($_SESSION['userWebsite']) && isset($_SESSION['login']))
+        {
+            $user = $_SESSION['userWebsite'];
+            $contact = $this ->contactModel->GetAllRecords();
+            $mxh = $this->mXh->GetByID(1);
+            $huongdan = $this ->huongdanModel->GetAlldata();
+            require_once SYSTEM_PATH."/View/Web/huongdan.php";
+        }else{
+            $contact = $this ->contactModel->GetAllRecords();
+            $mxh = $this->mXh->GetByID(1);
+            $huongdan = $this ->huongdanModel->GetAlldata();
+            require_once SYSTEM_PATH."/View/Web/huongdan.php";
+        }
     }
     function forgotPassword()
     {
