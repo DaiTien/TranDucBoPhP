@@ -80,7 +80,9 @@
                         <li class="nav-item">
                             <a class="nav-link" id="thongtin" href="?c=Contact&a=index"><i class="far fa-circle nav-icon"></i> Thông tin</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" id="huongdan" href="?c=Huongdan&a=index"><i class="far fa-circle nav-icon"></i> Hướng Dẫn Mua Hàng</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">

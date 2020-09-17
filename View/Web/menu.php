@@ -30,6 +30,7 @@
                         echo '<a >Xin chào ' . $user . '</a>';
                         echo '<ul class="drop-nav">';
                         echo '<li><a href="?c=indexwebsite&a=Order">Giỏ hàng</a></li>';
+                        echo '<li><a href="?c=indexwebsite&a=Huongdan">Huong dan mua hang</a></li>';
                         echo '</ul>';
                         echo '</li>';
                         echo '<li class="has-child">';
